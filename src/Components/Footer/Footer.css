@@ -3,7 +3,6 @@
   background-color: #dbdbdb;
   height: 600px;
   transform: scaleY(.95);
-  /* color: #000324; */
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   text-transform: capitalize;
@@ -49,4 +48,13 @@ border-top:solid 2px white;
 border-bottom:solid 2px white;
 width: max-content;
 padding: 5px 0px;
+}
+
+.footerAcmIcon{
+  width: 250px;
+  transform: translateY(-20px);
+}
+
+.iconsFooter{
+  margin: 8px;
 }

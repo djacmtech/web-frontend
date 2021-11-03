@@ -51,7 +51,9 @@ const Footer = () => {
       >
         <center>
           <Grid container spacing={1}>
-            <Grid item xs></Grid>
+            <Grid item xs>
+              <img className='footerAcmIcon' src='https://djacm.co.in/static/images/acm-white-logo.png' alt='acmIcon'/>
+            </Grid>
             <Grid item xs>
               <p>Get involved</p>
               <li>PPT</li>
@@ -61,14 +63,14 @@ const Footer = () => {
             </Grid>
             <Grid item xs>
               <p>Get in touch</p>
-              <IconContext.Provider value={{ size: "1.4rem" }}>
+              <IconContext.Provider value={{ size: "1.4rem",className:'iconsFooter' }}>
                 <li>
-                  <BsInstagram />
-                </li>
-                <li>
+                  <BsInstagram /> 
+                {/* </li>
+                <li> */}
                   <BsFacebook />
-                </li>
-                <li>
+                {/* </li>
+                <li> */}
                   <BsLinkedin />
                 </li>
               </IconContext.Provider>
