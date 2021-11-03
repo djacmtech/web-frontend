@@ -1,8 +1,8 @@
-
+import './HomePage.css'
 export default function About() {
     return (
-        <div>
-            <h2> About Us </h2>
+        <div class="About">
+            <h2 style={{textAlign:"center"}}> About Us </h2>
             <div>
                 <div>
                     <p> 
@@ -19,11 +19,6 @@ export default function About() {
                         of the Year awards do the talking.
                     </p>
 
-                </div>
-                <div>
-                    <div>
-                        <img src="" alt="About us pic"/>
-                    </div>
                 </div>
             </div>
         </div>

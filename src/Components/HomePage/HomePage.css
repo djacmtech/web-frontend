@@ -1,0 +1,27 @@
+.Video {
+    opacity: 50%;
+}
+
+.About {
+    background-color: #02073D;
+    width: 65%;
+    margin: -5vh 18vh 0vh 30vh;
+    padding: 2vh 5vh 2vh 5vh;
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.Vision {
+    background-color: #02073D;
+    width: 65%;
+    margin: 10vh 18vh 0vh 30vh;
+    padding: 2vh 5vh 2vh 5vh;
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
