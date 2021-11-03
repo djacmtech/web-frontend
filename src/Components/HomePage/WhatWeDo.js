@@ -13,31 +13,31 @@ const WhatWeDo = () => {
 
   return (
     <center>
-      <div>
+      <div className="whatWeDo">
         <h1>What We Do</h1>
 
-        <Box sx={{ flexGrow: 1, paddingLeft: 3}}>
+        <Box sx={{ flexGrow: 1, flexDirection: "column", paddingLeft: 2}} className="work_box">
           <Grid
             container
-            spacing={{ xs: 2, md: 3 }}
+            spacing={{ xs: 0.5, md: 1 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
             {theme.map((e, id) => {
               return (
                 <div key={id}>
-                  <Grid item xs={40} sm={40} md={30} sx={{ padding:2 }}>
-                    <Card sx={{ maxWidth: 345 }}>
-                      <CardMedia
+                  <Grid item xs={30} sm={20} md={30} sx={{ padding:1 }}>
+                    <Card className="work_card" sx={{ maxWidth: 345 }}>
+                      <CardMedia className="work_image"
                         component="img"
-                        height="120"
-                        image=""
+                        height="200"
+                        image={e.image}
                         alt="img"
                       />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                      <CardContent className="work_content">
+                        <Typography classsName="work_title" gutterBottom variant="h5" component="div">
                           {e.title} 
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography className="work_description" variant="body2" color="text.secondary">
                           {e.description}
                         </Typography>
                       </CardContent>

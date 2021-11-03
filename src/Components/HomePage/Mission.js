@@ -13,10 +13,10 @@ const Mission = () => {
 
   return (
     <center>
-      <div>
+      <div className="ourMission">
         <h1>Our Mission</h1>
 
-        <Box sx={{ flexGrow: 1, paddingLeft: 25, paddingRight: 5 }} className="box">
+        <Box sx={{ flexGrow: 1, paddingLeft: 25, paddingRight: 5 }} className="mission_box">
           <Grid
             container
             spacing={{ xs: 1, md: 2 }}
@@ -25,17 +25,16 @@ const Mission = () => {
             {ourmission.map((props, id) => {
               return (
                 <div key={id}>
-                  <Grid item xs={40} sm={40} md={30} sx={{ padding:2 }}>
+                  <Grid className="mission_grid" item xs={40} sm={40} md={30} sx={{ padding:2}}>
                     <Card className="mission_card" sx={{ maxWidth: 345 }} >
-                      <CardMedia
+                      <CardMedia className="mission_image"
                         component="img"
-                        height="120"
-                        image="Images/mission1.png"
-                        
+                        height="200"
+                        image={props.image}
                         alt="img"
                       />
                       <CardContent>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography className="mission_description" variant="body2" color="text.secondary">
                           {props.description}
                         </Typography>
                       </CardContent>

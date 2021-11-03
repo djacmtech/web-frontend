@@ -6,22 +6,22 @@ const OurMission = [
     },
     {
         id:2,
-        image:"VarDate",
+        image:"../Images/mission2.png",
         description:"Develop professionals, equipped with soft skills, ethical and social values for betterment of society.",
     },
     {
         id:3,
-        image:"VarDate",
+        image:"../Images/mission3.png",
         description:"Create awareness about sustainability concerns and ongoing trends in computing field.",
     },
     {
         id:4,
-        image:"VarDate",
+        image:"../Images/mission4.png",
         description:"To nurture and provide a collaborative environment for enabling aspiring technocrats to meet industry expectations.",
     },
     {
         id:5,
-        image:"VarDate",
+        image:"../Images/mission5.png",
         description:" Provide competent faculty and systematic modern approach in teaching-learning with state-of-art infrastructure.",
     },
 ];
