@@ -26,7 +26,7 @@ const WhatWeDo = () => {
               return (
                 <div key={id}>
                   <Grid item xs={30} sm={20} md={30} sx={{ padding:1 }}>
-                    <Card className="work_card" sx={{ maxWidth: 345 }}>
+                    <Card className="work_card" style={{backgroundColor:"#000324"}} sx={{ maxWidth: 345 }}>
                       <CardMedia className="work_image"
                         component="img"
                         height="200"

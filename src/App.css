@@ -8,6 +8,7 @@ body {
     padding-top: 3%;
     font-family: "Roboto", sans-serif;
     padding-bottom: 10%;
+    height: 400px;
 }
 
 .ourMission{
@@ -76,14 +77,14 @@ body {
     font-size: 1.0rem;
     font-family: 'Roboto', sans-serif;
     display: none;
-     transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    color: #dbdbdb !important;
 }
 
-.work_card:hover .work_description{
+.work_card:hover::after .work_description{
     display: block ;
-    color: #dbdbdb;
-    transition: all 0.5s linear;
-    
+    color: rgba(24, 22, 61, 0.904);
+    transition: all 0.5s linear;    
 }
 
 .mission_card .mission_image{
