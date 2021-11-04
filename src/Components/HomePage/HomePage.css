@@ -1,0 +1,61 @@
+.Video {
+    opacity: 50%;
+}
+
+.About {
+    background-color: #000324;
+    width: 68%;
+    margin: -5vh 18vh 0vh 23vh;
+    padding: 2vh 5vh 2vh 5vh;
+    display: flex;
+    font-size: larger;
+    color:  #dbdbdb;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.Vision {
+    background-color: #000324;
+    width: 68%;
+    margin: 5vh 18vh 5vh 23vh;
+    padding: 2vh 5vh 2vh 5vh;
+    font-size: larger;
+    display: flex;
+    color:  #dbdbdb;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Landing-image {
+    width: 100%;
+}
+
+.Events {
+    margin-top: -10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Image {
+    width:30%;
+    background-color: #dbdbdb;
+    padding: 3px;
+    border-radius: 48%;
+}
+
+.Image:hover {
+    border-radius: 15px;
+    scale: 105%;
+}
+
+.Card-content {
+    color: #dbdbdb;
+    width: 400px;
+}
+
+.Grid-card {
+    margin: 0vh 20vh 0vh 20vh;
+}
