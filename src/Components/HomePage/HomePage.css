@@ -17,11 +17,22 @@
 .Vision {
     background-color: #02073D;
     width: 65%;
-    margin: 10vh 18vh 0vh 30vh;
+    margin: 5vh 18vh 5vh 30vh;
     padding: 2vh 5vh 2vh 5vh;
     display: flex;
     color: aliceblue;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.Landing-image {
+    width: 100%;
+}
+
+.Events {
+    margin-top: -10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

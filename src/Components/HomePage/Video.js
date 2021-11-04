@@ -1,4 +1,4 @@
-import video from '../../Images/video.mp4'
+import video from '../Images/video.mp4'
 import './HomePage.css'
 
 export default function Video() {
