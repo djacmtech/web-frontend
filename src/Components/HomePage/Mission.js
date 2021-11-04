@@ -24,6 +24,7 @@ const Mission = () => {
           >
             {ourmission.map((props, id) => {
               return (
+                
                 <div key={id}>
                   <Grid className="mission_grid" item xs={40} sm={40} md={30} sx={{ padding:2}}>
                     <Card className="mission_card" sx={{ maxWidth: 345 }} >

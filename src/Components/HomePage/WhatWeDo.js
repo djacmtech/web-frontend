@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Theme from './WhatWeDo_array';
+import Theme from "./WhatWeDo_array";
 
 const WhatWeDo = () => {
   const [theme] = useState(Theme);
@@ -16,7 +16,10 @@ const WhatWeDo = () => {
       <div className="whatWeDo">
         <h1>What We Do</h1>
 
-        <Box sx={{ flexGrow: 1, flexDirection: "column", paddingLeft: 2}} className="work_box">
+        <Box
+          sx={{ flexGrow: 1, flexDirection: "column", paddingLeft: 2 }}
+          className="work_box"
+        >
           <Grid
             container
             spacing={{ xs: 0.5, md: 1 }}
@@ -25,19 +28,35 @@ const WhatWeDo = () => {
             {theme.map((e, id) => {
               return (
                 <div key={id}>
-                  <Grid item xs={30} sm={20} md={30} sx={{ padding:1 }}>
-                    <Card className="work_card" style={{backgroundColor:"#000324"}} sx={{ maxWidth: 345 }}>
-                      <CardMedia className="work_image"
+                  <Grid item xs={30} sm={20} md={30} sx={{ padding: 1 }}>
+                    <Card
+                      style={{
+                        backgroundColor: "#000324",
+                      }}
+                      className="work_card"
+                      sx={{ maxWidth: 345 }}
+                    >
+                      <CardMedia
+                        className="work_image"
                         component="img"
                         height="200"
                         image={e.image}
                         alt="img"
                       />
                       <CardContent className="work_content">
-                        <Typography classsName="work_title" gutterBottom variant="h5" component="div">
-                          {e.title} 
+                        <Typography
+                          classsName="work_title"
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                        >
+                          {e.title}
                         </Typography>
-                        <Typography className="work_description" variant="body2" color="text.secondary">
+                        <Typography
+                          className="work_description"
+                          variant="body2"
+                          color="text.secondary"
+                        >
                           {e.description}
                         </Typography>
                       </CardContent>
