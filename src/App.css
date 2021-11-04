@@ -26,6 +26,7 @@ body {
 
 .mission_card{
     height: calc(100vh/2.5);
+    
 }
 
 .work_card:hover{
