@@ -16,7 +16,7 @@ const Mission2 = () => {
             {
                 ourmission.map((props, id)=> {
                     return (
-                        <Grid item key={id} xs={4}>
+                        <Grid item key={id} xs={4} className="mission_grid">
                             <div>
                                 <img src={props.image} alt={`Mission${id}`} className="Image"/>
                             </div>
