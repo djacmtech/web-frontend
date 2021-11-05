@@ -9,10 +9,12 @@ import { Paper } from "@mui/material";
 export default function Landing() {
   const [events] = useState(OurEvents);
   return (
-    <div>
-      <div>
+    <div style={{transform:'translateY(-10px)'}}>
+        <span className='titleACM'>
+        <h1>Association For Computing Machinery</h1>
+        <h3>Dwarkadas J.Sanghvi College of Engineering</h3>
+        </span>
         <img src="/Images/About.png" alt="About" className="Landing-image" />
-      </div>
       <div className="Events">
         {events.map((props, id) => {
           return (
