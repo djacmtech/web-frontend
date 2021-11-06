@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OurMission from './Mission_array';
 import { Grid } from "@mui/material";
-import './HomePage.css'
+import '../HomePage.css'
 
 const Mission2 = () => {
   const [ourmission] = useState(OurMission);
