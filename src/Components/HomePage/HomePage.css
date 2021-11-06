@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:wght@600&family=Roboto:wght@300&display=swap');
 .Video {
     opacity: 50%;
 }
@@ -39,6 +40,20 @@
     justify-content: space-around;
 }
 
+.titleACM{
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    text-align: center;
+    color: #02073D;
+}
+.titleACM h1{
+    letter-spacing: 2px;
+    font-size: 3rem;
+}
+.titleACM h3{
+    font-family: 'Crimson Text', serif;
+  font-size: 1.7rem;
+}
 .Image {
     width:30%;
     background-color: #dbdbdb;
