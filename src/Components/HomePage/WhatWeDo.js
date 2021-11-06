@@ -48,17 +48,14 @@ const WhatWeDo = () => {
                           classsName="work_title"
                           gutterBottom
                           variant="h5"
+                          // style={{textDecoration:'underline'}}
                           component="div"
                         >
                           {e.title}
                         </Typography>
-                        <Typography
-                          className="work_description"
-                          variant="body2"
-                          color="text.secondary"
-                        >
-                          {e.description}
-                        </Typography>
+                        <p style={{color:'#dbdbdbc2'}}>
+                        {e.description}
+                        </p>
                       </CardContent>
                     </Card>
                   </Grid>
