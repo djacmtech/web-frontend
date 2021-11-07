@@ -8,14 +8,14 @@ import Mission from './Mission/Mission';
 
 const HomePage = () => {
   return (
-    <>
+    <div>
       <Landing />
       <Video />
-      <Vision />
       <About />
+      <Vision />
       <Mission/>
       <WhatWeDo />
-    </>
+    </div>
   );
 };
 

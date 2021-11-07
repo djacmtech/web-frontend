@@ -1,8 +1,9 @@
 import EventCard from "../Components/Eventpage/EventCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FinalEvent() {
 
+    const [offset] = useState(0)
     const [data, setData] = useState(
         [{
             'id':'0',
@@ -18,15 +19,18 @@ export default function FinalEvent() {
         method: 'GET',
         redirect: 'follow'
       };
-      
-      fetch("https://djacmdev.pythonanywhere.com/api/events/", requestOptions)
-        .then(response => response.text())
+    
+      useEffect(() => {
+        fetch("https://djacmdev.pythonanywhere.com/api/events/", requestOptions)
+        .then(response => response.json())
         .then(result => setData(result))
         .catch(error => console.log('error', error));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      },[offset])
 
     return (
         <div>
-            {
+            {                
                 data.map((items)=> 
                     <EventCard id={items.id} image={items.image} title={items.title} description={items.description} about={items.about} date={items.date}/>
                 )

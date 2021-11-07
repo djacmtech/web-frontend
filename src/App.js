@@ -6,7 +6,6 @@ import Header from "./Components/Header/Header";
 import HomePage from "./Components/HomePage/HomePage";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import EventCard from "./Components/Eventpage/EventCard";
 function App() {
   return (
     <Router>
