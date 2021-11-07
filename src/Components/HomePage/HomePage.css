@@ -1,169 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:wght@600&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:wght@600&family=Roboto:wght@300&display=swap");
 .Video {
-    opacity: 50%;
+  opacity: 50%;
 }
 
 .About {
-    background-color: #000324;
-    width: 68%;
-    margin: -5vh 18vh 0vh 23vh;
-    padding: 2vh 5vh 2vh 5vh;
-    display: flex;
-    font-size: larger;
-    color:  #dbdbdb;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
+  background-color: #000324;
+  width: 68%;
+  margin: -5vh 18vh 0vh 23vh;
+  padding: 2vh 5vh 2vh 5vh;
+  display: flex;
+  font-size: larger;
+  color: #dbdbdb;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  transform: translateX(43px);
 }
 
 .Vision {
-    background-color: #000324;
-    width: 68%;
-    margin: 5vh 18vh 5vh 23vh;
-    padding: 2vh 5vh 2vh 5vh;
-    font-size: larger;
-    display: flex;
-    color:  #dbdbdb;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  background-color: #000324;
+  width: 68%;
+  margin: 5vh 18vh 5vh 23vh;
+  padding: 2vh 5vh 2vh 5vh;
+  transform: translateX(43px);
+  font-size: larger;
+  display: flex;
+  color: #dbdbdb;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .Landing-image {
-    width: 100%;
+  width: 100%;
 }
 
 .Events {
-    margin-top: -10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  margin-top: -10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.titleACM{
-    font-family: 'Anton', sans-serif;
-    position: relative;
-    text-align: center;
-    color: #02073D;
+.titleACM {
+  font-family: "Anton", sans-serif;
+  position: relative;
+  text-align: center;
+  color: #02073d;
 }
-.titleACM h1{
-    letter-spacing: 2px;
-    font-size: 3rem;
+.titleACM h1 {
+  letter-spacing: 2px;
+  font-size: 3rem;
 }
-.titleACM h3{
-    font-family: 'Crimson Text', serif;
+.titleACM h3 {
+  font-family: "Crimson Text", serif;
   font-size: 1.7rem;
 }
 .Image {
-    width:30%;
-    background-color: #dbdbdb;
-    padding: 3px;
-    border-radius: 48%;
+  width: 30%;
+  background-color: #dbdbdb;
+  padding: 3px;
+  border-radius: 48%;
 }
 
 .Image:hover {
-    border-radius: 15px;
-    scale: 105%;
+  border-radius: 15px;
+  scale: 105%;
 }
 
 .Card-content {
-    color: #dbdbdb;
-    width: 400px;
+  color: #dbdbdb;
+  width: 400px;
 }
 
 .Grid-card {
-    margin: 0vh 20vh 0vh 20vh;
+  margin: 0vh 20vh 0vh 20vh;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
-.whatWeDo{
-    background-color: #000324;
-    padding-top: 3%;
-    font-family: "Roboto", sans-serif;
-    padding-bottom: 10%;
-    height: 400px;
+.whatWeDo {
+  background-color: #000324;
+  padding-top: 3%;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 20%;
+  height: 500px;
+  padding: 45px;
+  border-top: 3px solid grey;
+  transform: translateY(14.6px);
 }
 
-.ourMission{
-    background-color: #000324;
-    font-family: "Roboto", sans-serif;
-    padding-top: 3%;
+.ourMission {
+  background-color: #000324;
+  font-family: "Roboto", sans-serif;
+  padding-top: 3%;
+  padding-bottom: 30px;
+  transform: translateY(14.6px);
+  font-size: 1.3rem;
 }
 
-.whatWeDo>h1{
-    color: #dbdbdb;
+.whatWeDo > h1 {
+  color: #dbdbdb;
+  font-size: 2.7rem;
+  padding-bottom: 60px;
 }
 
-.ourMission>h1{
-    color: #dbdbdb;
+.ourMission > h1 {
+  color: #dbdbdb;
+  font-size: 2.7rem;
 }
 
-
-.work_card:hover{
-    
-    border-radius: 10%;
-    box-shadow: 0.05rem 0.05rem 1.0rem 0.1rem rgba(75, 250, 250, 0.822);
-    background-color:  #000324;
-    height: calc(100vh/2.1);
+.work_card:hover {
+  border-radius: 10%;
+  box-shadow: 0.05rem 0.05rem 1rem 0.1rem rgba(75, 250, 250, 0.822);
+  background-color: #000324;
+  height: calc(110vh / 2.1);
 }
 
-.work_image{
-    display: block;
-     width: 1%;
-     background-color:  #000324;
-     transition: all 0.5s linear;
+.work_image {
+  display: block;
+  width: 1%;
+  background-color: #000324;
+  transition: all 0.5s linear;
 }
 
-.work_card{
-    background-color:  #000324;
-    width: 400px;
+.work_card {
+  background-color: #000324;
+  width: 300px;
 }
 
-.work_card:hover .work_image{
-    width: 60%;
-    margin-top: 1rem ;
-    background-color:  rgba(24, 22, 61, 0.904);
+.work_card:hover .work_image {
+  width: 60%;
+  margin-top: 1rem;
+  background-color: rgba(24, 22, 61, 0.904);
 }
 
-.work_content{
-    width: calc(100% - 1.0rem);
-    margin: 0rem auto;
-    color: #dbdbdb;
-    background-color:  rgba(24, 22, 61, 0.904);
-    text-align: center;
+.work_content {
+  width: calc(100% - 1rem);
+  margin: 0rem auto;
+  color: #dbdbdb;
+  background-color: rgba(24, 22, 61, 0.904);
+  text-align: center;
+  height: 100px;
 }
 
-.work_title{
-    width: 100%;
-    height: fit-content;
-    color: #dbdbdb;
-    font-size: 1.8rem;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    margin-bottom: 0.8rem;
+.work_title {
+  width: 100%;
+  height: fit-content;
+  text-decoration: underline;
+  color: #dbdbdb;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 0.8rem;
 }
 
-.work_description{
-    font-size: 1.0rem;
-    font-family: 'Roboto', sans-serif;
-    display: none;
-    transition: all 0.5s linear;
-    color: #dbdbdb !important;
+.work_description {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  display: none;
+  transition: all 0.5s linear;
+  color: #dbdbdb !important;
 }
 
-.work_card:hover::after .work_description{
-    display: block ;
-    color: rgba(24, 22, 61, 0.904);
-    transition: all 0.5s linear;    
+.work_card:hover::after .work_description {
+  display: block;
+  color: rgba(24, 22, 61, 0.904);
+  transition: all 0.5s linear;
 }
 
-.mission_grid:nth-child(4){
-    margin-left: 18%;
+.mission_grid:nth-child(4) {
+  margin-left: 18%;
 }
-
-
-
