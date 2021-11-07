@@ -5,7 +5,6 @@ import About from "./About";
 import WhatWeDo from "./WhatWeDo/WhatWeDo";
 import Video from './Video';
 import Mission from './Mission/Mission';
-
 const HomePage = () => {
   return (
     <div>

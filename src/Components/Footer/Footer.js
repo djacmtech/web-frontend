@@ -63,7 +63,7 @@ const Footer = () => {
             </Grid>
             <Grid item xs>
               <p>Get in touch</p>
-              <IconContext.Provider value={{ size: "1.4rem",className:'iconsFooter' }}>
+              <IconContext.Provider value={{ size: "1.7rem",className:'iconsFooter' }}>
                 <li>
                   <BsInstagram /> 
                 {/* </li>
