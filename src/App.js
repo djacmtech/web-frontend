@@ -1,16 +1,26 @@
-import './App.css'
-import FinalEvent from './Assets/FinalEvent'
+import "./App.css";
+import FinalEvent from "./Assets/FinalEvent";
 // import FinalHome from './Assets/FinalHome'
-import Footer from './Components/Footer/Footer'
-import Header from './Components/Header/Header'
-
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
+import HomePage from "./Components/HomePage/HomePage";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes } from "react-router";
+import EventCard from "./Components/Eventpage/EventCard";
 function App() {
   return (
-    <div>
-      <Header/>
-      <FinalEvent/>
-      <Footer/>  
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+        <Route exact path="/" element={<HomePage/>}>
+        </Route>
+        <Route path="/Events" element={<FinalEvent/>} >
+        </Route>
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
