@@ -1,5 +1,6 @@
 import EventCard from "../Components/Eventpage/EventCard";
 import { useState, useEffect } from "react";
+import Header from "../Components/Header/Header";
 
 export default function FinalEvent() {
   const [offset] = useState(0);
@@ -31,6 +32,7 @@ export default function FinalEvent() {
 
   return (
     <div>
+    <Header activePage='Events'/>
       {data.map((items) => (
         <EventCard
           id={items.id}
