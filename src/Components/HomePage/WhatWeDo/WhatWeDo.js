@@ -17,7 +17,7 @@ const WhatWeDo = () => {
         <h1>What We Do</h1>
 
         <Box
-          sx={{ flexGrow: 1, flexDirection: "column", paddingLeft: 2 }}
+          sx={{ flexGrow: 1, flexDirection: "column", paddingLeft: 10}}
           className="work_box"
         >
           <Grid
