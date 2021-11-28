@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5vh;
+    margin: 22px;
 }
 
 .Images {
@@ -12,18 +12,41 @@
 }
 
 .Event-Image {
-    background-color: blue;
-    width: 60vh;
-    height: 35vh;
-    margin: 5vh -20vh 5vh 10vh;
+    background-color: #000324;
+    width: 63vh;
+    display: flex;
+    justify-content: center;
+    height: 38vh;
+    margin: 3.5vh -20vh 5vh 10vh;
     z-index: 1;
     align-items: center;
+    border-radius: 4px;
+}
+
+.Event2-Image {
+    background-color: #000324;
+    width: 63vh;
+    display: flex;
+    justify-content: center;
+    height: 38vh;
+    margin: 3.5vh 10vh 5vh -20vh;
+    z-index: 1;
+    align-items: center;
+    border-radius: 4px;
 }
 
 .Event-Content {
-    background-color: #C4C4C4;
-    width: 120vh;
-    height: 45vh;
+    background-color: #F3f8ff;
+    width: 130vh;
+    height: 300px;
+    border-radius: 7px;
+}
+
+.Event2-Content {
+    background-color: #F3f8ff;
+    width: 130vh;
+    height: 300px;
+    border-radius: 7px;
 }
 
 .Content {
@@ -34,16 +57,67 @@
     line-height: calc(1.2 * 24px);
 }
 
+.Content2{
+    margin: 5vh 25vh 10vh 5vh;
+    font-size: 18px;
+    text-align: justify;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: calc(1.2 * 24px);
+}
+
 .event_title{
     font-size: 50px;
     color: rgba(24, 22, 61, 0.904);
+    margin-bottom: 5%;
 }
 
 .event_knowmore{
     color: white;
-    background-color: rgb(163, 47, 47);
-    border-radius: 10%;
-    width: 18%;
+    background-color: rgba(24, 22, 61, 0.904);
+    border-radius: 4px;
+    border: none;
     padding: 1%;
     cursor: pointer;
+}
+
+.event_title_center{
+    font-family: coolvetica;
+    font-size: xx-large;
+}
+
+.event_description{
+    margin: 0%;
+    padding: 0%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 8%;
+}
+
+.event_img_div{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.event2_img_div{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.event_date{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    margin: 0%;
+    color: rgb(128, 128, 128);
+}
+/**************** Fonts *****************/
+@font-face {
+    font-family: coolvetica;
+    src: url("./coolvetica\ rg.ttf");
+}
+
+.Card2{
+    background-color: black;
 }

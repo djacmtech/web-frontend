@@ -6,9 +6,10 @@ import { useState } from "react";
 import OurEvents from "./Event";
 import { Paper } from "@mui/material";
 
+
 export default function Landing() {
   const [events] = useState(OurEvents);
-  return (
+  return (<>
     <div style={{transform:'translateY(-10px)'}}>
         <span className='titleACM'>
         <h1>Association For Computing Machinery</h1>
@@ -39,5 +40,6 @@ export default function Landing() {
         })}
       </div>
     </div>
+    </>
   );
 }
