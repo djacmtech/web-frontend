@@ -16,6 +16,8 @@
 }
 .navBar {
   transform: translateY(-9px);
+  position: sticky;
+  
 }
 .navBar Button {
   margin-left: 10px;
