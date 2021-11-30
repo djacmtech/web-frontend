@@ -8,15 +8,14 @@ import Mission from "./Mission/Mission";
 import Header from "../Header/Header";
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Header activePage="Home" />
       <Landing />
-      <Video />
       <About />
       <Vision />
       <Mission />
       <WhatWeDo />
-    </div>
+    </>
   );
 };
 

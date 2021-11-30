@@ -1,36 +1,26 @@
 import React, { useState } from "react";
 import OurMission from './Mission_array';
-import { Grid } from "@mui/material";
 import '../HomePage.css'
 
-const Mission2 = () => {
-  const [ourmission] = useState(OurMission);
-  console.log(ourmission);
+const Mission = () => {
 
-  return (
-    <center>
-      <div className="ourMission">
-        <h1>Our Mission</h1>
-
-        <Grid container spacing={3} className="Grid-card">
-            {
-                ourmission.map((props, id)=> {
-                    return (
-                        <Grid item key={id} xs={4} className="mission_grid">
-                            <div>
-                                <img src={props.image} alt={`Mission${id}`} className="Image"/>
-                            </div>
-                            <div className="Card-content">
-                                <p> {props.description} </p>
-                            </div>
-                        </Grid>
-                    )
-                })
-            }
-        </Grid>
-      </div>
-    </center>
-  );
+  return <>
+  <div className="ourMission">
+  <h2>Our Mission</h2>
+    <div className="ourMissionContainer">
+      {
+        OurMission.map(mission => {
+          return <div className="mission">
+            <div className="missionImgContainer">
+              <img src={mission.image} className="missionImg"/>
+            </div>
+            <i>{mission.description}</i>
+          </div>
+        })
+      }
+    </div>
+    </div>
+  </>;
 };
 
-export default Mission2;
+export default Mission;

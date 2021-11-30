@@ -1,28 +1,192 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Text:wght@600&family=Roboto:wght@300&display=swap");
-.Video {
-  opacity: 50%;
+@font-face {
+  font-family: coolvetica;
+  src: url("../Eventpage/coolvetica\ rg.ttf");
 }
 
-.About {
-  background-color: #000324;
-  width: 68%;
-  margin: -5vh 18vh 0vh 23vh;
-  padding: 2vh 5vh 2vh 5vh;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body{
+  background-color: #0A0E2A;
+  color: #DBDBDB;
+}
+
+h1, h2{
+  font-family: coolvetica;
+  letter-spacing: 0.1ch;
+}
+
+.landingScreenImg{
   display: flex;
-  font-size: larger;
-  color: #dbdbdb;
-  flex-direction: column;
   justify-content: center;
-  text-align: justify;
-  transform: translateX(43px);
+  align-items: center;
+  height: 100vh;
 }
 
+.landingScreenImg img{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.landingOverlay{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.411);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.landingTitleWrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingTitleWrapper h4{
+  color: #DBDBDB;
+  font-weight: light;
+  margin: 0px;
+  padding: 0px;
+}
+
+.typewriter {
+  color: #DBDBDB;
+  width: 37ch;
+  animation: typing 8s steps(22) infinite,
+    blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+}
+
+.events{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  /* position: absolute; */
+  transform: translateY(-150px);
+}
+
+.eventCard{
+  width: 240px;
+  height: 205px;
+  overflow: hidden;
+  position: relative;
+  filter: drop-shadow(5px 5px 10px rgba(60, 247, 251, 0.2));
+  border-radius: 4px;
+}
+
+.eventCard h4{
+  font-family: coolvetica;
+  letter-spacing: 0.2ch;
+}
+
+.eventCard:hover{
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+
+
+
+.eventImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* position: relative; */
+  /* filter: drop-shadow(5px 5px 10px rgba(60, 247, 251, 0.2)); */
+}
+
+.eventName{
+  background-color: rgba(0, 0, 0, 0.61);
+  color: white;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+/* ************************ About Us *********************** */
+.aboutUsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 40px;
+  margin: 100px;
+  margin-top: -50px;
+  font-size: 1rem;
+}
+
+.aboutUsContainer h2{
+  font-size: 1.5rem;
+}
+
+
+
+.aboutImg{
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.borderContainer{
+  border: 0.2rem solid rgb(60, 247, 251);
+  width: 32rem;
+  height: 11.5rem;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+
+/* ********************** Our Vision *********************** */
 .Vision {
   background-color: #000324;
   width: 68%;
-  margin: 5vh 18vh 5vh 23vh;
+  margin: auto;
   padding: 2vh 5vh 2vh 5vh;
-  transform: translateX(43px);
+  /* transform: translateX(43px); */
   font-size: larger;
   display: flex;
   color: #dbdbdb;
@@ -31,149 +195,138 @@
   text-align: center;
 }
 
-.Landing-image {
-  width: 100%;
-}
 
-.Events {
-  margin-top: -10vh;
+/* *************************** Our Mission **************************** */
+.ourMission{
+  margin: 100px;
+}
+.ourMission h2{
+  text-align: center;
+  color: white;
+}
+.ourMissionContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+
+}
+.mission{
+  width: 294px;
+  height: 160px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #201F45;
+  border-radius: 8px;
+  padding: 20px;
 }
 
-.titleACM {
-  font-family: "Anton", sans-serif;
+.mission:hover{
+  animation-name: pulse;
+  animation-duration: 1s;
+  filter: drop-shadow(5px 5px 10px rgba(60, 247, 251, 0.2));
+}
+
+.missionImgContainer{
+  background-color: #DBDBDB;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.missionImg{
+  width: 54px;
+height: 54px;
+}
+
+/* ************************ What We Do ************************** */
+
+
+.whatWeDo h2{
+  text-align: center;
+}
+
+.whatWeDoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  column-gap: 20px;
+}
+
+.work{
+  background-color: #DBDBDB;
+  color: #0A0E2A;
+  width: 220px;
+  height: 160px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.work:hover{
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+
+.work h4{
+  margin-bottom: 0;
+}
+
+.work p{
   text-align: center;
-  color: #02073d;
-}
-.titleACM h1 {
-  letter-spacing: 2px;
-  font-size: 3rem;
-}
-.titleACM h3 {
-  font-family: "Crimson Text", serif;
-  font-size: 1.7rem;
-}
-.Image {
-  width: 30%;
-  background-color: #dbdbdb;
-  padding: 3px;
-  border-radius: 48%;
 }
 
-.Image:hover {
-  border-radius: 15px;
-  scale: 105%;
+.workImg{
+  width: 50px;
+height: 50px;
 }
 
-.Card-content {
-  color: #dbdbdb;
-  width: 400px;
+.workImgContainer{
+  position: absolute;
+  top: -25%;
+  background-color: #201F45;
+  padding: 20px;
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 10px rgba(60, 247, 251, 0.2));
 }
 
-.Grid-card {
-  margin: 0vh 20vh 0vh 20vh;
+/* ********************* Media Queries ************************* */
+
+
+@media screen and (max-width: 1078px) {
+  .eventCard{
+    width: 150px;
+    height: 115px;
+  }
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+@media(max-width: 400px) {
+  .landingScreenImg{
+    transform: scaleY(0.8);
+  }
+  .landingScreenImg img{
+    transform: scaleY(0.8);
+ }
+  .landingTitleWrapper {
+    transform: scaleY(0.8);
+  }
+  .aboutUsContainer{
+    flex-direction: column;
+  }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto");
-.whatWeDo {
-  background-color: #000324;
-  padding-top: 5%;
-  font-family: "Roboto", sans-serif;
-  padding-bottom: 40%;
-  height: 500px;
-  padding: 45px;
-  border-top: 3px solid grey;
-  transform: translateY(14.6px);
+@media screen and (max-width: 1062px) {
+  .ourMissionContainer{
+    grid-template-columns: auto auto;
+  }
 }
-
-.ourMission {
-  background-color: #000324;
-  font-family: "Roboto", sans-serif;
-  padding-top: 3%;
-  padding-bottom: 30px;
-  transform: translateY(14.6px);
-  font-size: 1.3rem;
-}
-
-.whatWeDo > h1 {
-  color: #dbdbdb;
-  font-size: 2.7rem;
-  padding-bottom: 60px;
-}
-
-.ourMission > h1 {
-  color: #dbdbdb;
-  font-size: 2.7rem;
-}
-
-.work_card:hover {
-  border-radius: 10%;
-  box-shadow: 0.05rem 0.05rem 1rem 0.1rem rgba(75, 250, 250, 0.822);
-  background-color: #000324;
-  height: calc(110vh / 2.1);
-}
-
-.work_image {
-  display: block;
-  width: 1%;
-  background-color: #000324;
-  transition: all 0.5s linear;
-}
-
-.work_card {
-  background-color: #000324;
-  width: 300px;
-}
-
-.work_card:hover .work_image {
-  width: 60%;
-  margin-top: 1rem;
-  background-color: rgba(24, 22, 61, 0.904);
-}
-
-.work_content {
-  width: calc(100% - 1rem);
-  margin: 0rem auto;
-  color: #dbdbdb;
-  background-color: rgba(24, 22, 61, 0.904);
-  text-align: center;
-  height: 100px;
-}
-
-.work_title {
-  width: 100%;
-  height: fit-content;
-  text-decoration: underline;
-  color: #dbdbdb;
-  font-size: 1.3rem;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  margin-bottom: 0.8rem;
-}
-
-.work_description {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  display: none;
-  transition: all 0.5s linear;
-  color: #dbdbdb !important;
-}
-
-.work_card:hover::after .work_description {
-  display: block;
-  color: rgba(24, 22, 61, 0.904);
-  transition: all 0.5s linear;
-}
-
-.mission_grid:nth-child(4) {
-  margin-left: 18%;
-}
-
