@@ -1,51 +1,61 @@
+body {
+    background-color: #0A0E2A;
+}
+
 .Card {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 22px;
+    margin-right: 200px;    
+    margin-left: 200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #201E45;
 }
 
 .Images {
     width: 60vh;
     height: 35vh;
-    margin: 10px;
+    margin: 8px;
 }
 
 .Event-Image {
-    background-color: #000324;
     width: 63vh;
     display: flex;
     justify-content: center;
     height: 38vh;
-    margin: 3.5vh -20vh 5vh 10vh;
+    margin: 3.5vh -20vh 5vh 5vh;
     z-index: 1;
     align-items: center;
     border-radius: 4px;
 }
 
 .Event2-Image {
-    background-color: #000324;
+    background-color: #201E45;
     width: 63vh;
     display: flex;
     justify-content: center;
     height: 38vh;
     margin: 3.5vh 10vh 5vh -20vh;
     z-index: 1;
+    
     align-items: center;
     border-radius: 4px;
 }
 
 .Event-Content {
-    background-color: #F3f8ff;
+    background-color: #201E45;
     width: 130vh;
     height: 300px;
     border-radius: 7px;
+    color: #F3F2EB;
 }
 
 .Event2-Content {
-    background-color: #F3f8ff;
+    background-color: #201E45;
     width: 130vh;
     height: 300px;
+    color: #F3F2EB;
     border-radius: 7px;
 }
 
@@ -67,14 +77,18 @@
 
 .event_title{
     font-size: 50px;
-    color: rgba(24, 22, 61, 0.904);
+    color: #3CF7FB;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom: 5%;
+    letter-spacing: 3px;
 }
 
 .event_knowmore{
+    width: 141.13px;
+    height: 44.48px;
+    background: #BA2808;
+    border-radius: 20px;
     color: white;
-    background-color: rgba(24, 22, 61, 0.904);
-    border-radius: 4px;
     border: none;
     padding: 1%;
     cursor: pointer;
@@ -86,12 +100,10 @@
 }
 
 .event_description{
-    margin: 0%;
-    padding: 0%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 17px;
     line-height: 1.5;
-    margin-bottom: 8%;
+    margin-bottom: 2%;
 }
 
 .event_img_div{
@@ -109,8 +121,21 @@
 .event_date{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 13px;
-    margin: 0%;
     color: rgb(128, 128, 128);
+}
+
+@media only screen and (max-width: 400px) {
+    .Card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30vh;
+        margin-right: 100px;    
+        margin-left: 100px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: #f8f8f8;
+    }
 }
 /**************** Fonts *****************/
 @font-face {

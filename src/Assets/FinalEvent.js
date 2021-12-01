@@ -34,21 +34,22 @@ export default function FinalEvent() {
   return (
     <div>
     <Header activePage='Events'/>
-      {data.map((items, index) => (
+      {
+        data.map((items, index) => (
         ((index)%2 ===0)?<EventCard
             id={items.id}
             image={items.image}
             title={items.title}
             description={items.description}
             about={items.about}
-            date={items.date}
+            date={new Date(items.date).toDateString()}
             /> : <EventCard2
             id={items.id}
             image={items.image}
             title={items.title}
             description={items.description}
             about={items.about}
-            date={items.date}
+            date={new Date(items.date).toDateString()}
             />
       ))}
     </div>

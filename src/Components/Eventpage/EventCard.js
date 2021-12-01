@@ -1,23 +1,37 @@
 import './EventPage.css'
+import { Link } from 'react-router-dom'
+import { styled } from '@mui/material/styles';
+import { Grid, Paper } from '@mui/material'
 
 export default function EventCard(props) {
+
+    const Item = styled(Paper)(({ theme }) => ({
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+      }));
     const baseUrl = "http://djacmdev.pythonanywhere.com/"
     return (
         <div className="Card">
-        <div className="event_img_div">
-            <div className="Event-Image" key={props.id}>
-                <img src={baseUrl.concat(props.image)} alt="Event name" className="Images"/>
-            </div>
-        </div>
-            <div className="Event-Content">
-                <p className="Content"> 
+            <Grid container spacing={2}>
+                <Grid item xs={6}>
+                    <Item>
+
+                        <img src={baseUrl.concat(props.image)} alt="Event name" className="Images"/>
+                    </Item>
+                </Grid>
+                <Grid item xs={6}>
+                    <Item>
+                    <p className="Content"> 
                     <div className="event_title"><center className='event_title_center'>{props.title}</center></div>
                     <p className='event_description'>{props.description}</p>
-                    {/* {props.about} <br/> */}
-                    <p className="event_date">{props.date}</p>
-                    <button className="event_knowmore">KNOW MORE</button>
-                </p>
-            </div>
+                    <p className="event_date">Join us on {props.date}</p>
+                    <Link to={props.title}> <button className="event_knowmore">KNOW MORE</button> </Link>
+                    </p>
+                    </Item>
+                </Grid>
+            </Grid>
         </div>
     )
 }

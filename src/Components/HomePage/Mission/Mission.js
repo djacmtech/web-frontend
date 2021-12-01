@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import OurMission from './Mission_array';
 import '../HomePage.css'
 
@@ -12,7 +12,7 @@ const Mission = () => {
         OurMission.map(mission => {
           return <div className="mission">
             <div className="missionImgContainer">
-              <img src={mission.image} className="missionImg"/>
+              <img src={mission.image} className="missionImg" alt="missionImg"/>
             </div>
             <i>{mission.description}</i>
           </div>

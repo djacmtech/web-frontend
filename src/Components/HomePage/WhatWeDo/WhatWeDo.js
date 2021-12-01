@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import WhatWeDo_array from "./WhatWeDo_array"
 
 const WhatWeDo = () => {
@@ -12,7 +12,7 @@ const WhatWeDo = () => {
             return <>
               <div className="work">
                 <div className="workImgContainer">
-                  <img src={work.image} className="workImg" />
+                  <img src={work.image} className="workImg" alt="workImg"/>
                 </div>
                 <h4>{work.title}</h4>
                 <p>{work.description}</p>

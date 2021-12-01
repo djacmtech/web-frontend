@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './EventPage.css'
 
 export default function EventCard2(props) {
@@ -9,8 +10,8 @@ export default function EventCard2(props) {
                     <div className="event_title"><center className='event_title_center'>{props.title}</center></div>
                     <p className='event_description'>{props.description}</p>
                     {/* {props.about} <br/> */}
-                    <p className="event_date">{props.date}</p>
-                    <button className="event_knowmore">KNOW MORE</button>
+                    <p className="event_date">Join us on {props.date}</p>
+                    <Link to={props.title}> <button className="event_knowmore">KNOW MORE</button> </Link>
                 </p>
             </div>
             <div className="event2_img_div">
