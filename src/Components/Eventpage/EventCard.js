@@ -14,21 +14,18 @@ export default function EventCard(props) {
     const baseUrl = "http://djacmdev.pythonanywhere.com/"
     return (
         <div className="Card">
-            <Grid container spacing={2}>
+            <Grid container rowspacing={1} columnSpacing={{xs:0, sm:0}}>
                 <Grid item xs={6}>
                     <Item>
-
                         <img src={baseUrl.concat(props.image)} alt="Event name" className="Images"/>
                     </Item>
                 </Grid>
                 <Grid item xs={6}>
                     <Item>
-                    <p className="Content"> 
                     <div className="event_title"><center className='event_title_center'>{props.title}</center></div>
                     <p className='event_description'>{props.description}</p>
                     <p className="event_date">Join us on {props.date}</p>
                     <Link to={props.title}> <button className="event_knowmore">KNOW MORE</button> </Link>
-                    </p>
                     </Item>
                 </Grid>
             </Grid>
