@@ -2,6 +2,7 @@ import EventCard from "../Components/Eventpage/EventCard";
 import { useState, useEffect } from "react";
 import Header from "../Components/Header/Header";
 import EventCard2 from "../Components/Eventpage/EventCard2"
+import { Grid } from "@mui/material";
 
 export default function FinalEvent() {
   const [offset] = useState(0);
@@ -35,7 +36,9 @@ export default function FinalEvent() {
     <div>
     <Header activePage='Events'/>
       {data.map((items, index) => (
-        ((index)%2 ===0)?<EventCard
+        ((index)%2 ===0)?
+        
+        <EventCard
             id={items.id}
             image={items.image}
             title={items.title}
