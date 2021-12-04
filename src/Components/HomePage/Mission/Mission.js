@@ -20,12 +20,12 @@ const Mission = () => {
               );
             } else {
               return (
-                  <div className="mission">
-                    <div className="missionImgContainer">
-                      <img src={mission.image} className="missionImg" />
-                    </div>
-                    <i>{mission.description}</i>
+                <div className="mission">
+                  <div className="missionImgContainer">
+                    <img src={mission.image} className="missionImg" />
                   </div>
+                  <i>{mission.description}</i>
+                </div>
               );
             }
           })}
@@ -34,5 +34,4 @@ const Mission = () => {
     </>
   );
 };
-
 export default Mission;
