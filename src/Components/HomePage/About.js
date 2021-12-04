@@ -21,7 +21,7 @@ export default function About() {
                     </p>
                 </div>
                 <div className="borderContainer">
-                    <img src="/Images/About.png" className="aboutImg" />
+                    <img src="/Images/About.png" className="aboutImg" alt="aboutImg"/>
                 </div>
             </div>
         </div>

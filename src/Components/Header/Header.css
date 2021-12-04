@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
 .socialLinks {
   text-decoration: none;
-  color: #0A0E2A;
+  color: #dbdbdb;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   margin-left: 50px;
@@ -10,10 +10,10 @@
   transform: translateY(3px);
 }
 .HeaderSocial {
-  background-color: rgb(60, 247, 251);
+  background-color: #201F45;
   padding: 3px;
   transform: translateY(-10px);
-  border-bottom: 2px solid rgb(60, 247, 251);
+  border-bottom: 2px solid #201F45;
 }
 .navBar {
   transform: translateY(-0px);
