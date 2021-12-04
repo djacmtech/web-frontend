@@ -35,16 +35,10 @@ export default function FinalEvent() {
   return (
     <div>
     <Header activePage='Events'/>
-<<<<<<< HEAD
-      {data.map((items, index) => (
-        ((index)%2 ===0)?
-        
-        <EventCard
-=======
+
       {
         data.map((items, index) => (
         ((index)%2 ===0)?<EventCard
->>>>>>> f29075bb7b0e9d29763b45989aeab5e82406aefa
             id={items.id}
             image={items.image}
             title={items.title}
