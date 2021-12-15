@@ -19,7 +19,7 @@ export default function EventCard(props) {
         </Grid>
         <Grid item md={8} xs={12}>
           <div className="Event-Content">
-            <p className="Content">
+            {/* <p className="Content"> */}
               <div className="event_title">
                 <center className="event_title_center">{props.title}</center>
               </div>
@@ -27,7 +27,7 @@ export default function EventCard(props) {
               {/* {props.about} <br/> */}
               <p className="event_date">{props.date}</p>
               <button className="event_knowmore">KNOW MORE</button>
-            </p>
+            {/* </p> */}
           </div>
         </Grid>
       </Grid>

@@ -45,8 +45,8 @@ body {
 
 .Event-Content {
     background-color: #201E45;
-    width: 130vh;
-    height: 300px;
+    /* width: 130vh;
+    height: 300px; */
     border-radius: 7px;
     color: #F3F2EB;
 }

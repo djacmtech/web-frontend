@@ -11,8 +11,8 @@ const Footer = () => {
       <div
         style={{
           marginBottom: "55px",
-          backgroundColor: "#dbdbdb",
-          color: "#000324",
+          backgroundColor: "#000324",
+          color: "#dbdbdb",
         }}
       >
         <center>
@@ -51,17 +51,17 @@ const Footer = () => {
       >
         <center>
           <Grid container spacing={1}>
-            <Grid item xs>
+            <Grid  style={{backgroundColor:'#000324'}}  item xs>
               <img className='footerAcmIcon' src='https://djacm.co.in/static/images/acm-white-logo.png' alt='acmIcon'/>
             </Grid>
-            <Grid item xs>
+            <Grid  style={{backgroundColor:'#000324'}}  item xs>
               <p>Get involved</p>
               <li>PPT</li>
               <li>BLOGS</li>
               <li>EVENTS</li>
               <li>CONTACT US</li>
             </Grid>
-            <Grid item xs>
+            <Grid  style={{backgroundColor:'#000324'}}  item xs>
               <p>Get in touch</p>
               <IconContext.Provider value={{ size: "1.7rem",className:'iconsFooter' }}>
                 <li>
