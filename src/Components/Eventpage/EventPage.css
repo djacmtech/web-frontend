@@ -2,33 +2,22 @@ body {
     background-color: #0A0E2A;
 }
 
-.Card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-right: 200px;    
-    margin-left: 200px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: #201E45;
-}
-
 .Images {
-    width: 60vh;
-    height: 35vh;
-    margin: 8px;
+    width: 300px;
+    height: 300px;
 }
 
-.Event-Image {
-    width: 63vh;
-    display: flex;
-    justify-content: center;
-    height: 38vh;
-    margin: 3.5vh -20vh 5vh 5vh;
-    z-index: 1;
-    align-items: center;
-    border-radius: 4px;
+/* .MuiGrid-container {
+    width: 80vh;
 }
+
+.MuiGrid-root {
+    height: 40vh;
+}
+
+.MuiGrid-item:hover {
+    overflow: none;
+} */
 
 .Event2-Image {
     background-color: #201E45;
@@ -45,8 +34,6 @@ body {
 
 .Event-Content {
     background-color: #201E45;
-    width: 130vh;
-    height: 300px;
     border-radius: 7px;
     color: #F3F2EB;
 }
@@ -59,12 +46,7 @@ body {
     border-radius: 7px;
 }
 
-.MuiGrid-item {
-    background-color: #201E45;
-}
-
 .Content {
-    margin: 5vh 5vh 10vh 25vh;
     font-size: 18px;
     text-align: justify;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -93,7 +75,6 @@ body {
     background: #BA2808;
     border-radius: 20px;
     color: white;
-    border: none;
     padding: 1%;
     cursor: pointer;
 }
@@ -101,19 +82,14 @@ body {
 .event_title_center{
     font-family: coolvetica;
     font-size: xx-large;
+    color: #3CF7FB;
 }
 
 .event_description{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 17px;
+    color: #F3F2EB;
     line-height: 1.5;
-    margin-bottom: 2%;
-}
-
-.event_img_div{
-    z-index: 1;
-    display: flex;
-    align-items: center;
 }
 
 .event2_img_div{
@@ -124,7 +100,7 @@ body {
 
 .event_date{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     color: rgb(128, 128, 128);
 }
 /**************** Fonts *****************/

@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import image from './DJACMLOGO.png'
 
 // import MenuIcon from '@mui/icons-material/Menu';
 import Container from "@mui/material/Container";
@@ -57,7 +58,7 @@ const NavBar = (activePage) => {
           >
             <img
               width="60"
-              src="https://djacm.co.in/static/images/acm-white-logo.png"
+              src={image}
               alt="acmIcon"
             />
           </Typography>
@@ -201,12 +202,12 @@ const NavBar = (activePage) => {
           >
             <img
               width="60"
-              src="https://djacm.co.in/static/images/acm-white-logo.png"
+              src={image}
               alt="acmIcon"
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <span style={{ transform: "translateX(80%)", padding: '0 30px' }}>
+            <span style={{ transform: "translateX(70%)", padding: '0 30px' }}>
               <Link disabled={value.home} className="headerLinks" to="/">
                 <button disabled={value.home} className="btn">
                   Home
