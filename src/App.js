@@ -6,6 +6,8 @@ import HomePage from "./Components/HomePage/HomePage";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { ContactUS } from "./Components/contactUS/ContactUS";
+import Committee from "./Components/Committee/Committee";
+
 function App() {
   return (
     <Router>
@@ -15,6 +17,7 @@ function App() {
           <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/Events" element={<FinalEvent />}></Route>
           <Route path="/contactus" element={<ContactUS />}></Route>
+          <Route path="/Committee" element={<Committee />}></Route>
         </Routes>
         <Footer />
       </div>
