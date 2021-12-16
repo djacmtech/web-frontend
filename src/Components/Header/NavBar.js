@@ -206,7 +206,7 @@ const NavBar = (activePage) => {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <span style={{ transform: "translateX(80%)",padding:'0 30px' }}>
+            <span style={{ transform: "translateX(80%)", padding: '0 30px' }}>
               <Link disabled={value.home} className="headerLinks" to="/">
                 <button disabled={value.home} className="btn">
                   Home

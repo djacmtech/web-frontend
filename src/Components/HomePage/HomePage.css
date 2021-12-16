@@ -41,7 +41,7 @@ h1, h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  position: relative;
 }
 
 .landingScreenImg img{
@@ -50,25 +50,17 @@ h1, h2{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
   z-index: -10;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
 .landingOverlay{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.411);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: -1;
+  background: rgb(0, 0, 0);
+  opacity: .6;
+  position: absolute;
+  /* z-index: ; */
 }
 
 .landingTitleWrapper {
@@ -152,32 +144,22 @@ h1, h2{
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  column-gap: 40px;
-  margin: 100px;
-  margin-top: -50px;
-  font-size: 1rem;
 }
 
 .aboutUsContainer h2{
   font-size: 1.5rem;
+  text-align: left;
 }
 
 
 
 .aboutImg{
-  width: 300px;
-  height: 200px;
+  width: 110%;
+  height: 100%;
   object-fit: cover;
   z-index: 1;
 }
 
-.borderContainer{
-  border: 0.2rem solid rgb(60, 247, 251);
-  width: 32rem;
-  height: 11.5rem;
-  padding-top: 0.5rem;
-  padding-right: 0.5rem;
-}
 
 
 /* ********************** Our Vision *********************** */
@@ -207,12 +189,16 @@ h1, h2{
 .ourMissionContainer{
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: center;
+  justify-self: center;
   align-items: center;
-  column-gap: 20px;
   row-gap: 20px;
-
 }
+
+.ourMission h2{
+  font-size: 2rem;
+  font-family: coolvetica;
+}
+
 .mission{
   width: 294px;
   height: 160px;
@@ -222,6 +208,7 @@ h1, h2{
   background-color: #201F45;
   border-radius: 8px;
   padding: 20px;
+  margin-right: 0px;
 }
 
 .mission:hover{
@@ -310,23 +297,110 @@ height: 50px;
   }
 }
 
-@media(max-width: 400px) {
+@media screen and (max-width: 400px) {
   .landingScreenImg{
-    transform: scaleY(0.8);
+    height: 50%;
   }
   .landingScreenImg img{
-    transform: scaleY(0.8);
- }
+    height: 50%;
+  }
   .landingTitleWrapper {
-    transform: scaleY(0.8);
+    height: 50%;
   }
   .aboutUsContainer{
-    flex-direction: column;
+    height: 50%;
   }
 }
 
 @media screen and (max-width: 1062px) {
   .ourMissionContainer{
     grid-template-columns: auto auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,100,400');
+
+.landImg {
+  font-family: 'Raleway', sans-serif;
+  object-fit: cover;
+  background: rgb(0, 0, 0) url('https://drive.google.com/uc?export=download&id=1596ddPDlY3R-ODVis_zWdgGiQ4CpX1Cj') no-repeat center center / cover;
+  color: #ccc;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+.typewriterACM{
+  padding-top: 15%;
+}
+
+h1, h2 {
+  font-weight: 200;
+  margin: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: rgb(180, 180, 180);
+}
+
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
+}
+
+@media(min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 800px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
