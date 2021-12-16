@@ -32,7 +32,7 @@ export default function FinalEvent() {
   }, [offset]);
 
   return (
-    <div>
+    <div style={{height:'max-content'}}>
     <Header activePage='Events'/>
 
       {
