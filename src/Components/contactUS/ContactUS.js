@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import { Button } from "@mui/material";
 import {BsTelephoneForwardFill,BsArrowDown} from "react-icons/bs"
 import {HiOutlineMail} from 'react-icons/hi'
-import "./contactUs.css";
+import "./contactUS.css";
 
 export const ContactUS = () => {
   return (
