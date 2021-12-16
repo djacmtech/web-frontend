@@ -24,7 +24,7 @@ export default function EventCard(props) {
               <p className="event_description">{props.description}</p>
               {/* {props.about} <br/> */}
               <p className="event_date">{props.date}</p>
-              <button className="event_knowmore">KNOW MORE</button>
+              {/* <button className="event_knowmore">KNOW MORE</button> */}
           </Item>
         </Grid>
       </Grid>
