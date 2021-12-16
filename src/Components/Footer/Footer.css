@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
 .footerSection {
-  background-color: #dbdbdb;
+  background-color: #000324;
   height: 600px;
   transform: scaleY(.95);
   font-family: "Roboto", sans-serif;
@@ -26,10 +26,10 @@
 }
 .footerSection h5 {
   letter-spacing: 3px;
-  color: #0d1144dc;
+  color: grey;
 }
 .footerSection h6 {
-  color: #0d1144dc;
+  color: grey;
   text-transform: initial;
   word-spacing: 2px;
   letter-spacing: 0.7px;

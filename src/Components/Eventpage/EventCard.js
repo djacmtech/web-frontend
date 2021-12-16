@@ -28,6 +28,6 @@ export default function EventCard(props) {
           </Item>
         </Grid>
       </Grid>
-  );
+);
 }
 

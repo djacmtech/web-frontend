@@ -3,6 +3,7 @@ import React from "react";
 import { IconContext } from "react-icons";
 import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 import {MdOutlineEmail} from 'react-icons/md'
+import image from '../Header/DJACMLOGO.png'
 import "../Footer/Footer.css";
 const Footer = () => {
   return (
@@ -11,8 +12,8 @@ const Footer = () => {
       <div
         style={{
           marginBottom: "55px",
-          backgroundColor: "#dbdbdb",
-          color: "#000324",
+          backgroundColor: "#000324",
+          color: "#dbdbdb",
         }}
       >
         <center>
@@ -51,17 +52,17 @@ const Footer = () => {
       >
         <center>
           <Grid container spacing={1}>
-            <Grid item xs>
-              <img className='footerAcmIcon' src='https://djacm.co.in/static/images/acm-white-logo.png' alt='acmIcon'/>
+            <Grid  style={{backgroundColor:'#000324'}}  item sm={4} xs={12}>
+              <img className='footerAcmIcon' src={image} alt='acmIcon'/>
             </Grid>
-            <Grid item xs>
+            <Grid  style={{backgroundColor:'#000324'}}  item sm={4} xs={12}>
               <p>Get involved</p>
               <li>PPT</li>
               <li>BLOGS</li>
               <li>EVENTS</li>
               <li>CONTACT US</li>
             </Grid>
-            <Grid item xs>
+            <Grid  style={{backgroundColor:'#000324'}}  item sm={4} xs={12}>
               <p>Get in touch</p>
               <IconContext.Provider value={{ size: "1.7rem",className:'iconsFooter' }}>
                 <li>

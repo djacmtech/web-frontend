@@ -37,6 +37,11 @@ h1, h2{
   letter-spacing: 0.1ch;
 }
 
+.landingScreen{
+  background-image: url('../Images/About.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .landingScreenImg{
   display: flex;
   justify-content: center;
@@ -205,20 +210,21 @@ h1, h2{
   color: white;
 }
 .ourMissionContainer{
-  display: grid;
-  grid-template-columns: auto auto auto;
+  /* display: grid; */
+  /* grid-template-columns: auto auto auto; */
   justify-content: center;
   align-items: center;
   column-gap: 20px;
   row-gap: 20px;
-
+  padding-top: 2%;
 }
 .mission{
   width: 294px;
   height: 160px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  /* display: flex;
+  align-items: flex-start; */
+  /* flex-direction: column; */
+  justify-content: center;
   background-color: #201F45;
   border-radius: 8px;
   padding: 20px;
@@ -243,6 +249,11 @@ h1, h2{
 .missionImg{
   width: 54px;
 height: 54px;
+}
+
+.missionDes{
+  justify-content: center;
+  align-items: center;
 }
 
 /* ************************ What We Do ************************** */
