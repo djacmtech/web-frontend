@@ -1,6 +1,6 @@
 import OurEvents from "./Event";
 import "./HomePage.css"
-
+import image from '../Images/About.png'
 export default function Landing() {
   return (
   <>
@@ -12,7 +12,7 @@ export default function Landing() {
         </h1>
         <h4>Dwarkadas J.Sanghvi College of Engineering</h4>
     </div>
-      <img src="/Images/About.png" className='landingImage' alt="landingImg"/>
+      {/* <img src={image} className='landingImage' alt="landingImg"/> */}
         <div class="landingTitleWrapper">
         
     </div>

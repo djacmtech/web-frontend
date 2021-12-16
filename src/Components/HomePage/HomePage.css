@@ -37,6 +37,11 @@ h1, h2{
   letter-spacing: 0.1ch;
 }
 
+.landingScreen{
+  background-image: url('../Images/About.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .landingScreenImg{
   display: flex;
   justify-content: center;
