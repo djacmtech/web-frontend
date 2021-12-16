@@ -206,7 +206,7 @@ h1, h2{
 }
 .ourMissionContainer{
   /* display: grid; */
-  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
   column-gap: 20px;
