@@ -1,36 +1,33 @@
 import "./EventPage.css";
-import { Grid } from "@mui/material";
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 
 export default function EventCard2(props) {
   const baseUrl = "http://djacmdev.pythonanywhere.com/";
+
+  const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
+
   return (
-    <div className="Card">
-      <Grid container spacing={0}>
-        <Grid item md={8} xs={12}>
-          <div className="Event2-Content">
-            <p className="Content2">
-              <div className="event_title">
-                <center className="event_title_center">{props.title}</center>
-              </div>
+      <Grid container justifyContent="center" alignItems="center" spacing={2} style={{padding:'100px'}} >
+        <Grid item xs={12} sm={12} md={6}>
+          <Item style={{backgroundColor:'#0A0E2A'}}>
+              <p className="event_title_center">{props.title}</p>
               <p className="event_description">{props.description}</p>
               {/* {props.about} <br/> */}
               <p className="event_date">{props.date}</p>
-              <button className="event_knowmore">KNOW MORE</button>
-            </p>
-          </div>
+              {/* <button className="event_knowmore">KNOW MORE</button> */}
+          </Item>
         </Grid>
-        <Grid item md xs={12}>
-          <div className="event2_img_div">
-            <div className="Event2-Image" key={props.id}>
-              <img
-                src={baseUrl.concat(props.image)}
-                alt="Event name"
-                className="Images"
-              />
-            </div>
-          </div>
+        <Grid item xs={12} sm={12} md={6} >
+            <center> <img src={baseUrl.concat(props.image)} alt="Event name" className="Images"/> </center>
+            {/* <Item style={{backgroundColor:'#201E45'}}>  </Item>   */}
         </Grid>
-      </Grid>
-    </div>
+    </Grid>
   );
 }

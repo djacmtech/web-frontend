@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import image from './DJACMLOGO.png'
 
 // import MenuIcon from '@mui/icons-material/Menu';
 import Container from "@mui/material/Container";
@@ -57,7 +58,7 @@ const NavBar = (activePage) => {
           >
             <img
               width="60"
-              src="https://djacm.co.in/static/images/acm-white-logo.png"
+              src={image}
               alt="acmIcon"
             />
           </Typography>
@@ -201,7 +202,7 @@ const NavBar = (activePage) => {
           >
             <img
               width="60"
-              src="https://djacm.co.in/static/images/acm-white-logo.png"
+              src={image}
               alt="acmIcon"
             />
           </Typography>
