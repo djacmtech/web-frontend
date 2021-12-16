@@ -7,15 +7,15 @@ const HeadSocial = () => {
     <div className="HeaderSocial">
     <IconContext.Provider value={{size:'1.2rem',className:'iconPosition'}}>
 
-      <a href="#I" className="socialLinks">
+      <a href="https://www.instagram.com/djsanghvi_acm/?hl=en" className="socialLinks">
         <BsInstagram />
         &nbsp; djsanghvi_acm
       </a>
-      <a href="#F" className="socialLinks">
+      <a href="https://www.facebook.com/djscoe.acm.5" className="socialLinks">
         <BsFacebook />
         &nbsp; djscoe.acm
       </a>
-      <a href="#L" className="socialLinks">
+      <a href="https://in.linkedin.com/company/dj-sanghvi-acm" className="socialLinks">
         <BsLinkedin />
         &nbsp; DJ Sanghvi ACM
       </a>

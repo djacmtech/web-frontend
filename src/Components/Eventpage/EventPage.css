@@ -7,7 +7,7 @@ body {
     height: 300px;
 }
 
-.MuiGrid-container {
+/* .MuiGrid-container {
     width: 80vh;
 }
 
@@ -17,7 +17,7 @@ body {
 
 .MuiGrid-item:hover {
     overflow: none;
-}
+} */
 
 .Event2-Image {
     background-color: #201E45;

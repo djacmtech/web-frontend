@@ -2,8 +2,8 @@ import { Button, Grid } from "@mui/material";
 import React from "react";
 import { IconContext } from "react-icons";
 import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
-import {MdOutlineEmail} from 'react-icons/md'
-import image from '../Header/DJACMLOGO.png'
+import { MdOutlineEmail } from "react-icons/md";
+import image from "../Header/DJACMLOGO.png";
 import "../Footer/Footer.css";
 const Footer = () => {
   return (
@@ -18,8 +18,12 @@ const Footer = () => {
       >
         <center>
           <h5>NEWSLETTER</h5>
-          <h2>Get new offer's on your email <span style={{position:'relative',top:'5px'}}><MdOutlineEmail/>
-          </span></h2>
+          <h2>
+            Get new offer's on your email{" "}
+            <span style={{ position: "relative", top: "5px" }}>
+              <MdOutlineEmail />
+            </span>
+          </h2>
           <h6>Put your email address and get started</h6>
           <input
             type="text"
@@ -29,7 +33,8 @@ const Footer = () => {
           <Button
             variant="contained"
             style={{
-              backgroundColor: "#000324",
+              color: "#000324",
+              backgroundColor: "white",
               borderRadius: "40px",
               width: "120px",
               height: "50px",
@@ -47,32 +52,40 @@ const Footer = () => {
           paddingTop: "20px",
           backgroundColor: "#000324",
           color: "white",
-          transform:'scale(1.02)'
+          transform: "scale(1.02)",
         }}
       >
         <center>
           <Grid container spacing={1}>
-            <Grid  style={{backgroundColor:'#000324'}}  item sm={4} xs={12}>
-              <img className='footerAcmIcon' src={image} alt='acmIcon'/>
+            <Grid style={{ backgroundColor: "#000324" }} item sm={4} xs={12}>
+              <img className="footerAcmIcon" src={image} alt="acmIcon" />
             </Grid>
-            <Grid  style={{backgroundColor:'#000324'}}  item sm={4} xs={12}>
+            <Grid style={{ backgroundColor: "#000324" }} item sm={4} xs={12}>
               <p>Get involved</p>
               <li>PPT</li>
               <li>BLOGS</li>
               <li>EVENTS</li>
               <li>CONTACT US</li>
             </Grid>
-            <Grid  style={{backgroundColor:'#000324'}}  item sm={4} xs={12}>
+            <Grid style={{ backgroundColor: "#000324" }} item sm={4} xs={12}>
               <p>Get in touch</p>
-              <IconContext.Provider value={{ size: "1.7rem",className:'iconsFooter' }}>
-                <li>
-                  <BsInstagram /> 
-                {/* </li>
+              <IconContext.Provider
+                value={{ size: "1.7rem", className: "iconsFooter" }}
+              >
+                <li className="footerSocial">
+                  <a href="https://www.instagram.com/djsanghvi_acm/?hl=en">
+                    <BsInstagram />
+                  </a>
+                  {/* </li>
                 <li> */}
-                  <BsFacebook />
-                {/* </li>
+                  <a href="https://www.facebook.com/djscoe.acm.5">
+                    <BsFacebook />
+                  </a>
+                  {/* </li>
                 <li> */}
-                  <BsLinkedin />
+                  <a href="https://in.linkedin.com/company/dj-sanghvi-acm">
+                    <BsLinkedin />
+                  </a>
                 </li>
               </IconContext.Provider>
             </Grid>

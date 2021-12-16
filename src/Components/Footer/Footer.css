@@ -59,3 +59,8 @@ padding: 5px 0px;
 .iconsFooter{
   margin: 8px;
 }
+
+.footerSocial a{
+color: #dbdbdbe1;
+cursor: pointer;
+}
