@@ -54,11 +54,11 @@ export default function Landing() {
     <>
       <div className="landingScreen">
         <div className="landImg">
-          <div class="container">
-            <h1 className="typewriterACM">
+          <div class="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+            <h1 className="typewriterACM" style={{ marginTop: '10%', padding: '0' }}>
               <span class="txt-type" data-wait="3000" data-words='["Association of Computer Machinery"]'></span>
             </h1>
-            <h2>Dwarkadas J Sanghvi College of Engineering</h2>
+            <h3 style={{ margin: '0', padding: '0' }}>Dwarkadas J Sanghvi College of Engineering</h3>
           </div>
         </div>
         <div className="events">
