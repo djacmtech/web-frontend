@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+h1 {
+    color: #3cf7fb;
+    padding: 20px;
+  }
+
+h2{
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+}  
+
+.comCard{
+  background-color: #0A0E2A !important;
+  box-shadow: 5px 5px 6px 7px #3cf7fb !important;
+  border-top: red !important;
+}
+
+.comName{
+  color: white !important;
+}
+
+.comPosition{
+  color: red !important;
+  font-style: italic !important;
+}
+
+.comCard:hover {
+  animation: pulse 1s;
+}
