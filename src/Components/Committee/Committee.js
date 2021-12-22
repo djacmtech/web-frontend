@@ -13,9 +13,9 @@ const Committee = () => {
     <div style={{ backgroundColor: "#000324", paddingBottom: "30px" }}>
       <Header activePage="Committee" />
       <center>
-        <h1>MEET OUR TEAM</h1>
-        <h2>"Alone we can do so little, together we can do so much."</h2>
-        <h1>Faculty</h1>
+        <div className="team">MEET OUR TEAM</div>
+        <div className="quote">"Alone we can do so little, together we can do so much."</div>
+        <div className="faculty">Faculty</div>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} style={{paddingTop:20}}>
         {OurCommittee.map((committee) => (
           <Grid item xs={4} sm={4} md={4}>
