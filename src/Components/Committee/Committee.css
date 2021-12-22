@@ -13,13 +13,18 @@ h2{
 }  
 
 .comCard{
-  background-color: #0A0E2A !important;
-  box-shadow: 5px 5px 6px 7px #3cf7fb !important;
-  border-top: red !important;
+  background-color: #171636 !important;
+  box-shadow: 2px 2px 4px 0px #3cf7fb !important;
+  border-radius: 25px !important;
+  width: 320px !important;
+  padding-top: 40px;
+  margin: 28px;
 }
 
 .comName{
   color: white !important;
+  font-size: 18px !important;
+  padding-top: 16px;
 }
 
 .comPosition{
@@ -29,4 +34,11 @@ h2{
 
 .comCard:hover {
   animation: pulse 1s;
+}
+
+.comImg{
+  height: 50%;
+  border-radius: 50% !important;
+  width: 50% !important;
+  box-shadow: 0px 0px 8px #3cf7fb;
 }

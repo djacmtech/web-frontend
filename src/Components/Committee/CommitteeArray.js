@@ -8,14 +8,14 @@ const OurCommittee = [
     {
         id:2,
         image:"../Images/Aruna.jpeg",
-        name:"Dr. Aruna Gawde",
-        position:"ACM Convenor",
+        name:"Prof. Aruna Gawde",
+        position:"ACM Co-ordinator",
     },
     {
         id:3,
         image:"../Images/Pankaj.jpeg",
-        name:"Dr. Prof. Pankaj Sonawane",
-        position:"ACM Convenor",
+        name:"Prof. Pankaj Sonawane",
+        position:"ACM Co-ordinator",
     },
 ];
 
