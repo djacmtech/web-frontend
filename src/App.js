@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { ContactUS } from "./Components/contactUS/ContactUS";
 import Committee from "./Components/Committee/Committee";
+import MainEvent from "./Components/Eventpage/MainEvent";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Events" element={<FinalEvent />}></Route>
           <Route path="/contactus" element={<ContactUS />}></Route>
           <Route path="/Committee" element={<Committee />}></Route>
+          <Route path={`/Events/:mainEvent`} element={<MainEvent/>}/>
         </Routes>
         <Footer />
       </div>

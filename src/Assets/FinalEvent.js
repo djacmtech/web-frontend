@@ -2,6 +2,7 @@ import EventCard from "../Components/Eventpage/EventCard";
 import { useState, useEffect } from "react";
 import Header from "../Components/Header/Header";
 import EventCard2 from "../Components/Eventpage/EventCard2"
+import { useLocation } from 'react-router-dom';
 
 export default function FinalEvent() {
   const [offset] = useState(0);
@@ -30,7 +31,13 @@ export default function FinalEvent() {
       .catch((error) => console.log("error", error));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset]);
-
+  const routePath = useLocation();
+    const onTop = () => {
+      window.scrollTo(0, 0);
+    }
+    useEffect(() => {
+      onTop()
+    }, [routePath]);
   return (
     <div style={{height:'max-content'}}>
     <Header activePage='Events'/>
