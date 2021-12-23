@@ -16,7 +16,7 @@ const Committee = () => {
         <div className="team">MEET OUR TEAM</div>
         <div className="quote">"Alone we can do so little, together we can do so much."</div>
         <div className="faculty">Faculty</div>
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} style={{paddingTop:20}}>
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {OurCommittee.map((committee) => (
           <Grid item xs={4} sm={4} md={4}>
             <Card sx={{ maxWidth: 330 }} className="comCard" >
@@ -39,7 +39,7 @@ const Committee = () => {
           </Grid>
           ))}
         </Grid>
-        <h1>Core</h1>
+        <div className="faculty">Core</div>
         <Card sx={{ maxWidth: 330 }} className="comCard">
               <CardMedia
                 component="img"

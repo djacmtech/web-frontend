@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import WhatWeDo_array from "./WhatWeDo_array";
-import { Grid, Box } from "@mui/material";
-
+import { Grid } from "@mui/material";
 
 const WhatWeDo = () => {
   return (
