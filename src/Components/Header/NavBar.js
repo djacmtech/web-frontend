@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import image from './DJACMLOGO.png'
+import image from "./DJACMLOGO.png";
 
 // import MenuIcon from '@mui/icons-material/Menu';
 import Container from "@mui/material/Container";
@@ -43,12 +43,12 @@ const NavBar = (activePage) => {
     <AppBar
       style={{
         backgroundColor: "#0A0E2A",
-        transform: "translateY(-12px)",
+        // transform: "translateY(-12px)",
         color: "#dbdbdb",
       }}
       position="sticky"
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="l">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -56,11 +56,7 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img
-              width="60"
-              src={image}
-              alt="acmIcon"
-            />
+            <img width="60" src={image} alt="acmIcon" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -96,9 +92,7 @@ const NavBar = (activePage) => {
                 <Link disabled={value.home} className="headerLinks" to="/">
                   <MenuItem
                     style={{
-                      backgroundColor: "#000324",
-                      color: "white",
-                      borderBottom: "3px solid rgb(60, 247, 251)",
+                   
                     }}
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
@@ -112,11 +106,7 @@ const NavBar = (activePage) => {
                   to="/Events"
                 >
                   <MenuItem
-                    style={{
-                      backgroundColor: "#000324",
-                      color: "white",
-                      borderBottom: "3px solid rgb(60, 247, 251)",
-                    }}
+                  
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
                   >
@@ -129,11 +119,7 @@ const NavBar = (activePage) => {
                   to="/Committee"
                 >
                   <MenuItem
-                    style={{
-                      backgroundColor: "#000324",
-                      color: "white",
-                      borderBottom: "3px solid rgb(60, 247, 251)",
-                    }}
+                  
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
                   >
@@ -180,11 +166,7 @@ const NavBar = (activePage) => {
                   to="/ContactUs"
                 >
                   <MenuItem
-                    style={{
-                      backgroundColor: "#000324",
-                      color: "white",
-                      borderBottom: "3px solid rgb(60, 247, 251)",
-                    }}
+                    
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
                   >
@@ -200,14 +182,10 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img
-              width="60"
-              src={image}
-              alt="acmIcon"
-            />
+            <img width="60" src={image} alt="acmIcon" />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <span style={{ transform: "translateX(70%)", padding: '0 30px' }}>
+          <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>
+            <span className="navLinks">
               <Link disabled={value.home} className="headerLinks" to="/">
                 <button disabled={value.home} className="btn">
                   Home
