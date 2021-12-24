@@ -1,34 +1,45 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import "./EventPage.css";
-
+import axios from "axios";
 const MainEvent = () => {
+  const [data, setData] = useState([]);
+  // to scroll to top of page
+  const { mainEvent } = useParams();
   const routePath = useLocation();
   const onTop = () => {
     window.scrollTo(0, 0);
   };
   useEffect(() => {
     onTop();
+    axios
+      .get("http://137.135.78.87:8080/api/events/")
+      .then((res) => {
+        console.log(res.data);
+        res.data.map((x) => {
+          if (x.title == { mainEvent }.mainEvent) {
+            setData(x);
+          }
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   }, [routePath]);
+
+  console.log(data);
   return (
     <div>
       <Header />
       <center>
         <div className="mainEvent">
-          <h1>A flair to remember</h1>
+          <h1>{data.title}</h1>
           <h2>What is this event about?</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p>{data.about}</p>
           <div style={{ borderTop: "2px grey solid", width: "45%" }}></div>
         </div>
         <Grid container spacing={1} style={{ padding: "30px 10%" }}>
@@ -81,29 +92,13 @@ const MainEvent = () => {
           <h2>When is it happening?</h2>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p>{data.when}</p>
         </Grid>
         <Grid item sm={6} xs={12}>
           <h2>What's in it for you?</h2>
         </Grid>
         <Grid item sm={6} xs={12}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p>{data.you}</p>
         </Grid>
       </Grid>
       <Grid container spacing={1} style={{ padding: "5px 10%" }}>
