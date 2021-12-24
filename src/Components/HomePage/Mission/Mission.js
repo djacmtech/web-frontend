@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import OurMission from "./Mission_array";
 import "../HomePage.css";
 import { Grid, Box } from "@mui/material";
