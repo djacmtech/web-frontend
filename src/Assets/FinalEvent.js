@@ -25,7 +25,7 @@ export default function FinalEvent() {
   };
 
   useEffect(() => {
-    fetch("https://djacmdev.pythonanywhere.com/api/events/", requestOptions)
+    fetch("http://137.135.78.87:8080/api/events/", requestOptions)
       .then((response) => response.json())
       .then((result) => setData(result))
       .catch((error) => console.log("error", error));

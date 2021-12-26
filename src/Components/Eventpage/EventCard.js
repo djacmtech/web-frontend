@@ -27,7 +27,8 @@ export default function EventCard(props) {
           <img
             src={baseUrl.concat(props.image)}
             alt="Event name"
-            className="Images"
+            width="70%"
+            // className="Images"
           />{" "}
         </Item>
       </Grid>
