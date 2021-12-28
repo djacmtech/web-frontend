@@ -48,7 +48,9 @@ export default function EventCard2(props) {
           <img
             src={baseUrl.concat(props.image)}
             alt="Event name"
-            className="Images"
+            width="55%"
+            height="500px"
+            // className="Images"
           />{" "}
         </center>
         {/* <Item style={{backgroundColor:'#201E45'}}>  </Item>   */}
