@@ -23,7 +23,7 @@ const MainEvent = () => {
       .then((res) => {
         // console.log(res.data);
         res.data.map((x) => {
-          if (x.title == { mainEvent }.mainEvent) {
+          if (x.title === { mainEvent }.mainEvent) {
             setData(x);
           }
         });

@@ -28,15 +28,7 @@
 .navBar span button:hover {
   border-bottom: 2px solid rgb(60, 247, 251);
 }
-/* .headerLinks {
-  text-decoration: none;
-  color: #dbdbdb;
 
-}
-.headerLinks:active,
-.headerLinks:hover {
-  color: rgb(60, 247, 251);
-} */
 .btn {
   color: #dbdbdb;
   background-color: #0A0E2A;
@@ -71,6 +63,7 @@ border-bottom: 1.3px solid rgb(60, 247, 251);
   left: 60%;
   padding-right: 40px;
 }
+
 @media (max-width:610px){
   .HeaderSocial{
     font-size: 10px;
