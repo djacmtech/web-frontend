@@ -1,14 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import { Grid } from "@mui/material";
 import { Button } from "@mui/material";
 import { BsTelephoneForwardFill, BsArrowDown } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
-
+import axios from "axios";
 import { Formik } from "formik";
 import "./contactUs.css";
 
 export const ContactUS = () => {
+  const [value, setValue] = useState({
+    email: "",
+    fname: "",
+    lname: "",
+    subject: "",
+    message: "",
+  });
+  const handleChanges = (event) => {
+    setValue({
+      ...value,
+      [event.target.name]: event.target.value,
+    });
+  };
+  var data = JSON.stringify({
+    fname: `${value.fname}`,
+    lname: `${value.lname}`,
+    email: `${value.email}`,
+    subject: `${value.subject}`,
+    message: `${value.message}`,
+  });
+
+  var config = {
+    method: "post",
+    url: "http://137.135.78.87:8080/api/contact/",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+
   return (
     <div style={{ backgroundColor: "#000324", paddingBottom: "30px" }}>
       <Header activePage="ContactUs" />
@@ -99,7 +129,10 @@ export const ContactUS = () => {
                         <label for="fname">First Name:</label>
                         <input
                           value={values.fname}
-                          onChange={handleChange}
+                          onChange={(event) => {
+                            handleChange(event);
+                            handleChanges(event);
+                          }}
                           onBlur={handleBlur}
                           name="fname"
                           id="fname"
@@ -118,7 +151,10 @@ export const ContactUS = () => {
                           value={values.lname}
                           name="lname"
                           id="lname"
-                          onChange={handleChange}
+                          onChange={(event) => {
+                            handleChange(event);
+                            handleChanges(event);
+                          }}
                           onBlur={handleBlur}
                         ></input>
                         {errors.lname && touched.lname && errors.lname}
@@ -135,7 +171,10 @@ export const ContactUS = () => {
                           value={values.email}
                           type="email"
                           name="email"
-                          onChange={handleChange}
+                          onChange={(event) => {
+                            handleChange(event);
+                            handleChanges(event);
+                          }}
                           onBlur={handleBlur}
                         ></input>
                         {errors.email && touched.email && errors.email}
@@ -151,7 +190,10 @@ export const ContactUS = () => {
                           value={values.subject}
                           id="subject"
                           name="subject"
-                          onChange={handleChange}
+                          onChange={(event) => {
+                            handleChange(event);
+                            handleChanges(event);
+                          }}
                           onBlur={handleBlur}
                         ></input>
                         {errors.subject && touched.subject && errors.subject}
@@ -160,9 +202,13 @@ export const ContactUS = () => {
                         <label for="message">Message:</label>
                         <input
                           value={values.message}
+                          onChange={(event) => {
+                            handleChange(event);
+                            handleChanges(event);
+                          }}
                           id="message"
                           name="message"
-                          onChange={handleChange}
+                          // onChange={handleChange}
                           onBlur={handleBlur}
                         ></input>
                         {errors.message && touched.message && errors.message}
@@ -180,6 +226,16 @@ export const ContactUS = () => {
                       fontSize: "1.2rem",
                     }}
                     variant="contained"
+                    onClick={() => {
+                      axios(config)
+                        .then(function (response) {
+                          console.log(JSON.stringify(response.data));
+                          console.log(JSON.stringify(response.status));
+                        })
+                        .catch(function (error) {
+                          console.log(error);
+                        });
+                    }}
                   >
                     Submit
                   </Button>

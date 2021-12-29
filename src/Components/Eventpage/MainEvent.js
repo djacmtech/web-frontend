@@ -8,9 +8,11 @@ import "./EventPage.css";
 import axios from "axios";
 const MainEvent = () => {
   const [data, setData] = useState([]);
+  const [images, setImage] = useState([]);
   // to scroll to top of page
   const { mainEvent } = useParams();
   const routePath = useLocation();
+  const baseUrl = "http://137.135.78.87:8080/media";
   const onTop = () => {
     window.scrollTo(0, 0);
   };
@@ -19,7 +21,7 @@ const MainEvent = () => {
     axios
       .get("http://137.135.78.87:8080/api/events/")
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         res.data.map((x) => {
           if (x.title == { mainEvent }.mainEvent) {
             setData(x);
@@ -29,8 +31,27 @@ const MainEvent = () => {
       .catch((e) => {
         console.log(e);
       });
-  }, [routePath]);
 
+    axios
+      .get("http://137.135.78.87:8080/api/photos/")
+      .then((res) => {
+        console.log(res.data);
+        res.data.map((x) => {
+          if (x.event === data.id) {
+            console.log(x.pic);
+            // setImage(x.pic);
+            setImage((prev) => {
+              return [...prev, x.pic];
+            });
+          }
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, [routePath, mainEvent, data.id]);
+
+  console.log(images);
   console.log(data);
   return (
     <div>
@@ -46,7 +67,11 @@ const MainEvent = () => {
           <Grid item sm={6}>
             <img
               className="MainImg2"
-              src="https://picsum.photos/seed/picsum/200/"
+              src={baseUrl.concat(images[1])}
+              // src={
+              //   "http://137.135.78.87:8080/media/images/images/events/ACM%20101/WhatsApp_Image_2021-02-12_at_2.46.52_PM_yqwkLUU.jpeg"
+              // }
+              // src="https://picsum.photos/seed/picsum/200/"
               alt="eventImg"
             ></img>
           </Grid>
@@ -55,14 +80,16 @@ const MainEvent = () => {
               <Grid item xs={12}>
                 <img
                   className="MainImg"
-                  src="https://picsum.photos/seed/picsum/200/"
+                  src={baseUrl.concat(images[4])}
+                  // src="https://picsum.photos/seed/picsum/200/"
                   alt="eventImg"
                 ></img>
               </Grid>
               <Grid item xs={6}>
                 <img
                   className="MainImg"
-                  src="https://picsum.photos/seed/picsum/200/"
+                  src={baseUrl.concat(images[2])}
+                  // src="https://picsum.photos/seed/picsum/200/"
                   alt="eventImg"
                 ></img>
               </Grid>
@@ -70,7 +97,8 @@ const MainEvent = () => {
                 <img
                   className="MainImg"
                   style={{ opacity: ".2" }}
-                  src="https://picsum.photos/seed/picsum/200/"
+                  src={baseUrl.concat(images[3])}
+                  // src="https://picsum.photos/seed/picsum/200/"
                   alt="eventImg"
                 ></img>
                 <div
@@ -107,21 +135,24 @@ const MainEvent = () => {
             <Grid item xs={12}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl.concat(images[4])}
+                // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl.concat(images[5])}
+                // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl.concat(images[6])}
+                // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
             </Grid>
@@ -131,7 +162,8 @@ const MainEvent = () => {
         <Grid item sm={6}>
           <img
             className="MainImg2"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl.concat(images[7])}
+            // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
         </Grid>
@@ -141,21 +173,24 @@ const MainEvent = () => {
           {" "}
           <img
             className="MainImg"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl.concat(images[2])}
+            // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
         </Grid>
         <Grid item sm={6} xs={12}>
           <img
             className="MainImg"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl.concat(images[3])}
+            // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
         </Grid>
         <Grid item sm={6} xs={12}>
           <img
             className="MainImg"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl.concat(images[1])}
+            // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
         </Grid>
@@ -164,7 +199,8 @@ const MainEvent = () => {
         <Grid item sm={6}>
           <img
             className="MainImg2"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl.concat(images[4])}
+            // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
         </Grid>
@@ -173,21 +209,24 @@ const MainEvent = () => {
             <Grid item xs={12}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl.concat(images[5])}
+                // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl.concat(images[3])}
+                // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl.concat(images[1])}
+                // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
             </Grid>
