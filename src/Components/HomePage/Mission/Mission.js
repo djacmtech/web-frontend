@@ -15,7 +15,7 @@ const Mission = () => {
                 <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexDirection: 'column', backgroundColor: '#201F45', padding: '5%', height: '150px', borderRadius: '4px' }}>
                   <Box sx={{ width: '100%' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column', backgroundColor: 'white', width: '54px', height: '54px', borderRadius: '4px', padding: '2px' }}>
-                      <img src={mission.image} style={{ width: '54px', height: '54px' }} />
+                      <img src={mission.image} style={{ width: '54px', height: '54px' }} alt="mission"/>
                     </Box>
                   </Box>
                   <i>{mission.description}</i>

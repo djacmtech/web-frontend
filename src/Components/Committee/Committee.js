@@ -77,7 +77,7 @@ const Committee = () => {
         </Grid>
         <div className="faculty">Core</div>
         {committee.map((props) => {
-          if (props.position == 1) {
+          if (props.position === 1) {
             return (
               <Card
                 sx={{ maxWidth: 330 }}

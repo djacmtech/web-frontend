@@ -15,7 +15,7 @@ const WhatWeDo = () => {
                   <Grid item md={3} xs={12} sm={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <div className="work">
                       <div className="workImgContainer">
-                        <img src={work.image} className="workImg" />
+                        <img src={work.image} className="workImg" alt="work"/>
                       </div>
                       <h4>{work.title}</h4>
                       <p>{work.description}</p>

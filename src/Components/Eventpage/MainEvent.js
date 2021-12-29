@@ -8,6 +8,8 @@ import "./EventPage.css";
 import axios from "axios";
 const MainEvent = () => {
   const [data, setData] = useState([]);
+  const [pics, setPics] = useState([]);
+  const [eventId, setEventId] = useState([]);
   // to scroll to top of page
   const { mainEvent } = useParams();
   const routePath = useLocation();
@@ -19,19 +21,42 @@ const MainEvent = () => {
     axios
       .get("http://137.135.78.87:8080/api/events/")
       .then((res) => {
-        console.log(res.data);
         res.data.map((x) => {
-          if (x.title == { mainEvent }.mainEvent) {
+          if (x.title === { mainEvent }.mainEvent) {
             setData(x);
+            setEventId(x.id);
           }
         });
       })
       .catch((e) => {
         console.log(e);
       });
+
+    Picture()
   }, [routePath]);
 
-  console.log(data);
+  function Picture() {
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+    
+      fetch("http://137.135.78.87:8080/api/photos/", requestOptions)
+        .then(response => response.json())
+        .then(result=>{
+          result.map((i)=>{
+            if(i.event === eventId) {
+              console.log(i.pic)
+              setPics(i.pic)
+            }
+          })
+        })
+        .catch(error => console.log('error', error));
+  }
+
+  console.log(pics)
+
+  const baseUrl = "https://picsum.photos/200/300"
   return (
     <div>
       <Header />
@@ -44,25 +69,25 @@ const MainEvent = () => {
         </div>
         <Grid container spacing={1} style={{ padding: "30px 10%" }}>
           <Grid item sm={6}>
-            <img
+            {/* <img
               className="MainImg2"
-              src="https://picsum.photos/seed/picsum/200/"
+              src={}
               alt="eventImg"
-            ></img>
+            /> */}
           </Grid>
           <Grid item sm={6}>
             <Grid container spacing={1}>
               <Grid item xs={12}>
                 <img
                   className="MainImg"
-                  src="https://picsum.photos/seed/picsum/200/"
+                  src={baseUrl}
                   alt="eventImg"
                 ></img>
               </Grid>
               <Grid item xs={6}>
                 <img
                   className="MainImg"
-                  src="https://picsum.photos/seed/picsum/200/"
+                  src={baseUrl}
                   alt="eventImg"
                 ></img>
               </Grid>
@@ -70,7 +95,7 @@ const MainEvent = () => {
                 <img
                   className="MainImg"
                   style={{ opacity: ".2" }}
-                  src="https://picsum.photos/seed/picsum/200/"
+                  src={baseUrl}
                   alt="eventImg"
                 ></img>
                 <div
@@ -107,21 +132,21 @@ const MainEvent = () => {
             <Grid item xs={12}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl}
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl}
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl}
                 alt="eventImg"
               ></img>
             </Grid>
@@ -131,31 +156,31 @@ const MainEvent = () => {
         <Grid item sm={6}>
           <img
             className="MainImg2"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl}
             alt="eventImg"
           ></img>
         </Grid>
-      </Grid>
+        </Grid>
       <Grid container spacing={1} style={{ padding: "0 10%" }}>
         <Grid item xs={12}>
           {" "}
           <img
             className="MainImg"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl}
             alt="eventImg"
           ></img>
         </Grid>
         <Grid item sm={6} xs={12}>
           <img
             className="MainImg"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl}
             alt="eventImg"
           ></img>
         </Grid>
         <Grid item sm={6} xs={12}>
           <img
             className="MainImg"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl}
             alt="eventImg"
           ></img>
         </Grid>
@@ -164,7 +189,7 @@ const MainEvent = () => {
         <Grid item sm={6}>
           <img
             className="MainImg2"
-            src="https://picsum.photos/seed/picsum/200/"
+            src={baseUrl}
             alt="eventImg"
           ></img>
         </Grid>
@@ -173,21 +198,21 @@ const MainEvent = () => {
             <Grid item xs={12}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl}
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl}
                 alt="eventImg"
               ></img>
             </Grid>
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src="https://picsum.photos/seed/picsum/200/"
+                src={baseUrl}
                 alt="eventImg"
               ></img>
             </Grid>

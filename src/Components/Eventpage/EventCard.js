@@ -13,7 +13,7 @@ export default function EventCard(props) {
     color: theme.palette.text.secondary,
   }));
 
-  const baseUrl = "http://djacmdev.pythonanywhere.com/";
+  const baseUrl = "http://137.135.78.87:8080/media";
   return (
     <Grid
       container

@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 export default function EventCard2(props) {
-  const baseUrl = "http://djacmdev.pythonanywhere.com/";
+  const baseUrl = "http://137.135.78.87:8080/media";
 
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,

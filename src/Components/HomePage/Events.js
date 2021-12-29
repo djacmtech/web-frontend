@@ -1,7 +1,7 @@
 import React from 'react'
 import './HomePage.css'
 import OurEvents from "./Event";
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 
 
 

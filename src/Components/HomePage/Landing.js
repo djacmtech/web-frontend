@@ -1,6 +1,5 @@
 import OurEvents from "./Event";
 import "./HomePage.css"
-import image from '../Images/About.png'
 export default function Landing() {
   class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
