@@ -4,7 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import HomePage from "./Components/HomePage/HomePage";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import {ContactUs} from './Components/contactUs/ContactUs'
+import {ContactUs} from "./Components/contactUs/ContactUs";
 import Committee from "./Components/Committee/Committee";
 import MainEvent from "./Components/Eventpage/MainEvent";
 
