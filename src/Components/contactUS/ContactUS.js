@@ -38,7 +38,6 @@ export const ContactUs = () => {
     },
     data: data,
   };
-
   return (
     <div style={{ backgroundColor: "#000324", paddingBottom: "30px" }}>
       <Header activePage="ContactUs" />
