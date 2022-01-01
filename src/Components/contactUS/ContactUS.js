@@ -8,7 +8,7 @@ import axios from "axios";
 import { Formik } from "formik";
 import "./contactUs.css";
 
-export const ContactUs = () => {
+export const ContactUS = () => {
   const [value, setValue] = useState({
     email: "",
     fname: "",
@@ -40,7 +40,7 @@ export const ContactUs = () => {
   };
   return (
     <div style={{ backgroundColor: "#000324", paddingBottom: "30px" }}>
-      <Header activePage="ContactUs" />
+      <Header activePage="contactUS" />
       <center>
         <h1 className="heading">
           GET IN TOUCH<BsArrowDown></BsArrowDown>

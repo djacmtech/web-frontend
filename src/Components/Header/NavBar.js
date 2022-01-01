@@ -21,7 +21,7 @@ const NavBar = (activePage) => {
     Committee: false,
     Resources: false,
     Blogs: false,
-    contactUs: false,
+    contactUS: false,
   };
   let page = activePage.activePage.activePage;
   if (page === "Home") value.home = true;
@@ -29,7 +29,7 @@ const NavBar = (activePage) => {
   else if (page === "Committee") value.Committee = true;
   else if (page === "Resources") value.Resources = true;
   else if (page === "Blogs") value.Blogs = true;
-  else if (page === "ContactUs") value.contactUs = true;
+  else if (page === "contactUS") value.contactUS = true;
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -161,9 +161,9 @@ const NavBar = (activePage) => {
                   </MenuItem>
                 </Link> */}
                 <Link
-                  disabled={value.contactUs}
+                  disabled={value.contactUS}
                   className="headerLinks"
-                  to="/ContactUs"
+                  to="/contactUS"
                 >
                   <MenuItem
                     
@@ -224,11 +224,11 @@ const NavBar = (activePage) => {
                 </button>
               </Link> */}
               <Link
-                disabled={value.contactUs}
+                disabled={value.contactUS}
                 className="headerLinks"
-                to="/ContactUs"
+                to="/contactUS"
               >
-                <button disabled={value.contactUs} className="btn">
+                <button disabled={value.contactUS} className="btn">
                   Contact Us
                 </button>
               </Link>
