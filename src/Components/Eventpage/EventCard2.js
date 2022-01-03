@@ -30,7 +30,7 @@ export default function EventCard2(props) {
           <p className="event_date">{props.date}</p>
           <Link
             style={{ textDecoration: "none" }}
-            to={`/Events/${props.title}`}
+            to={`/Events/${props.title}`.toLowerCase()}
           >
             <Button
               variant="contained"

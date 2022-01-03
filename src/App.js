@@ -15,10 +15,10 @@ function App() {
         {/* <Header/> */}
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
-          <Route path="/Events" element={<FinalEvent />}></Route>
-          <Route path="/contactUS" element={<ContactUS/>}></Route>
-          <Route path="/Committee" element={<Committee />}></Route>
-          <Route path={`/Events/:mainEvent`} element={<MainEvent/>}/>
+          <Route path="/events" element={<FinalEvent />}></Route>
+          <Route path="/contact-us" element={<ContactUS/>}></Route>
+          <Route path="/committee" element={<Committee />}></Route>
+          <Route path={`/events/:mainEvent`} element={<MainEvent/>}/>
         </Routes>
         <Footer />
       </div>

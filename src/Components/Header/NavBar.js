@@ -103,7 +103,7 @@ const NavBar = (activePage) => {
                 <Link
                   disabled={value.events}
                   className="headerLinks"
-                  to="/Events"
+                  to="/events"
                 >
                   <MenuItem
                   
@@ -116,7 +116,7 @@ const NavBar = (activePage) => {
                 <Link
                   disabled={value.Committee}
                   className="headerLinks"
-                  to="/Committee"
+                  to="/committee"
                 >
                   <MenuItem
                   
@@ -163,7 +163,7 @@ const NavBar = (activePage) => {
                 <Link
                   disabled={value.contactUS}
                   className="headerLinks"
-                  to="/contactUS"
+                  to="/contact-us"
                 >
                   <MenuItem
                     
@@ -194,7 +194,7 @@ const NavBar = (activePage) => {
               <Link
                 disabled={value.events}
                 className="headerLinks"
-                to="/Events"
+                to="/events"
               >
                 <button disabled={value.events} className="btn">
                   Events
@@ -203,7 +203,7 @@ const NavBar = (activePage) => {
               <Link
                 disabled={value.Committee}
                 className="headerLinks"
-                to="/Committee"
+                to="/committee"
               >
                 <button disabled={value.Committee} className="btn">
                   Committee
@@ -226,7 +226,7 @@ const NavBar = (activePage) => {
               <Link
                 disabled={value.contactUS}
                 className="headerLinks"
-                to="/contactUS"
+                to="/contact-us"
               >
                 <button disabled={value.contactUS} className="btn">
                   Contact Us

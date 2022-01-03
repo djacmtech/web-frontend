@@ -38,7 +38,7 @@ export default function EventCard(props) {
           <p className="event_description">{props.description}</p>
           {/* {props.about} <br/> */}
           <p className="event_date">{props.date}</p>
-          <Link style={{textDecoration:'none'}} to={`/Events/${props.title}`}>
+          <Link style={{textDecoration:'none'}} to={`/events/${props.title}`.toLowerCase()}>
             <Button
               variant="contained"
               size="large"

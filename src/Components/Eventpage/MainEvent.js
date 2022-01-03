@@ -51,8 +51,6 @@ const MainEvent = () => {
       });
   }, [routePath, mainEvent, data.id]);
 
-  console.log(images);
-  console.log(data);
   return (
     <div>
       <Header />
