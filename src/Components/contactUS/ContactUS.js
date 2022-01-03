@@ -8,7 +8,7 @@ import axios from "axios";
 import { Formik } from "formik";
 import "./contactUs.css";
 
-export const ContactUS = () => {
+export default function ContactUS() {
   const [value, setValue] = useState({
     email: "",
     fname: "",

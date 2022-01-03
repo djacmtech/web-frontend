@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import Committee from "./Components/Committee/Committee";
 import MainEvent from "./Components/Eventpage/MainEvent";
+import ContactUS from "./Components/contactUS/ContactUS";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/Events" element={<FinalEvent />}></Route>
-          <Route path="/contactUS" element={<contactUS />}></Route>
+          <Route path="/contactUS" element={<ContactUS/>}></Route>
           <Route path="/Committee" element={<Committee />}></Route>
           <Route path={`/Events/:mainEvent`} element={<MainEvent/>}/>
         </Routes>
