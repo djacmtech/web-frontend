@@ -23,7 +23,7 @@ const MainEvent = () => {
       .then((res) => {
         // console.log(res.data);
         res.data.map((x) => {
-          if (x.title === { mainEvent }.mainEvent) {
+          if (x.title.toLowerCase() === { mainEvent }.mainEvent) {
             setData(x);
           }
         });
@@ -31,7 +31,6 @@ const MainEvent = () => {
       .catch((e) => {
         console.log(e);
       });
-
     axios
       .get("http://137.135.78.87:8080/api/photos/")
       .then((res) => {
@@ -133,7 +132,7 @@ const MainEvent = () => {
             <Grid item xs={12}>
               <img
                 className="MainImg"
-                src={baseUrl.concat(images[4])}
+                src={baseUrl.concat(images[1])}
                 // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
@@ -141,7 +140,7 @@ const MainEvent = () => {
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src={baseUrl.concat(images[5])}
+                src={baseUrl.concat(images[2])}
                 // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
@@ -149,7 +148,7 @@ const MainEvent = () => {
             <Grid item xs={6}>
               <img
                 className="MainImg"
-                src={baseUrl.concat(images[6])}
+                src={baseUrl.concat(images[3])}
                 // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
@@ -160,14 +159,14 @@ const MainEvent = () => {
         <Grid item sm={6}>
           <img
             className="MainImg2"
-            src={baseUrl.concat(images[7])}
+            src={baseUrl.concat(images[4])}
             // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
         </Grid>
       </Grid>
       <Grid container spacing={1} style={{ padding: "0 10%" }}>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           {" "}
           <img
             className="MainImg"
@@ -175,8 +174,24 @@ const MainEvent = () => {
             // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
+        </Grid> */}
+        <Grid item md={3} sm={6} xs={12}>
+          <img
+            className="MainImg"
+            src={baseUrl.concat(images[4])}
+            // src="https://picsum.photos/seed/picsum/200/"
+            alt="eventImg"
+          ></img>
         </Grid>
-        <Grid item sm={6} xs={12}>
+        <Grid item md={3} sm={6} xs={12}>
+          <img
+            className="MainImg"
+            src={baseUrl.concat(images[2])}
+            // src="https://picsum.photos/seed/picsum/200/"
+            alt="eventImg"
+          ></img>
+        </Grid>
+        <Grid item md={3} sm={6} xs={12}>
           <img
             className="MainImg"
             src={baseUrl.concat(images[3])}
@@ -184,10 +199,10 @@ const MainEvent = () => {
             alt="eventImg"
           ></img>
         </Grid>
-        <Grid item sm={6} xs={12}>
+        <Grid item md={3} sm={6} xs={12}>
           <img
             className="MainImg"
-            src={baseUrl.concat(images[1])}
+            src={baseUrl.concat(images[5])}
             // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
@@ -197,7 +212,7 @@ const MainEvent = () => {
         <Grid item sm={6}>
           <img
             className="MainImg2"
-            src={baseUrl.concat(images[4])}
+            src={baseUrl.concat(images[2])}
             // src="https://picsum.photos/seed/picsum/200/"
             alt="eventImg"
           ></img>
@@ -207,7 +222,7 @@ const MainEvent = () => {
             <Grid item xs={12}>
               <img
                 className="MainImg"
-                src={baseUrl.concat(images[5])}
+                src={baseUrl.concat(images[1])}
                 // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
