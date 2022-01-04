@@ -65,11 +65,11 @@ const Footer = () => {
               <p>Get involved</p>
               <li>PPT</li>
               <li>BLOGS</li>
-              <Link to="/events" style={{textDecoration:"none"}}>
-              <li>EVENTS</li>
+              <Link to="/events" style={{ textDecoration: "none" }}>
+                <li>EVENTS</li>
               </Link>
-              <Link to="/contact-us" style={{textDecoration:"none"}}>
-              <li>CONTACT US</li>
+              <Link to="/contact-us" style={{ textDecoration: "none" }}>
+                <li>CONTACT US</li>
               </Link>
             </Grid>
             <Grid style={{ backgroundColor: "#000324" }} item sm={4} xs={12}>
@@ -78,17 +78,29 @@ const Footer = () => {
                 value={{ size: "1.7rem", className: "iconsFooter" }}
               >
                 <li className="footerSocial">
-                  <a href="https://www.instagram.com/djsanghvi_acm/?hl=en" target="_blank">
+                  <a
+                    href="https://www.instagram.com/djsanghvi_acm/?hl=en"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <BsInstagram />
                   </a>
                   {/* </li>
                 <li> */}
-                  <a href="https://www.facebook.com/djscoe.acm.5" target="_blank">
+                  <a
+                    href="https://www.facebook.com/djscoe.acm.5"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <BsFacebook />
                   </a>
                   {/* </li>
                 <li> */}
-                  <a href="https://in.linkedin.com/company/dj-sanghvi-acm" target="_blank">
+                  <a
+                    href="https://in.linkedin.com/company/dj-sanghvi-acm"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <BsLinkedin />
                   </a>
                 </li>
