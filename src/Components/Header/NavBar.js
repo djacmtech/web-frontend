@@ -8,10 +8,20 @@ import Menu from "@mui/material/Menu";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import image from "./DJACMLOGO.png";
-
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+// import InboxIcon from '@mui/icons-material/MoveToInbox';
+// import MailIcon from '@mui/icons-material/Mail';
 // import MenuIcon from '@mui/icons-material/Menu';
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
+import axios from "axios";
 
 const NavBar = (activePage) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,6 +48,59 @@ const NavBar = (activePage) => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const anchor = "left";
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+      style={{ backgroundColor: "#000324",height:'100%' }}
+    >
+      <List>
+        <Link className="mobileDrawer" to={`/`}>
+          <ListItem button key="home">
+            <ListItemIcon>
+              <HiOutlineArrowNarrowRight className="mobileDrawer" />
+            </ListItemIcon>
+            <ListItemText>
+            <span className="mobileDrawer">Home</span>
+            </ListItemText>
+          </ListItem>
+        </Link>
+        {["events", "commitee", "contact-us"].map((text, index) => (
+          <Link className="mobileDrawer" to={`/${text}`}>
+            <ListItem button key={text}>
+              <ListItemIcon>
+                <HiOutlineArrowNarrowRight className="mobileDrawer" />
+              </ListItemIcon>
+              <ListItemText>
+              <span className="mobileDrawer">{text}</span></ListItemText>
+            </ListItem>
+          </Link>
+        ))}
+      </List>
+      {/* <hr style={{color:"white"}}/> */}
+    </Box>
+  );
 
   return (
     <AppBar
@@ -60,7 +123,7 @@ const NavBar = (activePage) => {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -69,7 +132,24 @@ const NavBar = (activePage) => {
               color="inherit"
             >
               <GiHamburgerMenu />
-            </IconButton>
+            </IconButton> */}
+            <React.Fragment key={anchor}>
+              <Button
+                style={{ fontSize: "2rem" }}
+                size="large"
+                color="inherit"
+                onClick={toggleDrawer(anchor, true)}
+              >
+                <GiHamburgerMenu />
+              </Button>
+              <Drawer
+                anchor={anchor}
+                open={state[anchor]}
+                onClose={toggleDrawer(anchor, false)}
+              >
+                {list(anchor)}
+              </Drawer>
+            </React.Fragment>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -88,12 +168,10 @@ const NavBar = (activePage) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <span>
+              {/* <span>
                 <Link disabled={value.home} className="headerLinks" to="/">
                   <MenuItem
-                    style={{
-                   
-                    }}
+                    style={{}}
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
                   >
@@ -105,11 +183,7 @@ const NavBar = (activePage) => {
                   className="headerLinks"
                   to="/events"
                 >
-                  <MenuItem
-                  
-                    className="mobileNav"
-                    onClick={handleCloseNavMenu}
-                  >
+                  <MenuItem className="mobileNav" onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">Events</Typography>
                   </MenuItem>
                 </Link>
@@ -118,15 +192,11 @@ const NavBar = (activePage) => {
                   className="headerLinks"
                   to="/committee"
                 >
-                  <MenuItem
-                  
-                    className="mobileNav"
-                    onClick={handleCloseNavMenu}
-                  >
+                  <MenuItem className="mobileNav" onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">Committee</Typography>
                   </MenuItem>
-                </Link>
-                {/* <Link
+                </Link> */}
+              {/* <Link
                   disabled={value.Resources}
                   className="headerLinks"
                   to="/Resources"
@@ -160,20 +230,16 @@ const NavBar = (activePage) => {
                     <Typography textAlign="center">Blogs</Typography>
                   </MenuItem>
                 </Link> */}
-                <Link
+              {/* <Link
                   disabled={value.contactUS}
                   className="headerLinks"
                   to="/contact-us"
                 >
-                  <MenuItem
-                    
-                    className="mobileNav"
-                    onClick={handleCloseNavMenu}
-                  >
+                  <MenuItem className="mobileNav" onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">Contact Us</Typography>
                   </MenuItem>
                 </Link>
-              </span>
+              </span> */}
             </Menu>
           </Box>
           <Typography

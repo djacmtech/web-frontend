@@ -58,6 +58,15 @@ background-color: #000324;
 color: white;
 border-bottom: 1.3px solid rgb(60, 247, 251);
 } */
+
+.mobileDrawer{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: aqua;
+  font-family: Georgia, 'Times New Roman', Times, serif
+
+  
+}
 .navLinks{
   position: relative;
   left: 60%;
