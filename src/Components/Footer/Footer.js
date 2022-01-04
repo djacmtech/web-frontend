@@ -4,6 +4,7 @@ import { IconContext } from "react-icons";
 import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import image from "../Header/DJACMLOGO.png";
+import { Link } from "react-router-dom";
 import "../Footer/Footer.css";
 const Footer = () => {
   return (
@@ -64,8 +65,12 @@ const Footer = () => {
               <p>Get involved</p>
               <li>PPT</li>
               <li>BLOGS</li>
-              <li>EVENTS</li>
-              <li>CONTACT US</li>
+              <Link to="/events" style={{ textDecoration: "none" }}>
+                <li>EVENTS</li>
+              </Link>
+              <Link to="/contact-us" style={{ textDecoration: "none" }}>
+                <li>CONTACT US</li>
+              </Link>
             </Grid>
             <Grid style={{ backgroundColor: "#000324" }} item sm={4} xs={12}>
               <p>Get in touch</p>
@@ -73,17 +78,29 @@ const Footer = () => {
                 value={{ size: "1.7rem", className: "iconsFooter" }}
               >
                 <li className="footerSocial">
-                  <a href="https://www.instagram.com/djsanghvi_acm/?hl=en">
+                  <a
+                    href="https://www.instagram.com/djsanghvi_acm/?hl=en"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <BsInstagram />
                   </a>
                   {/* </li>
                 <li> */}
-                  <a href="https://www.facebook.com/djscoe.acm.5">
+                  <a
+                    href="https://www.facebook.com/djscoe.acm.5"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <BsFacebook />
                   </a>
                   {/* </li>
                 <li> */}
-                  <a href="https://in.linkedin.com/company/dj-sanghvi-acm">
+                  <a
+                    href="https://in.linkedin.com/company/dj-sanghvi-acm"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <BsLinkedin />
                   </a>
                 </li>
