@@ -21,7 +21,7 @@ const Committee = () => {
           "http://137.135.78.87:8080/api/core_committee/"
         );
         comData = await response.data;
-        console.log(comData);
+        // console.log(comData);
       } catch (error) {
         console.log(error);
         comData = [];
