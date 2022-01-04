@@ -13,9 +13,9 @@ const HomePage = () => {
       <Landing />
       <About />
       <Vision />
+      <Events />
       <Mission />
       <WhatWeDo />
-      <Events />
     </>
   );
 };
