@@ -82,7 +82,7 @@ const NavBar = (activePage) => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["events", "commitee", "contact-us"].map((text, index) => (
+        {["events", "committee", "contact-us"].map((text, index) => (
           <Link className="mobileDrawer" to={`/${text}`}>
             <ListItem button key={text}>
               <ListItemIcon>
