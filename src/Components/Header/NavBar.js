@@ -56,7 +56,7 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img width="60" src={image} alt="acmIcon" />
+            <img width="89" style={{ marginLeft: '15px' }} src={image} alt="acmIcon" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -92,7 +92,7 @@ const NavBar = (activePage) => {
                 <Link disabled={value.home} className="headerLinks" to="/">
                   <MenuItem
                     style={{
-                   
+
                     }}
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
@@ -106,7 +106,7 @@ const NavBar = (activePage) => {
                   to="/events"
                 >
                   <MenuItem
-                  
+
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
                   >
@@ -119,7 +119,7 @@ const NavBar = (activePage) => {
                   to="/committee"
                 >
                   <MenuItem
-                  
+
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
                   >
@@ -166,7 +166,7 @@ const NavBar = (activePage) => {
                   to="/contact-us"
                 >
                   <MenuItem
-                    
+
                     className="mobileNav"
                     onClick={handleCloseNavMenu}
                   >
@@ -182,7 +182,7 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img width="60" src={image} alt="acmIcon" />
+            <img width="89" style={{ marginLeft: '207px' }} src={image} alt="acmIcon" />
           </Typography>
           <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>
             <span className="navLinks">
