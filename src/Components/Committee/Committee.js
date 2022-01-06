@@ -31,7 +31,7 @@ const Committee = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#000324", paddingBottom: "30px" }}>
+    <div style={{ backgroundColor: "#000324" }}>
       <Header activePage="Committee" />
       <center>
         <div className="team">MEET OUR TEAM</div>
