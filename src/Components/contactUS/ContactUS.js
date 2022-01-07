@@ -136,6 +136,7 @@ export default function ContactUS() {
                           name="fname"
                           id="fname"
                         ></input>
+                        <br />
                         {errors.fname && touched.fname && errors.fname}
                       </Grid>
                       <Grid
@@ -156,6 +157,8 @@ export default function ContactUS() {
                           }}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.lname && touched.lname && errors.lname}
                       </Grid>
                       <Grid
@@ -176,6 +179,8 @@ export default function ContactUS() {
                           }}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.email && touched.email && errors.email}
                       </Grid>
                       <Grid
@@ -195,6 +200,8 @@ export default function ContactUS() {
                           }}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.subject && touched.subject && errors.subject}
                       </Grid>
                       <Grid style={{ backgroundColor: "#000324" }} item xs={12}>
@@ -210,6 +217,8 @@ export default function ContactUS() {
                           // onChange={handleChange}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.message && touched.message && errors.message}
                       </Grid>
                     </Grid>
@@ -276,4 +285,4 @@ export default function ContactUS() {
       </center>
     </div>
   );
-};
+}

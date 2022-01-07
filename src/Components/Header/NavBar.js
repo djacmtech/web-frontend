@@ -78,7 +78,7 @@ const NavBar = (activePage) => {
               <HiOutlineArrowNarrowRight className="mobileDrawer" />
             </ListItemIcon>
             <ListItemText>
-            <span className="mobileDrawer">Home</span>
+            <span className="mobileDrawer">home</span>
             </ListItemText>
           </ListItem>
         </Link>
@@ -101,8 +101,8 @@ const NavBar = (activePage) => {
   return (
     <AppBar
       style={{
-        backgroundColor: "#0A0E2A",
-        // transform: "translateY(-12px)",
+        backgroundColor: "#000324",
+        transform: "translateY(-12px)",
         color: "#dbdbdb",
       }}
       position="sticky"
@@ -115,7 +115,7 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-          <Link to="/"> <img width="89" style={{ marginLeft: '15px' }} src={image} alt="acmIcon" /> </Link>  
+          <Link to="/"> <img width="70px" src={image} alt="acmIcon" /> </Link>  
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -244,7 +244,7 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img width="89" style={{ marginLeft: '207px' }} src={image} alt="acmIcon" />
+            <img width="89" src={image} alt="acmIcon" />
           </Typography>
           <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>
             <span className="navLinks">
