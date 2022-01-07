@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router";
 import Committee from "./Components/Committee/Committee";
 import MainEvent from "./Components/Eventpage/MainEvent";
 import ContactUS from "./Components/contactUS/ContactUS";
+import Loc from "./loc/Loc"
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/events" element={<FinalEvent />}></Route>
-          <Route path="/contact-us" element={<ContactUS/>}></Route>
+          <Route path="/contact-us" element={<ContactUS />}></Route>
           <Route path="/committee" element={<Committee />}></Route>
-          <Route path={`/events/:mainEvent`} element={<MainEvent/>}/>
+          <Route path={`/events/:mainEvent`} element={<MainEvent />} />
+          <Route path="/loc" element={<Loc />}></Route>
         </Routes>
         <Footer />
       </div>
