@@ -51,7 +51,7 @@ export default function FinalEvent() {
             description={items.description}
             about={items.about}
             date={new Date(items.date).toDateString()}
-            /> : <EventCard2
+            /> : <EventCard
             id={items.id}
             image={items.image}
             title={items.title}
