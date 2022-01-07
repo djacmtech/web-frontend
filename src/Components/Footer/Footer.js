@@ -39,6 +39,7 @@ const Footer = () => {
               borderRadius: "40px",
               width: "120px",
               height: "50px",
+              margin:"20px",
               textTransform: "capitalize",
             }}
           >
