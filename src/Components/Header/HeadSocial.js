@@ -9,15 +9,18 @@ const HeadSocial = () => {
 
       <a href="https://www.instagram.com/djsanghvi_acm/?hl=en" className="socialLinks" target="_blank" rel="noreferrer">
         <BsInstagram />
-        &nbsp; djsanghvi_acm
+        &nbsp;
+        <span>djsanghvi_acm</span> 
       </a>
       <a href="https://www.facebook.com/djscoe.acm.5" className="socialLinks" target="_blank" rel="noreferrer">
         <BsFacebook />
-        &nbsp; djscoe.acm
+        &nbsp; 
+        <span>djscoe.acm</span> 
       </a>
       <a href="https://in.linkedin.com/company/dj-sanghvi-acm" className="socialLinks" target="_blank" rel="noreferrer">
         <BsLinkedin />
-        &nbsp; DJ Sanghvi ACM
+        &nbsp;
+        <span>DJ Sanghvi ACM</span> 
       </a>
     </IconContext.Provider>
     </div>
