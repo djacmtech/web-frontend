@@ -3,7 +3,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { BsChevronDown } from 'react-icons/bs'
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 
@@ -18,12 +18,12 @@ function Faqs() {
 
     return (
         <div style={{ color:'black', backgroundColor: 'white', display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', fontSize:'18px'}}>
-            <h2 style={{color:'#3770FF'}}> Frequently asked questions </h2>
-            <h3> Can&#39;t find the answers to what you are looking for? <span style={{color:'#FF8A50'}}> Reach out to our Team </span> </h3>
-            <div style={{width:'60%', padding:'5%'}}>
+            <h1 style={{color:'#3770FF'}}> Frequently asked questions </h1>
+            <h3 style={{fontFamily:'montserrat', fontWeight:'900'}}> Can&#39;t find the answers to what you are looking for? <span style={{color:'#FF8A50'}}> Reach out to our Team </span> </h3>
+            <div style={{width:'60%', padding:'2% 5% 5% 5%'}}> 
                 <Accordion>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BsChevronDown />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
@@ -38,7 +38,7 @@ function Faqs() {
                 </Accordion>
                 <Accordion>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BsChevronDown />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
@@ -53,7 +53,7 @@ function Faqs() {
                 </Accordion>
                 <Accordion>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BsChevronDown />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
@@ -68,7 +68,7 @@ function Faqs() {
                 </Accordion>
                 <Accordion>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BsChevronDown />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
@@ -87,7 +87,7 @@ function Faqs() {
                     same college institute can form a team. </Item>
                     <Accordion>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BsChevronDown />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
@@ -102,7 +102,7 @@ function Faqs() {
                 </Accordion>
                 <Accordion>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<BsChevronDown />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
