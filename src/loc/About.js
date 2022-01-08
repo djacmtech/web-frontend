@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "./Loc.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 function About() {
   return (
@@ -13,26 +14,13 @@ function About() {
         paddingBottom: "70px",
       }}
     >
-      {/* <Splide
-      options={ {
-        rewind: true,
-        gap   : '1rem',
-      } }
-    >
-      <SplideSlide>
-        <img src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg" alt="Image 1"/>
-      </SplideSlide>
-      
-    </Splide> */}
-
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{ justifyContent: "center" }}
+          spacing={1}
+          style={{ justifyContent: "center", padding: "5px" }}
         >
-          <Grid item xs={4} sm={4} md={4}>
+          <Grid item sm={12} md={8} >
             <div className="abtheading">
               You’re stuck at home but your ideas doesn’t have to be. Write some
               lines of code!
@@ -43,29 +31,35 @@ function About() {
               codes to make industry-grade projects.
             </div>
           </Grid>
-          <Grid item xs={4} sm={4} md={4}>
-            <img
-              src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
-              alt=""
-              className="abtimg"
-            />
-            {/* <Splide
-      options={ {
-        rewind: true,
-        gap   : '1rem',
-      } }
-    >
-      <SplideSlide>
-        <img src="image1.jpg" alt="Image 1"/>
-      </SplideSlide>
-      <SplideSlide>
-        <img src="image2.jpg" alt="Image 2"/>
-      </SplideSlide>
-      <SplideSlide>
-        <img src="image3.jpg" alt="Image 3"/>
-      </SplideSlide>
-    </Splide> */}
+          <Grid item xs={12} sm={6} md={4} spacing={3} style={{width:"100%", height:"100%"}}>
+            <Splide
+              options={{
+                rewind: true,
+                gap: "1rem",
+              }}
+            >
+              <SplideSlide>
+                <img
+                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  alt="Image 1"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <img
+                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  alt="Image 2"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <img
+                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  alt="Image 3"
+                />
+              </SplideSlide>
+            </Splide>
+            
           </Grid>
+          {/* </div> */}
         </Grid>
       </Box>
     </div>

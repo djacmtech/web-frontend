@@ -9,6 +9,7 @@ font-size: 36px;
 line-height: 45px;
 color: #001019;
 padding-top: 70px;
+padding-left: 50px;
 }
 
 .abtcontent{
@@ -19,11 +20,39 @@ font-size: 18px;
 line-height: 150%;
 color: #001019;
 padding-top: 25px;
+padding-left: 50px;
 }
 
 .abtimg{
-    width: 457px;
-height: 326.25px;
+    margin-left: 70px;
+    width: 400px;
+height: 300px;
 border: 40px solid #FFFFFF;
 filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
+}
+
+.splide__slide img{
+    height: 300px;
+}
+
+@media (max-width: 600px){
+    .abtimg{
+        height: 300px;
+        width: 400px;
+    }
+
+    .abtheading{
+        font-size: 30px;
+    }
+
+    .abtcontent{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 485px){
+    .abtimg{
+        height: 200px;
+        width: 288px;
+    }
 }
