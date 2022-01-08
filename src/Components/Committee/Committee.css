@@ -39,10 +39,20 @@
   background-color: #171636 !important;
   box-shadow: 5px 5px 4px 5px #3cf7fb4f !important;
   border-radius: 25px !important;
-  width: 320px !important;
+  width: 70% !important;
   padding-top: 40px;
   margin: 28px;
-  height: 295px;
+  height: 80%;
+}
+
+.comCardCp {
+  background-color: #171636 !important;
+  box-shadow: 5px 5px 4px 5px #3cf7fb4f !important;
+  border-radius: 25px !important;
+  width: 70% !important;
+  padding-top: 40px;
+  margin: 28px;
+  height: 320px !important;
 }
 
 .comName {
@@ -69,11 +79,28 @@
 
 @media (max-width: 780px) {
   .comCard {
-    width: 259px !important;
-    height: 241px;
+    width: 75% !important;
+    height: 65%;
+    box-shadow: 3px 3px 3px 3px #3cf7fb4f !important;
   }
   .quote {
     margin-top: 0;
+  }
+  .comImg{
+    width: 40% !important;
+    height: 40% !important;
+  }
+  .comPosition{
+    font-size: 0.8rem !important;
+  }
+
+  .comName{
+    font-size: 14px !important;
+  }
+  .comCardCp{
+    width: 38% !important;
+    height: 65% !important;
+    box-shadow: 3px 3px 3px 3px #3cf7fb4f !important;
   }
 }
 
@@ -87,44 +114,31 @@
     margin-top: 0;
   }
 
+  .comCardCp{
+    width: 38% !important;
+    height: 65% !important;
+    box-shadow: 3px 3px 3px 3px #3cf7fb4f !important;
+  }
+
   .faculty {
     font-size: 1.5em;
   }
+  .comImg{
+    width: 40% !important;
+    height: 40% !important;
+  }
 
   .comCard {
-    width: 259px !important;
-    height: 240px;
+    width: 75% !important;
+    height: 65%;
+    box-shadow: 3px 3px 3px 3px #3cf7fb4f !important;
+  }
+  .comPosition{
+    font-size: 0.8rem !important;
+  }
+
+  .comName{
+    font-size: 14px !important;
   }
 }
 
-@media (max-width: 380px) {
-  .comCard {
-    height: 209px;
-  }
-}
-
-@media (max-width: 360px) {
-  .comCard {
-    width: 254px !important;
-    height: 196px;
-  }
-}
-
-@media (max-width: 320px) {
-  .comCard {
-    width: 254px !important;
-    height: 172px;
-  }
-}
-
-@media (max-width: 280px) {
-  .comCard {
-    width: 254px !important;
-    height: 247px;
-  }
-
-  .team {
-    padding-left: 35px;
-    letter-spacing: 0;
-  }
-}
