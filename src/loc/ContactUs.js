@@ -1,17 +1,8 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 function ContactUs() {
-
-    const Item = styled(Paper)(({ theme }) => ({
-        ...theme.typography.body2,
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-      }));
 
     return (
         <div style={{  background: "linear-gradient(179.94deg, #FF8A50 -1.24%, #F54951 64.13%)" }}>

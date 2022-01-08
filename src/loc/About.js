@@ -34,7 +34,7 @@ function About() {
         >
           <Grid item xs={4} sm={4} md={4}>
             <div className="abtheading">
-              You’re stuck at home but your ideas doesn’t have to be. Write some
+              You&#39;re stuck at home but your ideas doesn&#39;t have to be. Write some
               lines of code!
             </div>
             <div className="abtcontent">
