@@ -165,7 +165,7 @@ const MainEvent = () => {
           ></img>
         </Grid>
       </Grid>
-      <Grid container spacing={1} style={{ padding: "0 10%" }}>
+      <Grid container justifyContent='center' alignItems='center' spacing={1} style={{ padding: "0 10%" }}>
         {/* <Grid item xs={12}>
           {" "}
           <img
@@ -208,7 +208,7 @@ const MainEvent = () => {
           ></img>
         </Grid>
       </Grid>
-      <Grid container spacing={1} style={{ padding: "5px 10%" }}>
+      {/* <Grid container spacing={1} style={{ padding: "5px 10%" }}>
         <Grid item sm={6}>
           <img
             className="MainImg2"
@@ -242,10 +242,10 @@ const MainEvent = () => {
                 // src="https://picsum.photos/seed/picsum/200/"
                 alt="eventImg"
               ></img>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
+             </Grid> */}
+          {/* </Grid>  */}
+        {/* </Grid> */}
+      {/* </Grid> */}
     </div>
   );
 };

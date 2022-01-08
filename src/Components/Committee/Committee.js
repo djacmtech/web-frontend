@@ -11,7 +11,7 @@ import axios from "axios";
 
 const Committee = () => {
   const [committee, setCommittee] = useState([]);
-  const baseUrl="http://137.135.78.87:8080/media"
+  const baseUrl = "http://137.135.78.87:8080/media"
 
   useEffect(() => {
     (async () => {
@@ -30,7 +30,7 @@ const Committee = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#000324" }}>
+    <div style={{ backgroundColor: "#000324", margin: '0px', padding: '0px' }}>
       <Header activePage="Committee" />
       <center>
         <div className="team">MEET OUR TEAM</div>
@@ -40,12 +40,12 @@ const Committee = () => {
         <div className="faculty">Faculty</div>
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{justifyContent:"center"}}
+          // spacing={{ xs: 2, md: 3 }}
+          // columns={{ xs: 4, sm: 8, md: 12 }}
+          style={{ justifyContent: "center", margin: '0px', padding: '0px' }}
         >
           {OurCommittee.map((committee) => (
-            <Grid item xs={4} sm={4} md={4}>
+            <Grid item xs={6} sm={4} md={4}>
               <Card sx={{ maxWidth: 330 }} className="comCard">
                 <CardMedia
                   component="img"
@@ -81,13 +81,13 @@ const Committee = () => {
             return (
               <Card
                 sx={{ maxWidth: 330 }}
-                className="comCard"
+                className="comCardCp"
                 key={props.position}
               >
                 <CardMedia
                   component="img"
                   height="300"
-                  image= {baseUrl.concat(props.pic)}
+                  image={baseUrl.concat(props.pic)}
                   alt="img"
                   className="comImg"
                 />
@@ -115,14 +115,14 @@ const Committee = () => {
 
         <Grid
           container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{ paddingTop: 20, justifyContent:"center" }}
+          // spacing={{ xs: 2, md: 3 }}
+          // columns={{ xs: 4, sm: 8, md: 12 }}
+          style={{ paddingTop: 20, justifyContent: "center" }}
         >
           {committee.map((props) => {
-            if (props.position >1) {
+            if (props.position > 1) {
               return (
-                <Grid item xs={4} sm={4} md={4}>
+                <Grid item xs={6} sm={4} md={4}>
                   <Card sx={{ maxWidth: 345 }} className="comCard">
                     <CardMedia
                       component="img"

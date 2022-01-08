@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Righteous&display=swap');
+
+.abtheading{
+font-family: Righteous;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 45px;
+color: #001019;
+padding-top: 70px;
+}
+
+.abtcontent{
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 150%;
+color: #001019;
+padding-top: 25px;
+}
+
+.abtimg{
+    width: 457px;
+height: 326.25px;
+border: 40px solid #FFFFFF;
+filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
+}
