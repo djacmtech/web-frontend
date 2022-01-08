@@ -14,13 +14,12 @@ function Loc() {
         <>
             <Hero />
             {/* <About /> */}
-            {/* <Prizes />
-            <Domain />
+             <Prizes />
             <Timeline />
             <Guidelines />
             <Sponsors />
             <Faqs />
-            <ContactUs /> */}
+            <ContactUs />
         </>
     )
 }
