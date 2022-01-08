@@ -12,15 +12,14 @@ import ContactUs from './ContactUs'
 function Loc() {
     return (
         <>
-            {/* <Hero /> */}
-            <About />
-            {/* <Prizes />
-            <Domain />
+            <Hero />
+            {/* <About /> */}
+             <Prizes />
             <Timeline />
             <Guidelines />
             <Sponsors />
             <Faqs />
-            <ContactUs /> */}
+            <ContactUs />
         </>
     )
 }

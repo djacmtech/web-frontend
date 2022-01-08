@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Righteous&display=swap");
 
 .abtheading{
 font-family: Righteous;
@@ -24,8 +23,8 @@ padding-left: 50px;
 }
 
 .abtimg{
-    margin-left: 70px;
-    width: 400px;
+margin-left: 70px;
+width: 400px;
 height: 300px;
 border: 40px solid #FFFFFF;
 filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
@@ -35,7 +34,7 @@ filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
     height: 300px;
 }
 
-@media (max-width: 600px){
+/* @media (max-width: 600px){
     .abtimg{
         height: 300px;
         width: 400px;
@@ -54,5 +53,31 @@ filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
     .abtimg{
         height: 200px;
         width: 288px;
-    }
+    } */
+
+/* hero */
+
+.hero{
+    padding: 0 20px;
+}
+.heroHeading {
+  font-family: Righteous;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(180deg, #16BDFF 22.99%, #7B83FD 79.15%);
+  font-size: 7rem;
+  margin: 10px;
+}
+
+.heroContent{
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.heroContentDate{
+    font-family: Montserrat;
+    font-weight: 700;   
+
 }
