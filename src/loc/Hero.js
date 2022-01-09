@@ -9,6 +9,52 @@ function Hero() {
       <NavLoc />
       <center>
       <div className="hero">
+      {/* <svg
+          width="1373"
+          height="729"
+          viewBox="0 0 1373 729"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 -30V727H72.2133V20.4899H131.423V639.6H197.969V90.4793H260.846V588.066H322.152V172.282C409.761 172.282 845.259 172.282 1050.48 172.282"
+            stroke="url(#paint0_linear_311_9)"
+            stroke-width="4"
+            className="left"
+          />
+          <path
+            d="M1371 -30V727H1300.71V20.4899H1241.43V639.6H1174.81V90.4793H1111.86V588.066H1050.48V170.282"
+            stroke="url(#paint1_linear_311_9)"
+            stroke-width="4"
+            className="right"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_311_9"
+              x1="526.242"
+              y1="-30"
+              x2="526.242"
+              y2="727"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FF8A50" />
+              <stop offset="0.0001" stop-color="#FF8A50" />
+              <stop offset="1" stop-color="#FF8A50" />
+              <stop offset="1" stop-color="#FF8A50" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_311_9"
+              x1="1210.74"
+              y1="-30"
+              x2="1210.74"
+              y2="727"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FF8A50" />
+              <stop offset="1" stop-color="#FF8A50" />
+            </linearGradient>
+          </defs>
+        </svg> */}
         <h1 className="heroHeading">LOC 4.0</h1>
         <p className="heroContent">24 hour hackathon by DJSCE ACM</p>
         <Button variant="contained" color="primary">Apply with Devfolio</Button>

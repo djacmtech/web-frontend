@@ -18,9 +18,10 @@ function About() {
         <Grid
           container
           spacing={1}
-          style={{ justifyContent: "center", padding: "5px" }}
+          style={{ justifyContent: "center" }}
+          className="abtgrid"
         >
-          <Grid item sm={12} md={8} >
+          <Grid item sm={12} md={8}>
             <div className="abtheading">
               You&#39;re stuck at home but your ideas doesn&#39;t have to be. Write some
               lines of code!
@@ -36,6 +37,7 @@ function About() {
               options={{
                 rewind: true,
                 gap: "1rem",
+                autoplay : true,
               }}
             >
               <SplideSlide>
@@ -59,7 +61,6 @@ function About() {
             </Splide>
             
           </Grid>
-          {/* </div> */}
         </Grid>
       </Box>
     </div>
