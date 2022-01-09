@@ -30,7 +30,7 @@ const CountDown = () => {
       return
     }
     timerComponents.push(
-      <Grid item md={3} sm={6} xs={12} style={{padding:'20px 10px 20px 10px'}}>
+      <Grid item md={3} sm={3} xs={3} style={{padding:'20px 10px 20px 10px'}}>
         <span style={{fontSize:'3.3rem', fontWeight:'bolder'}}>{timeLeft[interval]}</span> <br/>
         <span style={{fontSize:'0.8rem', fontWeight:'600'}}> {interval} </span> 
       </Grid>
