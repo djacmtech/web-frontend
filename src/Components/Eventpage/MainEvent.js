@@ -26,6 +26,7 @@ const MainEvent = () => {
           if (x.title.toLowerCase() === { mainEvent }.mainEvent) {
             setData(x);
           }
+          return 0
         });
       })
       .catch((e) => {
@@ -43,6 +44,7 @@ const MainEvent = () => {
               return [...prev, x.pic];
             });
           }
+          return 0
         });
       })
       .catch((e) => {

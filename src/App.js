@@ -19,7 +19,7 @@ function App() {
           <Route path="/contact-us" element={<ContactUS />}></Route>
           <Route path="/committee" element={<Committee />}></Route>
           <Route path={`/events/:mainEvent`} element={<MainEvent />} />
-          <Route path="/loc" element={<Loc />}></Route>
+          <Route path="/LOC" element={<Loc />}></Route>
         </Routes>
         <Footer />
       </div>
