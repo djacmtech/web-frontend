@@ -1,8 +1,7 @@
-import { Card, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
 import './Loc.css'
 import { FaUserGraduate } from 'react-icons/fa'
-import { width } from '@mui/system'
 
 function Domain() {
     return (
