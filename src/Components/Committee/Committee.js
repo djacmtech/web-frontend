@@ -111,6 +111,7 @@ const Committee = () => {
               </Card>
             );
           }
+          return 0
         })}
 
         <Grid
@@ -152,6 +153,7 @@ const Committee = () => {
                 </Grid>
               );
             }
+            return 0
           })}
         </Grid>
       </center>
