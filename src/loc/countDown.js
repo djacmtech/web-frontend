@@ -1,22 +1,48 @@
-import React from "react";
-import { useTimer } from "react-timer-hook";
+import React, {useState, useEffect} from "react";
+import Grid from '@mui/material/Grid'
+
 const CountDown = () => {
-  const time = new Date();
-  let expiryTimestamp = time.setHours(1152);
-  const { seconds, minutes, hours, days } = useTimer({
-    expiryTimestamp,
-    onExpire: () => console.warn("Times up for registration !!"),
-  });
+
+  const calculateTimeLeft = () => {
+    let diff = +new Date("February 27, 2022 00:00:01").getTime() - +new Date().getTime()
+    let timeLeft = {
+      DAYS: Math.floor((diff/(1000*60*60*24))),
+      HOURS: Math.floor((diff/(1000*60*60))%24),
+      MINUTES: Math.floor((diff/1000/60)%60),
+      SECONDS: Math.floor((diff/1000)%60)
+    }
+    return timeLeft
+  }
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
+
+  useEffect(()=>{
+    const timer = setTimeout(()=>{
+      setTimeLeft((calculateTimeLeft()))
+    }, 1000)
+    return ()=> clearTimeout(timer)
+  })
+
+  const timerComponents = []
+
+  Object.keys(timeLeft).forEach((interval, index)=>{
+    if(!timeLeft[interval]) {
+      return
+    }
+    timerComponents.push(
+      <Grid item md={3} sm={3} xs={3} style={{padding:'20px 10px 20px 10px'}}>
+        <span style={{fontSize:'3.3rem', fontWeight:'bolder'}}>{timeLeft[interval]}</span> <br/>
+        <span style={{fontSize:'0.8rem', fontWeight:'600'}}> {interval} </span> 
+      </Grid>
+    )
+  })
+
   return (
-    <div>
-      <div style={{ fontSize: "100px" }}>
-        <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
-        <span>{seconds}</span>
-        <br />
-      </div>
-      <div style={{fontSize:'20px',margin:'40px'}}>
-      <span>Days</span><span>Hours</span><span>Minutes</span><span>Seconds</span>
-      </div>
+    <div style={{padding:'50px'}}>
+        <Grid container spacing={2} style={{width:'45%', fontFamily:'montserrat', border:'3px solid #FF8A50'}}>
+          {timerComponents.length? timerComponents : <span> Time's up! </span>}
+        </Grid>
+        <br/>
     </div>
   );
 };

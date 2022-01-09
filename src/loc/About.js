@@ -43,19 +43,19 @@ function About() {
               <SplideSlide>
                 <img
                   src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
-                  alt="Image 1"
+                  alt="Carousel 1"
                 />
               </SplideSlide>
               <SplideSlide>
                 <img
                   src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
-                  alt="Image 2"
+                  alt="Carousel 2"
                 />
               </SplideSlide>
               <SplideSlide>
                 <img
                   src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
-                  alt="Image 3"
+                  alt="Carousel 3"
                 />
               </SplideSlide>
             </Splide>
