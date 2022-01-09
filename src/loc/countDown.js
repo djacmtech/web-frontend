@@ -9,7 +9,7 @@ const CountDown = () => {
   });
   return (
     <div>
-      <div style={{ fontSize: "100px" }}>
+      <div style={{ fontSize: "40px" }}>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:
         <span>{seconds}</span>
         <br />

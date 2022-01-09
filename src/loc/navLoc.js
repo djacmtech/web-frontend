@@ -1,19 +1,33 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-
-const pages = ['Prizes', 'Domain', 'Timeline','Guidelines','Sponsors','FAQS','Contact Us'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import { Link } from "react-router-dom";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+const pages = [
+  "Prizes",
+  "Domain",
+  "Timeline",
+  "Guidelines",
+  "Sponsors",
+  "FAQS",
+  "Contact Us",
+];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavLoc = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,8 +48,47 @@ const NavLoc = () => {
     setAnchorElUser(null);
   };
 
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+  const anchor = "left";
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {pages.map((text, index) => (
+          <Link style={{textDecoration:'none'}} to={`/${text.toLowerCase().replace(" ", "-")}`}>
+            <ListItem button key={text}>
+              <ListItemText>
+                <span>{text}</span>
+              </ListItemText>
+            </ListItem>
+          </Link>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
-    <AppBar position="static" color='transparent' elevation='0'>
+    <AppBar position="static" color="transparent" elevation="0">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <Typography
@@ -47,18 +100,26 @@ const NavLoc = () => {
             LOGO
           </Typography> */}
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <GiHamburgerMenu />
-            </IconButton>
-            <Menu
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <React.Fragment key={anchor}>
+              <Button
+                style={{ fontSize: "2rem" }}
+                size="large"
+                color="inherit"
+                onClick={toggleDrawer(anchor, true)}
+              >
+                <GiHamburgerMenu />
+              </Button>
+              <Drawer
+                anchor={anchor}
+                open={state[anchor]}
+                onClose={toggleDrawer(anchor, false)}
+              >
+                {list(anchor)}
+              </Drawer>
+            </React.Fragment>
+
+            {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -81,7 +142,7 @@ const NavLoc = () => {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
           {/* <Typography
             variant="h6"
@@ -91,12 +152,16 @@ const NavLoc = () => {
           >
             LOGOy
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent='center' alignContent='center'>
+          <Box
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            justifyContent="center"
+            alignContent="center"
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
               </Button>
@@ -138,5 +203,3 @@ const NavLoc = () => {
   );
 };
 export default NavLoc;
-
-

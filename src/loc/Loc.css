@@ -1,37 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Righteous&display=swap");
 
-.abtheading{
-font-family: Righteous;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 45px;
-color: #001019;
-padding-top: 70px;
-padding-left: 50px;
+.abtheading {
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  color: #001019;
+  padding-top: 70px;
+  padding-left: 50px;
 }
 
-.abtcontent{
-font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 150%;
-color: #001019;
-padding-top: 25px;
-padding-left: 50px;
+.abtcontent {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #001019;
+  padding-top: 25px;
+  padding-left: 50px;
 }
 
-.abtimg{
-margin-left: 70px;
-width: 400px;
-height: 300px;
-border: 40px solid #FFFFFF;
-filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
+.abtimg {
+  margin-left: 70px;
+  width: 400px;
+  height: 300px;
+  border: 40px solid #ffffff;
+  filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
 }
 
-.splide__slide img{
-    height: 300px;
+.splide__slide img {
+  height: 300px;
 }
 
 /* @media (max-width: 600px){
@@ -57,27 +57,78 @@ filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
 
 /* hero */
 
-.hero{
-    padding: 0 20px;
+.hero {
+  padding: 0 20px;
 }
 .heroHeading {
   font-family: Righteous;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(180deg, #16BDFF 22.99%, #7B83FD 79.15%);
+  background-image: linear-gradient(180deg, #16bdff 22.99%, #7b83fd 79.15%);
   font-size: 7rem;
   margin: 10px;
 }
 
-.heroContent{
+.heroContent {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 1.2rem;
 }
 
-.heroContentDate{
-    font-family: Montserrat;
-    font-weight: 700;   
+.heroContentDate {
+  font-family: Montserrat;
+  font-weight: 700;
+}
 
+/* guideline */
+.guidelines {
+  border-image: linear-gradient(179.94deg, #ff8a50 -1.24%, #f54951 64.13%);
+  border-style: solid;
+  border-width: 8px;
+  border-image-slice: 1;
+  font-family: Righteous;
+  width: 67%;
+  height: fit-content;
+  padding: 3% 5%;
+}
+
+.guidelineHeading {
+  font-family: Righteous;
+  font-size: 2rem;
+  padding: 25px;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(179.94deg, #ff8a50 -1.24%, #f54951 64.13%);
+}
+.guideNumber {
+  font-size: 2.5rem;
+  float: right;
+  padding: 10px;
+  font-weight: 700;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(179.94deg, #ff8a50 -1.24%, #f54951 64.13%);
+  transform: translateY(-27px) translateX(22.5px);
+}
+.guideContain {
+  font-family: Montserrat;
+font-weight: 800;
+  /* margin: 40px; */
+  /* padding: 5% 10%; */
+  text-align: left;
+}
+@media (max-width: 542px) {
+  .guideContain {
+    /* padding: 0; */
+  }
+  .guidelines {
+    /* padding: 0; */
+    /* transform: translateX(-30%); */
+    margin: 0;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
 }
