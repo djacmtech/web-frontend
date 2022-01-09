@@ -54,6 +54,8 @@
     font-weight: 700;   
 }
 
+/* ***************************** PRIZES ********************************* */
+
 .prizesHeading{
   font-family: 'Righteous', cursive;
 }
@@ -63,36 +65,36 @@
   font-weight: bold;
 }
 
-.flip-card-container {
+
+
+/* ***************************** DOMAIN ********************************* */
+.flip-card {
+  background-color: transparent;
   width: 200px;
   height: 200px;
   perspective: 1000px;
 }
-.flip-card {
+
+.flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 1s;
+  text-align: center;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
+  
 }
-.flip-card-container:hover .flip-card {
-  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
-/* Position the front and back side */
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border-radius: 0.5rem; */
-}
-
-.flip-card-container{
-border-radius: 10px;
 }
 
 .flip-card-front {
@@ -100,37 +102,74 @@ border-radius: 10px;
 border: 20px solid #FFFFFF;
 box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
 border-radius: 10px;
-width: 100%;
-  height: 100%;
 }
+
 .flip-card-back {
-  background: #FFFFFF;
-border: 20px solid transparent;
-box-shadow: 5.04074px 5.04074px 25.2037px rgba(50, 106, 249, 0.2);
-border-image: linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%);
-border-image-slice: 1;
-border-radius: 10px !important;
+  /* width: 100%;
+  height: 100%; */
+  border: 20px solid transparent;
+  border-image: linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%);
+  border-image-slice: 1;
   transform: rotateY(180deg);
-}
-
-.flip-card-back::before{
-border-radius: 10px !important;
-}
-
-.flip-card-back p {
-  text-align: center;
-  margin: 1rem;
-  /* font-size: 1.4rem;
-  line-height: 1.5rem; */
-}
-.flip-card-back p span {
-  display: block;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: bold;
-  margin-top: 1.25rem;
+  box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
+border-radius: 10px;
+margin-left: -38px;
 }
 
 h3{
   font-family: Montserrat;
+}
+
+/* ***************************** TIMELINE ********************************* */
+.timeline p{
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1rem;
+
+} 
+
+
+
+.timeStamps{
+  width: 32%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  .timeStamps{
+    width: 80%;
+  }
+  /* .timelineGrid{
+    column-gap: 10px;
+  } */
+}
+
+@media screen and (max-width: 884px) {
+  .timeStamps{
+    width: 40%;
+  }
+  .timelineGrid{
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .timeStamps{
+    width: 60%;
+  }
+  .timelineGrid{
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .timeStamps{
+    width: 80%;
+  }
+  .timelineGrid{
+    column-gap: 10px;
+  }
 }
