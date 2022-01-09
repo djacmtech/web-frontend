@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Righteous&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Readex+Pro:wght@200;400;600&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 .abtheading {
   font-family: Righteous;
   font-style: normal;
@@ -51,4 +52,85 @@
 .heroContentDate{
     font-family: Montserrat;
     font-weight: 700;   
+}
+
+.prizesHeading{
+  font-family: 'Righteous', cursive;
+}
+
+.amount h2{
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+.flip-card-container {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.flip-card-container:hover .flip-card {
+  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
+}
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 0.5rem; */
+}
+
+.flip-card-container{
+border-radius: 10px;
+}
+
+.flip-card-front {
+  background: linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%);
+border: 20px solid #FFFFFF;
+box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
+border-radius: 10px;
+width: 100%;
+  height: 100%;
+}
+.flip-card-back {
+  background: #FFFFFF;
+border: 20px solid transparent;
+box-shadow: 5.04074px 5.04074px 25.2037px rgba(50, 106, 249, 0.2);
+border-image: linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%);
+border-image-slice: 1;
+border-radius: 10px !important;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back::before{
+border-radius: 10px !important;
+}
+
+.flip-card-back p {
+  text-align: center;
+  margin: 1rem;
+  /* font-size: 1.4rem;
+  line-height: 1.5rem; */
+}
+.flip-card-back p span {
+  display: block;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 1.25rem;
+}
+
+h3{
+  font-family: Montserrat;
 }

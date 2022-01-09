@@ -13,8 +13,9 @@ function Loc() {
     return (
         <>
             <Hero />
-            {/* <About /> */}
-             <Prizes />
+            <About />
+            <Prizes />
+            <Domain />
             <Timeline />
             <Guidelines />
             <Sponsors />
