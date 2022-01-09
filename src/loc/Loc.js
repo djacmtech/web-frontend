@@ -1,5 +1,5 @@
 import React from 'react'
-import Domain from './Domain'
+// import Domain from './Domain'
 import About from './About'
 import Hero from './Hero'
 import Prizes from './Prizes'
@@ -13,7 +13,7 @@ function Loc() {
     return (
         <>
             <Hero />
-            {/* <About /> */}
+            <About />
              <Prizes />
             <Timeline />
             <Guidelines />
