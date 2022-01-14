@@ -11,14 +11,14 @@ import axios from "axios";
 
 const Committee = () => {
   const [committee, setCommittee] = useState([]);
-  const baseUrl = "http://137.135.78.87:8080/media"
+  const baseUrl = "https://djacmdev.pythonanywhere.com"
 
   useEffect(() => {
     (async () => {
       let comData;
       try {
         const response = await axios.get(
-          "http://137.135.78.87:8080/api/core_committee/"
+          "https://djacmdev.pythonanywhere.com/api/core_committee/"
         );
         comData = await response.data;
       } catch (error) {
@@ -111,7 +111,7 @@ const Committee = () => {
               </Card>
             );
           }
-          return 0
+          return null
         })}
 
         <Grid
@@ -153,7 +153,7 @@ const Committee = () => {
                 </Grid>
               );
             }
-            return 0
+            return null
           })}
         </Grid>
       </center>

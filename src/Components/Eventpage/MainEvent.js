@@ -12,14 +12,14 @@ const MainEvent = () => {
   // to scroll to top of page
   const { mainEvent } = useParams();
   const routePath = useLocation();
-  const baseUrl = "http://137.135.78.87:8080/media";
+  const baseUrl = "https://djacmdev.pythonanywhere.com";
   const onTop = () => {
     window.scrollTo(0, 0);
   };
   useEffect(() => {
     onTop();
     axios
-      .get("http://137.135.78.87:8080/api/events/")
+      .get("https://djacmdev.pythonanywhere.com/api/events/")
       .then((res) => {
         // console.log(res.data);
         res.data.map((x) => {
@@ -33,7 +33,7 @@ const MainEvent = () => {
         console.log(e);
       });
     axios
-      .get("http://137.135.78.87:8080/api/photos/")
+      .get("https://djacmdev.pythonanywhere.com/api/photos/")
       .then((res) => {
         console.log(res.data);
         res.data.map((x) => {

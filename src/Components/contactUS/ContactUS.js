@@ -32,7 +32,7 @@ export default function ContactUS() {
 
   var config = {
     method: "post",
-    url: "http://137.135.78.87:8080/api/contact/",
+    url: "https://djacmdev.pythonanywhere.com/api/contact/",
     headers: {
       "Content-Type": "application/json",
     },
