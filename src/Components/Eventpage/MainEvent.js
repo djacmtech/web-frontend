@@ -12,7 +12,7 @@ const MainEvent = () => {
   // to scroll to top of page
   const { mainEvent } = useParams();
   const routePath = useLocation();
-  const baseUrl = "https://djacmdev.pythonanywhere.com";
+  const baseUrl = "https://djacmdev.pythonanywhere.com/media";
   const onTop = () => {
     window.scrollTo(0, 0);
   };

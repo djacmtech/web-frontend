@@ -271,6 +271,14 @@ const NavBar = (activePage) => {
                   Committee
                 </button>
               </Link>
+              <Link
+                className="headerLinks"
+                to="/loc"
+              >
+                <button  className="btn">
+                  LOC
+                </button>
+              </Link>
               {/* <Link
                 disabled={value.Resources}
                 className="headerLinks"

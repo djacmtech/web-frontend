@@ -11,7 +11,7 @@ import axios from "axios";
 
 const Committee = () => {
   const [committee, setCommittee] = useState([]);
-  const baseUrl = "https://djacmdev.pythonanywhere.com"
+  const baseUrl = "https://djacmdev.pythonanywhere.com/media"
 
   useEffect(() => {
     (async () => {
