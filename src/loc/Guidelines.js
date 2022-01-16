@@ -45,7 +45,7 @@ const array = [
 ];
 function Guidelines() {
   return (
-    <div style={{ color: "black", backgroundColor: "white",padding:'0 8%' }}>
+    <div id="Guidelines" style={{ color: "black", backgroundColor: "white",padding:'0 8%' }}>
 
       <center>
       <h2 className="guidelineHeading">Guidelines</h2>

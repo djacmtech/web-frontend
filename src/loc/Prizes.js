@@ -5,7 +5,7 @@ import './Loc.css'
 
 function Prizes() {
     return (
-        <div style={{ background: "linear-gradient(74.09deg, #34BDF3 0%, #585BA8 100.01%)" }}>
+        <div id='Prizes' style={{ background: "linear-gradient(74.09deg, #34BDF3 0%, #585BA8 100.01%)" }}>
             <div className="prizes" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column' }}>
                 <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '4%' }} className='prizesHeading'>Prizes</h2>
                 <Grid container sx={{ width: '100%' }} style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', width: '100%', marginBottom: '5%' }}>

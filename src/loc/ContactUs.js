@@ -6,7 +6,7 @@ import {BsGlobe2} from 'react-icons/bs'
 function ContactUs() {
 
     return (
-        <div style={{  background: "linear-gradient(179.94deg, #FF8A50 -1.24%, #F54951 64.13%)" }}>
+        <div id='Contact Us' style={{  background: "linear-gradient(179.94deg, #FF8A50 -1.24%, #F54951 64.13%)" }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={5} columnGap={2} style={{padding:"2%", textAlign:"center"}}>
                     <h1 style={{color:"black"}}> Contact Us </h1>
