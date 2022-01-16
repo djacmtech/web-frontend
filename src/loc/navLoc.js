@@ -13,11 +13,12 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-scroll";
 const pages = [
   "Prizes",
   "Domain",
@@ -75,7 +76,10 @@ const NavLoc = () => {
     >
       <List>
         {pages.map((text, index) => (
-          <Link style={{textDecoration:'none'}} to={`/${text.toLowerCase().replace(" ", "-")}`}>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={`/${text.toLowerCase().replace(" ", "-")}`}
+          >
             <ListItem button key={text}>
               <ListItemText>
                 <span>{text}</span>
@@ -158,13 +162,15 @@ const NavLoc = () => {
             alignContent="center"
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
+              <Link to={page} smooth={true} spy={true}>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
 
