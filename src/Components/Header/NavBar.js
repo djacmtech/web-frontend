@@ -28,12 +28,14 @@ const NavBar = (activePage) => {
     Resources: false,
     Blogs: false,
     contactUS: false,
+    loc: false
   };
   let page = activePage.activePage.activePage;
   if (page === "Home") value.home = true;
   else if (page === "Events") value.events = true;
   else if (page === "Committee") value.Committee = true;
   else if (page === "Resources") value.Resources = true;
+  else if (page === "Loc") value.loc = true;
   else if (page === "Blogs") value.Blogs = true;
   else if (page === "contactUS") value.contactUS = true;
 
@@ -82,7 +84,7 @@ const NavBar = (activePage) => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["Events", "Committee", "Contact Us"].map((text, index) => (
+        {["Events", "Committee", "Loc", "Contact Us"].map((text, index) => (
           <Link className="mobileDrawer" to={`/${text.toLowerCase().replace(' ','-')}`}>
             <ListItem button key={text}>
               <ListItemIcon>
@@ -272,10 +274,11 @@ const NavBar = (activePage) => {
                 </button>
               </Link>
               <Link
+                disabled={value.loc}
                 className="headerLinks"
                 to="/loc"
               >
-                <button  className="btn">
+                <button disabled={value.loc} className="btn">
                   LOC
                 </button>
               </Link>
