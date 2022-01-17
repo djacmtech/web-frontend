@@ -32,7 +32,7 @@ function About() {
               codes to make industry-grade projects.
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} spacing={3} style={{width:"100%", height:"100%"}}>
+          <Grid item xs={8} sm={8} md={4} spacing={3} style={{width:"100%", height:"100%"}}>
             <Splide
               options={{
                 rewind: true,

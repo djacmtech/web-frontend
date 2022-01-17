@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Readex+Pro:wght@200;400;600&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+/* About */
 .abtgrid {
   padding: 80px;
 }
@@ -29,14 +30,11 @@
   padding-right: 20%;
 }
 
-.abtimg {
-  border: 40px solid #ffffff;
-  filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
-}
-
 .splide__slide img {
   height: 300px;
   width: 100%;
+  /* border: 40px solid #ffffff;
+  filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12)); */
 }
 
 @media (max-width: 600px) {
@@ -51,15 +49,6 @@
 
   .abtgrid {
     padding: 10px;
-  }
-  .abtheading {
-    font-size: 30px;
-    padding-right: 5%;
-  }
-
-  .abtcontent {
-    font-size: 15px;
-    padding-right: 5%;
   }
 }
 
@@ -110,6 +99,17 @@
   font-weight: bold;
 }
 
+@media (min-width: 600px){
+  .Prizes2{
+    display: none;
+  }
+}
+
+@media (max-width: 600px){
+  .Prizes1{
+    display: none;
+  }
+}
 
 
 /* ***************************** DOMAIN ********************************* */
