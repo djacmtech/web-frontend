@@ -4,7 +4,7 @@ import './Loc.css'
 
 function Timeline() {
     return (
-        <div style={{ backgroundColor: '#001521' }}>
+        <div id='Timeline' style={{ backgroundColor: '#001521' }}>
             <div className="timeline" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', marginBottom: '5%' }}>
                 <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '4%' }} className='prizesHeading'>Timeline</h2>
                 <div className='timeStamps' >
