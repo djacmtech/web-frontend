@@ -4,7 +4,7 @@ import NavBar from './NavBar'
 const Header = (activePage) => {
     return (
         <>
-            <HeadSocial/>
+            {/* <HeadSocial/> */}
             <NavBar activePage={activePage}/>
         </>
     )

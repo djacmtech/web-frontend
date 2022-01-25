@@ -8,7 +8,7 @@ export default function Landing() {
         <div className="landImg">
           <div class="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <div class="wrapper">
-              <p class="word"><span>Association of Computer Machinery</span></p>
+              <p class="word"><span>Association for Computing Machinery</span></p>
             </div>
             <h3 style={{ margin: '0', padding: '0' }}>Dwarkadas Jivanlal Sanghvi College of Engineering</h3>
           </div>
