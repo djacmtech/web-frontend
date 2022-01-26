@@ -8,12 +8,17 @@ import Typography from "@mui/material/Typography";
 import "./Committee.css";
 import OurCommittee from "./CommitteeArray";
 import axios from "axios";
+const onTop = () => {
+  window.scrollTo(0, 0);
+};
 
 const Committee = () => {
   const [committee, setCommittee] = useState([]);
-  const baseUrl = "https://djacmdev.pythonanywhere.com/media"
+  const baseUrl = "https://djacmdev.pythonanywhere.com/media";
 
   useEffect(() => {
+    onTop();
+
     (async () => {
       let comData;
       try {
@@ -30,7 +35,7 @@ const Committee = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#000324", margin: '0px', padding: '0px' }}>
+    <div style={{ backgroundColor: "#000324", margin: "0px", padding: "0px" }}>
       <Header activePage="Committee" />
       <center>
         <div className="team">MEET OUR TEAM</div>
@@ -42,7 +47,7 @@ const Committee = () => {
           container
           // spacing={{ xs: 2, md: 3 }}
           // columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{ justifyContent: "center", margin: '0px', padding: '0px' }}
+          style={{ justifyContent: "center", margin: "0px", padding: "0px" }}
         >
           {OurCommittee.map((committee) => (
             <Grid item xs={6} sm={4} md={4}>
@@ -111,7 +116,7 @@ const Committee = () => {
               </Card>
             );
           }
-          return null
+          return null;
         })}
 
         <Grid
@@ -153,7 +158,7 @@ const Committee = () => {
                 </Grid>
               );
             }
-            return null
+            return null;
           })}
         </Grid>
       </center>
