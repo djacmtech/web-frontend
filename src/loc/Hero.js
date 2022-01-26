@@ -8,8 +8,8 @@ function Hero() {
     <div style={{ backgroundColor: "#001521", transform: "translateY(-5px)" }}>
       <NavLoc />
       <center>
-      <div className="hero">
-      {/* <svg
+        <div className="hero">
+          {/* <svg
           width="1373"
           height="729"
           viewBox="0 0 1373 729"
@@ -56,7 +56,10 @@ function Hero() {
           </defs>
         </svg> */}
           <h1 className="heroHeading">LOC 4.0</h1>
-          <p className="heroContent">24 hour hackathon by DJSCE ACM</p>
+          <p className="heroContent">
+            24 hour hackathon by Dwarkadas Jivanlal Sanghvi College of
+            Engineering - Association of Computing Machinery
+          </p>
           <Button variant="contained" color="primary">
             Apply with Devfolio
           </Button>
