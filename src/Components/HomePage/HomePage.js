@@ -5,7 +5,7 @@ import WhatWeDo from "./WhatWeDo/WhatWeDo";
 import Mission from "./Mission/Mission";
 import Header from "../Header/Header";
 import Events from "./Events";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 const HomePage = () => {
   const onTop = () => {
     window.scrollTo(0, 0);
