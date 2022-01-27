@@ -27,10 +27,10 @@ function Faqs() {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <Typography>What is a hackathon?</Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>What is a hackathon?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </Typography>
@@ -42,10 +42,10 @@ function Faqs() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Accordion 2</Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>Accordion 2</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </Typography>
@@ -57,10 +57,10 @@ function Faqs() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Accordion 3</Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>Accordion 3</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </Typography>
@@ -72,16 +72,16 @@ function Faqs() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Accordion 4</Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>Accordion 4</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </Typography>
                     </AccordionDetails>
                 </Accordion>
-                <Item style={{padding:'5%'}}> Each team would comprise of 2-4 members including the team leader.
+                <Item style={{padding:'5%', fontFamily:'montserrat', fontWeight:'500'}}> Each team would comprise of 2-4 members including the team leader.
                     All team members should be from same college; no inter-college 
                     teams are allowed. However, members from different branches of the
                     same college institute can form a team. </Item>
@@ -91,10 +91,10 @@ function Faqs() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Accordion 5</Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>Accordion 5</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </Typography>
@@ -106,10 +106,10 @@ function Faqs() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                     >
-                    <Typography>Accordion 6</Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>Accordion 6</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography>
+                    <Typography style={{fontFamily:'montserrat', fontWeight:'500'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         malesuada lacus ex, sit amet blandit leo lobortis eget.
                     </Typography>
