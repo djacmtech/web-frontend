@@ -18,15 +18,17 @@ function Loc() {
   }, []);
   return (
     <>
-      <Hero />
-      <About />
-      <Prizes />
-      <Domain />
-      <Timeline />
-      <Guidelines />
-      <Sponsors />
-      <Faqs />
-      <ContactUs />
+      <div style={{ backgroundColor: 'white' }}>
+        <Hero />
+        <About />
+        <Prizes />
+        <Domain />
+        <Timeline />
+        <Guidelines />
+        <Sponsors />
+        <Faqs />
+        <ContactUs />
+      </div>
     </>
   );
 }
