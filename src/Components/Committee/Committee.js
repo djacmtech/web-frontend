@@ -8,12 +8,17 @@ import Typography from "@mui/material/Typography";
 import "./Committee.css";
 import OurCommittee from "./CommitteeArray";
 import axios from "axios";
+const onTop = () => {
+  window.scrollTo(0, 0);
+};
 
 const Committee = () => {
   const [committee, setCommittee] = useState([]);
-  const baseUrl = "https://djacmdev.pythonanywhere.com/media"
+  const baseUrl = "https://djacmdev.pythonanywhere.com/media";
 
   useEffect(() => {
+    onTop();
+
     (async () => {
       let comData;
       try {
@@ -30,7 +35,7 @@ const Committee = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#000324", margin: '0px', padding: '0px' }}>
+    <div style={{ backgroundColor: "#000324", margin: "0px", padding: "0px" }}>
       <Header activePage="Committee" />
       <center>
         <div className="team">MEET OUR TEAM</div>
@@ -109,7 +114,7 @@ const Committee = () => {
               </Card>
             );
           }
-          return null
+          return null;
         })}
 
         <Grid
@@ -149,7 +154,7 @@ const Committee = () => {
                 </Grid>
               );
             }
-            return null
+            return null;
           })}
         </Grid>
       </center>

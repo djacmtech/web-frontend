@@ -66,7 +66,10 @@ function Hero() {
           </defs>
         </svg> */}
           <h1 className="heroHeading">LOC 4.0</h1>
-          <p className="heroContent">24 hour hackathon by DJSCE ACM</p>
+          <p className="heroContent">
+            24 hour hackathon by Dwarkadas Jivanlal Sanghvi College of
+            Engineering - Association of Computing Machinery
+          </p>
           <div
             className="apply-button"
             data-hackathon-slug="lines-of-code-djacm"

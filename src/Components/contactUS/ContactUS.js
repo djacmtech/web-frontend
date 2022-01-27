@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Header from "../Header/Header";
 import { Grid } from "@mui/material";
 import { Button } from "@mui/material";
@@ -38,6 +38,14 @@ export default function ContactUS() {
     },
     data: data,
   };
+
+  const onTop = () => {
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    onTop();
+  }, []);
+
   return (
     <div style={{ backgroundColor: "#000324", paddingBottom: "30px" }}>
       <Header activePage="contactUS" />

@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="footerSection">
       {/* first part */}
-      <div
+      {/* <div
         style={{
           marginBottom: "55px",
           backgroundColor: "#000324",
@@ -46,7 +46,7 @@ const Footer = () => {
             <h3>send</h3>
           </Button>
         </center>
-      </div>
+      </div> */}
 
       {/* social media handles */}
       <div

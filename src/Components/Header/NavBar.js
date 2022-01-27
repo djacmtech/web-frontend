@@ -104,7 +104,6 @@ const NavBar = (activePage) => {
     <AppBar
       style={{
         backgroundColor: "#000324",
-        transform: "translateY(-12px)",
         color: "#dbdbdb",
       }}
       position="sticky"
