@@ -1,8 +1,7 @@
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import { IconContext } from "react-icons";
 import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
 import image from "../Header/DJACMLOGO.png";
 import { Link } from "react-router-dom";
 import "../Footer/Footer.css";

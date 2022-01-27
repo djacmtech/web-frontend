@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "./Loc.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide.min.css";
+import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 function About() {
   return (
@@ -12,6 +12,7 @@ function About() {
         backgroundColor: "white",
         // paddingTop: "70px",
         paddingBottom: "70px",
+        // height:"100vh",
       }}
     >
      <div className="ball1"></div>
@@ -40,10 +41,11 @@ function About() {
               codes to make industry-grade projects.
             </div>
           </Grid>
-          <Grid item xs={8} sm={8} md={4} spacing={3} style={{width:"100%", height:"100%"}}>
+          <Grid item xs={8} sm={8} md={4} /*spacing={3}*/ style={{width:"100%", height:"100%"}}>
             <Splide
               options={{
                 rewind: true,
+                lazyLoad: 'nearby',
                 gap: "1rem",
                 autoplay : true,
               }}

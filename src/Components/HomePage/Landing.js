@@ -1,7 +1,23 @@
-import OurEvents from "./Event";
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 import "./HomePage.css"
-export default function Landing() {
 
+export default function Landing() {
+  const baseUrl = "https://djacmdev.pythonanywhere.com/media";
+  const [OurEvents2, setOurEvents2] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://djacmdev.pythonanywhere.com/api/events/")
+      .then((res) => {
+        // console.log(res.data);
+        setOurEvents2(res.data.slice(0, 4))
+        console.log(OurEvents2);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  })
   return (
     <>
       <div className="landingScreen">
@@ -15,11 +31,11 @@ export default function Landing() {
         </div>
         <div className="events">
           {
-            OurEvents.map(event => {
+            OurEvents2.map(event => {
               return <>
                 <div className="eventCard">
-                  <img src={event.image} className="eventImg" alt="eventImg" />
-                  <h4 className="eventName">{event.tag}</h4>
+                  <img src={baseUrl.concat(event.image)} className="eventImg" alt="eventImg" />
+                  <h4 className="eventName">{event.title}</h4>
                 </div>
               </>
             })
