@@ -399,9 +399,10 @@ h3 {
 .ball5,
 .ball6,
 .ball7 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  width: 5px;
+  height: 30px;
+  /* border-radius: 50%; */
+  transform: rotate(60deg);
   display: flex;
 }
 
