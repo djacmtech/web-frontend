@@ -6,7 +6,7 @@ import "./Loc.css";
 function Prizes() {
   return (
     <>
-      <div className="Prizes1">
+      <div className="Prizes1" id='Prizes'>
         <div
           style={{
             background:

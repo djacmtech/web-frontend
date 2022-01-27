@@ -10,10 +10,18 @@ function About() {
     <div
       style={{
         backgroundColor: "white",
-        paddingTop: "70px",
+        // paddingTop: "70px",
         paddingBottom: "70px",
       }}
     >
+     <div className="ball1"></div>
+     <div className="ball2"></div>
+     <div className="ball3"></div>
+     <div className="ball4"></div>
+     <div className="ball5"></div>
+     <div className="ball6"></div>
+     <div className="ball7"></div>
+
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
