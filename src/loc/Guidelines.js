@@ -3,9 +3,9 @@ import Grid from "@mui/material/Grid";
 import "./Loc.css";
 function Guidelines() {
 
-  const [rule, setRule] = useState([{id:0, desc:''}])
+  const [rule, setRule] = useState([{ id: 0, desc: '' }])
 
-  useEffect(()=> {
+  useEffect(() => {
 
     var myHeaders = new Headers();
     myHeaders.append("Cookie", "csrftoken=PNWvCigcHKd01ul44FUpyLNwLbkVZTJNHv4NtPEwmhnedricHyK02uduZJy3Uump");
@@ -17,22 +17,22 @@ function Guidelines() {
     };
 
     fetch("http://djacmdev.pythonanywhere.com/api/guideline/", requestOptions)
-    .then(response => response.json())
-    .then(result => setRule(result))
-    .catch(error => console.log('error', error));
+      .then(response => response.json())
+      .then(result => setRule(result))
+      .catch(error => console.log('error', error));
   }, [])
 
   return (
-    <div id="Guidelines" style={{ color: "black", backgroundColor: "white",padding:'0 8%' }}>
+    <div id="Guidelines" style={{ color: "black", backgroundColor: "white", padding: '0 8%' }}>
 
       <center>
-      <h2 className="guidelineHeading">Guidelines</h2>
+        <h2 className="guidelineHeading">Guidelines</h2>
         <Grid container spacing={2}>
           {rule.map((x) => {
             return (
               <Grid item lg={4} md={6} sm={6} xs={12}>
                 <div className="guidelines">
-                  <span className="guideNumber">0{(x.id)-2}</span>
+                  <span className="guideNumber">0{(x.id) - 2}</span>
                   <br />
                   <p className="guideContain">{x.desc}</p>
                 </div>
