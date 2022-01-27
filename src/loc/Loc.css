@@ -33,15 +33,17 @@
 
 .splide__slide img {
   height: 300px;
-  width: 100%;
-  /* border: 40px solid #ffffff;
-  filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12)); */
+  width: 367px;
+  border-radius: 5%;
+  border: 40px solid #FFFFFF;
+  filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12)); 
 }
 
 @media (max-width: 600px) {
   .splide__slide img {
-    height: 100%;
-    width: 100%;
+    height: 114px;
+    width: 165px;
+    /* border: 10px solid #FFFFFF; */
   }
 
   .splide__slide {
@@ -82,6 +84,7 @@
   font-family: Montserrat;
   font-weight: 700;
   font-size: 1.2rem;
+  padding: 0 20%;
 }
 
 .heroContentDate{

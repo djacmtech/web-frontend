@@ -45,9 +45,7 @@ const Committee = () => {
         <div className="faculty">Faculty</div>
         <Grid
           container
-          // spacing={{ xs: 2, md: 3 }}
-          // columns={{ xs: 4, sm: 8, md: 12 }}
-          style={{ justifyContent: "center", margin: "0px", padding: "0px" }}
+          style={{ justifyContent: "center", margin: '0px', padding: '0px' }}
         >
           {OurCommittee.map((committee) => (
             <Grid item xs={6} sm={4} md={4}>
@@ -121,8 +119,6 @@ const Committee = () => {
 
         <Grid
           container
-          // spacing={{ xs: 2, md: 3 }}
-          // columns={{ xs: 4, sm: 8, md: 12 }}
           style={{ paddingTop: 20, justifyContent: "center" }}
         >
           {committee.map((props) => {

@@ -1,15 +1,25 @@
 import React from "react";
 import NavLoc from "./navLoc";
 import "./Loc.css";
-import { Button } from "@mui/material";
 import CountDown from "./countDown";
 function Hero() {
+  React.useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://apply.devfolio.co/v2/sdk.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div style={{ backgroundColor: "#001521", transform: "translateY(-5px)" }}>
       <NavLoc />
       <center>
-      <div className="hero">
-      {/* <svg
+        <div className="hero">
+          {/* <svg
           width="1373"
           height="729"
           viewBox="0 0 1373 729"
@@ -56,10 +66,16 @@ function Hero() {
           </defs>
         </svg> */}
           <h1 className="heroHeading">LOC 4.0</h1>
-          <p className="heroContent">24 hour hackathon by DJSCE ACM</p>
-          <Button variant="contained" color="primary">
-            Apply with Devfolio
-          </Button>
+          <p className="heroContent">
+            24 hour hackathon by Dwarkadas Jivanlal Sanghvi College of
+            Engineering - Association of Computing Machinery
+          </p>
+          <div
+            className="apply-button"
+            data-hackathon-slug="lines-of-code-djacm"
+            data-button-theme="light"
+            // style="height: 44px; width: 312px"
+          ></div>
           <p className="heroContentDate">25th - 27th February, 2021</p>
         </div>
         <CountDown />
