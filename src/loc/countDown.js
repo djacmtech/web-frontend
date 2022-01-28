@@ -7,10 +7,10 @@ const CountDown = () => {
   const calculateTimeLeft = () => {
     let diff = +new Date("February 27, 2022 00:00:01").getTime() - +new Date().getTime()
     let timeLeft = {
-      DAYS: Math.floor((diff / (1000 * 60 * 60 * 24))),
-      HOURS: Math.floor((diff / (1000 * 60 * 60)) % 24),
-      MINUTES: Math.floor((diff / 1000 / 60) % 60),
-      SECONDS: Math.floor((diff / 1000) % 60)
+      DAYS: Math.floor((diff / (1000 * 60 * 60 * 24)))/10<1? '0'+ Math.floor((diff / (1000 * 60 * 60 * 24))): Math.floor((diff / (1000 * 60 * 60 * 24))),
+      HOURS: Math.floor((diff / (1000 * 60 * 60)) % 24)/10<1? '0'+Math.floor((diff / (1000 * 60 * 60)) % 24): Math.floor((diff / (1000 * 60 * 60)) % 24),
+      MINUTES: Math.floor((diff / 1000 / 60) % 60)/10<1? '0'+Math.floor((diff / 1000 / 60) % 60): Math.floor((diff / 1000 / 60) % 60),
+      SECONDS: Math.floor((diff / 1000) % 60)/10<1? '0'+Math.floor((diff / 1000) % 60): Math.floor((diff / 1000) % 60)
     }
     return timeLeft
   }
@@ -32,7 +32,7 @@ const CountDown = () => {
     }
     timerComponents.push(
       <Grid item md={3} sm={3} xs={3} style={{ padding: '20px 10px 20px 10px' }}>
-        <span style={{ fontWeight: 'bolder' }} className="countDownSize">{timeLeft[interval]}{index - 3 ? ' : ' : ''}</span> <br />
+        <span style={{ fontWeight: 'bolder' }} className="countDownSize">{timeLeft[interval]} {index - 3 ? ':' : ''}</span> <br />
         <span style={{ fontWeight: '600' }} className="countDownIntervalSize"> {interval} </span>
       </Grid>
     )
