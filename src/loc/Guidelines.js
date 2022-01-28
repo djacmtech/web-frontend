@@ -23,7 +23,7 @@ function Guidelines() {
   }, [])
 
   return (
-    <div id="Guidelines" style={{ color: "black", backgroundColor: "white", padding: '0 8%' }}>
+    <div id="Guidelines" style={{ color: "black", backgroundColor: "white", padding: '0 8%', marginBottom: '4%' }}>
 
       <center>
         <h2 className="guidelineHeading">Guidelines</h2>
@@ -31,7 +31,7 @@ function Guidelines() {
           {rule.map((x) => {
             return (
               <Grid item lg={4} md={6} sm={6} xs={12}>
-                <div className="guidelines">
+                <div className="guidelines" style={{ height: '130px' }}>
                   <span className="guideNumber">0{(x.id) - 2}</span>
                   <br />
                   <p className="guideContain">{x.desc}</p>
