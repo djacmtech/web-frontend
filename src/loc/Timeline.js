@@ -6,7 +6,7 @@ function Timeline() {
     return (
         <div id='Timeline' style={{ backgroundColor: '#001521' }}>
             <div className="timeline" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', marginBottom: '4%' }}>
-                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%' }} className='prizesHeading'>Timeline</h2>
+                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%', fontFamily:"Righteous" }} className='prizesHeading'>Timeline</h1>
                 <div className='timeStamps' >
                     <div style={{ width: '100%', marginTop: '15px' }}>
                         <Grid container className='timelineGrid'  >

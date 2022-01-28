@@ -7,7 +7,7 @@ function Domain() {
     return (
         <div id='Domain' style={{ color: 'black', backgroundColor: 'white' }}>
             <div className="domain" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column' }}>
-                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '4%', color: '#3770FF' }} className='domainHeading'>Domain</h2>
+                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '4%', color: '#3770FF', fontFamily:"Righteous" }} className='domainHeading'>Domain</h1>
                 <Grid container sx={{ width: '100%' }} style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', width: '100%', marginBottom: '5%', rowGap: '70px' }}>
                     <Grid item xs={12} sm={6} md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column' }}>
                         <div className="flip-card">

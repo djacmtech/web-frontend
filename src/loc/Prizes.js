@@ -23,7 +23,7 @@ function Prizes() {
               flexDirection: "column",
             }}
           >
-            <h2
+            <h1
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -31,11 +31,13 @@ function Prizes() {
                 width: "100%",
                 marginTop: "5%",
                 marginBottom: "4%",
+                fontFamily:"Righteous",
+                fontWeight:"400",
               }}
               className="prizesHeading"
             >
               Prizes
-            </h2>
+            </h1>
             <Grid
               container
               sx={{ width: "100%" }}
@@ -162,6 +164,7 @@ function Prizes() {
               alignItems: "center",
               width: "100%",
               flexDirection: "column",
+              paddingBottom:"10px",
             }}
           >
             <h2
@@ -172,6 +175,8 @@ function Prizes() {
                 width: "100%",
                 marginTop: "5%",
                 marginBottom: "4%",
+                fontFamily:"Righteous",
+                fontSize:"30px",
               }}
               className="prizesHeading"
             >
@@ -188,6 +193,7 @@ function Prizes() {
                 alignItems: "center",
                 width: "100%",
                 flexDirection: "column",
+                paddingBottom:"10px",
               }}
             >
               <img
@@ -231,6 +237,7 @@ function Prizes() {
                   alignItems: "center",
                   width: "100%",
                   flexDirection: "column",
+                  paddingBottom:"10px",
                 }}
               >
                 <img
@@ -263,6 +270,7 @@ function Prizes() {
                   alignItems: "center",
                   width: "100%",
                   flexDirection: "column",
+                  paddingBottom:"10px",
                 }}
               >
                 <img
