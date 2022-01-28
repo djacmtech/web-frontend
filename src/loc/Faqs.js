@@ -4,17 +4,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { BsChevronDown } from 'react-icons/bs'
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
 
 function Faqs() {
-
-    const Item = styled(Paper)(({ theme }) => ({
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    }));
 
     return (
         <div id='FAQS' style={{ color: 'black', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontSize: '18px' }}>
@@ -41,11 +32,11 @@ function Faqs() {
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography style={{ fontWeight: 'bold', fontFamily: 'Montserrat' }}>What are the problem statements for the hackathon?</Typography>
+                        <Typography style={{ fontWeight: 'bold', fontFamily: 'Montserrat'}}>What are the problem statements for the hackathon?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat' }}>
-                            The problem statements will be declared soon. Once you’ve registered we’ll keep you posted with all details.
+                        <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat'}}>
+                            The problem statements will be declared soon. Once you&#39;ve registered we&#39;ll keep you posted with all details.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>

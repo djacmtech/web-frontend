@@ -17,7 +17,7 @@ function ContactUs() {
                             <div style={{paddingLeft:'20px', fontSize:'20px'}}> coreacm@gmail.com </div>
                         </div> 
                         </p>
-                        <p style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}}> PHONE </h2> <div style={{fontSize:'20px', padding:'3px', color:'#FFFFFF'}}> Richa Shah | 9892993784 </div> <div style={{fontSize:'20px', padding:'3px', color:'#ffffff'}}> Richa Shah | 9892993784 </div>  </p>
+                        <p style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}}> PHONE </h2> <div style={{fontSize:'20px', padding:'3px', color:'#FFFFFF'}}> Deap Daru | +91 9987748170 </div> <div style={{fontSize:'20px', padding:'3px', color:'#ffffff'}}> Harvy Gandhi | +91 9819705248 </div>  </p>
                         <p style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}}> SOCIALS </h2> 
                         <div style={{display:'flex', alignItems:'center', justifyContent:'left'}}>
                             <div> <a href='http://djacm.co.in/'> <BsGlobe2 style={{fontSize:'35px', color:'black', padding:'3px 8px 3px 8px'}}/> </a> </div> 

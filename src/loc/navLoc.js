@@ -23,7 +23,7 @@ const pages = [
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavLoc = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  // const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   // const handleOpenNavMenu = (event) => {
@@ -33,9 +33,9 @@ const NavLoc = () => {
   //   setAnchorElUser(event.currentTarget);
   // };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  // const handleCloseNavMenu = () => {
+  //   setAnchorElNav(null);
+  // };
 
   // const handleCloseUserMenu = () => {
   //   setAnchorElUser(null);
@@ -160,7 +160,7 @@ const NavLoc = () => {
               <Link to={page} spy={true} smooth={true}>
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  // onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
