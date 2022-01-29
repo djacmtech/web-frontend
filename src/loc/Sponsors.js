@@ -6,7 +6,7 @@ function Sponsors() {
         <div id='Sponsors' style={{ backgroundColor: '#001521', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '4%' }}>
             <h1 style={{ fontFamily: 'Righteous', backgroundImage: 'linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%)', backgroundClip: 'text', WebkitTextFillColor: 'transparent', WebkitBackgroundClip: 'text', marginTop: '4%' }}>Sponsors</h1>
             <div className="goldSponsors">
-                <h5 style={{ textAlign: 'center' }}>Power Sponsors</h5>
+                <h5 style={{ textAlign: 'center' }}>Gold Sponsors</h5>
                 <Grid container spacing={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Grid item>
                         <a href='https://devfolio.co/' target='_blank' rel="noreferrer"><img src="https://drive.google.com/uc?export=download&id=1uOeQAKm5FdEnpN3ZVH7rUUllxwt7zXkd" alt="devfolio" style={{ width: '200px' }} /></a>
@@ -17,7 +17,7 @@ function Sponsors() {
                 </Grid>
             </div>
             <div className="silverSponsors" style={{ margin: '5%' }}>
-                <h5 style={{ textAlign: 'center' }}>Technical Sponsors</h5>
+                <h5 style={{ textAlign: 'center' }}>Silver Sponsors</h5>
                 <Grid container spacing={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
                     <Grid item>
                         <a href='https://celo.org/' target='_blank' rel="noreferrer"><img src="https://drive.google.com/uc?export=download&id=1sS7IG73jrpKUq8oLaTPsIcNeq4uzgSJS" alt="celo" style={{ width: '200px' }} /></a>
