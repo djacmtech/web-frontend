@@ -107,11 +107,19 @@
   .Prizes2 {
     display: none;
   }
+  
 }
 
 @media (max-width: 600px) {
   .Prizes1 {
     display: none;
+  }
+  .heroHeading{
+    font-size: 4.2rem;
+  }
+  .heroContent{
+    font-size: .8rem;
+    padding: 0;
   }
 }
 
@@ -168,6 +176,9 @@ h3 {
   font-family: Montserrat;
 }
 
+.domainGrid{
+  transform: translateX(-20px);
+}
 /* ***************************** TIMELINE ********************************* */
 .timeline p {
   font-family: Montserrat;
