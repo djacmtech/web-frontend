@@ -247,7 +247,7 @@ h3 {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-left: 15%;
+    /* padding-left: 15%; */
     align-items: center;
 }}
 
@@ -357,6 +357,35 @@ h3 {
   }
 }
 
+.countdownSection{
+  padding: 50px;
+}
+
+@media screen and (max-width: 353px){
+  .countdownSection {
+      padding: 20px;
+  }
+  .countdownBorder{
+    margin: 0%;
+  }
+  .countDownSize {
+    font-size: 1.0rem;
+}
+}
+
+
+@media (max-width: 430px) {
+  .countDownSize {
+    font-size: 10%;
+  }
+
+  .countDownIntervalSize {
+    font-size: 0.6rem;
+  }
+}
+
+
+
 @media (max-width: 968px) {
   .countDownSize {
     font-size: 1.8rem;
@@ -372,7 +401,7 @@ h3 {
 
 @media (max-width: 712px) {
   .countDownSize {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .countDownIntervalSize {
