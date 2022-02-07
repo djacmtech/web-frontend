@@ -34,7 +34,7 @@ function Guidelines() {
           {rule.map((x) => {
             return (
               <Grid item lg={4} md={6} sm={6} xs={12}>
-                <div className="guidelines" style={{ height: '130px' }}>
+                <div className="guidelines">
                   <span className="guideNumber">0{(x.id) - 2}</span>
                   <br />
                   <p className="guideContain">{x.desc}</p>

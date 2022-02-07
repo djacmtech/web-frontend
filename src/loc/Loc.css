@@ -305,8 +305,8 @@ h3 {
   border-image-slice: 1;
   font-family: Righteous;
   width: 67%;
-  height: fit-content;
-  padding: 3% 5%;
+  height: 75%;
+  padding: 3% 5% 3% 5%;
 }
 
 .guidelineHeading {

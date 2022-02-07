@@ -9,9 +9,9 @@ function Faqs() {
 
     return (
         <div id='FAQS' style={{ color: 'black', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontSize: '18px' }}>
-            <h1 style={{ color: '#3770FF', fontFamily: 'Righteous' }}> Frequently Asked Questions </h1>
-            <h3 style={{ fontFamily: 'montserrat', fontWeight: '900' }}> Can&#39;t find the answers to what you are looking for? <span style={{ color: '#FF8A50' }}> Reach out to our Team </span> </h3>
-            <div style={{ width: '60%', padding: '2% 5% 5% 5%' }}>
+            <h1 style={{ color: '#3770FF', fontFamily: 'Righteous', padding:'0 2% 0 2%'}}> Frequently Asked Questions </h1>
+            <h3 style={{ fontFamily: 'montserrat', fontWeight: '900', padding:'2% 4% 2% 4%'}}> Can&#39;t find the answers to what you are looking for? <span style={{ color: '#FF8A50' }}> Reach out to our Team </span> </h3>
+            <div style={{ width: '70%', paddingBottom:'5%', paddingTop:'2%'}}>
                 <Accordion defaultExpanded={true}>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
