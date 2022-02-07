@@ -16,7 +16,7 @@ function Guidelines() {
       redirect: 'follow'
     };
 
-    fetch("http://djacmdev.pythonanywhere.com/api/guideline/", requestOptions)
+    fetch("https://djacmdev.pythonanywhere.com/api/guideline/", requestOptions)
       .then(response => response.json())
       .then(result => {
         setRule(result)
