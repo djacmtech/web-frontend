@@ -18,7 +18,10 @@ function Guidelines() {
 
     fetch("http://djacmdev.pythonanywhere.com/api/guideline/", requestOptions)
       .then(response => response.json())
-      .then(result => setRule(result))
+      .then(result => {
+        setRule(result)
+        console.log(result)
+      })
       .catch(error => console.log('error', error));
   }, [])
 

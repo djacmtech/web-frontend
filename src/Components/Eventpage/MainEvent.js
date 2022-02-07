@@ -39,10 +39,10 @@ const MainEvent = () => {
         res.data.map((x) => {
           if (x.event === data.id) {
             console.log(x.pic);
-            // setImage(x.pic);
-            setImage((prev) => {
-              return [...prev, x.pic];
-            });
+            setImage(x.pic);
+            // setImage((prev) => {
+            //   return [...prev, x.pic];
+            // });
           }
           return 0
         });

@@ -30,7 +30,7 @@ function About() {
           style={{ justifyContent: "center" }}
           className="abtgrid"
         >
-          <Grid item sm={12} md={8}>
+          <Grid item sm={12} md={12} lg={8}>
             <div className="abtheading">
               You&#39;re stuck at home but your ideas doesn&#39;t have to be. Write some
               lines of code!
@@ -41,7 +41,7 @@ function About() {
               codes to make industry-grade projects.
             </div>
           </Grid>
-          <Grid item xs={8} sm={8} md={4} /*spacing={3}*/ style={{width:"100%", height:"100%"}}>
+          <Grid item xs={8} sm={8} md={12} lg={4} /*spacing={3}*/ style={{width:"100%", height:"100%"}}>
             <Splide
               options={{
                 rewind: true,
