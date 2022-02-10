@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 function Sponsors() {
 
     useEffect(() => {
-        Aos.init({ duration: 1000 });
+        Aos.init({ duration: 1000, once:"true" });
       }, []);
 
   return (

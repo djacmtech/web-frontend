@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 function Domain() {
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once:"true" });
   }, []);
 
   return (
