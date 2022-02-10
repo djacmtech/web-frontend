@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 function Prizes() {
 
     useEffect(() => {
-      Aos.init({ duration: 1000, once:"true" });
+      Aos.init({ duration: 1000, once:true });
     }, []);
 
   return (
