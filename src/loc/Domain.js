@@ -94,6 +94,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
@@ -169,6 +170,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
@@ -244,6 +246,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
@@ -319,6 +322,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
