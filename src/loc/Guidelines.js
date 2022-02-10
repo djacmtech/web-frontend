@@ -29,12 +29,14 @@ function Guidelines() {
     <div id="Guidelines" style={{ color: "black", backgroundColor: "white", padding: '0 8%', marginBottom: '4%' }}>
 
       <center>
+        <div data-aos="fade-left">
         <h2 className="guidelineHeading">Guidelines</h2>
+        </div>
         <Grid container spacing={2}>
           {rule.map((x) => {
             return (
               <Grid item lg={4} md={6} sm={6} xs={12}>
-                <div className="guidelines">
+                <div data-aos="fade-up" className="guidelines">
                   <span className="guideNumber">0{(x.id) - 2}</span>
                   <br />
                   <p className="guideContain">{x.desc}</p>
