@@ -50,12 +50,12 @@ function Loc() {
     <>
       <div style={{backgroundColor:"white"}}>
         {visible ? <NavLoc elevation={0} /> : <NavLoc elevation={3} />}
-        <Link
+        {/* <Link
           style={{ textDecoration: "none" }}
           to="heroTop"
           spy={true}
           smooth={true}
-        >
+        > */}
           <Fab
             variant="extended"
             style={{
@@ -64,6 +64,7 @@ function Loc() {
               margin: "35% 2%",
               zIndex: "0",
             }}
+            onClick={()=>onTop()}
           >
             <BsArrowUpCircleFill
               style={{
@@ -75,7 +76,7 @@ function Loc() {
               className='backTop'
             />
           </Fab>
-        </Link>
+        {/* </Link> */}
         <Hero />
         {/* <div ref={ref}> */}
         <div onMouseOver={() => setVisible(!visible)}>
