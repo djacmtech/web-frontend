@@ -10,9 +10,7 @@ function About() {
     <div
       style={{
         backgroundColor: "white",
-
         paddingBottom: "70px",
-
       }}
     >
       <div className="ball1"></div>

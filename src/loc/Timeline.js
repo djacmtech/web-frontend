@@ -1,19 +1,12 @@
 import { Grid } from '@mui/material'
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Loc.css'
-// import Aos from "aos";
-// import "aos/dist/aos.css";
 
 function Timeline() {
-
-    // useEffect(() => {
-    //     Aos.init({ duration: 1000, once: true });
-    // }, []);
-
     return (
         <div id='Timeline' style={{ backgroundColor: '#001521' }}>
             <div className="timeline" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', marginBottom: '4%' }}>
-                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%', fontFamily: "Righteous" }} className='prizesHeading'>Timeline</h1>
+                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%', fontFamily: "Righteous" }} className='prizesHeading' data-aos="fade-right">Timeline</h1>
                 <div className='timeStamps' >
                     <div style={{ width: '100%', marginTop: '15px' }}>
                         <div>

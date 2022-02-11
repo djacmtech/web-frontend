@@ -1,8 +1,7 @@
 import { Grid } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 
 function Sponsors() {
-
   return (
     <div
       id="Sponsors"
@@ -25,7 +24,7 @@ function Sponsors() {
           WebkitBackgroundClip: "text",
           marginTop: "4%",
         }}
-        data-aos="fade-left"
+        data-aos="fade-right"
       >
         Sponsors
       </h1>
