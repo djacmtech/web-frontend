@@ -8,49 +8,8 @@ import "../Footer/Footer.css";
 const Footer = () => {
   return (
     <div className="footerSection">
-      {/* first part */}
-      {/* <div
-        style={{
-          marginBottom: "55px",
-          backgroundColor: "#000324",
-          color: "#dbdbdb",
-        }}
-      >
-        <center>
-          <h5>NEWSLETTER</h5>
-          <h2>
-            Get new offer's on your email{" "}
-            <span style={{ position: "relative", top: "5px" }}>
-              <MdOutlineEmail />
-            </span>
-          </h2>
-          <h6>Put your email address and get started</h6>
-          <input
-            type="text"
-            placeholder="Enter email address"
-            className="footerEmail"
-          />
-          <Button
-            variant="contained"
-            style={{
-              color: "#000324",
-              backgroundColor: "white",
-              borderRadius: "40px",
-              width: "120px",
-              height: "50px",
-              margin:"20px",
-              textTransform: "capitalize",
-            }}
-          >
-            <h3>send</h3>
-          </Button>
-        </center>
-      </div> */}
-
-      {/* social media handles */}
       <div
         style={{
-          paddingTop: "20px",
           backgroundColor: "#000324",
           color: "white",
           transform: "scale(1.02)",
@@ -59,7 +18,7 @@ const Footer = () => {
         <center>
           <Grid container spacing={1}>
             <Grid style={{ backgroundColor: "#000324" }} item sm={4} xs={12}>
-              <img className="footerAcmIcon" src={image} alt="acmIcon" />
+              <img className="footerAcmIcon" style={{width:'65%'}} src={image} alt="acmIcon" />
             </Grid>
             <Grid style={{ backgroundColor: "#000324" }} item sm={4} xs={12}>
               <p>Get involved</p>
@@ -85,8 +44,6 @@ const Footer = () => {
                   >
                     <BsInstagram />
                   </a>
-                  {/* </li>
-                <li> */}
                   <a
                     href="https://www.facebook.com/djscoe.acm.5"
                     rel="noreferrer"
@@ -109,7 +66,7 @@ const Footer = () => {
           </Grid>
           {/* copyright */}
           <h6
-            style={{ color: " #dbdbdb91", padding: "5px", fontSize: ".8rem" }}
+            style={{ color: " #dbdbdb91", fontSize: ".8rem" }}
           >
             &copy;
             {new Date().getFullYear()} DJSCE ACM -- All Rights Reserved

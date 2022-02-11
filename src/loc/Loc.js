@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Domain from "./Domain";
 import About from "./About";
 import Hero from "./Hero";
@@ -14,34 +14,9 @@ import Fab from "@mui/material/Fab";
 import { BsArrowUpCircleFill } from "react-icons/bs";
 
 function Loc() {
-  const onTop = () => {
-    window.scrollTo(0, 0);
-  };
+  
   const [visible, setVisible] = useState(false);
   const ref = useRef();
-  function useOnScreen(options) {
-    useEffect(() => {
-      onTop();
-
-      const observer = new IntersectionObserver(([entry]) => {
-        // setVisible(entry.isIntersecting);
-      }, options);
-      console.log(visible);
-
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      };
-    }, [ref, options]);
-
-    return [ref, visible];
-  }
-  const [elev, setElev] = useState(false);
 
   // const [ref, visible] = useOnScreen({ threshold: 0.9 });
   console.log(ref);
@@ -56,7 +31,7 @@ function Loc() {
           spy={true}
           smooth={true}
         >
-          <Fab
+          {/* <Fab
             variant="extended"
             style={{
               backgroundColor: "#001521",
@@ -74,7 +49,7 @@ function Loc() {
               }}
               className='backTop'
             />
-          </Fab>
+          </Fab> */}
         </Link>
         <Hero />
         {/* <div ref={ref}> */}

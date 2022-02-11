@@ -65,13 +65,13 @@ function Timeline() {
                     </div>
                     <div style={{ width: '100%', marginTop: '15px', marginBottom: '7%' }}>
                     <div data-aos="fade-right">
-                        <Grid container className='timelineGrid' >
+                        <Grid container className='timelineGrid' direction={{sm:'column'}} >
                             <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                <div style={{ padding: '2px', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>5</div>
+                                <div style={{ padding: '2%', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>5</div>
                             </Grid>
                             <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>13th March</p></Grid>
-                            <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>
-                            <Grid item md={5} ><p>Judging and closing cerermony</p></Grid>
+                            <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>-</p></Grid>
+                            <Grid item md={5}><p>Judging and closing cerermony</p></Grid>
                         </Grid>
                         </div>
                     </div>
