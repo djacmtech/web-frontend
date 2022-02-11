@@ -7,6 +7,8 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
+import logo from "./DJACMLOGO.png";
+import { Typography } from "@mui/material";
 // import { Link } from "react-router-dom";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -22,7 +24,8 @@ const pages = [
 ];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const NavLoc = () => {
+const NavLoc = (elev) => {
+  console.log(elev.elevation);
   // const [anchorElNav, setAnchorElNav] = React.useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -87,17 +90,17 @@ const NavLoc = () => {
   );
 
   return (
-    <AppBar position="static" color="transparent" elevation="0">
+    <AppBar position="sticky" elevation={elev.elevation} style={{backgroundColor:'#001521'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <Typography
+          <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            LOGO
-          </Typography> */}
+            <img src={logo} alt="logo" width="50"></img>
+          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <React.Fragment key={anchor}>
@@ -143,14 +146,14 @@ const NavLoc = () => {
               ))}
             </Menu> */}
           </Box>
-          {/* <Typography
+          <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            LOGOy
-          </Typography> */}
+            <img src={logo} alt="logo" width="50"></img>
+          </Typography>
           <Box
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
             justifyContent="center"
@@ -160,6 +163,7 @@ const NavLoc = () => {
               <Link to={page} spy={true} smooth={true}>
                 <Button
                   key={page}
+                  style={{fontSize:'1.2rem'}}
                   // onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
