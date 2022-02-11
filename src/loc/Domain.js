@@ -1,9 +1,16 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import "./Loc.css";
 import { FaUserGraduate } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Domain() {
+
+  useEffect(() => {
+    Aos.init({ duration: 1000, once:true });
+  }, []);
+
   return (
     <center>
       <div id="Domain" style={{ color: "black", backgroundColor: "white" }}>
@@ -29,7 +36,8 @@ function Domain() {
               color: "#3770FF",
               fontFamily: "Righteous",
             }}
-            className="domainHeading"
+            className="domainHeading" 
+            data-aos="fade-left"    
           >
             Domain
           </h1>
@@ -59,7 +67,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card">
+              <div className="flip-card" data-aos="zoom-in">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -94,6 +102,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
@@ -134,7 +143,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card">
+              <div className="flip-card" data-aos="zoom-in">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -169,6 +178,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
@@ -209,7 +219,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card">
+              <div className="flip-card" data-aos="zoom-in">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -244,6 +254,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
@@ -284,7 +295,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card">
+              <div className="flip-card" data-aos="zoom-in">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -319,6 +330,7 @@ function Domain() {
                           padding: "0px",
                           marginTop: "10px",
                         }}
+                        data-aos="fade-up"
                       >
                         {" "}
                         AI/ML{" "}
