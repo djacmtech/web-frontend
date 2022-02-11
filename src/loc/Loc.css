@@ -384,6 +384,10 @@ h3 {
 }
 }
 
+.containerCountDown::after{
+  content: ":";
+}
+
 
 @media (max-width: 430px) {
   .countDownSize {
