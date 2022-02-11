@@ -31,7 +31,7 @@ function Sponsors() {
           WebkitBackgroundClip: "text",
           marginTop: "4%",
         }}
-        data-aos="fade-left"
+        data-aos="fade-right"
       >
         Sponsors
       </h1>

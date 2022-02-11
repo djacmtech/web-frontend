@@ -37,7 +37,7 @@ function Domain() {
               fontFamily: "Righteous",
             }}
             className="domainHeading" 
-            data-aos="fade-left"    
+            data-aos="fade-right"    
           >
             Domain
           </h1>

@@ -59,7 +59,7 @@ function About() {
               justifyContent: "center",
               alignItems: "center",
             }}
-            data-aos="fade-left"
+            // data-aos="fade-left"
           >
             <Splide
               options={{
