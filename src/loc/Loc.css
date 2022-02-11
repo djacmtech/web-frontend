@@ -208,8 +208,19 @@ h3 {
   font-size: 1rem;
 }
 
+.balls{
+  padding: 2px;
+  background-color: #3770FF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
 .timeStamps {
-  width: 32%;
+  width: 52%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -260,6 +271,24 @@ h3 {
     /* padding-left: 15%; */
     align-items: center;
   }
+  .balls{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .timeStamps p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.56em;
+  }
+  .balls{
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .heroContentDate {
@@ -298,7 +327,7 @@ h3 {
 }
 /* guideline */
 .guidelines {
-  border-image: linear-gradient(179.94deg, #ff8a50 -1.24%, #f54951 64.13%);
+  border-image: linear-gradient(179.94deg, #34BDF3 -1.24%, #585BA8 64.13%);
   border-style: solid;
   border-width: 8px;
   border-image-slice: 1;
@@ -311,11 +340,9 @@ h3 {
 .guidelineHeading {
   font-family: Righteous;
   font-size: 3rem;
+  font-weight: 300;
   padding: 25px;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(179.94deg, #ff8a50 -1.24%, #f54951 64.13%);
+  color: white;
 }
 .guideNumber {
   font-size: 2.5rem;
@@ -325,14 +352,13 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(179.94deg, #ff8a50 -1.24%, #f54951 64.13%);
+  background-image: linear-gradient(179.94deg, #34BDF3 -1.24%, #585BA8 64.13%);
   transform: translateY(-27px) translateX(22.5px);
 }
 .guideContain {
   font-family: Montserrat;
-  font-weight: 800;
-  /* margin: 40px; */
-  /* padding: 5% 10%; */
+  font-weight: 300;
+  color: white;
   text-align: left;
 }
 @media (max-width: 542px) {
@@ -382,6 +408,8 @@ h3 {
     font-size: 1rem;
   }
 }
+
+
 
 @media (max-width: 430px) {
   .countDownSize {
@@ -589,4 +617,9 @@ h3 {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* FAQ */ 
+.MuiAccordion-root {
+  background-color:#001522 !important;
 }

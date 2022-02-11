@@ -23,7 +23,7 @@ function Loc() {
   console.log(visible);
   return (
     <>
-      <div style={{backgroundColor:"white"}}>
+      <div style={{backgroundColor:"#001522"}}>
         {visible ? <NavLoc elevation={0} /> : <NavLoc elevation={3} />}
         <Link
           style={{ textDecoration: "none" }}
@@ -39,6 +39,7 @@ function Loc() {
               margin: "35% 2%",
               zIndex: "0",
             }}
+            onClick={()=>onTop()}
           >
             <BsArrowUpCircleFill
               style={{
@@ -51,6 +52,7 @@ function Loc() {
             />
           </Fab> */}
         </Link>
+        {/* </Link> */}
         <Hero />
         {/* <div ref={ref}> */}
         <div onMouseOver={() => setVisible(!visible)}>

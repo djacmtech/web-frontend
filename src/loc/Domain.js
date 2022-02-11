@@ -1,16 +1,9 @@
 import { Grid } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import "./Loc.css";
 import { FaUserGraduate } from "react-icons/fa";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 function Domain() {
-
-  useEffect(() => {
-    Aos.init({ duration: 1000, once:true });
-  }, []);
-
   return (
     <center>
       <div id="Domain" style={{ color: "black", backgroundColor: "white" }}>
@@ -37,7 +30,7 @@ function Domain() {
               fontFamily: "Righteous",
             }}
             className="domainHeading" 
-            data-aos="fade-left"    
+            data-aos="fade-right"    
           >
             Domain
           </h1>
