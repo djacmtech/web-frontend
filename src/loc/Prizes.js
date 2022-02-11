@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import { FaRupeeSign } from "react-icons/fa";
 import "./Loc.css";
 
