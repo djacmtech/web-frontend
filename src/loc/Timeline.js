@@ -1,15 +1,8 @@
 import { Grid } from '@mui/material'
 import React, { useEffect } from 'react'
 import './Loc.css'
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 function Timeline() {
-
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
-
     return (
         <div id='Timeline' style={{ backgroundColor: '#001521' }}>
             <div className="timeline" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', marginBottom: '4%' }}>

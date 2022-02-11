@@ -4,15 +4,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { BsChevronDown } from 'react-icons/bs';
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 function Faqs() {
-
-    useEffect(() => {
-        Aos.init({ duration: 1000, once:true });
-      }, []);
-
     return (
         <div id='FAQS' style={{ color: 'black', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontSize: '18px' }}>
             <h1 style={{ color: '#3770FF', fontFamily: 'Righteous', padding:'0 2% 0 2%'}} data-aos="fade-right"> Frequently Asked Questions </h1>
