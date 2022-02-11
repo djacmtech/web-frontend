@@ -15,8 +15,7 @@ function Hero() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#001521", transform: "translateY(-5px)" }}>
-      <NavLoc />
+    <div id="heroTop" style={{ backgroundColor: "#001521",height:'100vh',zIndex:'3' }}>
       <center>
         <div className="hero">
           {/* <svg
@@ -67,8 +66,7 @@ function Hero() {
         </svg> */}
           <h1 className="heroHeading">LOC 4.0</h1>
           <p className="heroContent">
-            24 hour hackathon by Dwarkadas Jivanlal Sanghvi College of
-            Engineering - Association of Computing Machinery
+          DJSCE ACM Student Chapter
           </p>
           <div
             className="apply-button"
