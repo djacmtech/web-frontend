@@ -7,9 +7,8 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import logo from "./DJACMLOGO.png";
+import logo from "../Assets/DJACMLOGO.png";
 import { Typography } from "@mui/material";
-// import { Link } from "react-router-dom";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-scroll";
@@ -22,27 +21,9 @@ const pages = [
   "FAQS",
   "Contact Us",
 ];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavLoc = (elev) => {
   console.log(elev.elevation);
-  // const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  // const handleOpenNavMenu = (event) => {
-  //   setAnchorElNav(event.currentTarget);
-  // };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
-
-  // const handleCloseNavMenu = () => {
-  //   setAnchorElNav(null);
-  // };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
 
   const [state, setState] = React.useState({
     top: false,
@@ -70,7 +51,7 @@ const NavLoc = (elev) => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {pages.map((text, index) => (
+        {pages.map((text) => (
           <Link
             style={{ textDecoration: "none" }}
             to={text}
