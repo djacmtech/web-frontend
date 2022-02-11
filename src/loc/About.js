@@ -18,7 +18,6 @@ function About() {
         backgroundColor: "white",
         // paddingTop: "70px",
         paddingBottom: "70px",
-        // height:"100vh",
       }}
     >
       <div className="ball1"></div>
