@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { BsChevronDown } from 'react-icons/bs'
+import { BsChevronDown } from 'react-icons/bs';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Faqs() {
 
+    useEffect(() => {
+        Aos.init({ duration: 1000, once:true });
+      }, []);
+
     return (
         <div id='FAQS' style={{ color: 'black', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontSize: '18px' }}>
-            <h1 style={{ color: '#3770FF', fontFamily: 'Righteous', padding:'0 2% 0 2%'}}> Frequently Asked Questions </h1>
+            <h1 style={{ color: '#3770FF', fontFamily: 'Righteous', padding:'0 2% 0 2%'}} data-aos="fade-left"> Frequently Asked Questions </h1>
             <h3 style={{ fontFamily: 'montserrat', fontWeight: '900', padding:'2% 4% 2% 4%'}}> Can&#39;t find the answers to what you are looking for? <span style={{ color: '#FF8A50' }}> Reach out to our Team </span> </h3>
             <div style={{ width: '70%', paddingBottom:'5%', paddingTop:'2%'}}>
+                <div data-aos="fade-right">
                 <Accordion defaultExpanded={true}>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
@@ -26,6 +33,8 @@ function Faqs() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+                </div>
+                <div data-aos="fade-left">
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
@@ -40,6 +49,8 @@ function Faqs() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+                </div>
+                <div data-aos="fade-right">
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
@@ -55,6 +66,8 @@ function Faqs() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+                </div>
+                <div data-aos="fade-left">
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
@@ -69,7 +82,8 @@ function Faqs() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-
+                </div>
+                <div data-aos="fade-right">
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
@@ -84,6 +98,8 @@ function Faqs() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+                </div>
+                <div data-aos="fade-left">
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
@@ -98,6 +114,8 @@ function Faqs() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+                </div>
+                <div data-aos="fade-right">
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<BsChevronDown style={{ color: '#3770FF' }} />}
@@ -112,6 +130,7 @@ function Faqs() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+                </div>
             </div>
         </div>
     )
