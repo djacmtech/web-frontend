@@ -13,25 +13,26 @@ function About() {
         paddingBottom: "70px",
       }}
     >
-      <div className="ball1"></div>
-      <div className="ball2"></div>
-      <div className="ball3"></div>
-      <div className="ball4"></div>
-      <div className="ball5"></div>
-      <div className="ball6"></div>
-      <div className="ball7"></div>
 
       <Box sx={{ flexGrow: 1 }}>
+        <div className="ball1"></div>
+        <div className="ball2"></div>
+        <div className="ball3"></div>
+        <div className="ball4"></div>
+        <div className="ball5"></div>
+        <div className="ball6"></div>
+        <div className="ball7"></div>
         <Grid
           container
           spacing={1}
           style={{ justifyContent: "center" }}
           className="abtgrid"
         >
+
           <Grid item sm={12} md={12} lg={8}>
             <div data-aos="fade-right" className="abtheading">
               You&#39;re stuck at home but your ideas doesn&#39;t have to be.
-              Write some <div style={{color:"#FF8A50", display:"inline"}}>lines of code!</div>
+              Write some <div style={{ color: "#FF8A50", display: "inline" }}>lines of code!</div>
             </div>
             <div data-aos="fade-right" className="abtcontent">
               With over 200 participants from numerous colleges, the hackathon
