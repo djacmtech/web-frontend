@@ -9,7 +9,7 @@ function About() {
   return (
     <div
       style={{
-        backgroundColor: "white",
+        backgroundColor: "#001521",
         paddingBottom: "70px",
       }}
     >
@@ -31,7 +31,7 @@ function About() {
           <Grid item sm={12} md={12} lg={8}>
             <div data-aos="fade-right" className="abtheading">
               You&#39;re stuck at home but your ideas doesn&#39;t have to be.
-              Write some lines of code!
+              Write some <div style={{color:"#FF8A50", display:"inline"}}>lines of code!</div>
             </div>
             <div data-aos="fade-right" className="abtcontent">
               With over 200 participants from numerous colleges, the hackathon

@@ -13,9 +13,9 @@
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
-  /* line-height: 45px; */
   color: #001019;
   padding-top: 5%;
+  color:  #FFFFFF;
 }
 
 .abtcontent {
@@ -23,8 +23,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  /* line-height: 150%; */
-  color: #001019;
+  color:  #FFFFFF;
   padding-top: 25px;
   /* padding-left: 5%; */
   /* padding-right: 20%; */
@@ -38,8 +37,8 @@
   height: 300px;
   width: 367px;
   border-radius: 5%;
-  border: 40px solid #ffffff;
-  filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
+  border: 40px solid #011B29;
+  /* filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12)); */
 }
 
 @media (max-width: 520px) {
@@ -125,17 +124,21 @@
   font-weight: bold;
 }
 
-/* @media (min-width: 600px) {
-  .Prizes2 {
-    display: none;
-  }
+.goodies{
+  font-size: 24px;
+  padding-bottom: 40px;
+}
 
-} */
+@media (max-width: 800px) {
+  .goodies{
+    font-size: 15px;
+  }
+}
 
 @media (max-width: 600px) {
-  /* .Prizes1 {
-    display: none;
-  } */
+  .goodies{
+    font-size: 12px;
+  }
   .heroHeading{
     font-size: 4.2rem;
   }
