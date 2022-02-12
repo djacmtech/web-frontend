@@ -38,7 +38,7 @@ const CountDown = () => {
           </span> <br />
           <span style={{ fontWeight: '600' }} className="countDownIntervalSize"> {interval} </span>
         </div>
-        <div>
+        <div style={index - 3 ? { color: 'white' } : { display: 'none' }}>
           {index - 3 ? (<h2>:</h2>) : ''}
         </div>
       </Grid>
