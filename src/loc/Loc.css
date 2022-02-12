@@ -14,7 +14,7 @@
   font-weight: normal;
   font-size: 2rem;
   /* line-height: 45px; */
-  color: #001019;
+  /* color: #001019; */
   padding-top: 5%;
 }
 
@@ -24,7 +24,7 @@
   font-weight: normal;
   font-size: 18px;
   /* line-height: 150%; */
-  color: #001019;
+  /* color: #001019; */
   padding-top: 25px;
   /* padding-left: 5%; */
   /* padding-right: 20%; */
@@ -38,7 +38,7 @@
   height: 300px;
   width: 367px;
   border-radius: 5%;
-  border: 40px solid #ffffff;
+  border: 40px solid #010c13;
   filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12));
 }
 
