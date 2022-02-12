@@ -12,6 +12,7 @@ import NavLoc from "./navLoc";
 import { Link } from "react-scroll";
 import Fab from "@mui/material/Fab";
 import { BsArrowUpCircleFill } from "react-icons/bs";
+// import LocFooter from "./locFooter";
 
 function Loc() {
   
@@ -37,7 +38,7 @@ function Loc() {
               backgroundColor: "#001521",
               float: "right",
               margin: "35% 2%",
-              zIndex: "0",
+              // zIndex: "0",
             }}
             onClick={()=>onTop()}
           >
@@ -65,6 +66,7 @@ function Loc() {
         <Sponsors />
         <Faqs />
         <ContactUs />
+        {/* <LocFooter/> */}
       </div>
     </>
   );
