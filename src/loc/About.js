@@ -62,23 +62,29 @@ function About() {
                 lazyLoad: "nearby",
                 gap: "1rem",
                 autoplay: true,
+                breakpoints: {
+                  444: {
+                    height: "60vw",
+                    width: "100vw",
+                  },
+                },
               }}
             >
               <SplideSlide>
                 <img
-                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  src="https://lh3.googleusercontent.com/pw/AM-JKLUtCr9h3sc7ADaknHDLRFe2HQ1NmotDN32D9GGamjOaXXIH6ub6m94CKxWh1Cc-Lc0R7IRhDOivzkMw_446tFmc37iYh6UVGYgW52GqXTIibCMnIw78qEmarpsc9SF0OlPVo5QuT0Nr3vrh59_R4BFRZA=w1204-h903-no?authuser=0"
                   alt="Carousel 1"
                 />
               </SplideSlide>
               <SplideSlide>
                 <img
-                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  src="https://lh3.googleusercontent.com/pw/AM-JKLX6d5wdSUI_m6kFQCv07aoQWrzWt5DOjPbanrA92q4p5IwSSZrBQzy6vDLizE3-Ny_hp7spen3gZ6pz_1gQTJI4vg8o0fAakcYV_5dglbEvscnA_3cyUQhpw6k4LJFMG8NkgN9vXVUiwmktUmb5M868yg=w1034-h903-no?authuser=0"
                   alt="Carousel 2"
                 />
               </SplideSlide>
               <SplideSlide>
                 <img
-                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  src="https://lh3.googleusercontent.com/pw/AM-JKLUxs25noY68zRrw-qKvNNHL-WfBu52zUJm4Bt7dh8CGyy5uSFeM6HwRHK6HdSaFALfYp9E3LZ42rGfrrGgUM2CsRRB61y5LGfDmxgvKeENQZ4aAuVp1xFL7TGPqV8vgxzSGtCF0jvNEYI82yeV6zeeBJw=w1204-h903-no?authuser=0"
                   alt="Carousel 3"
                 />
               </SplideSlide>

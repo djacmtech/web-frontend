@@ -6,7 +6,7 @@ import { FaUserGraduate } from "react-icons/fa";
 function Domain() {
   return (
     <center>
-      <div id="Domain" style={{ color: "black", backgroundColor: "#001521", position: 'relative' }}>
+      <div id="Domain" style={{ color: "#FFFFFF", backgroundColor: "#001521", position: 'relative' }}>
 
         <div
           className="domain"
