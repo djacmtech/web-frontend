@@ -86,7 +86,7 @@ function Faqs() {
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography style={{ fontFamily: 'Montserrat', color:'#FFFFFF' }} variant="h6">How many members are allowed in one team for this Hackathon?</Typography>
+                        <Typography style={{ fontFamily: 'Montserrat', color:'#FFFFFF' }} variant="h6">How many members are allowed per team for this hackathon?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color:'white' }}>

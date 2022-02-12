@@ -1,6 +1,8 @@
 import React from "react";
 import "./Loc.css";
 import CountDown from "./countDown";
+import Three from "./Three";
+import {Canvas} from '@react-three/fiber';
 function Hero() {
   React.useEffect(() => {
     const script = document.createElement("script");
@@ -30,6 +32,9 @@ function Hero() {
           <p className="heroContentDate">12th - 13th March, 2022</p>
         </div>
         <CountDown />
+        <Canvas style={{height:'50%', width:'50%'}}>
+        <Three/>
+        </Canvas>
       </center>
     </div>
   );
