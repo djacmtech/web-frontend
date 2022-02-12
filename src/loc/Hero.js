@@ -15,7 +15,7 @@ function Hero() {
   }, []);
 
   return (
-    <div id="heroTop" style={{ backgroundColor: "#001521",height:'100vh',zIndex:'3' }}>
+    <div id="heroTop" style={{ backgroundColor: "#001521",height:'100vh' }}>
       <center>
         <div className="hero">
           {/* <svg
