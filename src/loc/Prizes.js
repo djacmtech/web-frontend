@@ -150,6 +150,7 @@ function Prizes() {
                 </div>
               </Grid>
             </Grid>
+            <p style={{fontSize:"24px"}}>*Including goodies and special prizes for different categories!</p>
           </div>
         </div>
       </div>
