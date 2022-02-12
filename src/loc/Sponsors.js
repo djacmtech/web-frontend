@@ -1,14 +1,7 @@
 import { Grid } from "@mui/material";
-import React, { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React  from "react";
 
 function Sponsors() {
-
-    useEffect(() => {
-        Aos.init({ duration: 1000, once:true });
-      }, []);
-
   return (
     <div
       id="Sponsors"
@@ -31,7 +24,7 @@ function Sponsors() {
           WebkitBackgroundClip: "text",
           marginTop: "4%",
         }}
-        data-aos="fade-left"
+        data-aos="fade-right"
       >
         Sponsors
       </h1>

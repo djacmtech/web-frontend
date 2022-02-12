@@ -1,24 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "./Loc.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 function About() {
-  useEffect(() => {
-    Aos.init({ duration: 2000, once:true });
-  }, []);
-
   return (
     <div
       style={{
         backgroundColor: "white",
-        // paddingTop: "70px",
         paddingBottom: "70px",
-        // height:"100vh",
       }}
     >
       <div className="ball1"></div>
@@ -59,7 +51,7 @@ function About() {
               justifyContent: "center",
               alignItems: "center",
             }}
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <Splide
               options={{

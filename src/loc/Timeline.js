@@ -1,22 +1,15 @@
 import { Grid } from '@mui/material'
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Loc.css'
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 function Timeline() {
-
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
-
     return (
         <div id='Timeline' style={{ backgroundColor: '#001521' }}>
             <div className="timeline" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', marginBottom: '4%' }}>
-                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%', fontFamily: "Righteous" }} className='prizesHeading' data-aos="fade-left">Timeline</h1>
+                <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%', fontFamily: "Righteous" }} className='prizesHeading' data-aos="fade-right">Timeline</h1>
                 <div className='timeStamps' >
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-right">
+                        <div>
                             <Grid container className='timelineGrid'  >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <div style={{ padding: '2px', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>1</div>
@@ -28,7 +21,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-left">
+                        <div>
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <div style={{ padding: '2px', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>2</div>
@@ -40,7 +33,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-right">
+                        <div>
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <div style={{ padding: '2px', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>3</div>
@@ -52,7 +45,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-left">
+                        <div>
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <div className='balls'>4</div>
@@ -64,7 +57,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-right">
+                        <div>
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <div style={{ padding: '2px', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>5</div>
@@ -76,10 +69,10 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px', marginBottom: '7%' }}>
-                        <div data-aos="fade-right">
+                        <div>
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                    <div style={{ padding: '2px', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>5</div>
+                                    <div style={{ padding: '2px', backgroundColor: '#3770FF', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>6</div>
                                 </Grid>
                                 <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>13th March</p></Grid>
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>

@@ -1,16 +1,9 @@
 import { Grid } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import { FaRupeeSign } from "react-icons/fa";
 import "./Loc.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 function Prizes() {
-
-    useEffect(() => {
-      Aos.init({ duration: 1000, once:true });
-    }, []);
-
   return (
     <>
       <div className="Prizes1" id='Prizes'>
@@ -42,7 +35,7 @@ function Prizes() {
                 fontWeight:"400",
               }}
               className="prizesHeading"
-              data-aos="fade-left"
+              data-aos="fade-right"
             >
               Prizes
             </h1>

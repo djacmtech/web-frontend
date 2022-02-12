@@ -8,8 +8,16 @@ import Committee from "./Components/Committee/Committee";
 import MainEvent from "./Components/Eventpage/MainEvent";
 import ContactUS from "./Components/contactUS/ContactUS";
 import Loc from "./loc/Loc"
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+
+  useEffect(() => {
+    Aos.init({ duration: 1000, once:true });
+  }, []);
+
   return (
     <Router>
       <div>
