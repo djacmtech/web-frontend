@@ -6,7 +6,8 @@ import { FaUserGraduate } from "react-icons/fa";
 function Domain() {
   return (
     <center>
-      <div id="Domain" style={{ color: "black", backgroundColor: "white" }}>
+      <div id="Domain" style={{ color: "#FFFFFF", backgroundColor: "#001521", position: 'relative' }}>
+
         <div
           className="domain"
           style={{
@@ -15,7 +16,7 @@ function Domain() {
             alignItems: "center",
             width: "100%",
             flexDirection: "column",
-            paddingBottom:'50px'
+            paddingBottom: '50px'
           }}
         >
           <h1
@@ -26,11 +27,11 @@ function Domain() {
               width: "100%",
               marginTop: "5%",
               marginBottom: "4%",
-              color: "#3770FF",
+              // color: "#3770FF",
               fontFamily: "Righteous",
             }}
-            className="domainHeading" 
-            data-aos="fade-right"    
+            className="domainHeading"
+            data-aos="fade-right"
           >
             Domain
           </h1>
