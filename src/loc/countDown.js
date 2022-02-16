@@ -31,7 +31,7 @@ const CountDown = () => {
       return
     }
     timerComponents.push(
-      <Grid item md={3} sm={3} xs={3} style={{ padding: '20px 10px 20px 10px', display: 'flex', justifyContent: 'space-around', alignItems: 'center' }} >
+      <Grid key={index} item md={3} sm={3} xs={3} style={{ padding: '20px 10px 20px 10px', display: 'flex', justifyContent: 'space-around', alignItems: 'center' }} >
         <div>
           <span style={{ fontWeight: 'bolder' }} className="countDownSize">
             {timeLeft[interval]}

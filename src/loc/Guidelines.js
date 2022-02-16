@@ -20,7 +20,6 @@ function Guidelines() {
       .then(response => response.json())
       .then(result => {
         setRule(result)
-        console.log(result)
       })
       .catch(error => console.log('error', error));
   }, [])
@@ -35,8 +34,8 @@ function Guidelines() {
         <Grid container spacing={2}>
           {rule.map((x) => {
             return (
-              <Grid item lg={4} md={6} sm={6} xs={12}>
-                <div data-aos="fade-up" className="guidelines">
+              <Grid key={x.id-2} item lg={4} md={6} sm={6} xs={12}>
+                <div key={x.id-2} data-aos="fade-up" className="guidelines">
                   <span className="guideNumber">0{(x.id) - 2}</span>
                   <br />
                   <p className="guideContain">{x.desc}</p>

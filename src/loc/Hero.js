@@ -1,36 +1,33 @@
-import React from "react";
+// import {useEffect} from "react";
 import "./Loc.css";
 import CountDown from "./countDown";
 import {Grid} from '@mui/material';
 import {Canvas} from '@react-three/fiber';
 import Ring from "./Ring";
 import Box from "./Box";
-import { OrbitControls } from "@react-three/drei";
 function Hero() {
-  React.useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://apply.devfolio.co/v2/sdk.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
-  function addEvent(e) {
-    console.log(e)
-  }
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://apply.devfolio.co/v2/sdk.js";
+  //   script.async = true;
+  //   script.defer = true;
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+
+  // }, []);
 
   return (
     <div id="heroTop" style={{ backgroundColor: "#001521",height:'100vh',zIndex:'3', textAlign:'center' }}>
       <center>  
         <Grid container spacing={0} className="hero">
           <Grid item xs={12} sm={12} md={3} lg={3}>
-            <Canvas>
-              <OrbitControls/>
-              <Ring/>
-            </Canvas>
+              <Canvas>
+                <Ring/>
+              </Canvas>
           </Grid> 
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <h1 className="heroHeading">LOC 4.0</h1>

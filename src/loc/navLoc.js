@@ -51,8 +51,9 @@ const NavLoc = (elev) => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {pages.map((text) => (
+        {pages.map((text, index) => (
           <Link
+            key={index}
             style={{ textDecoration: "none" }}
             to={text}
             spy={true}
@@ -140,8 +141,8 @@ const NavLoc = (elev) => {
             justifyContent="center"
             alignContent="center"
           >
-            {pages.map((page) => (
-              <Link to={page} spy={true} smooth={true}>
+            {pages.map((page, index) => (
+              <Link key={index} to={page} spy={true} smooth={true}>
                 <Button
                   key={page}
                   style={{fontSize:'1.2rem'}}
