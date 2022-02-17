@@ -271,27 +271,27 @@ h3 {
   }
 }
 
-@media screen and (max-width: 428px) {
+/* @media screen and (max-width: 428px) {
   .timeStamps {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* padding-left: 15%; */
+    padding-left: 15%;
     align-items: center;
   }
   .balls{
     width: 30px;
     height: 30px;
   }
-}
+} */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .timeStamps p{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.56em;
+    font-size: 10px;
   }
   .balls{
     width: 30px;
