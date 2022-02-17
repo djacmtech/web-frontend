@@ -15,7 +15,6 @@ import { BsArrowUpCircleFill } from "react-icons/bs";
 import LocFooter from "./locFooter";
 
 function Loc() {
-  
   const [visible, setVisible] = useState(false);
   const ref = useRef();
 
@@ -24,7 +23,7 @@ function Loc() {
   console.log(visible);
   return (
     <>
-      <div style={{backgroundColor:"#001522"}}>
+      <div style={{ backgroundColor: "#001522" }}>
         {visible ? <NavLoc elevation={0} /> : <NavLoc elevation={3} />}
         <Link
           style={{ textDecoration: "none" }}
@@ -66,7 +65,7 @@ function Loc() {
         <Sponsors />
         <Faqs />
         <ContactUs />
-        <LocFooter/>
+        <LocFooter />
       </div>
     </>
   );

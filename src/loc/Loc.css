@@ -111,7 +111,16 @@
   }
 }
 
+@media (min-width: 600px){
+  .Prizes2{
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
+  .Prizes1{
+    display: none;
+  }
   .goodies{
     font-size: 12px;
   }
