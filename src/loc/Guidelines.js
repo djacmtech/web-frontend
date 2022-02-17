@@ -30,9 +30,9 @@ function Guidelines() {
 
       <center>
         <div data-aos="fade-right">
-        <h2 className="guidelineHeading">Guidelines</h2>
+          <h2 className="guidelineHeading">Guidelines</h2>
         </div>
-        <Grid container spacing={2}>
+        <Grid container columnSpacing={1} rowSpacing={8}>
           {rule.map((x) => {
             return (
               <Grid item lg={4} md={6} sm={6} xs={12}>
