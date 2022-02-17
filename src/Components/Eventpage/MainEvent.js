@@ -20,7 +20,7 @@ const MainEvent = () => {
     axios
       .get("https://djacmdev.pythonanywhere.com/api/events/")
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         res.data.map((x) => {
           if (x.title.toLowerCase() === { mainEvent }.mainEvent) {
             setData(x);
@@ -38,10 +38,10 @@ const MainEvent = () => {
         res.data.map((x) => {
           if (x.event === data.id) {
             console.log(x.pic);
-            setImage(x.pic);
-            // setImage((prev) => {
-            //   return [...prev, x.pic];
-            // });
+            // setImage(x.pic);
+            setImage((prev) => {
+              return [...prev, x.pic];
+            });
           }
           return 0
         });

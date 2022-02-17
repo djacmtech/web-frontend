@@ -6,17 +6,17 @@ import { FaUserGraduate } from "react-icons/fa";
 function Domain() {
   return (
     <center>
-      <div id="Domain" style={{ color: "#FFFFFF", backgroundColor: "#001521", position: 'relative' }}>
-
         <div
           className="domain"
           style={{
+            color: "#FFFFFF", 
+            backgroundColor: "#001521",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
             flexDirection: "column",
-            paddingBottom: '50px'
+            paddingInline: '20px 0px 50px 0px'
           }}
         >
           <h1
@@ -350,7 +350,6 @@ function Domain() {
             </Grid>
           </Grid>
         </div>
-      </div>
     </center>
   );
 }

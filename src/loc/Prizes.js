@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { FaRupeeSign } from "react-icons/fa";
 import "./Loc.css";
 
 function Prizes() {
@@ -31,8 +30,8 @@ function Prizes() {
                 width: "100%",
                 marginTop: "5%",
                 marginBottom: "4%",
-                fontFamily:"Righteous",
-                fontWeight:"400",
+                fontFamily: "Righteous",
+                fontWeight: "400",
               }}
               className="prizesHeading"
               data-aos="fade-right"
@@ -79,8 +78,8 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <FaRupeeSign style={{ width: "4%", height: "4%" }} />
-                  <h2 style={{ padding: "0px", margin: "0px" }}>15,000</h2>
+                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹15,000</h2>
                 </div>
               </Grid>
               <Grid
@@ -112,8 +111,8 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <FaRupeeSign style={{ width: "4%", height: "4%" }} />
-                  <h2 style={{ padding: "0px", margin: "0px" }}>20,000</h2>
+                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹20,000</h2>
                 </div>
               </Grid>
               <Grid
@@ -145,8 +144,8 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <FaRupeeSign style={{ width: "4%", height: "4%" }} />
-                  <h2 style={{ padding: "0px", margin: "0px" }}>10,000</h2>
+                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹10,000</h2>
                 </div>
               </Grid>
             </Grid>

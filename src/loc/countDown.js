@@ -27,19 +27,16 @@ const CountDown = () => {
   const timerComponents = []
 
   Object.keys(timeLeft).forEach((interval, index) => {
-    if (!timeLeft[interval]) {
-      return
-    }
     timerComponents.push(
-      <Grid key={index} item md={3} sm={3} xs={3} style={{ padding: '20px 10px 20px 10px', display: 'flex', justifyContent: 'space-around', alignItems: 'center' }} >
-        <div>
+      <Grid key={index} item md={3} sm={3} xs={3} style={{ padding: '20px 10px 20px 30px', display: 'flex', justifyContent: 'space-around', alignItems: 'center' }} >
+        <div style={{}}>
           <span style={{ fontWeight: 'bolder' }} className="countDownSize">
             {timeLeft[interval]}
           </span> <br />
           <span style={{ fontWeight: '600' }} className="countDownIntervalSize"> {interval} </span>
         </div>
         <div style={index - 3 ? { color: 'white' } : { display: 'none' }}>
-          {index - 3 ? (<h2>:</h2>) : ''}
+          {index - 3 ? (<h3>:</h3>) : null}
         </div>
       </Grid>
     )
