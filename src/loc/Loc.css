@@ -69,7 +69,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(180deg, #16bdff 22.99%, #7b83fd 79.15%);
-  font-size: 7rem;
+  font-size: 9rem;
   margin: 10px;
 }
 
@@ -118,7 +118,16 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px){
+  .Prizes2{
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .Prizes1{
+    display: none;
+  }
   .goodies{
     font-size: 12px;
   }
@@ -613,4 +622,44 @@ h3 {
 /* FAQ */ 
 .MuiAccordion-root {
   background-color:#001522 !important;
+}
+
+/* loc footer */
+.locNav p{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Montserrat;
+  font-size: 1.3rem;
+  padding: 13% 5% 8% 0%;
+}
+
+.locationData{
+  font-size: 1rem;
+  font-family: Montserrat;
+  padding: 0% 6%;
+  font-weight: 400;
+}
+.aboutFooter{
+  font-size: .8rem;
+  font-family: Montserrat;
+  padding: 0% 6%;
+  font-weight: 400;
+}
+.locationMail{
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: Montserrat;
+  padding: 3%;
+}
+
+.locNav a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  padding: 2%;
+}
+
+.locLinkFooter{
+font-size: .9rem;
+padding: 0;
 }

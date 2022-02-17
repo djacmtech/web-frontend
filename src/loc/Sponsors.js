@@ -17,11 +17,12 @@ function Sponsors() {
       <h1
         style={{
           fontFamily: "Righteous",
-          backgroundImage:
-            "linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%)",
-          backgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          WebkitBackgroundClip: "text",
+          color:'white',
+          // backgroundImage:
+          //   "linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%)",
+          // backgroundClip: "text",
+          // WebkitTextFillColor: "transparent",
+          // WebkitBackgroundClip: "text",
           marginTop: "4%",
         }}
         data-aos="fade-right"
