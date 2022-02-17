@@ -12,7 +12,7 @@ import NavLoc from "./navLoc";
 import { Link } from "react-scroll";
 import Fab from "@mui/material/Fab";
 import { BsArrowUpCircleFill } from "react-icons/bs";
-// import LocFooter from "./locFooter";
+import LocFooter from "./locFooter";
 
 function Loc() {
   
@@ -66,7 +66,7 @@ function Loc() {
         <Sponsors />
         <Faqs />
         <ContactUs />
-        {/* <LocFooter/> */}
+        <LocFooter/>
       </div>
     </>
   );
