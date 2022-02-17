@@ -12,7 +12,7 @@ function Faqs() {
     return (
         <div id='FAQS' style={{ color: 'black', backgroundColor: '#001522', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontSize: '18px' }}>
             <h1 style={{ color: 'white', fontFamily: 'Righteous', padding: '0 2% 0 2%' }} data-aos="fade-right"> Frequently Asked Questions </h1>
-            <h3 style={{ fontFamily: 'montserrat', color: 'white', fontWeight: '500', padding: '2% 4% 2% 4%' }}> Can&#39;t find the answers to what you are looking for? <Link spy={true} smooth={true} to="Contact Us" style={{ color: '#FF8A50', padding: '5px', cursor: 'pointer' }}> Reach out to our Team </Link> </h3>
+            <h3 style={{ fontFamily: 'montserrat', color: 'white', fontWeight: '500', padding: '0% 4% 2% 4%' }}> Can&#39;t find the answers to what you are looking for? <Link spy={true} smooth={true} to="Contact Us" style={{ color: '#FF8A50', padding: '5px', cursor: 'pointer' }}> Reach out to our Team </Link> </h3>
             <div style={{ width: '70%', paddingBottom: '5%', paddingTop: '2%' }}>
                 <div data-aos="fade-up">
                     <Accordion defaultExpanded={true}>
