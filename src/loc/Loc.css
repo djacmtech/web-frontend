@@ -157,41 +157,11 @@
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  background-color: white;
-  border-radius: 10px !important;
-}
-
 .flip-card-front {
   background: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
   /* border: 20px solid #ffffff; */
   box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
   border-radius: 10px;
-}
-
-.flip-card-back {
-  /* width: 100%;
-  height: 100%; */
-  border: 20px solid transparent;
-  border-image: linear-gradient(180deg, #34BDF3 22.99%, #585BA8 79.15%);
-  border-image-slice: 1;
-  transform: rotateY(180deg);
-  box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
-  border-radius: 10px;
-  margin-left: -38px;
 }
 
 h3 {

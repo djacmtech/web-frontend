@@ -121,7 +121,7 @@ const NavLoc = (elev) => {
                 <Button
                   key={page}
                   style={{fontSize:'1.2rem'}}
-                  sx={{ my: 2, color: "white", display: "block", paddingInline:'12px' }}
+                  sx={{ my: 2, color: "white", display: "block", paddingInline:'15px' }}
                 >
                   {page}
                 </Button>

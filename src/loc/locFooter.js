@@ -2,7 +2,6 @@ import { Grid } from "@mui/material";
 import React from "react";
 import image from "../Assets/DJACMLOGO.png";
 import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
-import {BiRightArrow} from 'react-icons/bi'
 import { Link } from "react-scroll";
 const LocFooter = () => {
   const pages = [
