@@ -80,7 +80,7 @@ const NavLoc = (elev) => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <img src={logo} alt="logo" width="50"></img>
+            <img src={logo} alt="logo" width="50" ></img>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -131,7 +131,7 @@ const NavLoc = (elev) => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}
           >
             <img src={logo} alt="logo" width="50"></img>
           </Typography>

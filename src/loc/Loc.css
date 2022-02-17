@@ -73,7 +73,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(180deg, #16bdff 22.99%, #7b83fd 79.15%);
-  font-size: 7rem;
+  font-size: 9rem;
   margin: 10px;
 }
 
@@ -117,7 +117,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .Prizes1{
     display: none;
   }
