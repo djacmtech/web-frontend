@@ -118,7 +118,7 @@ function Faqs() {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', textAlign: 'left' }} variant="h6">Can I start working on my submission before the event or use something that I have built previously?</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', textAlign: 'left', fontWeight: 'bold' }} variant="h6">Can I start working on my submission before the event or use something that I have built previously?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: 'white' }}>
