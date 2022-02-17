@@ -21,7 +21,7 @@ function Faqs() {
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold' }} variant="h6">What is a hackathon?</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF',textAlign: 'left', fontWeight: 'bold' }} variant="h6">What is a hackathon?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: '#FFFFFF' }}>
@@ -37,7 +37,7 @@ function Faqs() {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold' }} variant="h6">What are the problem statements for the hackathon?</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF',textAlign: 'left', fontWeight: 'bold' }} variant="h6">What are the problem statements for the hackathon?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: 'white' }}>
@@ -53,7 +53,7 @@ function Faqs() {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold' }} variant="h6">What will be the mode and location of the hackathon?</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF',textAlign: 'left', fontWeight: 'bold' }} variant="h6">What will be the mode and location of the hackathon?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: 'white' }}>
@@ -70,7 +70,7 @@ function Faqs() {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold' }} variant="h6">What are the eligibility criteria? Are there any prerequisites or</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF',textAlign: 'left', fontWeight: 'bold' }} variant="h6">What are the eligibility criteria? Are there any prerequisites or</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: 'white' }}>
@@ -86,7 +86,7 @@ function Faqs() {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold' }} variant="h6">How many members are allowed in one team for this Hackathon?</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold',textAlign: 'left' }} variant="h6">How many members are allowed in one team for this Hackathon?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: 'white' }}>
@@ -102,7 +102,7 @@ function Faqs() {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold' }} variant="h6">How much does this cost?</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', fontWeight: 'bold',textAlign: 'left' }} variant="h6">How much does this cost?</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: 'white' }}>
