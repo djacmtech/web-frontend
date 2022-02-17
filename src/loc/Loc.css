@@ -120,6 +120,17 @@
   font-weight: bold;
 }
 
+.goldSponsors {
+  color: #FBC778;
+  font-size: 2rem;
+}
+
+.silverSponsors {
+  color: #C5C5C5;
+  margin: 5%;
+  font-size: 2rem;
+}
+
 .goodies{
   font-size: 24px;
   padding-bottom: 40px;
