@@ -11,21 +11,25 @@ function ContactUs() {
                 <Grid item xs={12} md={5} columnGap={2} style={{padding:"2%", textAlign:"center", display:'flex', alignItems:'center', flexDirection:'column'}}>
                     <h1 style={{color:"black"}}> Contact Us </h1>
                     <div style={{fontFamily:'montserrat', fontSize:'17px', color:'#FFFFFF'}}>
-                        <p> <h2 style={{textAlign:'left', fontFamily:'righteous'}}> EMAIL </h2> 
+                        <div> <h2 style={{textAlign:'left', fontFamily:'righteous'}}> EMAIL </h2> 
                         <div style={{display:'flex', flexDirection:'row', alignItems:'center', padding:'3px'}}> 
                             <div> <AiFillMail style={{fontSize:'30px', color:'#FFFFFF'}}/></div>
                             <div style={{paddingLeft:'20px', fontSize:'20px'}}> coreacm@gmail.com </div>
                         </div> 
-                        </p>
-                        <p style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}}> PHONE </h2> <div style={{fontSize:'20px', padding:'3px', color:'#FFFFFF'}}> Deap Daru | +91 9987748170 </div> <div style={{fontSize:'20px', padding:'3px', color:'#ffffff'}}> Harvy Gandhi | +91 9819705248 </div>  </p>
-                        <p style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}}> SOCIALS </h2> 
+                        </div>
+                        <div style={{textAlign:'left'}}> 
+                            <h2 style={{fontFamily:'righteous'}}> PHONE </h2> 
+                            <p style={{fontSize:'20px', padding:'3px', color:'#FFFFFF'}}> Deap Daru | +91 9987748170 </p> 
+                            <p style={{fontSize:'20px', padding:'3px', color:'#ffffff'}}> Harvy Gandhi | +91 9819705248 </p>  
+                        </div>
+                        <div style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}}> SOCIALS </h2> 
                         <div style={{display:'flex', alignItems:'center', justifyContent:'left'}}>
                             <div> <a href='http://djacm.co.in/'> <BsGlobe2 style={{fontSize:'35px', color:'black', padding:'3px 8px 3px 8px'}}/> </a> </div> 
                             <div> <a href='https://www.instagram.com/djsanghvi_acm/'> <AiFillInstagram style={{fontSize:'40px', color:'black', padding:'3px 8px 3px 8px'}}/> </a> </div>
                             <div> <a href='https://www.linkedin.com/company/dj-sanghvi-acm/mycompany/'> <AiFillLinkedin style={{fontSize:'40px', color:'black', padding:'3px 8px 3px 8px'}}/> </a> </div>
                             <div> <a href='https://www.facebook.com/djscoeacm'> <AiFillFacebook style={{fontSize:'40px', color:'black', padding:'3px 8px 3px 8px'}}/> </a> </div>
                         </div>
-                        </p> 
+                        </div> 
                     </div>
                 </Grid>
                 <Grid item xs={12} md={7} style={{display:'flex', alignItems:'center', justifyContent:'center'}}>

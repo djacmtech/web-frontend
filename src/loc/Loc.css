@@ -63,17 +63,13 @@
 } 
 
 /* hero */
-
-.hero {
-  padding: 10px 0px 20px;
-}
 .heroHeading {
   font-family: Righteous;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(180deg, #16bdff 22.99%, #7b83fd 79.15%);
-  font-size: 7rem;
+  font-size: 9rem;
   margin: 10px;
 }
 
@@ -100,6 +96,17 @@
   font-weight: bold;
 }
 
+.goldSponsors {
+  color: #FBC778;
+  font-size: 2rem;
+}
+
+.silverSponsors {
+  color: #C5C5C5;
+  margin: 5%;
+  font-size: 2rem;
+}
+
 .goodies{
   font-size: 24px;
   padding-bottom: 40px;
@@ -111,7 +118,16 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px){
+  .Prizes2{
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .Prizes1{
+    display: none;
+  }
   .goodies{
     font-size: 12px;
   }
@@ -141,41 +157,11 @@
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  background-color: white;
-  border-radius: 10px !important;
-}
-
 .flip-card-front {
   background: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
   /* border: 20px solid #ffffff; */
   box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
   border-radius: 10px;
-}
-
-.flip-card-back {
-  /* width: 100%;
-  height: 100%; */
-  border: 20px solid transparent;
-  border-image: linear-gradient(180deg, #34BDF3 22.99%, #585BA8 79.15%);
-  border-image-slice: 1;
-  transform: rotateY(180deg);
-  box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
-  border-radius: 10px;
-  margin-left: -38px;
 }
 
 h3 {
@@ -607,4 +593,44 @@ h3 {
 /* FAQ */ 
 .MuiAccordion-root {
   background-color:#001522 !important;
+}
+
+/* loc footer */
+.locNav p{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Montserrat;
+  font-size: 1.3rem;
+  padding: 13% 5% 8% 0%;
+}
+
+.locationData{
+  font-size: 1rem;
+  font-family: Montserrat;
+  padding: 0% 6%;
+  font-weight: 400;
+}
+.aboutFooter{
+  font-size: .8rem;
+  font-family: Montserrat;
+  padding: 0% 6%;
+  font-weight: 400;
+}
+.locationMail{
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: Montserrat;
+  padding: 3%;
+}
+
+.locNav a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  padding: 2%;
+}
+
+.locLinkFooter{
+font-size: .9rem;
+padding: 0;
 }

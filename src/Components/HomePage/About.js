@@ -31,7 +31,7 @@ export default function About() {
                     </p>
                 </div>
             </Grid>
-            <Grid md={3} xs={12}>
+            <Grid item md={3} xs={12}>
                 <Item sx={{ backgroundColor: 'transparent' }}>
                     <img src="https://drive.google.com/uc?export=download&id=1Iq-QR5_ojRc9c9e4vkzjrSdU0jvjMDki" className="aboutImg" alt="aboutImg" />
                 </Item>

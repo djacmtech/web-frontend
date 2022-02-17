@@ -6,17 +6,17 @@ import { FaUserGraduate } from "react-icons/fa";
 function Domain() {
   return (
     <center>
-      <div id="Domain" style={{ color: "#FFFFFF", backgroundColor: "#001521", position: 'relative' }}>
-
         <div
           className="domain"
           style={{
+            color: "#FFFFFF", 
+            backgroundColor: "#001521",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
             flexDirection: "column",
-            paddingBottom: '50px'
+            paddingInline: '20px 0px 50px 0px'
           }}
         >
           <h1
@@ -98,28 +98,9 @@ function Domain() {
                         }}
                         data-aos="fade-up"
                       >
-                        {" "}
-                        AI/ML{" "}
+                        Web/App
                       </h3>
                     </div>
-                  </div>
-                  <div
-                    className="flip-card-back"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      flexDirection: "column",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  >
-                    <p>
-                      Lorem ipsum dolor sit amet, consectur adipiscing elit.
-                      Feugiat porttitor duis aliquet arcu. Feugiat porttitor
-                      duis aliquet arcu. Feugiat porttior duis aliquet arcu.
-                      Feugiat porttitor duis aliquet arcu. Feugiat duis aliquet.{" "}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -174,28 +155,9 @@ function Domain() {
                         }}
                         data-aos="fade-up"
                       >
-                        {" "}
-                        AI/ML{" "}
+                        AI/ML
                       </h3>
                     </div>
-                  </div>
-                  <div
-                    className="flip-card-back"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      flexDirection: "column",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  >
-                    <p>
-                      Lorem ipsum dolor sit amet, consectur adipiscing elit.
-                      Feugiat porttitor duis aliquet arcu. Feugiat porttitor
-                      duis aliquet arcu. Feugiat porttior duis aliquet arcu.
-                      Feugiat porttitor duis aliquet arcu. Feugiat duis aliquet.{" "}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -250,28 +212,9 @@ function Domain() {
                         }}
                         data-aos="fade-up"
                       >
-                        {" "}
-                        AI/ML{" "}
+                        IoT
                       </h3>
                     </div>
-                  </div>
-                  <div
-                    className="flip-card-back"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      flexDirection: "column",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  >
-                    <p>
-                      Lorem ipsum dolor sit amet, consectur adipiscing elit.
-                      Feugiat porttitor duis aliquet arcu. Feugiat porttitor
-                      duis aliquet arcu. Feugiat porttior duis aliquet arcu.
-                      Feugiat porttitor duis aliquet arcu. Feugiat duis aliquet.{" "}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -326,35 +269,15 @@ function Domain() {
                         }}
                         data-aos="fade-up"
                       >
-                        {" "}
-                        AI/ML{" "}
+                        Blockchain
                       </h3>
                     </div>
-                  </div>
-                  <div
-                    className="flip-card-back"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      flexDirection: "column",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                  >
-                    <p>
-                      Lorem ipsum dolor sit amet, consectur adipiscing elit.
-                      Feugiat porttitor duis aliquet arcu. Feugiat porttitor
-                      duis aliquet arcu. Feugiat porttior duis aliquet arcu.
-                      Feugiat porttitor duis aliquet arcu. Feugiat duis aliquet.{" "}
-                    </p>
                   </div>
                 </div>
               </div>
             </Grid>
           </Grid>
         </div>
-      </div>
     </center>
   );
 }

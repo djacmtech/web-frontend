@@ -1,12 +1,11 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { FaRupeeSign } from "react-icons/fa";
 import "./Loc.css";
 
 function Prizes() {
   return (
     <>
-      <div className="Prizes1" id='Prizes'>
+      <div className="Prizes1" id="Prizes">
         <div
           style={{
             background:
@@ -33,6 +32,7 @@ function Prizes() {
                 marginBottom: "4%",
                 fontFamily: "Righteous",
                 fontWeight: "400",
+                fontSize:"50px"
               }}
               className="prizesHeading"
               data-aos="fade-right"
@@ -80,7 +80,7 @@ function Prizes() {
                   }}
                 >
                   {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
-                  <h2 style={{ padding: "0px", margin: "0px" }}>₹15,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹15,000</h2>
                 </div>
               </Grid>
               <Grid
@@ -113,7 +113,7 @@ function Prizes() {
                   }}
                 >
                   {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
-                  <h2 style={{ padding: "0px", margin: "0px" }}>₹20,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹20,000</h2>
                 </div>
               </Grid>
               <Grid
@@ -146,15 +146,17 @@ function Prizes() {
                   }}
                 >
                   {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
-                  <h2 style={{ padding: "0px", margin: "0px" }}>₹10,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹10,000</h2>
                 </div>
               </Grid>
             </Grid>
-            <p className="goodies">*Including goodies and special prizes for different categories!</p>
+            <p className="goodies">
+              *Including goodies and special prizes for different categories!
+            </p>
           </div>
         </div>
       </div>
-      {/* <div className="Prizes2">
+      <div className="Prizes2">
         <div
           style={{
             background:
@@ -169,7 +171,7 @@ function Prizes() {
               alignItems: "center",
               width: "100%",
               flexDirection: "column",
-              paddingBottom:"10px",
+              paddingBottom: "10px",
             }}
           >
             <h2
@@ -180,8 +182,8 @@ function Prizes() {
                 width: "100%",
                 marginTop: "5%",
                 marginBottom: "4%",
-                fontFamily:"Righteous",
-                fontSize:"30px",
+                fontFamily: "Righteous",
+                fontSize: "40px",
               }}
               className="prizesHeading"
               data-aos="fade-left"
@@ -199,7 +201,7 @@ function Prizes() {
                 alignItems: "center",
                 width: "100%",
                 flexDirection: "column",
-                paddingBottom:"10px",
+                paddingBottom: "20px",
               }}
             >
               <img
@@ -218,8 +220,8 @@ function Prizes() {
                   margin: "4%",
                 }}
               >
-                <FaRupeeSign style={{ width: "4%", height: "4%" }} />
-                <h2 style={{ padding: "0px", margin: "0px" }}>20,000</h2>
+                {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
+                <h2 style={{ padding: "0px", margin: "0px" }}>₹20,000</h2>
               </div>
             </Grid>
             <Grid
@@ -244,7 +246,7 @@ function Prizes() {
                   alignItems: "center",
                   width: "100%",
                   flexDirection: "column",
-                  paddingBottom:"10px",
+                  paddingBottom: "20px",
                 }}
               >
                 <img
@@ -263,8 +265,8 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <FaRupeeSign style={{ width: "4%", height: "4%" }} />
-                  <h2 style={{ padding: "0px", margin: "0px" }}>15,000</h2>
+                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
+                  <h2 style={{ padding: "0px", margin: "0px" }}>₹15,000</h2>
                 </div>
               </Grid>
               <Grid
@@ -278,7 +280,7 @@ function Prizes() {
                   alignItems: "center",
                   width: "100%",
                   flexDirection: "column",
-                  paddingBottom:"10px",
+                  paddingBottom: "0px",
                 }}
               >
                 <img
@@ -297,14 +299,17 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <FaRupeeSign style={{ width: "4%", height: "4%" }} />
-                  <h2 style={{ padding: "0px", margin: "0px" }}>10,000</h2>
+                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
+                  <h2 style={{ padding: "0px", margin: "0px" }}>₹10,000</h2>
                 </div>
               </Grid>
             </Grid>
+            <p className="goodies" style={{fontSize:"15px", padding:"0px 30px"}}>
+              *Including goodies and special prizes for different categories!
+            </p>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }

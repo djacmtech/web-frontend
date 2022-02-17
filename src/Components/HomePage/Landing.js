@@ -3,7 +3,6 @@ import axios from 'axios';
 import "./HomePage.css"
 
 export default function Landing() {
-  const baseUrl = "https://djacmdev.pythonanywhere.com/media";
   const [OurEvents2, setOurEvents2] = useState([]);
 
   useEffect(() => {
@@ -17,7 +16,8 @@ export default function Landing() {
       .catch((e) => {
         console.log(e);
       });
-  })
+      // eslint-disable-next-line
+  }, [])
   return (
     <>
       <div className="landingScreen">
@@ -31,13 +31,13 @@ export default function Landing() {
         </div>
         <div className="events">
           {
-            OurEvents2.map(event => {
-              return <>
-                <div className="eventCard">
-                  <img src={baseUrl.concat(event.image)} className="eventImg" alt="eventImg" />
+            OurEvents2.map((event, index) => {
+              return (
+                <div key={index} className="eventCard">
+                  <img src={event.image.slice(0,-15)} className="eventImg" alt="eventImg" />
                   <h4 className="eventName">{event.title}</h4>
                 </div>
-              </>
+              )
             })
           }
         </div>

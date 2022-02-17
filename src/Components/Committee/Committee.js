@@ -14,7 +14,6 @@ const onTop = () => {
 
 const Committee = () => {
   const [committee, setCommittee] = useState([]);
-  const baseUrl = "https://djacmdev.pythonanywhere.com/media";
 
   useEffect(() => {
     onTop();
@@ -90,7 +89,7 @@ const Committee = () => {
                 <CardMedia
                   component="img"
                   height="300"
-                  image={baseUrl.concat(props.pic)}
+                  image={props.pic.slice(0,-15)}
                   alt="img"
                   className="comImg"
                 />
@@ -129,7 +128,7 @@ const Committee = () => {
                     <CardMedia
                       component="img"
                       height="300"
-                      image={baseUrl.concat(props.pic)}
+                      image={props.pic.slice(0,-15)}
                       alt="img"
                       className="comImg"
                     />

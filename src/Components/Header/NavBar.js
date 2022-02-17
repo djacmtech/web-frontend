@@ -85,7 +85,7 @@ const NavBar = (activePage) => {
           </ListItem>
         </Link>
         {["Events", "Committee", "Loc", "Contact Us"].map((text, index) => (
-          <Link className="mobileDrawer" to={`/${text.toLowerCase().replace(' ','-')}`}>
+          <Link className="mobileDrawer" key={index} to={`/${text.toLowerCase().replace(' ','-')}`}>
             <ListItem button key={text}>
               <ListItemIcon>
                 <HiOutlineArrowNarrowRight className="mobileDrawer" />

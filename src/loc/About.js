@@ -24,12 +24,12 @@ function About() {
         <div className="ball7"></div>
         <Grid
           container
-          spacing={1}
+          spacing={2}
           style={{ justifyContent: "center" }}
           className="abtgrid"
         >
 
-          <Grid item sm={12} md={12} lg={8}>
+          <Grid item sm={12} md={12} lg={7} style={{padding:'5%'}}>
             <div data-aos="fade-right" className="abtheading">
               You&#39;re stuck at home but your ideas doesn&#39;t have to be.
               Write some <span style={{color:'#FF8A50'}}>
@@ -46,7 +46,7 @@ function About() {
             item
             xs={12}
             sm={12}
-            md={4}
+            md={5}
             /*spacing={3}*/ style={{
               width: "100%",
               height: "100%",

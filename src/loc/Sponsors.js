@@ -17,11 +17,12 @@ function Sponsors() {
       <h1
         style={{
           fontFamily: "Righteous",
-          backgroundImage:
-            "linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%)",
-          backgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          WebkitBackgroundClip: "text",
+          color:'white',
+          // backgroundImage:
+          //   "linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%)",
+          // backgroundClip: "text",
+          // WebkitTextFillColor: "transparent",
+          // WebkitBackgroundClip: "text",
           marginTop: "4%",
         }}
         data-aos="fade-right"
@@ -29,7 +30,7 @@ function Sponsors() {
         Sponsors
       </h1>
       <div className="goldSponsors">
-        <h5 style={{ textAlign: "center" }}>Gold Sponsors</h5>
+        <h5 style={{ textAlign: "center" }}> Gold Sponsors</h5>
         <div data-aos="fade-up">
         <Grid
           container
@@ -65,8 +66,8 @@ function Sponsors() {
         </Grid>
         </div>
       </div>
-      <div className="silverSponsors" style={{ margin: "5%" }}>
-        <h5 style={{ textAlign: "center" }}>Silver Sponsors</h5>
+      <div className="silverSponsors">
+        <h5 style={{ textAlign: "center" }}> Silver Sponsors </h5>
         <div data-aos="fade-up">
         <Grid
           container

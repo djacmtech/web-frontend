@@ -16,7 +16,10 @@ export default function FinalEvent() {
   useEffect(() => {
     fetch("https://djacmdev.pythonanywhere.com/api/events/", requestOptions)
       .then((response) => response.json())
-      .then((result) => setData(result))
+      .then((result) => {
+        setData(result)
+        console.log(result[0].image.slice(0,-15))
+      })
       .catch((error) => console.log("error", error));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset]);
@@ -33,21 +36,15 @@ export default function FinalEvent() {
 
       {
         data.map((items, index) => (
-        ((index)%2 ===0)?<EventCard
-            id={items.id}
-            image={items.image}
-            title={items.title}
-            description={items.description}
-            about={items.about}
-            date={new Date(items.date).toDateString()}
-            /> : <EventCard
-            id={items.id}
-            image={items.image}
-            title={items.title}
-            description={items.description}
-            about={items.about}
-            date={new Date(items.date).toDateString()}
-            />
+        <EventCard
+          id={items.id}
+          key={index}
+          image={items.image}
+          title={items.title}
+          description={items.description}
+          about={items.about}
+          date={new Date(items.date).toDateString()}
+        />
       ))}
     </div>
   );

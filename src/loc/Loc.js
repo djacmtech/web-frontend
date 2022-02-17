@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Domain from "./Domain";
 import About from "./About";
 import Hero from "./Hero";
@@ -10,21 +10,17 @@ import Faqs from "./Faqs";
 import ContactUs from "./ContactUs";
 import NavLoc from "./navLoc";
 import { Link } from "react-scroll";
-import Fab from "@mui/material/Fab";
-import { BsArrowUpCircleFill } from "react-icons/bs";
-// import LocFooter from "./locFooter";
+import LocFooter from "./locFooter";
 
 function Loc() {
-  
   const [visible, setVisible] = useState(false);
-  const ref = useRef();
+  // const ref = useRef();
 
   // const [ref, visible] = useOnScreen({ threshold: 0.9 });
-  console.log(ref);
   console.log(visible);
   return (
     <>
-      <div style={{backgroundColor:"#001522"}}>
+      <div style={{ backgroundColor: "#001522" }}>
         {visible ? <NavLoc elevation={0} /> : <NavLoc elevation={3} />}
         <Link
           style={{ textDecoration: "none" }}
@@ -66,7 +62,7 @@ function Loc() {
         <Sponsors />
         <Faqs />
         <ContactUs />
-        {/* <LocFooter/> */}
+        <LocFooter />
       </div>
     </>
   );
