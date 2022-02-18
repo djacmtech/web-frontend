@@ -45,6 +45,7 @@ function Domain() {
               width: "100%",
               marginBottom: "5%",
               rowGap: "70px",
+              paddingLeft:"33px"
             }}
             className='domainGrid'
           >
@@ -61,7 +62,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -118,7 +119,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -175,7 +176,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -232,7 +233,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"

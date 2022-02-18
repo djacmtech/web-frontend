@@ -9,7 +9,7 @@ function ContactUs() {
         <div id='Contact Us' style={{  background: "linear-gradient(179.94deg, #34BDF3 -1.24%, #585BA8 64.13%)" }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={5} columnGap={2} style={{padding:"2%", textAlign:"center", display:'flex', alignItems:'center', flexDirection:'column'}}>
-                    <h1 style={{color:"black"}}> Contact Us </h1>
+                    <h1 style={{color:"black", textAlign:'left'}} data-aos="fade-right"> Contact Us </h1>
                     <div style={{fontFamily:'montserrat', fontSize:'17px', color:'#FFFFFF'}}>
                         <div> <h2 style={{textAlign:'left', fontFamily:'righteous'}}> EMAIL </h2> 
                         <div style={{display:'flex', flexDirection:'row', alignItems:'center', padding:'3px'}}> 
