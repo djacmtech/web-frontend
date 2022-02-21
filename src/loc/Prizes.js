@@ -79,8 +79,7 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
-                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹15,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'36px' }}>₹15,000</h2>
                 </div>
               </Grid>
               <Grid
@@ -112,8 +111,7 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
-                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹20,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'36px' }}>₹20,000</h2>
                 </div>
               </Grid>
               <Grid
@@ -145,8 +143,7 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
-                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'1.2rem' }}>₹10,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'36px'}}>₹10,000</h2>
                 </div>
               </Grid>
             </Grid>
@@ -220,7 +217,6 @@ function Prizes() {
                   margin: "4%",
                 }}
               >
-                {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
                 <h2 style={{ padding: "0px", margin: "0px" }}>₹20,000</h2>
               </div>
             </Grid>
@@ -265,7 +261,6 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
                   <h2 style={{ padding: "0px", margin: "0px" }}>₹15,000</h2>
                 </div>
               </Grid>
@@ -299,7 +294,6 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  {/* <FaRupeeSign style={{ width: "4%", height: "4%" }} /> */}
                   <h2 style={{ padding: "0px", margin: "0px" }}>₹10,000</h2>
                 </div>
               </Grid>

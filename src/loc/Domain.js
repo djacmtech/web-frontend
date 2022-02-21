@@ -1,7 +1,9 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import "./Loc.css";
-import { FaUserGraduate } from "react-icons/fa";
+import {SiHiveBlockchain} from 'react-icons/si';
+import {IoHardwareChipOutline} from 'react-icons/io5';
+import {CgWebsite} from 'react-icons/cg';
 
 function Domain() {
   return (
@@ -45,6 +47,7 @@ function Domain() {
               width: "100%",
               marginBottom: "5%",
               rowGap: "70px",
+              paddingLeft:"33px"
             }}
             className='domainGrid'
           >
@@ -61,7 +64,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -82,11 +85,11 @@ function Domain() {
                         flexDirection: "column",
                       }}
                     >
-                      <FaUserGraduate
+                      <CgWebsite
                         style={{
                           color: "white",
-                          width: "40px",
-                          height: "40px",
+                          width: "60px",
+                          height: "60px",
                         }}
                       />
                       <h3
@@ -94,7 +97,7 @@ function Domain() {
                           color: "white",
                           margin: "0px",
                           padding: "0px",
-                          marginTop: "10px",
+                          marginTop: "15px",
                         }}
                         data-aos="fade-up"
                       >
@@ -118,7 +121,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -139,19 +142,13 @@ function Domain() {
                         flexDirection: "column",
                       }}
                     >
-                      <FaUserGraduate
-                        style={{
-                          color: "white",
-                          width: "40px",
-                          height: "40px",
-                        }}
-                      />
+                      <img color="white" alt="ai/ml" src="https://img.icons8.com/material-rounded/60/ffffff/artificial-intelligence.png"/>
                       <h3
                         style={{
                           color: "white",
                           margin: "0px",
                           padding: "0px",
-                          marginTop: "10px",
+                          marginTop: "15px",
                         }}
                         data-aos="fade-up"
                       >
@@ -175,7 +172,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -196,11 +193,11 @@ function Domain() {
                         flexDirection: "column",
                       }}
                     >
-                      <FaUserGraduate
+                      <IoHardwareChipOutline
                         style={{
                           color: "white",
-                          width: "40px",
-                          height: "40px",
+                          width: "60px",
+                          height: "60px",
                         }}
                       />
                       <h3
@@ -208,7 +205,7 @@ function Domain() {
                           color: "white",
                           margin: "0px",
                           padding: "0px",
-                          marginTop: "10px",
+                          marginTop: "15px",
                         }}
                         data-aos="fade-up"
                       >
@@ -232,7 +229,7 @@ function Domain() {
                 flexDirection: "column",
               }}
             >
-              <div className="flip-card" data-aos="zoom-in">
+              <div className="flip-card" data-aos="flip-left">
                 <div className="flip-card-inner">
                   <div
                     className="flip-card-front"
@@ -253,19 +250,19 @@ function Domain() {
                         flexDirection: "column",
                       }}
                     >
-                      <FaUserGraduate
-                        style={{
-                          color: "white",
-                          width: "40px",
-                          height: "40px",
-                        }}
-                      />
+                    <SiHiveBlockchain
+                      style={{
+                        color: "white",
+                        width: "60px",
+                        height: "60px",
+                      }}
+                    />
                       <h3
                         style={{
                           color: "white",
                           margin: "0px",
                           padding: "0px",
-                          marginTop: "10px",
+                          marginTop: "15px",
                         }}
                         data-aos="fade-up"
                       >

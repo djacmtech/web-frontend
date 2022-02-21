@@ -5,21 +5,22 @@ import {Grid} from '@mui/material';
 import {Canvas} from '@react-three/fiber';
 import Ring from "./Ring";
 import Box from "./Box";
+import { useEffect } from "react";
 import { OrbitControls } from "@react-three/drei";
 function Hero() {
 
-  // useEffect(() => {
-  //   const script = document.createElement("script");
-  //   script.src = "https://apply.devfolio.co/v2/sdk.js";
-  //   script.async = true;
-  //   script.defer = true;
-  //   document.body.appendChild(script);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://apply.devfolio.co/v2/sdk.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
 
-  //   return () => {
-  //     document.body.removeChild(script);
-  //   };
+    return () => {
+      document.body.removeChild(script);
+    };
 
-  // }, []);
+  }, []);
 
   return (
     <div id="heroTop" style={{ backgroundColor: "#001521",zIndex:'3', textAlign:'center' }}>
