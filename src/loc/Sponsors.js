@@ -181,7 +181,7 @@ function Sponsors() {
               alignItems: "center",
             }}
           >
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="/" target="_blank" rel="noreferrer">
               <img src={logo3} alt="SYBGEN" style={{ width: "150px" }} />
             </a>
           </Grid>

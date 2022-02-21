@@ -9,7 +9,7 @@ function Timeline() {
                 <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%', fontFamily: "Righteous" }} className='prizesHeading' data-aos="fade-right">Timeline</h1>
                 <div className='timeStamps' >
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-up">
+                        <div data-aos="fade-left">
                             <Grid container className='timelineGrid'  >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls'>1</div>
@@ -21,7 +21,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-up">
+                        <div data-aos="fade-right">
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls' >2</div>
@@ -33,7 +33,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-up">
+                        <div data-aos="fade-left">
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls'>3</div>
@@ -45,7 +45,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px' }}>
-                        <div data-aos="fade-up">
+                        <div data-aos="fade-right">
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls'>4</div>
@@ -57,7 +57,7 @@ function Timeline() {
                         </div>
                     </div>
                     <div style={{ width: '100%', marginTop: '15px', marginBottom: '7%' }}>
-                        <div data-aos="fade-up">
+                        <div data-aos="fade-left">
                             <Grid container className='timelineGrid' >
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls'>5</div>
