@@ -7,7 +7,7 @@ import {CgWebsite} from 'react-icons/cg';
 
 function Domain() {
   return (
-    <center>
+    <center id="Domain">
         <div
           className="domain"
           style={{
