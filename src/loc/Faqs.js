@@ -14,7 +14,7 @@ function Faqs() {
             <h1 style={{ color: 'white', fontFamily: 'Righteous', padding: '0 2% 0 2%' }} data-aos="fade-right"> Frequently Asked Questions </h1>
             <h3 style={{ fontFamily: 'montserrat', color: 'white', fontWeight: '500', padding: '0% 4% 2% 4%' }}> Can&#39;t find the answers to what you are looking for? <Link spy={true} smooth={true} to="Contact Us" style={{ color: '#FF8A50', padding: '5px', cursor: 'pointer' }}> Reach out to our Team </Link> </h3>
             <div style={{ width: '70%', paddingBottom: '5%', paddingTop: '2%' }}>
-                <div data-aos="fade-right">
+                <div data-aos="fade-up">
                     <Accordion defaultExpanded={true}>
                         <AccordionSummary
                             expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
@@ -30,7 +30,7 @@ function Faqs() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-                <div data-aos="fade-left">
+                <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
                             expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
@@ -46,7 +46,7 @@ function Faqs() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-                <div data-aos="fade-right">
+                <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
                             expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
@@ -63,7 +63,7 @@ function Faqs() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-                <div data-aos="fade-left">
+                <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
                             expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
@@ -79,7 +79,7 @@ function Faqs() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-                <div data-aos="fade-right">
+                <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
                             expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
@@ -95,7 +95,7 @@ function Faqs() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-                <div data-aos="fade-left">
+                <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
                             expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
@@ -111,7 +111,7 @@ function Faqs() {
                         </AccordionDetails>
                     </Accordion>
                 </div>
-                <div data-aos="fade-right">
+                <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
                             expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
