@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Domain from "./Domain";
 import About from "./About";
 import Hero from "./Hero";
