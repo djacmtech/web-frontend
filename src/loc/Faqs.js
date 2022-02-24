@@ -1,5 +1,6 @@
-import React from 'react'
-import Accordion from '@mui/material/Accordion';
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import MuiAccordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
@@ -9,6 +10,18 @@ import './Loc.css';
 
 function Faqs() {
 
+    const Accordion = styled((props) => (
+        <MuiAccordion disableGutters elevation={0} square {...props} />
+      ))(({ theme }) => ({
+        borderBottom: `1px solid #16bdff`,
+        '&:not(:last-child)': {
+          borderBottom: 0,
+        },
+        '&:before': {
+          display: 'none',
+        },
+      }));
+
     return (
         <div id='FAQS' style={{ color: 'black', backgroundColor: '#001522', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontSize: '18px' }}>
             <h1 style={{ color: 'white', fontFamily: 'Righteous', padding: '0 2% 0 2%' }} data-aos="fade-right"> Frequently Asked Questions </h1>
@@ -17,7 +30,7 @@ function Faqs() {
                 <div data-aos="fade-up">
                     <Accordion defaultExpanded={true}>
                         <AccordionSummary
-                            expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
+                            expandIcon={<BsChevronDown style={{ color: '#16bdff', padding: '5px' }} />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
@@ -33,7 +46,7 @@ function Faqs() {
                 <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
-                            expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
+                            expandIcon={<BsChevronDown style={{ color: '#16bdff', padding: '5px' }} />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
@@ -49,7 +62,7 @@ function Faqs() {
                 <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
-                            expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
+                            expandIcon={<BsChevronDown style={{ color: '#16bdff', padding: '5px' }} />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
@@ -66,7 +79,7 @@ function Faqs() {
                 <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
-                            expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
+                            expandIcon={<BsChevronDown style={{ color: '#16bdff', padding: '5px' }} />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
@@ -82,7 +95,7 @@ function Faqs() {
                 <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
-                            expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
+                            expandIcon={<BsChevronDown style={{ color: '#16bdff', padding: '5px' }} />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
@@ -98,7 +111,7 @@ function Faqs() {
                 <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
-                            expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
+                            expandIcon={<BsChevronDown style={{ color: '#16bdff', padding: '5px' }} />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
@@ -114,7 +127,7 @@ function Faqs() {
                 <div data-aos="fade-up">
                     <Accordion style={{ paddingBlock: '2%' }} >
                         <AccordionSummary
-                            expandIcon={<BsChevronDown style={{ color: '#FF8A50', padding: '5px' }} />}
+                            expandIcon={<BsChevronDown style={{ color: '#16bdff', padding: '5px' }} />}
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
