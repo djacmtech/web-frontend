@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import logo1 from "../Assets/xyz.png";
 import logo2 from "../Assets/taskade-logo.png";
 import logo3 from "../Assets/SYBGEN.png";
@@ -37,7 +37,7 @@ function Sponsors() {
         Sponsors
       </h1>
       <div className="platinumSponsors">
-        <h5 style={{ textAlign: "center" }}> Platinum Sponsors</h5>
+        <h5 style={{ textAlign: "center" }} data-aos="fade-up"> Platinum Sponsors</h5>
         <div data-aos="fade-up">
           <Grid
             container
@@ -61,11 +61,11 @@ function Sponsors() {
         </div>
       </div>
       <div className="goldSponsors">
-        <h5 style={{ textAlign: "center" }}> Gold Sponsors</h5>
-        <div data-aos="fade-up" data-aos-delay="500">
+        <h5 style={{ textAlign: "center" }} data-aos="fade-up"> Gold Sponsors</h5>
           <Grid
             container
             spacing={6}
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -95,14 +95,13 @@ function Sponsors() {
               </a>
             </Grid>
           </Grid>
-        </div>
       </div>
       <div className="silverSponsors">
-        <h5 style={{ textAlign: "center" }}> Silver Sponsors </h5>
-        <div data-aos="fade-up" data-aos-delay="500">
+        <h5 style={{ textAlign: "center" }} data-aos="fade-up"> Silver Sponsors </h5>
           <Grid
             container
             spacing={6}
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -137,15 +136,15 @@ function Sponsors() {
               </a>
             </Grid>
           </Grid>
-        </div>
       </div>
       <div className="techPartners">
-        <h5 style={{ textAlign: "center" }}>
+        <h5 style={{ textAlign: "center" }} data-aos="fade-up">
           Tech Partners
         </h5>
         <Grid
           container
           spacing={6}
+          
           style={{
             display: "flex",
             justifyContent: "center",
@@ -156,7 +155,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -171,7 +170,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -194,7 +193,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -209,7 +208,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -224,7 +223,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -243,7 +242,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -258,7 +257,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -277,7 +276,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -300,7 +299,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",
@@ -315,7 +314,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up" data-aos-delay="500"
+            data-aos="fade-up" /*data-aos-delay="400"*/
             style={{
               display: "flex",
               justifyContent: "center",

@@ -82,7 +82,7 @@ function Prizes() {
                   <h2
                     style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
                   >
-                    ₹15,000
+                    ₹12,500
                   </h2>
                 </div>
               </Grid>
@@ -119,7 +119,7 @@ function Prizes() {
                   <h2
                     style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
                   >
-                    ₹20,000
+                    ₹25,000
                   </h2>
                 </div>
               </Grid>
@@ -156,14 +156,14 @@ function Prizes() {
                   <h2
                     style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
                   >
-                    ₹10,000
+                    ₹7,500
                   </h2>
                 </div>
               </Grid>
             </Grid>
-            <p className="goodies">
+            {/* <p className="goodies">
               *Including goodies and special prizes for different categories!
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
@@ -231,7 +231,7 @@ function Prizes() {
                   margin: "4%",
                 }}
               >
-                <h2 style={{ padding: "0px", margin: "0px" }}>₹20,000</h2>
+                <h2 style={{ padding: "0px", margin: "0px" }}>₹25,000</h2>
               </div>
             </Grid>
             <Grid
@@ -275,7 +275,7 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{ padding: "0px", margin: "0px" }}>₹15,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px" }}>₹12,500</h2>
                 </div>
               </Grid>
               <Grid
@@ -308,16 +308,16 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{ padding: "0px", margin: "0px" }}>₹10,000</h2>
+                  <h2 style={{ padding: "0px", margin: "0px" }}>₹7,500</h2>
                 </div>
               </Grid>
             </Grid>
-            <p
+            {/* <p
               className="goodies"
               style={{ fontSize: "15px", padding: "0px 30px" }}
             >
               *Including goodies and special prizes for different categories!
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
