@@ -196,6 +196,19 @@ h3 {
   }
 }
 
+.guidelines:hover{
+  border-image:linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+  border-style: solid;
+  border-width: 8px;
+  border-image-slice: 1;
+}
+.guidelines:hover > .guideNumber{
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+}
+
 .domainImgs:hover {
   transform: scale(1.2);
   transition: all 0.4s ease-in-out;
