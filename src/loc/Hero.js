@@ -7,7 +7,7 @@ import Ring from "./Ring";
 import Box from "./Box";
 import { useEffect } from "react";
 import { OrbitControls } from "@react-three/drei";
-import arcana from "../Assets/arcana.png"
+import arcana from "../Assets/arcana-logo.png"
 function Hero() {
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function Hero() {
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <h1 className="heroHeading">LOC 4.0</h1>
             <p className="heroContent">
-            DJSCE ACM Student Chapter
+            Hosted by - DJSCE ACM Student Chapter
             </p>
             <div
               className="apply-button"
@@ -45,8 +45,8 @@ function Hero() {
             />
             <p className="heroContentDate">12th - 13th March, 2022</p>
             <div className="platinum"> 
-              <span style={{paddingInline:'4%'}}> Powered by </span>  
-              <img src={arcana} style={{width:'12%'}} alt="arcana"/>
+              <h4 style={{paddingInline:'2%'}}> Powered by </h4>  
+              <img src={arcana} style={{width:'15%', paddingBottom:'1%'}} alt="arcana"/>
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>

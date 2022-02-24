@@ -76,6 +76,7 @@
 .heroContentDate {
   font-family: Montserrat;
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .platinum {
@@ -83,7 +84,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  height: 45px;
 }
 
 .heroContent {
@@ -104,13 +107,26 @@
   font-weight: bold;
 }
 
+.platinumSponsors {
+  color: #E5E4E2;
+  font-size: 2rem;
+  text-shadow: 0px 0px 12px #E5E4E2;
+}
+
 .goldSponsors {
   color: #fbc778;
   font-size: 2rem;
+  text-shadow: 0px 0px 12px #fbc778;
 }
 
 .silverSponsors {
   color: #c5c5c5;
+  margin: 2%;
+  font-size: 2rem;
+  text-shadow: 0px 0px 12px #c5c5c5;
+}
+
+.techPartners {
   margin: 2%;
   font-size: 2rem;
 }
@@ -172,6 +188,12 @@
   border-radius: 10px;
 }
 
+.flip-card-front:hover{
+  background: linear-gradient(179.94deg, #34bdf3 -1.24%, #585ba8 64.13%);
+  /* border: 20px solid #ffffff; */
+  box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
+  border-radius: 10px;
+}
 h3 {
   font-family: Montserrat;
 }
@@ -196,10 +218,20 @@ h3 {
   }
 }
 
-.domainImgs:hover {
-  transform: scale(1.2);
-  transition: all 0.4s ease-in-out;
+.guidelines:hover{
+  border-image:linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+  border-style: solid;
+  border-width: 8px;
+  border-image-slice: 1;
 }
+.guidelines:hover > .guideNumber{
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+}
+
+
 .domainGrid {
   transform: translateX(-20px);
 }

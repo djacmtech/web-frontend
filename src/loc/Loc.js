@@ -13,15 +13,10 @@ import { Link } from "react-scroll";
 import LocFooter from "./locFooter";
 
 function Loc() {
-  const [visible, setVisible] = useState(false);
-  // const ref = useRef();
-
-  // const [ref, visible] = useOnScreen({ threshold: 0.9 });
-  console.log(visible);
   return (
     <>
       <div style={{ backgroundColor: "#001522" }}>
-        {visible ? <NavLoc elevation={0} /> : <NavLoc elevation={3} />}
+        <NavLoc />
         <Link
           style={{ textDecoration: "none" }}
           to="heroTop"
@@ -52,9 +47,7 @@ function Loc() {
         {/* </Link> */}
         <Hero />
         {/* <div ref={ref}> */}
-        <div onMouseOver={() => setVisible(!visible)}>
-          <About />
-        </div>
+        <About />
         <Prizes />
         <Domain />
         <Timeline />
