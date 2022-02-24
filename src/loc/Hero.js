@@ -6,7 +6,6 @@ import {Canvas} from '@react-three/fiber';
 import Ring from "./Ring";
 import Box from "./Box";
 import { useEffect } from "react";
-import { OrbitControls } from "@react-three/drei";
 import arcana from "../Assets/arcana-logo.png"
 function Hero() {
 
@@ -29,7 +28,6 @@ function Hero() {
         <Grid container spacing={0} className="hero">
           <Grid item xs={12} sm={12} md={3} lg={3}>
               <Canvas>
-                <OrbitControls/>
                 <Ring/>
               </Canvas>
           </Grid> 
@@ -51,7 +49,6 @@ function Hero() {
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <Canvas>
-              <OrbitControls/>
               <Box/>
             </Canvas>
           </Grid> 

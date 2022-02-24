@@ -5,7 +5,7 @@ import './Loc.css'
 const CountDown = () => {
 
   const calculateTimeLeft = () => {
-    let diff = +new Date("February 27, 2022 00:00:01").getTime() - +new Date().getTime()
+    let diff = +new Date("March 12, 2022 00:00:01").getTime() - +new Date().getTime()
     let timeLeft = {
       DAYS: Math.floor((diff / (1000 * 60 * 60 * 24))) / 10 < 1 ? '0' + Math.floor((diff / (1000 * 60 * 60 * 24))) : Math.floor((diff / (1000 * 60 * 60 * 24))),
       HOURS: Math.floor((diff / (1000 * 60 * 60)) % 24) / 10 < 1 ? '0' + Math.floor((diff / (1000 * 60 * 60)) % 24) : Math.floor((diff / (1000 * 60 * 60)) % 24),
