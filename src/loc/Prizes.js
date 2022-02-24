@@ -1,7 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import "./Loc.css";
-
 function Prizes() {
   return (
     <>
@@ -32,7 +31,7 @@ function Prizes() {
                 marginBottom: "4%",
                 fontFamily: "Righteous",
                 fontWeight: "400",
-                fontSize:"50px"
+                fontSize: "50px",
               }}
               className="prizesHeading"
               data-aos="fade-right"
@@ -68,6 +67,7 @@ function Prizes() {
                   alt="prize-2"
                   style={{ width: "40%", height: "40%" }}
                   data-aos="zoom-in"
+                  className="imgPrize"
                 />
                 <div
                   className="amount"
@@ -79,7 +79,11 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'36px' }}>₹15,000</h2>
+                  <h2
+                    style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
+                  >
+                    ₹15,000
+                  </h2>
                 </div>
               </Grid>
               <Grid
@@ -100,6 +104,7 @@ function Prizes() {
                   alt="prize-1"
                   style={{ width: "70%", height: "70%" }}
                   data-aos="zoom-in"
+                  className="imgPrize"
                 />
                 <div
                   className="amount"
@@ -111,7 +116,11 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'36px' }}>₹20,000</h2>
+                  <h2
+                    style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
+                  >
+                    ₹20,000
+                  </h2>
                 </div>
               </Grid>
               <Grid
@@ -132,6 +141,7 @@ function Prizes() {
                   alt="prize-3"
                   style={{ width: "40%", height: "40%" }}
                   data-aos="zoom-in"
+                  className="imgPrize"
                 />
                 <div
                   className="amount"
@@ -143,7 +153,11 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{ padding: "0px", margin: "0px", fontSize:'36px'}}>₹10,000</h2>
+                  <h2
+                    style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
+                  >
+                    ₹10,000
+                  </h2>
                 </div>
               </Grid>
             </Grid>
@@ -298,7 +312,10 @@ function Prizes() {
                 </div>
               </Grid>
             </Grid>
-            <p className="goodies" style={{fontSize:"15px", padding:"0px 30px"}}>
+            <p
+              className="goodies"
+              style={{ fontSize: "15px", padding: "0px 30px" }}
+            >
               *Including goodies and special prizes for different categories!
             </p>
           </div>
