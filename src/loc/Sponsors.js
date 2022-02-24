@@ -10,6 +10,7 @@ import logo7 from "../Assets/cb_grey_small.png";
 import logo8 from "../Assets/cake_logo_white_on_blue.png";
 import logo9 from "../Assets/balsamiq-logo.png";
 import logo10 from "../Assets/1P-logo.png";
+import logo0 from "../Assets/arcana.png";
 
 function Sponsors() {
   return (
@@ -28,17 +29,36 @@ function Sponsors() {
         style={{
           fontFamily: "Righteous",
           color: "white",
-          // backgroundImage:
-          //   "linear-gradient(180deg, #FF8A50 22.99%, #F54951 79.15%)",
-          // backgroundClip: "text",
-          // WebkitTextFillColor: "transparent",
-          // WebkitBackgroundClip: "text",
           marginTop: "4%",
         }}
         data-aos="fade-right"
       >
         Sponsors
       </h1>
+      <div className="platinumSponsors">
+        <h5 style={{ textAlign: "center" }}> Platinum Sponsors</h5>
+        <div data-aos="fade-up">
+          <Grid
+            container
+            spacing={6}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Grid item>
+              <a href="https://arcana.network/" target="_blank" rel="noreferrer">
+                <img
+                  src={logo0}
+                  alt="devfolio"
+                  style={{ width: "150px" }}
+                />
+              </a>
+            </Grid>
+          </Grid>
+        </div>
+      </div>
       <div className="goldSponsors">
         <h5 style={{ textAlign: "center" }}> Gold Sponsors</h5>
         <div data-aos="fade-up">
@@ -118,10 +138,9 @@ function Sponsors() {
           </Grid>
         </div>
       </div>
-      <div>
-        <h5 style={{ textAlign: "center", fontSize: "2rem" }}>
-          {" "}
-          Tech Partners{" "}
+      <div className="techPartners">
+        <h5 style={{ textAlign: "center" }}>
+          Tech Partners
         </h5>
         <Grid
           container
