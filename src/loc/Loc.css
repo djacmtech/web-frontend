@@ -76,7 +76,7 @@
 .heroContentDate {
   font-family: Montserrat;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .platinum {
@@ -84,8 +84,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
+  font-size: 1.2rem;
   font-family: Montserrat;
+  height: 45px;
 }
 
 .heroContent {
