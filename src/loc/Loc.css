@@ -53,11 +53,13 @@
   .abtheading {
     width: 100%;
     font-size: 1.8rem;
+    padding-right: 10%;
   }
 
   .abtcontent {
     padding-right: 5%;
     font-size: 0.8rem;
+    padding-right: 10%;
   }
 }
 

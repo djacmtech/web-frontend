@@ -197,7 +197,7 @@ function Prizes() {
                 fontSize: "40px",
               }}
               className="prizesHeading"
-              data-aos="fade-left"
+              data-aos="fade-right"
             >
               Prizes
             </h2>
