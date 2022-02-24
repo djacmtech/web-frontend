@@ -24,7 +24,6 @@ const pages = [
 
 const NavLoc = (elev) => {
   console.log(elev.elevation);
-
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -58,7 +57,7 @@ const NavLoc = (elev) => {
             to={text}
             spy={true}
             smooth={true}
-            // to={`/${text.toLowerCase().replace(" ", "-")}`}
+          // to={`/${text.toLowerCase().replace(" ", "-")}`}
           >
             <ListItem button key={text}>
               <ListItemText>
@@ -72,7 +71,7 @@ const NavLoc = (elev) => {
   );
 
   return (
-    <AppBar position="sticky" elevation={elev.elevation} style={{backgroundColor:'#001521'}}>
+    <AppBar position="sticky" elevation={elev.elevation} style={{ backgroundColor: '#001521' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -120,13 +119,14 @@ const NavLoc = (elev) => {
               <Link key={index} to={page} spy={true} smooth={true}>
                 <Button
                   key={page}
-                  style={{fontSize:'1.2rem'}}
-                  sx={{ my: 2, color: "white", display: "block", paddingInline:'15px' }}
+                  style={{ fontSize: '1.2rem' }}
+                  sx={{ my: 2, color: "white", display: "block", paddingInline: '15px' }}
                 >
                   {page}
                 </Button>
               </Link>
             ))}
+
           </Box>
         </Toolbar>
       </Container>
