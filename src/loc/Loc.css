@@ -172,6 +172,12 @@
   border-radius: 10px;
 }
 
+.flip-card-front:hover{
+  background: linear-gradient(179.94deg, #34bdf3 -1.24%, #585ba8 64.13%);
+  /* border: 20px solid #ffffff; */
+  box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
+  border-radius: 10px;
+}
 h3 {
   font-family: Montserrat;
 }
