@@ -176,6 +176,30 @@ h3 {
   font-family: Montserrat;
 }
 
+.imgPrize:hover {
+  /* transform:scale(1.2) rotate(30deg);
+  transition: all 1s ease-in-out; */
+  animation: imgPrize 1.3s 1;
+}
+@keyframes imgPrize {
+  0% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2) rotate(-20deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(20deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.domainImgs:hover {
+  transform: scale(1.2);
+  transition: all 0.4s ease-in-out;
+}
 .domainGrid {
   transform: translateX(-20px);
 }
