@@ -176,6 +176,43 @@ h3 {
   font-family: Montserrat;
 }
 
+.imgPrize:hover {
+  /* transform:scale(1.2) rotate(30deg);
+  transition: all 1s ease-in-out; */
+  animation: imgPrize 1.3s 1;
+}
+@keyframes imgPrize {
+  0% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2) rotate(-20deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(20deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.guidelines:hover{
+  border-image:linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+  border-style: solid;
+  border-width: 8px;
+  border-image-slice: 1;
+}
+.guidelines:hover > .guideNumber{
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+}
+
+.domainImgs:hover {
+  transform: scale(1.2);
+  transition: all 0.4s ease-in-out;
+}
 .domainGrid {
   transform: translateX(-20px);
 }

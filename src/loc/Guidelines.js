@@ -34,7 +34,7 @@ function Guidelines() {
         <Grid container columnSpacing={1} rowSpacing={8}>
           {rule.map((x) => {
             return (
-              <Grid key={x.id-2} item lg={4} md={6} sm={6} xs={12}>
+              <Grid key={x.id-2} item lg={4} md={6} sm={6} xs={12} >
                 <div key={x.id-2} data-aos="fade-up" className="guidelines">
                   <span className="guideNumber">0{(x.id) - 2}</span>
                   <br />
