@@ -73,7 +73,7 @@ const NavLoc = (elev) => {
             to={text}
             spy={true}
             smooth={true}
-            // to={`/${text.toLowerCase().replace(" ", "-")}`}
+          // to={`/${text.toLowerCase().replace(" ", "-")}`}
           >
             <ListItem button key={text}>
               <ListItemText>
