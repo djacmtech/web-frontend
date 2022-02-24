@@ -9,16 +9,16 @@ import Sponsors from "./Sponsors";
 import Faqs from "./Faqs";
 import ContactUs from "./ContactUs";
 import NavLoc from "./navLoc";
-import { Link } from "react-scroll";
+import {Link} from "react-scroll";
 import LocFooter from "./locFooter";
 
 function Loc() {
   return (
     <>
-      <div style={{ backgroundColor: "#001522" }}>
+      <div style={{backgroundColor: "#001522"}}>
         <NavLoc />
         <Link
-          style={{ textDecoration: "none" }}
+          style={{textDecoration: "none"}}
           to="heroTop"
           spy={true}
           smooth={true}

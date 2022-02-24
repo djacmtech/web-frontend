@@ -110,9 +110,9 @@
 }
 
 .platinumSponsors {
-  color: #E5E4E2;
+  color: #e5e4e2;
   font-size: 2rem;
-  text-shadow: 0px 0px 12px #E5E4E2;
+  text-shadow: 0px 0px 12px #e5e4e2;
 }
 
 .goldSponsors {
@@ -128,7 +128,7 @@
   text-shadow: 0px 0px 12px #c5c5c5;
 }
 
-.techPartners {
+.partners {
   margin: 2%;
   font-size: 2rem;
 }
@@ -190,7 +190,7 @@
   border-radius: 10px;
 }
 
-.flip-card-front:hover{
+.flip-card-front:hover {
   background: linear-gradient(179.94deg, #34bdf3 -1.24%, #585ba8 64.13%);
   /* border: 20px solid #ffffff; */
   box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
@@ -220,19 +220,18 @@ h3 {
   }
 }
 
-.guidelines:hover{
-  border-image:linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+.guidelines:hover {
+  border-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
   border-style: solid;
   border-width: 8px;
   border-image-slice: 1;
 }
-.guidelines:hover > .guideNumber{
+.guidelines:hover > .guideNumber {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
 }
-
 
 .domainGrid {
   transform: translateX(-20px);
