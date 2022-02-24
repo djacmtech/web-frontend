@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import logo1 from "../Assets/xyz.png";
 import logo2 from "../Assets/taskade-logo.png";
 import logo3 from "../Assets/SYBGEN.png";
@@ -12,6 +12,7 @@ import logo9 from "../Assets/balsamiq-logo.png";
 import logo10 from "../Assets/1P-logo.png";
 
 function Sponsors() {
+
   return (
     <div
       id="Sponsors"
@@ -41,7 +42,7 @@ function Sponsors() {
       </h1>
       <div className="goldSponsors">
         <h5 style={{ textAlign: "center" }}> Gold Sponsors</h5>
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="500">
           <Grid
             container
             spacing={6}
@@ -78,7 +79,7 @@ function Sponsors() {
       </div>
       <div className="silverSponsors">
         <h5 style={{ textAlign: "center" }}> Silver Sponsors </h5>
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="500">
           <Grid
             container
             spacing={6}
@@ -136,7 +137,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -151,7 +152,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -174,7 +175,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -189,7 +190,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -204,7 +205,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -223,7 +224,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -238,7 +239,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -257,7 +258,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -280,7 +281,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -295,7 +296,7 @@ function Sponsors() {
             item
             md={3}
             xs={6}
-            data-aos="fade-up"
+            data-aos="fade-up" data-aos-delay="500"
             style={{
               display: "flex",
               justifyContent: "center",
