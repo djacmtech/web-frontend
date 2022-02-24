@@ -230,10 +230,7 @@ h3 {
   background-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
 }
 
-.domainImgs:hover {
-  transform: scale(1.2);
-  transition: all 0.4s ease-in-out;
-}
+
 .domainGrid {
   transform: translateX(-20px);
 }
