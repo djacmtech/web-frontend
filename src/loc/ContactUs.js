@@ -12,18 +12,18 @@ function ContactUs() {
                 <Grid item xs={12} md={5} columnGap={2} style={{padding:"2%", textAlign:"center", display:'flex', alignItems:'center', flexDirection:'column'}}>
                     <h1 className='contactHeading' style={{color:"black", textAlign:'left', marginLeft:"-50px"}} data-aos="fade-right"> Contact Us </h1>
                     <div style={{fontFamily:'montserrat', fontSize:'17px', color:'#FFFFFF'}}>
-                        <div> <h2 style={{textAlign:'left', fontFamily:'righteous'}}> EMAIL </h2> 
+                        <div> <h2 style={{textAlign:'left', fontFamily:'righteous'}} data-aos="fade-right"> EMAIL </h2> 
                         <div style={{display:'flex', flexDirection:'row', alignItems:'center'/*, padding:'3px'*/}}> 
                             <div> <AiFillMail style={{fontSize:'30px', color:'#FFFFFF'}}/></div>
                             <div style={{paddingLeft:'20px', fontSize:'20px'}}> coreacm@gmail.com </div>
                         </div> 
                         </div>
                         <div style={{textAlign:'left'}}> 
-                            <h2 style={{fontFamily:'righteous'}}> PHONE </h2> 
+                            <h2 style={{fontFamily:'righteous'}} data-aos="fade-right"> PHONE </h2> 
                             <p style={{fontSize:'20px', color:'#FFFFFF'}}> Deap Daru | +91 9987748170 </p> 
                             <p style={{fontSize:'20px', color:'#ffffff'}}> Harvy Gandhi | +91 9819705248 </p>  
                         </div>
-                        <div style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}}> SOCIALS </h2> 
+                        <div style={{textAlign:'left'}}> <h2 style={{fontFamily:'righteous'}} data-aos="fade-right"> SOCIALS </h2> 
                         <div style={{display:'flex', alignItems:'center', justifyContent:'left'}}>
                             <div> <a href='http://djacm.co.in/'> <BsGlobe2 style={{fontSize:'35px', color:'black', padding:'3px 8px 3px 0px'}}/> </a> </div> 
                             <div> <a href='https://www.instagram.com/djsanghvi_acm/'> <AiFillInstagram style={{fontSize:'40px', color:'black', padding:'3px 8px 3px 8px'}}/> </a> </div>
