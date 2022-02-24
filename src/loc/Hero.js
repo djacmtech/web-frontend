@@ -7,6 +7,7 @@ import Ring from "./Ring";
 import Box from "./Box";
 import { useEffect } from "react";
 import { OrbitControls } from "@react-three/drei";
+import arcana from "../Assets/arcana.png"
 function Hero() {
 
   useEffect(() => {
@@ -41,9 +42,12 @@ function Hero() {
               className="apply-button"
               data-hackathon-slug="lines-of-code-djacm"
               data-button-theme="light"
-              // style="height: 44px; width: 312px"
             />
             <p className="heroContentDate">12th - 13th March, 2022</p>
+            <div className="platinum"> 
+              <span style={{paddingInline:'4%'}}> Powered by </span>  
+              <img src={arcana} style={{width:'12%'}} alt="arcana"/>
+            </div>
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <Canvas>
