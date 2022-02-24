@@ -100,7 +100,6 @@ function Domain() {
                         padding: "0px",
                         marginTop: "15px",
                       }}
-                      data-aos="fade-up"
                     >
                       Web/App
                     </h3>
@@ -156,7 +155,6 @@ function Domain() {
                         padding: "0px",
                         marginTop: "15px",
                       }}
-                      data-aos="fade-up"
                     >
                       AI/ML
                     </h3>
@@ -214,7 +212,6 @@ function Domain() {
                         padding: "0px",
                         marginTop: "15px",
                       }}
-                      data-aos="fade-up"
                     >
                       IoT
                     </h3>
@@ -272,7 +269,6 @@ function Domain() {
                         padding: "0px",
                         marginTop: "15px",
                       }}
-                      data-aos="fade-up"
                     >
                       Blockchain
                     </h3>
