@@ -83,7 +83,7 @@ function Faqs() {
                             aria-controls="panel2a-content"
                             id="panel2a-header"
                         >
-                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', textAlign: 'left', fontWeight: 'bold' }} variant="h6">What are the eligibility criteria? Are there any prerequisites or</Typography>
+                            <Typography style={{ fontFamily: 'Montserrat', color: '#FFFFFF', textAlign: 'left', fontWeight: 'bold' }} variant="h6">What are the eligibility criteria? Are there any prerequisites</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography style={{ textAlign: 'left', fontFamily: 'Montserrat', color: 'white' }}>
