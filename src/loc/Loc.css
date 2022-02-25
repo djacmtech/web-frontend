@@ -698,3 +698,13 @@ h3 {
     margin-left: -88px !important;
   }
 }
+
+.countdownMediaQ{
+  padding: 20px 10px 20px 30px !important;
+}
+
+@media (max-width: 500px) {
+  .countdownMediaQ{
+    padding: 20px 10px 20px 10px !important;
+  }
+}
