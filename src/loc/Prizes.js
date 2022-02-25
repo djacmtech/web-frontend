@@ -4,7 +4,7 @@ import "./Loc.css";
 function Prizes() {
   return (
     <>
-      <div className="Prizes1" id="Prizes">
+      <div className="Prizes1 mobileview" id="Prizes">
         <div
           style={{
             background:

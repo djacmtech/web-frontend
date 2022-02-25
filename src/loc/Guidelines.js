@@ -25,7 +25,7 @@ function Guidelines() {
   }, [])
 
   return (
-    <div id="Guidelines" style={{ color: "black", backgroundColor: "#001522", padding: '0 8%', marginBottom: '4%' }}>
+    <div id="Guidelines" className='mobileview' style={{ color: "black", backgroundColor: "#001522", padding: '0 8%', marginBottom: '4%' }}>
 
       <center>
         <div data-aos="fade-right">
@@ -34,8 +34,8 @@ function Guidelines() {
         <Grid container columnSpacing={1} rowSpacing={8}>
           {rule.map((x) => {
             return (
-              <Grid key={x.id-2} item lg={4} md={6} sm={6} xs={12} >
-                <div key={x.id-2} data-aos="fade-up" className="guidelines">
+              <Grid key={x.id - 2} item lg={4} md={6} sm={6} xs={12} >
+                <div key={x.id - 2} data-aos="fade-up" className="guidelines">
                   <span className="guideNumber">0{(x.id) - 2}</span>
                   <br />
                   <p className="guideContain">{x.desc}</p>

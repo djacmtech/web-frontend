@@ -7,7 +7,7 @@ import { CgWebsite } from "react-icons/cg";
 
 function Domain() {
   return (
-    <center id="Domain">
+    <center id="Domain" className='mobileview'>
       <div
         className="domain"
         style={{

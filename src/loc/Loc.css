@@ -708,3 +708,13 @@ h3 {
     padding: 20px 10px 20px 10px !important;
   }
 }
+
+.mobileview{
+  margin-bottom: 0px !important;
+}
+
+@media (max-width: 600px) {
+  .mobileview{
+    margin-bottom: 80px !important;
+  }
+}
