@@ -33,12 +33,12 @@ function About() {
           className="abtgrid"
         >
 
-          <Grid item sm={12} md={12} lg={7} style={{padding:'5%'}}>
+          <Grid item sm={12} md={12} lg={7} style={{ padding: '5%' }}>
             <div data-aos="fade-right" className="abtheading">
-              You&#39;re stuck at home but your ideas doesn&#39;t have to be.
-              Write some <span style={{color:'#FF8A50'}}>
-              lines of code!
-              </span> 
+              You&#39;re stuck at home but your ideas don&#39;t have to be.
+              Write some <span style={{ color: '#FF8A50' }}>
+                lines of code!
+              </span>
             </div>
             <div data-aos="fade-right" className="abtcontent">
               With over 200 participants from numerous colleges, the hackathon
