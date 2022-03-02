@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import {Grid} from "@mui/material";
 import React from "react";
 import "./Loc.css";
 function Prizes() {
@@ -40,7 +40,7 @@ function Prizes() {
             </h1>
             <Grid
               container
-              sx={{ width: "100%" }}
+              sx={{width: "100%"}}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -65,7 +65,7 @@ function Prizes() {
                 <img
                   src="https://drive.google.com/uc?export=download&id=1vDCd7giuyAvFN-u5UtWgFQDtEyqbhgID"
                   alt="prize-2"
-                  style={{ width: "40%", height: "40%" }}
+                  style={{width: "40%", height: "40%"}}
                   data-aos="zoom-in"
                   className="imgPrize"
                 />
@@ -79,9 +79,7 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2
-                    style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
-                  >
+                  <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
                     ₹12,500
                   </h2>
                 </div>
@@ -102,7 +100,7 @@ function Prizes() {
                 <img
                   src="https://drive.google.com/uc?export=download&id=172ODE8_sj8s-CSd4SThuqTPADQogxY-n"
                   alt="prize-1"
-                  style={{ width: "70%", height: "70%" }}
+                  style={{width: "70%", height: "70%"}}
                   data-aos="zoom-in"
                   className="imgPrize"
                 />
@@ -116,9 +114,7 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2
-                    style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
-                  >
+                  <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
                     ₹25,000
                   </h2>
                 </div>
@@ -139,7 +135,7 @@ function Prizes() {
                 <img
                   src="https://drive.google.com/uc?export=download&id=1q7C-acDAoaXCr0bIvADUbKXSZjqbsF7i"
                   alt="prize-3"
-                  style={{ width: "40%", height: "40%" }}
+                  style={{width: "40%", height: "40%"}}
                   data-aos="zoom-in"
                   className="imgPrize"
                 />
@@ -153,17 +149,17 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2
-                    style={{ padding: "0px", margin: "0px", fontSize: "36px" }}
-                  >
+                  <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
                     ₹7,500
                   </h2>
                 </div>
               </Grid>
             </Grid>
-            {/* <p className="goodies">
-              *Including goodies and special prizes for different categories!
-            </p> */}
+            <p className="goodies">& exciting goodies worth upto ₹2 Lakh!</p>
+            <p className="auxiliaryPrizes">
+              Get a chance to win prizes in subcategories like "Best UI/UX",
+              "Best Pitch" and "Most Innovative Idea"
+            </p>
           </div>
         </div>
       </div>
@@ -218,7 +214,7 @@ function Prizes() {
               <img
                 src="https://drive.google.com/uc?export=download&id=172ODE8_sj8s-CSd4SThuqTPADQogxY-n"
                 alt="prize-1"
-                style={{ width: "40%", height: "40%" }}
+                style={{width: "40%", height: "40%"}}
                 data-aos="zoom-in"
               />
               <div
@@ -231,12 +227,12 @@ function Prizes() {
                   margin: "4%",
                 }}
               >
-                <h2 style={{ padding: "0px", margin: "0px" }}>₹25,000</h2>
+                <h2 style={{padding: "0px", margin: "0px"}}>₹25,000</h2>
               </div>
             </Grid>
             <Grid
               container
-              sx={{ width: "100%" }}
+              sx={{width: "100%"}}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -262,7 +258,7 @@ function Prizes() {
                 <img
                   src="https://drive.google.com/uc?export=download&id=1vDCd7giuyAvFN-u5UtWgFQDtEyqbhgID"
                   alt="prize-2"
-                  style={{ width: "40%", height: "40%" }}
+                  style={{width: "40%", height: "40%"}}
                   data-aos="zoom-in"
                 />
                 <div
@@ -275,7 +271,7 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{ padding: "0px", margin: "0px" }}>₹12,500</h2>
+                  <h2 style={{padding: "0px", margin: "0px"}}>₹12,500</h2>
                 </div>
               </Grid>
               <Grid
@@ -295,7 +291,7 @@ function Prizes() {
                 <img
                   src="https://drive.google.com/uc?export=download&id=1q7C-acDAoaXCr0bIvADUbKXSZjqbsF7i"
                   alt="prize-3"
-                  style={{ width: "40%", height: "40%" }}
+                  style={{width: "40%", height: "40%"}}
                   data-aos="zoom-in"
                 />
                 <div
@@ -308,16 +304,20 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{ padding: "0px", margin: "0px" }}>₹7,500</h2>
+                  <h2 style={{padding: "0px", margin: "0px"}}>₹7,500</h2>
                 </div>
               </Grid>
             </Grid>
-            {/* <p
+            <p
               className="goodies"
-              style={{ fontSize: "15px", padding: "0px 30px" }}
+              style={{fontSize: "15px", padding: "0px 30px"}}
             >
-              *Including goodies and special prizes for different categories!
-            </p> */}
+              & exciting goodies worth upto ₹2 Lakh!
+            </p>
+            <p className="auxiliaryPrizes">
+              Get a chance to win prizes in subcategories like "Best UI/UX",
+              "Best Pitch" and "Most Innovative Idea"
+            </p>
           </div>
         </div>
       </div>
