@@ -6,7 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "./Committee.css";
-import OurCommittee from "./CommitteeArray";
 import axios from "axios";
 const onTop = () => {
   window.scrollTo(0, 0);
@@ -14,6 +13,7 @@ const onTop = () => {
 
 const Committee = () => {
   const [committee, setCommittee] = useState([]);
+  const [faculty, setFaculty] = useState([]);
 
   useEffect(() => {
     onTop();
@@ -31,6 +31,22 @@ const Committee = () => {
       }
       setCommittee(comData);
     })();
+
+    (async () => {
+      let facData;
+      try {
+        const response = await axios.get(
+          "https://djacmdev.pythonanywhere.com/api/faculty/"
+        );
+        facData = await response.data;
+        // console.log(facData);
+      } catch (error) {
+        console.log(error);
+        facData = [];
+      }
+      setFaculty(facData);
+    })();
+
   }, []);
 
   return (
@@ -46,13 +62,13 @@ const Committee = () => {
           container
           style={{ justifyContent: "center", margin: '0px', padding: '0px' }}
         >
-          {OurCommittee.map((committee) => (
+          {faculty.map((committee) => (
             <Grid item xs={6} sm={4} md={4}>
-              <Card sx={{ maxWidth: 330 }} className="comCard">
+              <Card sx={{ maxWidth: 330 }} className="comCard" key={committee.index}>
                 <CardMedia
                   component="img"
                   height="340"
-                  image={committee.image}
+                  image={committee.pic}
                   alt="img"
                   className="comImg"
                 />
@@ -70,7 +86,7 @@ const Committee = () => {
                     color="text.secondary"
                     className="comPosition"
                   >
-                    {committee.position}
+                    {committee.post}
                   </Typography>
                 </CardContent>
               </Card>
