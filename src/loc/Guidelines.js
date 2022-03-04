@@ -32,17 +32,69 @@ function Guidelines() {
           <h2 className="guidelineHeading">Guidelines</h2>
         </div>
         <Grid container columnSpacing={1} rowSpacing={8}>
-          {rule.map((x) => {
-            return (
-              <Grid key={x.id - 2} item lg={4} md={6} sm={6} xs={12} >
-                <div key={x.id - 2} data-aos="fade-up" className="guidelines">
-                  <span className="guideNumber">0{(x.id) - 2}</span>
-                  <br />
-                  <p className="guideContain">{x.desc}</p>
-                </div>
-              </Grid>
-            );
-          })}
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">01</span>
+              <br />
+              <p className="guideContain">Registration will be done through Devfolio. All teams must also submit their team for review.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">02</span>
+              <br />
+              <p className="guideContain">Each team should contain 2-4 members.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">03</span>
+              <br />
+              <p className="guideContain">Teams will be shortlisted on the basis of their Devfolio profile.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">04</span>
+              <br />
+              <p className="guideContain">Every shortlisted team must RSVP on Devfolio for their team to participate in the hackathon.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">05</span>
+              <br />
+              <p className="guideContain">Each team should provide the new GitHub link of their project at the start of the hackathon.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">06</span>
+              <br />
+              <p className="guideContain">No commits should be made after the event completion.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">07</span>
+              <br />
+              <p className="guideContain">Problem statement will be released prior to the event and teams have to work on only one PS.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">08</span>
+              <br />
+              <p className="guideContain">Plagiarism/clones of the project are strictly prohibited.</p>
+            </div>
+          </Grid>
+          <Grid item lg={4} md={6} sm={6} xs={12} >
+            <div data-aos="fade-up" className="guidelines">
+              <span className="guideNumber">09</span>
+              <br />
+              <p className="guideContain">Mentoring and assistance will be provided during the hackathon.</p>
+            </div>
+          </Grid>
         </Grid>
       </center>
     </div>

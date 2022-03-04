@@ -1,8 +1,8 @@
 // import {useEffect} from "react";
 import "./Loc.css";
 import CountDown from "./countDown";
-import {Grid} from '@mui/material';
-import {Canvas} from '@react-three/fiber';
+import { Grid } from '@mui/material';
+import { Canvas } from '@react-three/fiber';
 import Ring from "./Ring";
 import Box from "./Box";
 import { useEffect } from "react";
@@ -23,18 +23,18 @@ function Hero() {
   }, []);
 
   return (
-    <div id="heroTop" style={{ backgroundColor: "#001521",zIndex:'3', textAlign:'center' }}>
-      <center>  
+    <div id="heroTop" style={{ backgroundColor: "#001521", zIndex: '3', textAlign: 'center' }}>
+      <center>
         <Grid container spacing={0} className="hero">
           <Grid item xs={12} sm={12} md={3} lg={3}>
-              <Canvas>
-                <Ring/>
-              </Canvas>
-          </Grid> 
+            <Canvas>
+              <Ring />
+            </Canvas>
+          </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <h1 className="heroHeading">LOC 4.0</h1>
             <p className="heroContent">
-            Hosted by - DJSCE ACM Student Chapter
+              Hosted by - DJSCE ACM Student Chapter
             </p>
             <div
               className="apply-button"
@@ -42,16 +42,16 @@ function Hero() {
               data-button-theme="light"
             />
             <p className="heroContentDate">12th - 13th March, 2022</p>
-            <div className="platinum"> 
-              <h4 style={{paddingInline:'2%'}}> Powered by </h4>  
-              <img src={arcana} style={{width:'15%', paddingBottom:'1%'}} alt="arcana"/>
+            <div className="platinum">
+              <h4 style={{ paddingInline: '2%' }}> Powered by </h4>
+              <img src={arcana} style={{ width: '15%', paddingBottom: '1%' }} alt="arcana" />
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <Canvas>
-              <Box/>
+              <Box />
             </Canvas>
-          </Grid> 
+          </Grid>
         </Grid>
         <CountDown />
       </center>
