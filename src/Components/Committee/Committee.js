@@ -11,43 +11,47 @@ const onTop = () => {
   window.scrollTo(0, 0);
 };
 
-const Committee = () => {
-  const [committee, setCommittee] = useState([]);
-  const [faculty, setFaculty] = useState([]);
+const Committee = (com) => {
+  console.log(com.comData);
+  console.log(com.facData);
+  
+  let comData =com.comData;
+  let facData =com.facData
+  const [committee, setCommittee] = useState(comData);
+  const [faculty, setFaculty] = useState(facData);
+  // useEffect(() => {
+  //   onTop();
 
-  useEffect(() => {
-    onTop();
+  //   (async () => {
+  //     let comData;
+  //     try {
+  //       const response = await axios.get(
+  //         "https://djacmdev.pythonanywhere.com/api/core_committee/"
+  //       );
+  //       comData = await response.data;
+  //     } catch (error) {
+  //       console.log(error);
+  //       comData = [];
+  //     }
+  //     setCommittee(comData);
+  //   })();
 
-    (async () => {
-      let comData;
-      try {
-        const response = await axios.get(
-          "https://djacmdev.pythonanywhere.com/api/core_committee/"
-        );
-        comData = await response.data;
-      } catch (error) {
-        console.log(error);
-        comData = [];
-      }
-      setCommittee(comData);
-    })();
+  //   (async () => {
+  //     let facData;
+  //     try {
+  //       const response = await axios.get(
+  //         "https://djacmdev.pythonanywhere.com/api/faculty/"
+  //       );
+  //       facData = await response.data;
+  //       // console.log(facData);
+  //     } catch (error) {
+  //       console.log(error);
+  //       facData = [];
+  //     }
+  //     setFaculty(facData);
+  //   })();
 
-    (async () => {
-      let facData;
-      try {
-        const response = await axios.get(
-          "https://djacmdev.pythonanywhere.com/api/faculty/"
-        );
-        facData = await response.data;
-        // console.log(facData);
-      } catch (error) {
-        console.log(error);
-        facData = [];
-      }
-      setFaculty(facData);
-    })();
-
-  }, []);
+  // }, []);
 
   return (
     <div style={{ backgroundColor: "#000324", margin: "0px", padding: "0px" }}>
@@ -105,7 +109,7 @@ const Committee = () => {
                 <CardMedia
                   component="img"
                   height="300"
-                  image={props.pic.slice(0,-15)}
+                  image={props.pic.slice(0, -15)}
                   alt="img"
                   className="comImg"
                 />
@@ -144,7 +148,7 @@ const Committee = () => {
                     <CardMedia
                       component="img"
                       height="300"
-                      image={props.pic.slice(0,-15)}
+                      image={props.pic.slice(0, -15)}
                       alt="img"
                       className="comImg"
                     />

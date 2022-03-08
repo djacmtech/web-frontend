@@ -51,6 +51,29 @@ const MainEvent = () => {
       });
   }, [routePath, mainEvent, data.id]);
 
+  // const [data, setData] = useState([]);
+  // const [images, setImage] = useState([]);
+  // const { mainEvent } = useParams();
+  // console.log(e);
+  // e.data.map((x) => {
+  //   if (x.title.toLowerCase() === { mainEvent }.mainEvent) {
+  //     setData(x);
+  //   }
+  //   return 0;
+  // })
+
+  // e.pics.map((x) => {
+  //   if (x.event === data.id) {
+  //     console.log(x.pic);
+  //     // setImage(x.pic);
+  //     setImage((prev) => {
+  //       return [...prev, x.pic];
+  //     });
+
+  //   }
+  //   return 0;
+
+  // })
   return (
     <div>
       <Header />
