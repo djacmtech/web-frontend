@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -6,17 +6,16 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "./Committee.css";
-import OurCommittee from "./CommitteeArray";
 import axios from "axios";
-const onTop = () => {
-  window.scrollTo(0, 0);
-};
 
-const Committee = () => {
-  const [committee, setCommittee] = useState([]);
-
-  useEffect(() => {
-    onTop();
+const Committee = (com) => {
+  console.log(com.comData);
+  console.log(com.facData);
+  
+  let comData =com.comData;
+  let facData =com.facData
+  const [committee, setCommittee] = useState(comData);
+  const [faculty, setFaculty] = useState(facData);
 
     (async () => {
       let comData;
@@ -32,7 +31,6 @@ const Committee = () => {
       console.log(comData[0].pic)
       setCommittee(comData);
     })();
-  }, []);
 
   return (
     <div style={{ backgroundColor: "#000324", margin: "0px", padding: "0px" }}>
@@ -47,13 +45,13 @@ const Committee = () => {
           container
           style={{ justifyContent: "center", margin: '0px', padding: '0px' }}
         >
-          {OurCommittee.map((committee) => (
+          {faculty.map((committee) => (
             <Grid item xs={6} sm={4} md={4}>
-              <Card sx={{ maxWidth: 330 }} className="comCard">
+              <Card sx={{ maxWidth: 330 }} className="comCard" key={committee.index}>
                 <CardMedia
                   component="img"
                   height="340"
-                  image={committee.image}
+                  image={committee.pic}
                   alt="img"
                   className="comImg"
                 />
@@ -71,7 +69,7 @@ const Committee = () => {
                     color="text.secondary"
                     className="comPosition"
                   >
-                    {committee.position}
+                    {committee.post}
                   </Typography>
                 </CardContent>
               </Card>

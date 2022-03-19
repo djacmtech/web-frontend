@@ -64,7 +64,7 @@ function Timeline() {
                                 </Grid>
                                 <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>13th March</p></Grid>
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>
-                                <Grid item md={5} ><p>Judging and Closing Ceremony</p></Grid>
+                                <Grid item md={5} ><p>Judging & Closing Ceremony</p></Grid>
                             </Grid>
                         </div>
                     </div>

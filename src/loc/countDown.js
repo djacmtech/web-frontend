@@ -28,7 +28,7 @@ const CountDown = () => {
 
   Object.keys(timeLeft).forEach((interval, index) => {
     timerComponents.push(
-      <Grid key={index} item md={3} sm={3} xs={3} style={{ padding: '20px 10px 20px 30px', display: 'flex', justifyContent: 'space-around', alignItems: 'center' }} >
+      <Grid key={index} item md={3} className='countdownMediaQ' sm={3} xs={3} style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }} >
         <div style={{}}>
           <span style={{ fontWeight: 'bolder' }} className="countDownSize">
             {timeLeft[interval]}

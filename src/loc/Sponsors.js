@@ -12,10 +12,12 @@ import logo10 from "../Assets/1P-logo.png";
 import logo0 from "../Assets/arcana.png";
 import cutistic from "../Assets/CutisticLogo.jpg";
 import bakehouse from "../Assets/bakehouse.png";
+import GMC from "../Assets/GMC.png";
 
 function Sponsors() {
   return (
     <div
+      className="mobileview"
       id="Sponsors"
       style={{
         backgroundColor: "#001521",
@@ -345,6 +347,31 @@ function Sponsors() {
             <a href="https://1password.com/" target="_blank" rel="noreferrer">
               <Tooltip title="1Password" arrow placement="top">
                 <img src={logo10} alt="1Password" style={{width: "150px"}} />
+              </Tooltip>
+            </a>
+          </Grid>
+          <Grid
+            item
+            md={3}
+            xs={6}
+            data-aos="fade-up" /*data-aos-delay="400"*/
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <a
+              href="https://givemycertificate.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Tooltip title="Give My Certificate" arrow placement="top">
+                <img
+                  src={GMC}
+                  alt="Give My Certificate"
+                  style={{width: "150px"}}
+                />
               </Tooltip>
             </a>
           </Grid>

@@ -135,16 +135,34 @@
 
 .goodies {
   font-size: 24px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
+}
+
+.auxiliaryPrizes {
+  transition: all 1s;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  padding-bottom: 20px;
+  border-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+  border-style: solid;
+  border-width: 3px;
+  border-image-slice: 1;
 }
 
 @media (max-width: 800px) {
   .goodies {
     font-size: 15px;
   }
+
+  .auxiliaryPrizes {
+    width: 80%;
+    font-size: 12px;
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .Prizes2 {
     display: none;
   }
@@ -155,6 +173,10 @@
     display: none;
   }
   .goodies {
+    font-size: 12px;
+  }
+  .auxiliaryPrizes {
+    width: 80%;
     font-size: 12px;
   }
   .heroHeading {
@@ -696,5 +718,25 @@ h3 {
 @media (max-width: 500px) {
   .contactHeading {
     margin-left: -88px !important;
+  }
+}
+
+.countdownMediaQ {
+  padding: 20px 10px 20px 30px !important;
+}
+
+@media (max-width: 500px) {
+  .countdownMediaQ {
+    padding: 20px 10px 20px 10px !important;
+  }
+}
+
+.mobileview {
+  margin-bottom: 0px !important;
+}
+
+@media (max-width: 600px) {
+  .mobileview {
+    margin-bottom: 80px !important;
   }
 }

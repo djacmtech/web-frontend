@@ -1,9 +1,9 @@
-import EventCard from "../Components/Eventpage/EventCard";
+import EventCard from "./EventCard";
 import { useState, useEffect } from "react";
-import Header from "../Components/Header/Header";
+import Header from "../Header/Header";
 import { useLocation } from 'react-router-dom';
 
-export default function FinalEvent() {
+export default function FinalEvent(e) {
   const [offset] = useState(0);
   const [data, setData] = useState([
   ]);
