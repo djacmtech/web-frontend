@@ -28,7 +28,7 @@ export default function EventCard(props) {
       <Grid item xs={12} sm={12} md={6}>
         <Item style={{ backgroundColor: "#0A0E2A" }}>
           <img
-            src={props.image.slice(0,-15)}
+            src={props.image}
             alt="Event name"
             width="70%"
             // className="Images"

@@ -18,7 +18,7 @@ export default function FinalEvent() {
       .then((response) => response.json())
       .then((result) => {
         setData(result)
-        console.log(result[0].image.slice(0,-15))
+        console.log(result[0].image)
       })
       .catch((error) => console.log("error", error));
     // eslint-disable-next-line react-hooks/exhaustive-deps

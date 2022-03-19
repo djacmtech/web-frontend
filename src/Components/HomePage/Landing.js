@@ -9,7 +9,7 @@ export default function Landing() {
     axios
       .get("https://djacmdev.pythonanywhere.com/api/events/")
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         setOurEvents2(res.data.slice(0, 4))
         console.log(OurEvents2);
       })
@@ -34,7 +34,7 @@ export default function Landing() {
             OurEvents2.map((event, index) => {
               return (
                 <div key={index} className="eventCard">
-                  <img src={event.image.slice(0,-15)} className="eventImg" alt="eventImg" />
+                  <img src={event.image} className="eventImg" alt="eventImg" />
                   <h4 className="eventName">{event.title}</h4>
                 </div>
               )

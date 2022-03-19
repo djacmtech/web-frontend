@@ -66,12 +66,8 @@ const MainEvent = () => {
             <img
               className="MainImg2"
               src={(images[1])}
-              // src={
-              //   "http://137.135.78.87:8080/media/images/images/events/ACM%20101/WhatsApp_Image_2021-02-12_at_2.46.52_PM_yqwkLUU.jpeg"
-              // }
-
               alt="eventImg1"
-            ></img>
+            />
           </Grid>
           <Grid item sm={6}>
             <Grid container spacing={1}>

@@ -29,6 +29,7 @@ const Committee = () => {
         console.log(error);
         comData = [];
       }
+      console.log(comData[0].pic)
       setCommittee(comData);
     })();
   }, []);
@@ -89,7 +90,7 @@ const Committee = () => {
                 <CardMedia
                   component="img"
                   height="300"
-                  image={props.pic.slice(0,-15)}
+                  image={props.pic}
                   alt="img"
                   className="comImg"
                 />
@@ -128,7 +129,7 @@ const Committee = () => {
                     <CardMedia
                       component="img"
                       height="300"
-                      image={props.pic.slice(0,-15)}
+                      image={props.pic}
                       alt="img"
                       className="comImg"
                     />

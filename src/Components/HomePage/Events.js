@@ -11,9 +11,8 @@ function Events() {
         axios
             .get("https://djacmdev.pythonanywhere.com/api/events/")
             .then((res) => {
-                // console.log(res.data);
                 setOurEvents2(res.data.slice(0, 4))
-                console.log(OurEvents2);
+                console.log(res.data.slice(0,4));
             })
             .catch((e) => {
                 console.log(e);
@@ -31,7 +30,7 @@ function Events() {
                             return <div key={index}>
                                 <Grid item md={3} xs={12} sm={12} key={index} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <div key={index} className="eventCard">
-                                        <img src={event.image.slice(0,-15)} className="eventImg" alt={index} />
+                                        <img src={event.image} className="eventImg" alt={index} />
                                         <h4 className="eventName" key={index}>{event.title}</h4>
                                     </div>
                                 </Grid>
