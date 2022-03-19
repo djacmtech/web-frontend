@@ -14,6 +14,7 @@ import "aos/dist/aos.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import CircularProgress from '@mui/material/CircularProgress';
+import Resources from "./Components/Resources/Resources";
 const FinalEvent = lazy(() => import('./Components/Eventpage/FinalEvent'));
 // const HomePage = lazy(() => import('./Components/HomePage/HomePage'));
 const Committee = lazy(() => import('./Components/Committee/Committee'));
@@ -144,6 +145,7 @@ function App() {
             }
           />
           <Route path="/LOC" element={<Loc />}></Route>
+          <Route path="/Resources" element={<Resources/>}></Route>
         </Routes>
       </div>
     </Router>
