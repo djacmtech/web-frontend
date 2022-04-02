@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Header from "../Header/Header";
 import { Grid } from "@mui/material";
 import { Button } from "@mui/material";
@@ -32,12 +32,20 @@ export default function ContactUS() {
 
   var config = {
     method: "post",
-    url: "http://137.135.78.87:8080/api/contact/",
+    url: "https://djacmdev.pythonanywhere.com/api/contact/",
     headers: {
       "Content-Type": "application/json",
     },
     data: data,
   };
+
+  const onTop = () => {
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    onTop();
+  }, []);
+
   return (
     <div style={{ backgroundColor: "#000324", paddingBottom: "30px" }}>
       <Header activePage="contactUS" />
@@ -136,6 +144,7 @@ export default function ContactUS() {
                           name="fname"
                           id="fname"
                         ></input>
+                        <br />
                         {errors.fname && touched.fname && errors.fname}
                       </Grid>
                       <Grid
@@ -156,6 +165,8 @@ export default function ContactUS() {
                           }}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.lname && touched.lname && errors.lname}
                       </Grid>
                       <Grid
@@ -176,6 +187,8 @@ export default function ContactUS() {
                           }}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.email && touched.email && errors.email}
                       </Grid>
                       <Grid
@@ -195,6 +208,8 @@ export default function ContactUS() {
                           }}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.subject && touched.subject && errors.subject}
                       </Grid>
                       <Grid style={{ backgroundColor: "#000324" }} item xs={12}>
@@ -210,6 +225,8 @@ export default function ContactUS() {
                           // onChange={handleChange}
                           onBlur={handleBlur}
                         ></input>
+                        <br />
+
                         {errors.message && touched.message && errors.message}
                       </Grid>
                     </Grid>
@@ -276,4 +293,4 @@ export default function ContactUS() {
       </center>
     </div>
   );
-};
+}

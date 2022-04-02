@@ -28,12 +28,14 @@ const NavBar = (activePage) => {
     Resources: false,
     Blogs: false,
     contactUS: false,
+    loc: false,
   };
   let page = activePage.activePage.activePage;
   if (page === "Home") value.home = true;
   else if (page === "Events") value.events = true;
   else if (page === "Committee") value.Committee = true;
   else if (page === "Resources") value.Resources = true;
+  else if (page === "Loc") value.loc = true;
   else if (page === "Blogs") value.Blogs = true;
   else if (page === "contactUS") value.contactUS = true;
 
@@ -82,8 +84,8 @@ const NavBar = (activePage) => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["events", "commitee", "contact-us"].map((text, index) => (
-          <Link className="mobileDrawer" to={`/${text}`}>
+        {["Events", "Committee", "Loc","Resources","Contact Us"].map((text, index) => (
+          <Link className="mobileDrawer" key={index} to={`/${text.toLowerCase().replace(' ','-')}`}>
             <ListItem button key={text}>
               <ListItemIcon>
                 <HiOutlineArrowNarrowRight className="mobileDrawer" />
@@ -101,8 +103,7 @@ const NavBar = (activePage) => {
   return (
     <AppBar
       style={{
-        backgroundColor: "#0A0E2A",
-        // transform: "translateY(-12px)",
+        backgroundColor: "#000324",
         color: "#dbdbdb",
       }}
       position="sticky"
@@ -115,7 +116,7 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-          <Link to="/"> <img width="89" style={{ marginLeft: '15px' }} src={image} alt="acmIcon" /> </Link>  
+          <Link to="/"> <img width="70px" src={image} alt="acmIcon" /> </Link>  
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -244,7 +245,7 @@ const NavBar = (activePage) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <img width="89" style={{ marginLeft: '207px' }} src={image} alt="acmIcon" />
+            <img width="89" src={image} alt="acmIcon" />
           </Typography>
           <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>
             <span className="navLinks">
@@ -271,7 +272,16 @@ const NavBar = (activePage) => {
                   Committee
                 </button>
               </Link>
-              {/* <Link
+              <Link
+                disabled={value.loc}
+                className="headerLinks"
+                to="/loc"
+              >
+                <button disabled={value.loc} className="btn">
+                  LOC
+                </button>
+              </Link>
+              <Link
                 disabled={value.Resources}
                 className="headerLinks"
                 to="/Resources"
@@ -279,7 +289,7 @@ const NavBar = (activePage) => {
                 <button disabled={value.Resources} className="btn">
                   Resources
                 </button>
-              </Link> */}
+              </Link>
               {/* <Link disabled={value.Blogs} className="headerLinks" to="/Blogs">
                 <button disabled={value.Blogs} className="btn">
                   Blogs

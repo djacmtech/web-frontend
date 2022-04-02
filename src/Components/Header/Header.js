@@ -1,10 +1,10 @@
 import React from 'react'
-import HeadSocial from './HeadSocial'
+import "../Header/Header.css";
 import NavBar from './NavBar'
 const Header = (activePage) => {
     return (
         <>
-            <HeadSocial/>
+            {/* <HeadSocial/> */}
             <NavBar activePage={activePage}/>
         </>
     )
