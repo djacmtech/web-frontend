@@ -70,6 +70,10 @@
   animation: pulse 1s;
 }
 
+.comCardCp:hover {
+  animation: pulse 1s;
+}
+
 .comImg {
   height: 50% !important;
   border-radius: 50% !important;

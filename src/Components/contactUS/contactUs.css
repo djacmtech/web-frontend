@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 .heading {
-  color: #3cf7fb;
+  color: grey;
 }
 
 .inputFields input {
   padding: 10px;
   width: 80%;
-  border: 3px #3cf7fb solid;
+  border: 3px grey solid;
   border-radius: 20px;
   background-color: #000324;
   font-family: "Roboto", sans-serif;

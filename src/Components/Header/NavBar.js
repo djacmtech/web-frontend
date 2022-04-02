@@ -28,12 +28,14 @@ const NavBar = (activePage) => {
     Resources: false,
     Blogs: false,
     contactUS: false,
+    loc: false,
   };
   let page = activePage.activePage.activePage;
   if (page === "Home") value.home = true;
   else if (page === "Events") value.events = true;
   else if (page === "Committee") value.Committee = true;
   else if (page === "Resources") value.Resources = true;
+  else if (page === "Loc") value.loc = true;
   else if (page === "Blogs") value.Blogs = true;
   else if (page === "contactUS") value.contactUS = true;
 
@@ -82,8 +84,8 @@ const NavBar = (activePage) => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["Events", "Committee", "Contact Us"].map((text, index) => (
-          <Link className="mobileDrawer" to={`/${text.toLowerCase().replace(' ','-')}`}>
+        {["Events", "Committee", "Loc","Resources","Contact Us"].map((text, index) => (
+          <Link className="mobileDrawer" key={index} to={`/${text.toLowerCase().replace(' ','-')}`}>
             <ListItem button key={text}>
               <ListItemIcon>
                 <HiOutlineArrowNarrowRight className="mobileDrawer" />
@@ -102,7 +104,6 @@ const NavBar = (activePage) => {
     <AppBar
       style={{
         backgroundColor: "#000324",
-        transform: "translateY(-12px)",
         color: "#dbdbdb",
       }}
       position="sticky"
@@ -271,7 +272,16 @@ const NavBar = (activePage) => {
                   Committee
                 </button>
               </Link>
-              {/* <Link
+              <Link
+                disabled={value.loc}
+                className="headerLinks"
+                to="/loc"
+              >
+                <button disabled={value.loc} className="btn">
+                  LOC
+                </button>
+              </Link>
+              <Link
                 disabled={value.Resources}
                 className="headerLinks"
                 to="/Resources"
@@ -279,7 +289,7 @@ const NavBar = (activePage) => {
                 <button disabled={value.Resources} className="btn">
                   Resources
                 </button>
-              </Link> */}
+              </Link>
               {/* <Link disabled={value.Blogs} className="headerLinks" to="/Blogs">
                 <button disabled={value.Blogs} className="btn">
                   Blogs

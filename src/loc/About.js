@@ -3,63 +3,102 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "./Loc.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide.min.css";
+import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
+import carousel1 from "../Assets/carousel1.jpeg";
+import carousel2 from "../Assets/carousel2.jpeg";
+import carousel3 from "../Assets/carousel3.jpg";
+import carousel4 from "../Assets/carousel4.jpeg";
 
 function About() {
   return (
     <div
       style={{
-        backgroundColor: "white",
-        paddingTop: "70px",
+        backgroundColor: "#001521",
         paddingBottom: "70px",
       }}
     >
+
       <Box sx={{ flexGrow: 1 }}>
+        {/* <div className="ball1"></div>
+        <div className="ball2"></div>
+        <div className="ball3"></div>
+        <div className="ball4"></div>
+        <div className="ball5"></div>
+        <div className="ball6"></div>
+        <div className="ball7"></div> */}
         <Grid
           container
-          spacing={1}
+          spacing={2}
           style={{ justifyContent: "center" }}
           className="abtgrid"
         >
-          <Grid item sm={12} md={8}>
-            <div className="abtheading">
-              You&#39;re stuck at home but your ideas doesn&#39;t have to be. Write some
-              lines of code!
+
+          <Grid item sm={12} md={12} lg={7} style={{ padding: '5%' }}>
+            <div data-aos="fade-right" className="abtheading">
+              You&#39;re stuck at home but your ideas don&#39;t have to be.
+              Write some <span style={{ color: '#FF8A50' }}>
+                lines of code!
+              </span>
             </div>
-            <div className="abtcontent">
+            <div data-aos="fade-right" className="abtcontent">
               With over 200 participants from numerous colleges, the hackathon
               is a gathering where individual programmers collaborate their
               codes to make industry-grade projects.
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} spacing={3} style={{width:"100%", height:"100%"}}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={5}
+            /*spacing={3}*/ style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            data-aos="fade-up"
+          >
             <Splide
               options={{
                 rewind: true,
+                lazyLoad: "nearby",
                 gap: "1rem",
-                autoplay : true,
+                autoplay: true,
+                breakpoints: {
+                  444: {
+                    height: "60vw",
+                    width: "100vw",
+                  },
+                },
               }}
             >
               <SplideSlide>
                 <img
-                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  src={carousel1}
                   alt="Carousel 1"
                 />
               </SplideSlide>
               <SplideSlide>
                 <img
-                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  src={carousel2}
                   alt="Carousel 2"
                 />
               </SplideSlide>
               <SplideSlide>
                 <img
-                  src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__480.jpg"
+                  src={carousel3}
                   alt="Carousel 3"
                 />
               </SplideSlide>
+              <SplideSlide>
+                <img
+                  src={carousel4}
+                  alt="Carousel 4"
+                />
+              </SplideSlide>
             </Splide>
-            
           </Grid>
         </Grid>
       </Box>

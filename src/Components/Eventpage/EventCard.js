@@ -16,8 +16,7 @@ export default function EventCard(props) {
     textAlign: "center",
     color: theme.palette.text.secondary,
   }));
-
-  const baseUrl = "http://137.135.78.87:8080/media";
+  
   return (
     <Grid
       container
@@ -29,7 +28,7 @@ export default function EventCard(props) {
       <Grid item xs={12} sm={12} md={6}>
         <Item style={{ backgroundColor: "#0A0E2A" }}>
           <img
-            src={baseUrl.concat(props.image)}
+            src={props.image}
             alt="Event name"
             width="70%"
             // className="Images"

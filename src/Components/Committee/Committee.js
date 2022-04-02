@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
@@ -6,31 +6,34 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "./Committee.css";
-import OurCommittee from "./CommitteeArray";
 import axios from "axios";
 
-const Committee = () => {
-  const [committee, setCommittee] = useState([]);
-  const baseUrl = "http://137.135.78.87:8080/media"
+const Committee = (com) => {
+  console.log(com.comData);
+  console.log(com.facData);
+  
+  let comData =com.comData;
+  let facData =com.facData
+  const [committee, setCommittee] = useState(comData);
+  const [faculty, setFaculty] = useState(facData);
 
-  useEffect(() => {
     (async () => {
       let comData;
       try {
         const response = await axios.get(
-          "http://137.135.78.87:8080/api/core_committee/"
+          "https://djacmdev.pythonanywhere.com/api/core_committee/"
         );
         comData = await response.data;
       } catch (error) {
         console.log(error);
         comData = [];
       }
+      console.log(comData[0].pic)
       setCommittee(comData);
     })();
-  }, []);
 
   return (
-    <div style={{ backgroundColor: "#000324", margin: '0px', padding: '0px' }}>
+    <div style={{ backgroundColor: "#000324", margin: "0px", padding: "0px" }}>
       <Header activePage="Committee" />
       <center>
         <div className="team">MEET OUR TEAM</div>
@@ -40,17 +43,15 @@ const Committee = () => {
         <div className="faculty">Faculty</div>
         <Grid
           container
-          // spacing={{ xs: 2, md: 3 }}
-          // columns={{ xs: 4, sm: 8, md: 12 }}
           style={{ justifyContent: "center", margin: '0px', padding: '0px' }}
         >
-          {OurCommittee.map((committee) => (
+          {faculty.map((committee) => (
             <Grid item xs={6} sm={4} md={4}>
-              <Card sx={{ maxWidth: 330 }} className="comCard">
+              <Card sx={{ maxWidth: 330 }} className="comCard" key={committee.index}>
                 <CardMedia
                   component="img"
                   height="340"
-                  image={committee.image}
+                  image={committee.pic}
                   alt="img"
                   className="comImg"
                 />
@@ -68,7 +69,7 @@ const Committee = () => {
                     color="text.secondary"
                     className="comPosition"
                   >
-                    {committee.position}
+                    {committee.post}
                   </Typography>
                 </CardContent>
               </Card>
@@ -87,7 +88,7 @@ const Committee = () => {
                 <CardMedia
                   component="img"
                   height="300"
-                  image={baseUrl.concat(props.pic)}
+                  image={props.pic}
                   alt="img"
                   className="comImg"
                 />
@@ -111,13 +112,11 @@ const Committee = () => {
               </Card>
             );
           }
-          return 0
+          return null;
         })}
 
         <Grid
           container
-          // spacing={{ xs: 2, md: 3 }}
-          // columns={{ xs: 4, sm: 8, md: 12 }}
           style={{ paddingTop: 20, justifyContent: "center" }}
         >
           {committee.map((props) => {
@@ -128,7 +127,7 @@ const Committee = () => {
                     <CardMedia
                       component="img"
                       height="300"
-                      image={baseUrl.concat(props.pic)}
+                      image={props.pic}
                       alt="img"
                       className="comImg"
                     />
@@ -153,7 +152,7 @@ const Committee = () => {
                 </Grid>
               );
             }
-            return 0
+            return null;
           })}
         </Grid>
       </center>

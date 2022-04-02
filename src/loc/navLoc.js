@@ -2,22 +2,17 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import { Link } from "react-router-dom";
+import logo from "../Assets/DJACMLOGO.png";
+import { Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-scroll";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 const pages = [
   "Prizes",
   "Domain",
@@ -27,27 +22,24 @@ const pages = [
   "FAQS",
   "Contact Us",
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const NavLoc = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
+function ElevationScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-
+const NavLoc = (elev) => {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -75,7 +67,14 @@ const NavLoc = () => {
     >
       <List>
         {pages.map((text, index) => (
-          <Link style={{textDecoration:'none'}} to={`/${text.toLowerCase().replace(" ", "-")}`}>
+          <Link
+            key={index}
+            style={{ textDecoration: "none" }}
+            to={text}
+            spy={true}
+            smooth={true}
+          // to={`/${text.toLowerCase().replace(" ", "-")}`}
+          >
             <ListItem button key={text}>
               <ListItemText>
                 <span>{text}</span>
@@ -88,118 +87,72 @@ const NavLoc = () => {
   );
 
   return (
-    <AppBar position="static" color="transparent" elevation="0">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            LOGO
-          </Typography> */}
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <React.Fragment key={anchor}>
-              <Button
-                style={{ fontSize: "2rem" }}
-                size="large"
-                color="inherit"
-                onClick={toggleDrawer(anchor, true)}
-              >
-                <GiHamburgerMenu />
-              </Button>
-              <Drawer
-                anchor={anchor}
-                open={state[anchor]}
-                onClose={toggleDrawer(anchor, false)}
-              >
-                {list(anchor)}
-              </Drawer>
-            </React.Fragment>
-
-            {/* <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+    <ElevationScroll>
+      <AppBar position="sticky" style={{ backgroundColor: "#001521" }}>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
-          </Box>
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            LOGOy
-          </Typography> */}
-          <Box
-            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
-            justifyContent="center"
-            alignContent="center"
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+              <img src={logo} alt="logo" width="50"></img>
+            </Typography>
 
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <React.Fragment key={anchor}>
+                <Button
+                  style={{ fontSize: "2rem" }}
+                  size="large"
+                  color="inherit"
+                  onClick={toggleDrawer(anchor, true)}
+                >
+                  <GiHamburgerMenu />
+                </Button>
+                <Drawer
+                  anchor={anchor}
+                  open={state[anchor]}
+                  onClose={toggleDrawer(anchor, false)}
+                >
+                  {list(anchor)}
+                </Drawer>
+              </React.Fragment>
+            </Box>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+              <img src={logo} alt="logo" width="50"></img>
+            </Typography>
+            <Box
+              sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+              justifyContent="center"
+              alignContent="center"
+            >
+              {pages.map((page, index) => (
+                <Link key={index} to={page} spy={true} smooth={true}>
+                  <Button
+                    key={page}
+                    style={{ fontSize: "1.2rem" }}
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "block",
+                      paddingInline: "15px",
+                    }}
+                  >
+                    {page}
+                  </Button>
+                </Link>
               ))}
-            </Menu>
-          </Box> */}
-        </Toolbar>
-      </Container>
-    </AppBar>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </ElevationScroll>
   );
 };
 export default NavLoc;

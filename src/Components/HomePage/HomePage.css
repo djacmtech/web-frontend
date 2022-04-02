@@ -81,7 +81,7 @@ h1, h2{
   padding: 0px;
 }
 
-.typewriter {
+/* .typewriter {
   color: #DBDBDB;
   width: 37ch;
   animation: typing 8s steps(22) infinite,
@@ -90,7 +90,7 @@ h1, h2{
   overflow: hidden;
   border-right: 3px solid;
   font-size: 2em;
-}
+} */
 
 .events{
   display: flex;
@@ -450,10 +450,10 @@ h2 {
   padding: 0;
   /* height: 70px; */
   font-family: coolvetica;
-  border-right: 3px solid rgb(255, 255, 255);
+  /* border-right: 3px solid rgb(255, 255, 255); */
   /* line-height: 70px; */
   overflow: hidden;
-  animation: moveRight 6000ms steps(45) infinite, borderBlink 300ms infinite;
+  /* animation: moveRight 6000ms steps(45) infinite, borderBlink 300ms infinite; */
   font-size: 50px;
   white-space: nowrap;
 }
