@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap');
+.heroSub{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 4% 4% 0%;
+}
+
+.heroFair{
+    font-family: 'Alumni Sans', sans-serif;
+    color: #187271;
+    font-weight: 800;
+    font-size: 5rem;
+    padding: 0% 4% 0%;
+    
+
+}
+.extraHero{
+    color: black;
+    padding: 0% 4% 0%;
+    font-weight: 600;
+
+}
