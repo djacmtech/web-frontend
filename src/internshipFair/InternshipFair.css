@@ -1,32 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* Hero */
 
-.heroSub{
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    font-weight: 600;
-    font-size: 1.4rem;
-    padding: 4% 4% 0%;
+.heroSub {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 2.2rem;
+  /* padding: 4% 4% 0%; */
 }
 
-.heroFair{
-    font-family: 'Alumni Sans', sans-serif;
-    color: #187271;
-    font-weight: 800;
-    font-size: 5rem;
-    padding: 0% 4% 0%;
-    
-
+.heroFair {
+  font-family: "Alumni Sans", sans-serif;
+  color: #187271;
+  font-weight: 800;
+  font-size: 7rem;
+  padding: 1% 0;
+  /* padding: 0% 4% 0%; */
 }
-.extraHero{
-    color: black;
-    padding: 0% 4% 0%;
-    font-weight: 600;
-
+.extraHero {
+  color: black;
+  /* padding: 0% 4% 0%; */
+  font-weight: 500;
+  /* padding-right: 40%; */
 }
 
+.heroFairButton:hover::after {
+  content: " \279C";
+  transition: all 2s ease;
+}
+.heroFairButton {
+  /* padding: 0% 4% 0%; */
+}
+
+
+.fairCount {
+  background-color: #187271;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 1%;
+  text-align: center;
+  float: right;
+  width: 50%;
+  transform: translateX(15px);
+}
+
+.fairCount span {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+    .fairCount {
+      width: 80%;
+      float: none;
+      margin:1%;
+      justify-content: center;
+      align-items: center;
+      /* color: green; */
+    }
+  }
 /* About Page */
 
 .image-stack {
@@ -34,7 +69,7 @@
     position: relative; 
     grid-template-columns: repeat(12, 1fr);
   }
-  
+
   .image-stack__item--bottom {
     grid-column: 4 / -1;
     grid-row: 1;
@@ -44,7 +79,7 @@
     grid-row: 1;
     grid-column: 1 / span 8;
     padding-top: 20%;
-    z-index: 1; 
+    z-index: 1;
   }
   
   .imgFair {
@@ -81,4 +116,23 @@
   text-align: left;
   color: black;
   padding-inline: 3%;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.fairheading {
+  font-family: "Open Sans", sans-serif;
+  font-style: regular;
+  font-size: 36px;
+  line-height: 54px;
+  color: #2d3748;
+}
+
+.faircontent {
+  font-family: "Open Sans", sans-serif;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2d3748;
 }
