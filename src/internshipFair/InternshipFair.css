@@ -50,3 +50,7 @@
     width: 100%;
     display: block;
   }
+
+  .logoDark{
+    filter: brightness(0) invert(1);
+  }
