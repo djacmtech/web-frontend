@@ -26,8 +26,11 @@
     "react-slick": "^0.28.1",
     "react-swipeable-views": "^0.14.0",
     "swiper": "^8.0.7",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.4.8",
     "three": "^0.137.5",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
