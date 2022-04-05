@@ -138,12 +138,13 @@ const NavbarFair = (elev) => {
                                 <Link key={index} to={page} spy={true} smooth={true}>
                                     <Button
                                         key={page}
-                                        style={{ fontSize: "1.2rem" }}
+                                        style={{ fontSize: "1.2rem" ,fontFamily:'sans-serif',textTransform:'capitalize' }}
                                         sx={{
                                             my: 2,
                                             color: "black",
                                             display: "block",
                                             paddingInline: "15px",
+                                            
                                         }}
                                     >
                                         {page}
