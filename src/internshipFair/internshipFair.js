@@ -5,7 +5,7 @@ import AboutFair from "./AboutFair";
 import "./InternshipFair.css";
 const InternshipFair = () => {
   return (
-    <div style={{ backgroundColor: "white" }}>
+    <div style={{ backgroundColor: "white",transform:'translateY(-5px)' }}>
       <NavbarFair />
       <HeroFair />
       <AboutFair/>

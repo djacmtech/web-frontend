@@ -15,6 +15,7 @@ function AboutFair() {
         backgroundColor: "#001521",
         paddingBottom: "70px",
       }}
+      id='About IF'
     >
       <Box sx={{ flexGrow: 1 }}>
         <Grid
