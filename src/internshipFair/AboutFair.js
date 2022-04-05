@@ -12,7 +12,7 @@ function AboutFair() {
   return (
     <div
       style={{
-        backgroundColor: "#001521",
+        backgroundColor: "#FFFFFF",
         paddingBottom: "70px",
       }}
     >
@@ -85,11 +85,11 @@ function AboutFair() {
             </div>
           </Grid>
           <Grid item sm={12} md={12} lg={7} style={{ padding: "5%" }}>
-            <div data-aos="fade-right" className="abtheading">
+            <div data-aos="fade-right" className="fairheading">
               We aim to bridge the gap between academia and the industry by
               promoting our learning by doing ethos.
             </div>
-            <div data-aos="fade-right" className="abtcontent">
+            <div data-aos="fade-right" className="faircontent">
               The internship can be scheduled between June and July for one
               month of full-time work followed by part-time or work from the
               home model as negotiated between the company and the concerned
@@ -101,6 +101,7 @@ function AboutFair() {
                 color: "#FFFFFF",
                 fontSize: "20px",
                 marginTop: "20px",
+                padding:"10px"
               }}
             >
               Know more about DJSCE ACM{" "}
