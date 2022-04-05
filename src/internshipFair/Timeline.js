@@ -1,4 +1,5 @@
 import TimelineInternship from "./TimelineInternship";
+import './InternshipFair.css';
 
 export default function Timeline() {
     return (

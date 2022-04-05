@@ -6,6 +6,7 @@ import "./InternshipFair.css";
 import Contact from "./Contact";
 import Timeline from "./Timeline";
 import FairFooter from "./FairFooter";
+import Testimonials from "./Testimonials";
 
 const InternshipFair = () => {
   return (
@@ -14,8 +15,9 @@ const InternshipFair = () => {
       <HeroFair />
       <AboutFair/>
       <Timeline/>
+      <Testimonials/>
       <Contact/>
-      <FairFooter />
+      <FairFooter/>
     </div>
   );
 };

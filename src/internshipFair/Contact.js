@@ -9,6 +9,7 @@ export default function Contact() {
           <Grid
             item
             xs={12}
+            sm={12}
             md={7}
             style={{
                 display: "flex",
@@ -36,6 +37,7 @@ export default function Contact() {
             <Grid
             item
             xs={12}
+            sm={12}
             md={5}
             columnGap={2}
             style={{

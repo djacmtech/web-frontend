@@ -14,10 +14,23 @@ export default function TimelineInternship() {
           <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>
-             9th May 
-            <p> ACM 101 </p>
-            <p> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+        <TimelineContent className='timelineEntry'>
+            <span className='date'> 9th May </span>
+            <span className='timelineHeading'> ACM 101 </span>
+            <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
+            </span>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent className='timelineEntry'>
+            <span className='date'> 9th May </span>
+            <span className='timelineHeading'> ACM 101 </span>
+            <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
             </p>
         </TimelineContent>
@@ -27,23 +40,10 @@ export default function TimelineInternship() {
           <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>
-            9th May 
-            <p> ACM 101 </p>
-            <p> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
-            </p>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-            9th May 
-            <p> ACM 101 </p>
-            <p> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+        <TimelineContent className='timelineEntry'>
+            <span className='date'> 9th May </span>
+            <span className='timelineHeading'> ACM 101 </span>
+            <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
             </p>
         </TimelineContent>
@@ -52,10 +52,10 @@ export default function TimelineInternship() {
         <TimelineSeparator>
           <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
         </TimelineSeparator>
-        <TimelineContent>
-            9th May 
-            <p> ACM 101 </p>
-            <p> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+        <TimelineContent className='timelineEntry'>
+            <span className='date'> 9th May </span>
+            <span className='timelineHeading'> ACM 101 </span>
+            <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
             </p>
         </TimelineContent>
