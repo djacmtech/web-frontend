@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 
 /* Hero */
 
@@ -17,7 +17,7 @@
   color: #187271;
   font-weight: 800;
   font-size: 7rem;
-  padding: 1% 0 ;
+  padding: 1% 0;
   /* padding: 0% 4% 0%; */
 }
 .extraHero {
@@ -35,56 +35,69 @@
   /* padding: 0% 4% 0%; */
 }
 
-.fairCount{
-    background-color: #187271;
-    font-family: "Poppins", sans-serif;
-    color: white;
-    padding: 1%;
-    text-align: center;
-    float: right;
-    width: 50%;
+
+.fairCount {
+  background-color: #187271;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 1%;
+  text-align: center;
+  float: right;
+  width: 50%;
+  transform: translateX(15px);
 }
 
-.fairCount span{
-    font-size: 3rem;
+.fairCount span {
+  font-size: 3rem;
 }
+
+@media screen and (max-width: 900px) {
+    .fairCount {
+      width: 80%;
+      float: none;
+      margin:1%;
+      justify-content: center;
+      align-items: center;
+      /* color: green; */
+    }
+  }
 /* About Page */
 
 .image-stack {
-    display: grid;
-    position: relative; 
-    grid-template-columns: repeat(12, 1fr);
-  }
-  
-  .image-stack__item--bottom {
-    grid-column: 4 / -1;
-    grid-row: 1;
-  }
-  
-  .image-stack__item--top {
-    grid-row: 1;
-    grid-column: 1 / span 8;
-    padding-top: 20%;
-    z-index: 1; 
-  }
-  
-  .imgFair {
-    width: 100%;
-    display: block;
-  }
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
 
-  .fairheading{
-    font-family: 'Open Sans', sans-serif;
-    font-style: regular;
-    font-size: 36px;
-    line-height: 54px;
-    color: #2D3748;
-  }
+.image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
 
-  .faircontent{
-    font-family: 'Open Sans', sans-serif;
-    font-style: regular;
-    font-size: 16px;
-    line-height: 24px;
-    color: #2D3748;
-  }
+.image-stack__item--top {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  padding-top: 20%;
+  z-index: 1;
+}
+
+.imgFair {
+  width: 100%;
+  display: block;
+}
+
+.fairheading {
+  font-family: "Open Sans", sans-serif;
+  font-style: regular;
+  font-size: 36px;
+  line-height: 54px;
+  color: #2d3748;
+}
+
+.faircontent {
+  font-family: "Open Sans", sans-serif;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2d3748;
+}

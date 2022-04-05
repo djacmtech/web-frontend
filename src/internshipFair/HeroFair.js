@@ -16,7 +16,7 @@ const HeroFair = () => {
                     <br />
                     <span className='heroFair'>INTERNSHIP FAIR</span>
                     <p className='extraHero'>Sign In to get yourself registered and know more about the Job Profiles</p>
-                    <Button className='heroFairButton' variant='contained' style={{ backgroundColor: '#187271' }}>Let's get Started</Button>
+                    <Button className='heroFairButton' variant='contained' size='large' style={{ backgroundColor: '#187271' }}>Let's get Started</Button>
 
                 </Grid>
                 <Grid item sm={4} style={{ backgroundColor: '#2ABEA2' }}>
