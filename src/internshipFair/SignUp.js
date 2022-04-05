@@ -32,8 +32,8 @@ function SignUp() {
 
     return (
         <>
-            <Grid container sx={{ height: '100vh', backgroundColor: 'white', overflow: 'hidden' }}>
-                <Grid item md={3.5}>
+            <Grid container sx={{ height: { md: '100vh', sm: '100vh', xs: '100vh' }, backgroundColor: 'white' }}>
+                <Grid item md={3.5} sx={{ display: { md: 'inline', sm: 'none', xs: 'none' } }}>
                     <img src={img} style={{ width: '100%', height: '100%' }} />
                 </Grid>
                 <Grid item md={8.5} sx={{ height: '100%' }}>
