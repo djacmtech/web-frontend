@@ -12,9 +12,10 @@ import { Navigation } from "swiper";
 const PastCompanies = () => {
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
-      <div className="pastCompanies"> - - - - - PAST COMPANIES</div>
+      <div className="pastCompanies"> - - - PAST COMPANIES</div>
       <Swiper
         navigation={true}
+        loop={true}
         modules={[Navigation, FreeMode]}
         slidesPerView={3}
         spaceBetween={30}

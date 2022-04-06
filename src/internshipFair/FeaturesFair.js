@@ -15,7 +15,7 @@ const FeaturesFair = () => {
           full-time work.
         </div>
       </div>
-      <div style={{ justifyContent: "right", paddingLeft: "750px" }}>
+      <div className="growth">
         <div className="featuresHead">GROWTH</div>
         <div className="featuresContent">
           The internship can be scheduled between June and July for one month of
@@ -24,10 +24,10 @@ const FeaturesFair = () => {
       </div>
       <div style={{ paddingLeft: "50px" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
-         <img src={stipend} style={{height:"150px", width:"150px"}}alt=""/>
-          <div className="featuresHead" style={{paddingLeft:"50px"}}>STIPEND</div>
+         <img src={stipend} alt="" className="stipendImg"/>
+          <div className="StipendHead">STIPEND</div>
         </div>
-        <div className="featuresContent" style={{paddingLeft:"200px"}}>
+        <div className="StipendContent">
           The internship can be scheduled between June and July for one month of
           full-time work.
         </div>

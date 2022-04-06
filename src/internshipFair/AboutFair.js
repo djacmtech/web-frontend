@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import "./InternshipFair.css";
 import carousel1 from "../Assets/carousel1.jpeg";
 import carousel2 from "../Assets/carousel2.jpeg";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { CgArrowLongRight } from "react-icons/cg";
 import { Button } from "@mui/material";
 
 function AboutFair() {
@@ -70,13 +70,13 @@ function AboutFair() {
               style={{
                 backgroundColor: "#187271",
                 color: "#FFFFFF",
-                fontSize: "20px",
+                fontSize: "18px",
                 marginTop: "20px",
                 padding:"10px"
               }}
             >
               Know more about DJSCE ACM{" "}
-              <AiOutlineArrowRight style={{ fontSize: "2rem" }} />
+              <CgArrowLongRight style={{ fontSize: "2rem" }} />
             </Button>
           </Grid>
         </Grid>
