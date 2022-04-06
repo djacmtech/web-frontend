@@ -2,7 +2,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "./InternshipFair.css";
-import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
 import carousel1 from "../Assets/carousel1.jpeg";
 import carousel2 from "../Assets/carousel2.jpeg";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -13,7 +12,7 @@ function AboutFair() {
     <div
       style={{
         backgroundColor: "#FFFFFF",
-        paddingBottom: "70px",
+        // paddingBottom: "70px",
       }}
       id='About IF'
     >
@@ -22,7 +21,7 @@ function AboutFair() {
           container
           spacing={2}
           style={{ justifyContent: "center" }}
-          className="abtgrid"
+          className="abtfairgrid"
         >
           <Grid
             item
@@ -38,35 +37,6 @@ function AboutFair() {
             }}
             data-aos="fade-up"
           >
-            {/* <Splide
-              options={{
-                rewind: true,
-                lazyLoad: "nearby",
-                gap: "1rem",
-                autoplay: true,
-                breakpoints: {
-                  444: {
-                    height: "60vw",
-                    width: "100vw",
-                  },
-                },
-              }}
-            >
-              <SplideSlide>
-                <img src={carousel1} alt="Carousel 1" />
-              </SplideSlide>
-              <SplideSlide>
-                <img src={carousel2} alt="Carousel 2" />
-              </SplideSlide>
-              <SplideSlide>
-                <img src={carousel3} alt="Carousel 3" />
-              </SplideSlide>
-              <SplideSlide>
-                <img src={carousel4} alt="Carousel 4" />
-              </SplideSlide>
-            </Splide> */}
-            {/* <img src={carousel1} alt="" style={{height:"200px", width:"400px", paddingLeft:"50px"}}></img> */}
-            {/* <img src={carousel1} alt="" style={{height:"200px", width:"400px", paddingLeft:"50px"}}></img> */}
 
             <div class="image-stack">
               <div class="image-stack__item image-stack__item--top">

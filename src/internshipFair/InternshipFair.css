@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Poppins:wght@200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@700&family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 
 /* Hero */
 
@@ -131,6 +131,38 @@
   font-size: 16px;
   line-height: 24px;
   color: #2d3748;
+  padding-top: 20px;
+}
+
+.abtfairgrid {
+  padding-inline: 5%;
+  padding-block: 50px;
+}
+
+/* Features */
+.featuresHead {
+  font-family: "Alumni Sans", sans-serif;
+  font-style: bold;
+  font-size: 200px;
+  color: #2d3748;
+  line-height: 200px;
+}
+
+.featuresContent {
+  font-family: "Open Sans", sans-serif;
+  font-style: regular;
+  font-size: 18px;
+  color: #2d3748;
+  line-height: 24px;
+}
+
+.featuresSpan {
+  background-color: #2abea2;
+  width: 80px;
+  padding-left: 50px;
+  margin-left: 100px;
+  height: 30px;
+  border-radius: 8px;
 }
 
 .date {
