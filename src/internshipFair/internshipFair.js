@@ -9,12 +9,14 @@ import FairFooter from "./FairFooter";
 import Testimonials from "./Testimonials";
 import "./InternshipFair.css";
 
+import PastCompanies from "./PastCompanies";
 const InternshipFair = () => {
   return (
     <div style={{ backgroundColor: "white", transform: 'translateY(-5px)' }}>
       <NavbarFair />
       <HeroFair />
       <AboutFair/>
+      <PastCompanies/>
       <FeaturesFair/>
       <Timeline/>
       <Testimonials/>
