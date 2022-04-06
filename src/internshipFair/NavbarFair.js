@@ -34,6 +34,7 @@ function ElevationScroll(props) {
 
     return React.cloneElement(children, {
         elevation: trigger ? 4 : 0,
+        // color : trigger ? 'transparent' : 'color', 
     });
 }
 
@@ -86,7 +87,7 @@ const NavbarFair = (elev) => {
 
     return (
         <ElevationScroll>
-            <AppBar position="sticky" color="transparent">
+            <AppBar position="sticky" color="transparent" >
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography

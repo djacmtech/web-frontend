@@ -19,15 +19,15 @@ const HeroFair = () => {
                     <Button className='heroFairButton' variant='contained' size='large' style={{ backgroundColor: '#187271' }}>Let's get Started</Button>
 
                 </Grid>
-                <Grid item sm={4} style={{ backgroundColor: '#2ABEA2' }}>
+                <Grid item sm={4} className='heroGridFair' >
                     {/* <div style={{backgroundColor:'#2ABEA2'}}></div> */}
                 </Grid>
             </Grid>
             <div className='fairCount'>
                 <Grid container spacing={0} >
-                    <Grid item xs={4}>COMPANIES <br />
+                    <Grid item xs={4}>COMPANIES  <br />
                         <span>
-                            <CountUp end={30} duration={2} />+</span>
+                            &nbsp;&nbsp;  <CountUp end={30} duration={2} />+</span>
                     </Grid>
                     <Grid item xs={4}>INTERVIEWS ORGANISED <br />
                         <span>

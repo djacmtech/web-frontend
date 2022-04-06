@@ -35,7 +35,6 @@
   /* padding: 0% 4% 0%; */
 }
 
-
 .fairCount {
   background-color: #187271;
   font-family: "Poppins", sans-serif;
@@ -51,16 +50,41 @@
   font-size: 3rem;
 }
 
+.heroGridFair {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 95vh;
+  width: 27%;
+  background-color: rgb(42, 190, 162);
+}
+
 @media screen and (max-width: 900px) {
-    .fairCount {
-      width: 80%;
-      float: none;
-      margin:1%;
-      justify-content: center;
-      align-items: center;
-      /* color: green; */
-    }
+  .fairCount {
+    width: 80%;
+    float: none;
+    margin: 9% 3%;
+    justify-content: center;
+    align-items: center;
+
+    /* color: green; */
   }
+  .fairCount span{
+    font-size: 1.5rem;
+  }
+  .heroGridFair {
+    display: none;
+  }
+  .heroSub,
+  .extraHero,
+  .heroFair {
+    text-align: center;
+  }
+  .heroFair {
+    font-size: 5rem;
+  }
+
+}
 /* About Page */
 
 .image-stack {
