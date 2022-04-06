@@ -13,6 +13,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-scroll";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import { useNavigate } from "react-router-dom";
 const pages = [
     "About IF",
     "Perks",
@@ -39,6 +40,7 @@ function ElevationScroll(props) {
 }
 
 const NavbarFair = (elev) => {
+    const navigate = useNavigate()
     const [state, setState] = React.useState({
         top: false,
         left: false,
@@ -108,7 +110,7 @@ const NavbarFair = (elev) => {
                                     color="inherit"
                                     onClick={toggleDrawer(anchor, true)}
                                 >
-                                    <GiHamburgerMenu style={{color:'black'}}/>
+                                    <GiHamburgerMenu style={{ color: 'black' }} />
                                 </Button>
                                 <Drawer
                                     anchor={anchor}
@@ -131,7 +133,7 @@ const NavbarFair = (elev) => {
                             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
                             justifyContent="center"
                             alignContent="center"
-                            style={{transform:'translateX(4%)'}}
+                            style={{ transform: 'translateX(4%)' }}
                         >
                             {pages.map((page, index) => (
                                 <Link key={index} to={page} spy={true} smooth={true}>
@@ -152,9 +154,9 @@ const NavbarFair = (elev) => {
                             ))}
                         </Box>
                         <Box sx={{ flexGrow: 0 }}>
-                        <Button variant="contained" size="large" style={{color:'#2D3748',backgroundColor:'white',fontWeight:'800'}}>Login</Button>
-                        &nbsp;&nbsp;&nbsp;
-                        <Button variant="contained" size="large" style={{backgroundColor:'#2D3748',color:'white',fontWeight:'800'}}>Signup</Button>
+                            <Button variant="contained" size="large" style={{ color: '#2D3748', backgroundColor: 'white', fontWeight: '800' }}>Login</Button>
+                            &nbsp;&nbsp;&nbsp;
+                            <Button variant="contained" onClick={() => navigate('/signup')} size="large" style={{ backgroundColor: '#2D3748', color: 'white', fontWeight: '800' }}>Signup</Button>
                         </Box>
                     </Toolbar>
                 </Container>

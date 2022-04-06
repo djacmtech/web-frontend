@@ -16,6 +16,8 @@ import { useEffect, useState } from "react";
 import CircularProgress from '@mui/material/CircularProgress';
 import Resource from "./Components/Resources/Resources";
 import InternshipFair from "./internshipFair/internshipFair";
+import SignUp from "./internshipFair/SignUp";
+import OnBoarding from "./internshipFair/OnBoarding";
 const FinalEvent = lazy(() => import('./Components/Eventpage/FinalEvent'));
 // const HomePage = lazy(() => import('./Components/HomePage/HomePage'));
 const Committee = lazy(() => import('./Components/Committee/Committee'));
@@ -146,8 +148,11 @@ function App() {
             }
           />
           <Route path="/LOC" element={<Loc />}></Route>
-          <Route path="/Resources" element={<Resource/>}></Route>
-          <Route path="/internship-fair" element={<InternshipFair/>} ></Route>
+          <Route path="/Resources" element={<Resource />}></Route>
+          <Route path="/internship-fair" element={<InternshipFair />} ></Route>
+          <Route path="/signup" element={<SignUp />} ></Route>
+          <Route path="/onboarding" element={<OnBoarding />} ></Route>
+
         </Routes>
       </div>
     </Router>
