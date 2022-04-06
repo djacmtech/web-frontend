@@ -55,9 +55,9 @@ export default function TimelineInternship() {
         <TimelineContent className='timelineEntry'>
             <span className='date'> 9th May </span>
             <span className='timelineHeading'> ACM 101 </span>
-            <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+            <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
-            </p>
+            </span>
         </TimelineContent>
       </TimelineItem>
     </Timeline>
