@@ -9,7 +9,7 @@
   font-family: "Poppins", sans-serif;
   color: black;
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   /* padding: 4% 4% 0%; */
 }
 
@@ -17,21 +17,23 @@
   font-family: "Alumni Sans", sans-serif;
   color: #187271;
   font-weight: 800;
-  font-size: 7rem;
-  padding: 1% 0;
-  /* padding: 0% 4% 0%; */
+  font-size: 10rem;
+  line-height: 8rem;
 }
 .extraHero {
   color: black;
   /* padding: 0% 4% 0%; */
   font-weight: 500;
-  /* padding-right: 40%; */
+  font-size: 1.3rem;
+  line-height: 30px;
+  text-align: left;
+  justify-content: left;
 }
 
-.heroFairButton:hover::after {
+/* .heroFairButton:hover::after {
   content: " \279C";
   transition: all 2s ease;
-}
+} */
 
 .fairCount {
   background-color: #187271;
@@ -41,7 +43,8 @@
   text-align: center;
   float: right;
   width: 50%;
-  transform: translateX(15px);
+  transform: translateX(45.5px);
+  /* transform: translateY(-122px); */
 }
 
 .fairCount span {
@@ -118,6 +121,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 2rem;
+  color: #187271;
 }
 
 .heading {
@@ -130,8 +134,10 @@
 .address {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center;
   justify-content: center;
+  text-align: left; */
+  padding: 0 0 2% 10%;
 }
 
 .addressContact {
@@ -345,7 +351,7 @@
 .testimonialSwiper {
   width: 80%;
 }
-@media (max-width: 1170px){
+@media (max-width: 800px){
   .pastCompanies{
     font-size: 1.5rem;
   line-height: 2rem;

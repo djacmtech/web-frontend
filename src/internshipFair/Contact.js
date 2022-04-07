@@ -1,6 +1,9 @@
 import { Grid } from "@mui/material";
 import "./InternshipFair.css";
 import { MdLocationOn } from "react-icons/md";
+import { Button } from "@mui/material";
+import { CgArrowLongRight } from "react-icons/cg";
+import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 
 export default function Contact() {
   return (
@@ -29,6 +32,19 @@ export default function Contact() {
               padding: "5% 10% 5% 15%",
             }}
           />
+          <div className="address">
+            <MdLocationOn
+              style={{
+                fontSize: "4.5rem",
+                color: "#187271",
+                paddingInline: "2%",
+              }}
+            />
+            <p className="addressContact">
+              No. U, 15, Bhaktivedanta Swami Rd, opp. Cooper Hospital, Navpada,
+              JVPD Scheme, Vile Parle, Mumbai, Maharashtra 400056
+            </p>
+          </div>
         </Grid>
         <Grid
           item
@@ -60,8 +76,23 @@ export default function Contact() {
               ></a>
             </div>
             <div style={{ textAlign: "left" }}>
+              <h2 className="phoneHeading"> For Companies </h2>
+              <p style={{ fontSize: "20px", color: "black" }}>
+                Interested in being part of DJSCE’s Internship fair?
+              </p>
+              <Button
+                style={{
+                  backgroundColor: "#187271",
+                  color: "#FFFFFF",
+                  fontSize: "18px",
+                  marginTop: "20px",
+                  padding: "10px",
+                }}
+              >
+                Join Us
+                <CgArrowLongRight style={{ fontSize: "2rem" }} />
+              </Button>
               <h2 className="phoneHeading"> Contact Us </h2>
-
               <div style={{ textAlign: "left" }}>
                 <a
                   style={{ color: "#fff", textDecoration: "none" }}
@@ -79,14 +110,33 @@ export default function Contact() {
                     Richa Shah - 9892993784
                   </p>
                 </a>
+                <div>
+                  <a
+                    href="https://www.instagram.com/djsanghvi_acm/?hl=en"
+                    rel="noreferrer"
+                    target="_blank"
+                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2% 2% 0 0" }}
+                  >
+                    <BsInstagram />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/djscoe.acm.5"
+                    rel="noreferrer"
+                    target="_blank"
+                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2%"  }}
+                  >
+                    <BsFacebook />
+                  </a>
+                  <a
+                    href="https://in.linkedin.com/company/dj-sanghvi-acm"
+                    rel="noreferrer"
+                    target="_blank"
+                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2%"  }}
+                  >
+                    <BsLinkedin />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="address">
-              <MdLocationOn style={{ fontSize: "4.5rem", color: "#187271", paddingInline:'2%' }} />
-              <p className="addressContact">
-                No. U, 15, Bhaktivedanta Swami Rd, opp. Cooper Hospital,
-                Navpada, JVPD Scheme, Vile Parle, Mumbai, Maharashtra 400056
-              </p>
             </div>
           </div>
         </Grid>
