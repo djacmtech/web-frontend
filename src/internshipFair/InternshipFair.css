@@ -99,7 +99,7 @@
   .image-stack__item--top {
     grid-row: 1;
     grid-column: 1 / span 8;
-    padding-top: 20%;
+    padding-top: 50%;
     z-index: 1;
   }
   
@@ -166,6 +166,7 @@
   font-family: "Alumni Sans", sans-serif;
   font-size: 10rem;
   color: #2d3748;
+  font-weight: 700;
   line-height: 150px;
 }
 .StipendHead{
@@ -173,6 +174,7 @@
   font-size: 10rem;
   color: #2d3748;
   line-height: 150px;
+  font-weight: 700;
   padding-left: 50px;
 }
 .stipendImg{
@@ -188,7 +190,8 @@
   padding-left: 200px;
 }
 .growth{
-  padding-left: 750px;
+  text-align: right;
+  padding-right: 50px;
 }
 .featuresContent {
   font-family: "Open Sans", sans-serif;
@@ -257,9 +260,6 @@
     line-height: 22px;
     padding-left: 120px;
   }
-  .growth{
-    padding-left: 350px;
-  }
   .StipendHead{
     font-size: 7rem;
     line-height: 20px;
@@ -304,6 +304,7 @@
 .swiper {
   width: 70%;
   height: 70%;
+  padding-right: 50px !important;
 }
 
 .swiper-slide {
@@ -325,7 +326,6 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -335,6 +335,23 @@
 .swiper-button-prev{
   display: none !important;
 }
+.swiper-button-next{
+  background-color: black;
+  color: white !important;
+  height: 46.7px !important;
+  width: 35px !important;
+  border-radius: 50%;
+}
 .testimonialSwiper {
   width: 80%;
+}
+@media (max-width: 1170px){
+  .pastCompanies{
+    font-size: 1.5rem;
+  line-height: 2rem;
+  }
+  .swiper-button-next{
+    height: 30.7px !important;
+  width: 20px !important;
+  }
 }
