@@ -4,7 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 import { Button } from "@mui/material";
 import { CgArrowLongRight } from "react-icons/cg";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
-import {RiInstagramFill} from "react-icons/ri";
+import {RiInstagramFill, RiFacebookCircleFill, RiLinkedinBoxFill} from "react-icons/ri";
 
 export default function Contact() {
   return (
@@ -69,12 +69,6 @@ export default function Contact() {
             }}
           >
             <div>
-              <a
-                style={{ color: "#fff", textDecoration: "none" }}
-                rel="noreferrer"
-                href="mailto:coreacm@gmail.com"
-                target="_blank"
-              ></a>
             </div>
             <div style={{ textAlign: "left" }}>
               <h2 className="phoneHeading"> For Companies </h2>
@@ -129,19 +123,7 @@ export default function Contact() {
                       padding: "2% 2% 0 0",
                     }}
                   >
-                    <RiInstagramFill style={{fontSize:"1.95rem"}}/>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/djscoe.acm.5"
-                    rel="noreferrer"
-                    target="_blank"
-                    style={{
-                      color: "#187271",
-                      fontSize: "1.7rem",
-                      padding: "2%",
-                    }}
-                  >
-                    <BsFacebook />
+                    <RiInstagramFill style={{fontSize:"2rem"}}/>
                   </a>
                   <a
                     href="https://in.linkedin.com/company/dj-sanghvi-acm"
@@ -153,8 +135,20 @@ export default function Contact() {
                       padding: "2%",
                     }}
                   >
-                    <BsLinkedin />
+                    <RiLinkedinBoxFill  style={{fontSize:"2rem"}}/>
                   </a>
+                  <a
+                    href="https://www.facebook.com/djscoe.acm.5"
+                    rel="noreferrer"
+                    target="_blank"
+                    style={{
+                      color: "#187271",
+                      fontSize: "1.7rem",
+                      padding: "2%",
+                    }}
+                  >
+                    <RiFacebookCircleFill  style={{fontSize:"2rem"}}/>
+                  </a> 
                 </div>
               </div>
             </div>

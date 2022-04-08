@@ -3,8 +3,6 @@ import React from "react";
 import Button from "@mui/material/Button";
 import CountUp from "react-countup";
 import { CgArrowLongRight } from "react-icons/cg";
-// import { motion } from 'framer-motion';
-import { Link } from "react-router-dom";
 
 const HeroFair = () => {
   return (
