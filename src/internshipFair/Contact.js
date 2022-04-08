@@ -85,7 +85,7 @@ export default function Contact() {
                   backgroundColor: "#187271",
                   color: "#FFFFFF",
                   fontSize: "18px",
-                  marginTop: "20px",
+                  marginBottom: "20px",
                   padding: "10px",
                 }}
               >
@@ -110,12 +110,16 @@ export default function Contact() {
                     Richa Shah - 9892993784
                   </p>
                 </a>
-                <div>
+                <div style={{ paddingTop: "10px" }}>
                   <a
                     href="https://www.instagram.com/djsanghvi_acm/?hl=en"
                     rel="noreferrer"
                     target="_blank"
-                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2% 2% 0 0" }}
+                    style={{
+                      color: "#187271",
+                      fontSize: "1.7rem",
+                      padding: "2% 2% 0 0",
+                    }}
                   >
                     <BsInstagram />
                   </a>
@@ -123,7 +127,11 @@ export default function Contact() {
                     href="https://www.facebook.com/djscoe.acm.5"
                     rel="noreferrer"
                     target="_blank"
-                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2%"  }}
+                    style={{
+                      color: "#187271",
+                      fontSize: "1.7rem",
+                      padding: "2%",
+                    }}
                   >
                     <BsFacebook />
                   </a>
@@ -131,7 +139,11 @@ export default function Contact() {
                     href="https://in.linkedin.com/company/dj-sanghvi-acm"
                     rel="noreferrer"
                     target="_blank"
-                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2%"  }}
+                    style={{
+                      color: "#187271",
+                      fontSize: "1.7rem",
+                      padding: "2%",
+                    }}
                   >
                     <BsLinkedin />
                   </a>

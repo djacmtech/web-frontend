@@ -10,6 +10,7 @@ import Testimonials from "./Testimonials";
 import "./InternshipFair.css";
 
 import PastCompanies from "./PastCompanies";
+import FairFAQs from "./FairFAQs";
 const InternshipFair = () => {
   return (
     <div style={{ backgroundColor: "white", transform: 'translateY(-5px)' }}>
@@ -20,6 +21,7 @@ const InternshipFair = () => {
       <FeaturesFair/>
       <Timeline/>
       <Testimonials/>
+      <FairFAQs/>
       <Contact/>
       <FairFooter />
     </div>

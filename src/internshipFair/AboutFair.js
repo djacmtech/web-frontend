@@ -12,7 +12,6 @@ function AboutFair() {
     <div
       style={{
         backgroundColor: "#FFFFFF",
-        // paddingBottom: "70px",
       }}
       id='About IF'
     >
