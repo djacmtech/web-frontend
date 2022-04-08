@@ -9,7 +9,7 @@ import { Button } from "@mui/material";
 
 function AboutFair() {
   return (
-    <div
+    <div className="AbtFair"
       style={{
         backgroundColor: "#FFFFFF",
       }}
