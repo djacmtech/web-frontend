@@ -3,7 +3,8 @@ import "./InternshipFair.css";
 import { MdLocationOn } from "react-icons/md";
 import { Button } from "@mui/material";
 import { CgArrowLongRight } from "react-icons/cg";
-import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import {RiInstagramFill} from "react-icons/ri";
 
 export default function Contact() {
   return (
@@ -80,18 +81,25 @@ export default function Contact() {
               <p style={{ fontSize: "20px", color: "black" }}>
                 Interested in being part of DJSCE’s Internship fair?
               </p>
-              <Button
-                style={{
-                  backgroundColor: "#187271",
-                  color: "#FFFFFF",
-                  fontSize: "18px",
-                  marginBottom: "20px",
-                  padding: "10px",
-                }}
+              <a
+                href="https://forms.gle/n6LhNHRWZLSxsXwHA"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none" }}
               >
-                Join Us
-                <CgArrowLongRight style={{ fontSize: "2rem" }} />
-              </Button>
+                <Button
+                  style={{
+                    backgroundColor: "#187271",
+                    color: "#FFFFFF",
+                    fontSize: "18px",
+                    marginBottom: "20px",
+                    padding: "10px",
+                  }}
+                >
+                  Join Us
+                  <CgArrowLongRight style={{ fontSize: "1.8rem", paddingLeft: "1rem" }}/>
+                </Button>
+              </a>
               <h2 className="phoneHeading"> Contact Us </h2>
               <div style={{ textAlign: "left" }}>
                 <a
@@ -99,7 +107,7 @@ export default function Contact() {
                   href="tel:+91 9987748170"
                 >
                   <p style={{ fontSize: "20px", color: "black" }}>
-                    Richa Shah - 9892993784
+                  Deap Daru - 9987748170
                   </p>
                 </a>
                 <a
@@ -107,7 +115,7 @@ export default function Contact() {
                   href="tel:+91 9819705248"
                 >
                   <p style={{ fontSize: "20px", color: "black" }}>
-                    Richa Shah - 9892993784
+                  Harvy Gandhi - 9819705248
                   </p>
                 </a>
                 <div style={{ paddingTop: "10px" }}>
@@ -121,7 +129,7 @@ export default function Contact() {
                       padding: "2% 2% 0 0",
                     }}
                   >
-                    <BsInstagram />
+                    <RiInstagramFill style={{fontSize:"1.95rem"}}/>
                   </a>
                   <a
                     href="https://www.facebook.com/djscoe.acm.5"

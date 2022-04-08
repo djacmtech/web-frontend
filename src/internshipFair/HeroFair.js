@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import CountUp from "react-countup";
 import { CgArrowLongRight } from "react-icons/cg";
 // import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 const HeroFair = () => {
   return (
@@ -18,8 +19,8 @@ const HeroFair = () => {
           <br />
           <span className="heroFair">INTERNSHIP FAIR</span>
           <p className="extraHero">
-            Sign In to get yourself registered and know more about
-            the Internship opportunities and Job Profiles{" "}
+            Sign In to get yourself registered and know more about the
+            Internship opportunities and Job Profiles{" "}
           </p>
           <Button
             className="heroFairButton"
@@ -27,9 +28,26 @@ const HeroFair = () => {
             size="large"
             style={{ backgroundColor: "#187271", fontSize: "18px" }}
           >
-            Let's get Started <CgArrowLongRight style={{ fontSize: "2rem" }} />
+            Let's get Started{" "}
+            <CgArrowLongRight
+              style={{ fontSize: "1.8rem", paddingLeft: "1rem" }}
+            />
           </Button>
-          <div style={{fontSize:"20px", paddingTop:"20px"}}><span style={{color:"#2D3748"}}>Interested in providing internships? </span><span style={{color:"#006462", fontWeight:"700"}}>Join Us</span></div>
+          <div style={{ fontSize: "20px", paddingTop: "20px" }}>
+            <span style={{ color: "#2D3748" }}>
+              Interested in providing internships?{" "}
+            </span>
+            <a
+              href="https://forms.gle/n6LhNHRWZLSxsXwHA"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <span style={{ color: "#006462", fontWeight: "700" }}>
+                Join Us
+              </span>
+            </a>
+          </div>
         </Grid>
         <Grid item sm={4} className="heroGridFair">
           {/* <div style={{backgroundColor:'#2ABEA2'}}></div> */}
