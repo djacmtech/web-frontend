@@ -2,8 +2,8 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import "./InternshipFair.css";
-import carousel1 from "../Assets/carousel1.jpeg";
-import carousel2 from "../Assets/carousel2.jpeg";
+import IFAbout1 from "../Assets/IFAbout1.jpg";
+import IFAbout2 from "../Assets/IFAbout2.jpg";
 import { CgArrowLongRight } from "react-icons/cg";
 import { Button } from "@mui/material";
 
@@ -41,21 +41,21 @@ function AboutFair() {
             <div class="image-stack">
               <div class="image-stack__item image-stack__item--top">
                 <img
-                  src={carousel2}
+                  src={IFAbout2}
                   alt=""
                   className="imgFair"
                 />
               </div>
               <div class="image-stack__item image-stack__item--bottom">
                 <img
-                  src={carousel1}
+                  src={IFAbout1}
                   alt=""
                   className="imgFair"
                 />
               </div>
             </div>
           </Grid>
-          <Grid item sm={12} md={12} lg={7} style={{ padding: "5%" }}>
+          <Grid item sm={12} md={12} lg={7} style={{ padding: "5% 5% 5% 10%" }}>
             <div data-aos="fade-right" className="fairheading">
               We aim to bridge the gap between academia and the industry by
               promoting our learning by doing ethos.

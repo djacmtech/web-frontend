@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import logo from '../Assets/DJACMLOGO.png';
+import logo from '../Assets/DJACMLOGODARK.png';
 import { Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -19,6 +19,7 @@ const pages = [
     "Perks",
     "Timeline",
     "Testimonal",
+    "FAQ's",
     "Contact Us",
 ];
 
@@ -35,7 +36,7 @@ function ElevationScroll(props) {
 
     return React.cloneElement(children, {
         elevation: trigger ? 4 : 0,
-        // color : trigger ? 'transparent' : 'color', 
+        // color: trigger ? '#FFFFFF' : 'transparent', 
     });
 }
 
@@ -89,7 +90,7 @@ const NavbarFair = (elev) => {
 
     return (
         <ElevationScroll>
-            <AppBar position="sticky" color="transparent" >
+            <AppBar position="sticky" color="transparent">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
@@ -133,7 +134,7 @@ const NavbarFair = (elev) => {
                             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
                             justifyContent="center"
                             alignContent="center"
-                            style={{ transform: 'translateX(4%)' }}
+                            style={{ transform: 'translateX(-4%)' }}
                         >
                             {pages.map((page, index) => (
                                 <Link key={index} to={page} spy={true} smooth={true}>
@@ -144,8 +145,8 @@ const NavbarFair = (elev) => {
                                             my: 2,
                                             color: "black",
                                             display: "block",
-                                            paddingInline: "15px",
-                                            
+                                            paddingInline: "25px",
+                                            paddingLeft:"30px"
                                         }}
                                     >
                                         {page}
@@ -154,7 +155,7 @@ const NavbarFair = (elev) => {
                             ))}
                         </Box>
                         <Box sx={{ flexGrow: 0 }}>
-                            <Button variant="contained" size="large" style={{ color: '#2D3748', backgroundColor: 'white', fontWeight: '800' }}>Login</Button>
+                            <Button variant="contained" size="large" style={{ color: '#2D3748', backgroundColor: 'white', fontWeight: '800',border:"1px solid black" }}>Login</Button>
                             &nbsp;&nbsp;&nbsp;
                             <Button variant="contained" onClick={() => navigate('/signup')} size="large" style={{ backgroundColor: '#2D3748', color: 'white', fontWeight: '800' }}>Signup</Button>
                         </Box>
