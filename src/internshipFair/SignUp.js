@@ -37,7 +37,7 @@ function SignUp() {
                     <img src={img} style={{ width: '100%', height: '100%' }} />
                 </Grid>
                 <Grid item md={8.5} sx={{ height: '100%' }}>
-                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5% 10%', flexDirection: 'column', height: '95%' }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5% 10%', height: '95%' }}>
                         <Grid item style={{ width: '100%', textAlign: 'left' }}>
                             <img src={logo} />
                         </Grid>
@@ -57,35 +57,35 @@ function SignUp() {
                                 <Form>
 
                                     <Grid container spacing={4} rowSpacing={4}>
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="firstName"
                                                 label='First Name'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="lastName"
                                                 label='Last Name'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="email"
                                                 label='Email'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="sapId"
                                                 label='Sap ID'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="password"
                                                 label='Password'
@@ -93,7 +93,7 @@ function SignUp() {
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="confirmPassword"
                                                 label='Confirm Password'
