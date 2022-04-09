@@ -3,7 +3,8 @@ import "./InternshipFair.css";
 import { MdLocationOn } from "react-icons/md";
 import { Button } from "@mui/material";
 import { CgArrowLongRight } from "react-icons/cg";
-import { BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import {RiInstagramFill, RiFacebookCircleFill, RiLinkedinBoxFill} from "react-icons/ri";
 
 export default function Contact() {
   return (
@@ -68,30 +69,31 @@ export default function Contact() {
             }}
           >
             <div>
-              <a
-                style={{ color: "#fff", textDecoration: "none" }}
-                rel="noreferrer"
-                href="mailto:coreacm@gmail.com"
-                target="_blank"
-              ></a>
             </div>
             <div style={{ textAlign: "left" }}>
               <h2 className="phoneHeading"> For Companies </h2>
               <p style={{ fontSize: "20px", color: "black" }}>
                 Interested in being part of DJSCE’s Internship fair?
               </p>
-              <Button
-                style={{
-                  backgroundColor: "#187271",
-                  color: "#FFFFFF",
-                  fontSize: "18px",
-                  marginTop: "20px",
-                  padding: "10px",
-                }}
+              <a
+                href="https://forms.gle/n6LhNHRWZLSxsXwHA"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none" }}
               >
-                Join Us
-                <CgArrowLongRight style={{ fontSize: "2rem" }} />
-              </Button>
+                <Button
+                  style={{
+                    backgroundColor: "#187271",
+                    color: "#FFFFFF",
+                    fontSize: "18px",
+                    marginBottom: "20px",
+                    padding: "10px",
+                  }}
+                >
+                  Join Us
+                  <CgArrowLongRight style={{ fontSize: "1.8rem", paddingLeft: "1rem" }}/>
+                </Button>
+              </a>
               <h2 className="phoneHeading"> Contact Us </h2>
               <div style={{ textAlign: "left" }}>
                 <a
@@ -99,7 +101,7 @@ export default function Contact() {
                   href="tel:+91 9987748170"
                 >
                   <p style={{ fontSize: "20px", color: "black" }}>
-                    Richa Shah - 9892993784
+                  Deap Daru - 9987748170
                   </p>
                 </a>
                 <a
@@ -107,34 +109,46 @@ export default function Contact() {
                   href="tel:+91 9819705248"
                 >
                   <p style={{ fontSize: "20px", color: "black" }}>
-                    Richa Shah - 9892993784
+                  Harvy Gandhi - 9819705248
                   </p>
                 </a>
-                <div>
+                <div style={{ paddingTop: "10px" }}>
                   <a
                     href="https://www.instagram.com/djsanghvi_acm/?hl=en"
                     rel="noreferrer"
                     target="_blank"
-                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2% 2% 0 0" }}
+                    style={{
+                      color: "#187271",
+                      fontSize: "1.7rem",
+                      padding: "2% 2% 0 0",
+                    }}
                   >
-                    <BsInstagram />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/djscoe.acm.5"
-                    rel="noreferrer"
-                    target="_blank"
-                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2%"  }}
-                  >
-                    <BsFacebook />
+                    <RiInstagramFill style={{fontSize:"2rem"}}/>
                   </a>
                   <a
                     href="https://in.linkedin.com/company/dj-sanghvi-acm"
                     rel="noreferrer"
                     target="_blank"
-                    style={{ color: "#187271", fontSize: "1.7rem",padding:"2%"  }}
+                    style={{
+                      color: "#187271",
+                      fontSize: "1.7rem",
+                      padding: "2%",
+                    }}
                   >
-                    <BsLinkedin />
+                    <RiLinkedinBoxFill  style={{fontSize:"2rem"}}/>
                   </a>
+                  <a
+                    href="https://www.facebook.com/djscoe.acm.5"
+                    rel="noreferrer"
+                    target="_blank"
+                    style={{
+                      color: "#187271",
+                      fontSize: "1.7rem",
+                      padding: "2%",
+                    }}
+                  >
+                    <RiFacebookCircleFill  style={{fontSize:"2rem"}}/>
+                  </a> 
                 </div>
               </div>
             </div>

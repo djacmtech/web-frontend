@@ -20,7 +20,7 @@ import ichars from "../Assets/ichars.png";
 import embedos from "../Assets/embedos.png";
 import cyberfrat from "../Assets/cyberfrat.jpg";
 import boson from "../Assets/boson.webp";
-import birthvenue from "../Assets/birthvenue.png";
+import birthvenue from "../Assets/birthvenue.jpg";
 import confluencr from "../Assets/confluencr.png";
 
 const PastCompanies = () => {

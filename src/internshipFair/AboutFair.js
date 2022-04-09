@@ -10,11 +10,11 @@ import { Button } from "@mui/material";
 function AboutFair() {
   return (
     <div
+      className="AbtFair"
       style={{
         backgroundColor: "#FFFFFF",
-        // paddingBottom: "70px",
       }}
-      id='About IF'
+      id="About IF"
     >
       <Box sx={{ flexGrow: 1 }}>
         <Grid
@@ -37,21 +37,12 @@ function AboutFair() {
             }}
             data-aos="fade-up"
           >
-
             <div class="image-stack">
               <div class="image-stack__item image-stack__item--top">
-                <img
-                  src={IFAbout2}
-                  alt=""
-                  className="imgFair"
-                />
+                <img src={IFAbout2} alt="" className="imgFair" />
               </div>
               <div class="image-stack__item image-stack__item--bottom">
-                <img
-                  src={IFAbout1}
-                  alt=""
-                  className="imgFair"
-                />
+                <img src={IFAbout1} alt="" className="imgFair" />
               </div>
             </div>
           </Grid>
@@ -72,11 +63,11 @@ function AboutFair() {
                 color: "#FFFFFF",
                 fontSize: "18px",
                 marginTop: "20px",
-                padding:"10px"
+                padding: "10px",
               }}
             >
               Know more about DJSCE ACM{" "}
-              <CgArrowLongRight style={{ fontSize: "2rem" }} />
+              <CgArrowLongRight style={{ fontSize: "1.8rem", paddingLeft: "1rem" }} />
             </Button>
           </Grid>
         </Grid>

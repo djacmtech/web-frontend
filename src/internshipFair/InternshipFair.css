@@ -30,11 +30,6 @@
   justify-content: left;
 }
 
-/* .heroFairButton:hover::after {
-  content: " \279C";
-  transition: all 2s ease;
-} */
-
 .fairCount {
   background-color: #187271;
   font-family: "Poppins", sans-serif;
@@ -93,22 +88,24 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
-  .image-stack__item--bottom {
-    grid-column: 4 / -1;
-    grid-row: 1;
-  }
-  
-  .image-stack__item--top {
-    grid-row: 1;
-    grid-column: 1 / span 8;
-    padding-top: 50%;
-    z-index: 1;
-  }
-  
-  .imgFair {
-    width: 100%;
-    display: block;
-  }
+.image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
+.AbtFair{
+  padding-top: 250px;
+}
+.image-stack__item--top {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  padding-top: 50%;
+  z-index: 1;
+}
+
+.imgFair {
+  width: 100%;
+  display: block;
+}
 
 .contactHeading {
   font-family: "Alumni Sans", sans-serif;
@@ -121,6 +118,7 @@
   font-weight: 500;
   font-size: 2rem;
   color: #187271;
+  line-height: 5px;
 }
 
 .heading {
@@ -133,9 +131,6 @@
 .address {
   display: flex;
   flex-direction: row;
-  /* align-items: center;
-  justify-content: center;
-  text-align: left; */
   padding: 0 0 2% 10%;
 }
 
@@ -195,7 +190,8 @@
   padding-left: 200px;
 }
 .growth {
-  padding-left: 750px;
+  text-align: right;
+  padding-right: 60px;
 }
 
 .featuresContent {
@@ -236,7 +232,7 @@
     padding-left: 5px !important;
   }
   .growth {
-    padding-left: 50px !important;
+    padding-right: 10px;
   }
   .StipendHead {
     font-size: 5rem !important;
@@ -265,14 +261,12 @@
     line-height: 22px;
     padding-left: 120px;
   }
-  .growth {
-    padding-left: 350px;
-  }
   .StipendHead {
     font-size: 7rem;
     line-height: 20px;
     padding: 40px 10px 40px 20px;
-}}
+  }
+}
 
 .date {
   color: #187271;
@@ -342,12 +336,12 @@
 .swiper-button-prev {
   display: none !important;
 }
-.swiper-button-next{
-  background-color: black;
-  color: white !important;
-  height: 46.7px !important;
-  width: 35px !important;
-  border-radius: 50%;
+.swiper-button-next {
+  /* background-color: black; */
+  color: #2ABEA2 !important;
+  /* height: 46.7px !important; */
+  /* width: 35px !important; */
+  /* border-radius: 50%; */
 }
 .testimonialSwiper {
   width: 80%;
@@ -367,23 +361,42 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #2abea346;
   padding: 2%;
-
 }
 
-.aplData{
+.aplData {
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
-color: #187271;
+  color: #187271;
 }
 
-@media (max-width: 800px){
-  .pastCompanies{
+@media (max-width: 800px) {
+  .pastCompanies {
     font-size: 1.5rem;
-  line-height: 2rem;
+    line-height: 2rem;
   }
-  .swiper-button-next{
+  .swiper-button-next {
     height: 30.7px !important;
-  width: 20px !important;
+    width: 20px !important;
+  }
+}
+
+.accordionFair {
+  background-color: white !important;
+  margin: 40px;
+}
+
+@media (max-width: 600px) {
+  .fairheading {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .faircontent{
+    font-size: 15px;
+    line-height: 20px;
+    padding-top: 10px;
+  }
+  .AbtFair{
+    padding-top: 0px;
   }
 }
