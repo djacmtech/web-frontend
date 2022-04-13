@@ -14,6 +14,8 @@ import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
+import os from "../../Assets/os.jpg";
+import dbms from "../../Assets/dbms.png";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,7 +54,6 @@ const Resources = () => {
   const [value, setValue] = React.useState(0);
   const [resources, setResources] = useState([]);
   const theme = useTheme();
-  const color="3CF7FB";
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -122,7 +123,7 @@ const Resources = () => {
                   marginright={40}
                 >
                   {resources.map((card, index) => {
-                    if (card.subject_name == "Operating System") {
+                    if (card.subject_name === "Operating System") {
                       return (
                         <Grid item xs={12} sm={4} md={4} key={index}>
                           <Card sx={{ maxWidth: 345 }}>
@@ -130,7 +131,7 @@ const Resources = () => {
                               <CardMedia
                                 component="img"
                                 height="140"
-                                image="https://store.hp.com/app/assets/images/uploads/prod/what-is-my-operating-system-hero1573502075719107.jpg"
+                                image={os}
                                 alt="file"
                               />
                               <CardContent>
@@ -162,7 +163,7 @@ const Resources = () => {
                   marginright={40}
                 >
                   {resources.map((card, index) => {
-                    if (card.subject_name == "Database Management System") {
+                    if (card.subject_name === "Database Management System") {
                       return (
                         <Grid item xs={12} sm={4} md={4} key={index}>
                           <Card sx={{ maxWidth: 345 }}>
@@ -170,7 +171,7 @@ const Resources = () => {
                               <CardMedia
                                 component="img"
                                 height="140"
-                                image="https://www.itsguru.com/wp-content/uploads/2020/05/The-Considerations-And-Perks-Of-Choosing-A-DBMS-ITs-Guru.png"
+                                image={dbms}
                                 alt="file"
                               />
                               <CardContent>
