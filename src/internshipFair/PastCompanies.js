@@ -25,7 +25,7 @@ import confluencr from "../Assets/confluencr.png";
 
 const PastCompanies = () => {
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
+    <div style={{ display: "flex", alignItems: "center",paddingTop:"50px", paddingBottom:"100px" }}>
       <div className="pastCompanies">-------- PAST COMPANIES</div>
       <Swiper
         navigation={true}
@@ -37,7 +37,7 @@ const PastCompanies = () => {
         className="mySwiper"
       >
         <SwiperSlide><img src={wiseidot} alt=""/></SwiperSlide>
-        <SwiperSlide><img src={yocket} alt="" style={{height:"10%"}}/></SwiperSlide>
+        <SwiperSlide><img src={yocket} alt=""/></SwiperSlide>
         <SwiperSlide><img src={spacenos} alt=""/></SwiperSlide>
         <SwiperSlide><img src={skyindya} alt=""/></SwiperSlide>
         <SwiperSlide><img src={prixled} alt=""/></SwiperSlide>
