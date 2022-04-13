@@ -7,7 +7,7 @@ import { Navigation } from "swiper";
 
 export default function Testimonials() {
     return (
-        <div style={{padding:"50px 0 150px 0"}}>
+        <div style={{padding:"50px 0 150px 0"}} id='Testimonial'>
         <h1 className="heading">
           --------  TESTIMONIALS
         </h1>

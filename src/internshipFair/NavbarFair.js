@@ -18,7 +18,7 @@ const pages = [
     "About IF",
     "Perks",
     "Timeline",
-    "Testimonal",
+    "Testimonial",
     "FAQ's",
     "Contact Us",
 ];
@@ -90,7 +90,7 @@ const NavbarFair = (elev) => {
 
     return (
         <ElevationScroll>
-            <AppBar position="sticky" color="transparent">
+            <AppBar position="sticky" style={{backgroundColor:'white'}} color='transparent'>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
@@ -131,10 +131,10 @@ const NavbarFair = (elev) => {
                             <img src={logo} alt="logo" width="50"></img>
                         </Typography>
                         <Box
-                            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
-                            justifyContent="center"
-                            alignContent="center"
-                            style={{ transform: 'translateX(-4%)' }}
+                            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+                            // justifyContent="center"
+                            // alignContent="center"
+                            // style={{ transform: 'translateX(-4%)' }}
                         >
                             {pages.map((page, index) => (
                                 <Link key={index} to={page} spy={true} smooth={true}>

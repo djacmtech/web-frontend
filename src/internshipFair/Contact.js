@@ -8,7 +8,7 @@ import {RiInstagramFill, RiFacebookCircleFill, RiLinkedinBoxFill} from "react-ic
 
 export default function Contact() {
   return (
-    <>
+    <div id='Contact Us'>
       <Grid container spacing={2}>
         <Grid
           item
@@ -155,6 +155,6 @@ export default function Contact() {
           </div>
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 }

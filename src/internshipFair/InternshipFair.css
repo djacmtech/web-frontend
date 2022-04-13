@@ -34,12 +34,12 @@
   background-color: #187271;
   font-family: "Poppins", sans-serif;
   color: white;
-  padding: 1%;
+  padding: 2%;
   text-align: center;
   float: right;
-  width: 50%;
-  transform: translateX(45.5px);
-  /* transform: translateY(-122px); */
+  width: 47%;
+  transform: translate(30px ,-20px);
+  /* transform: translateY(20px); */
 }
 
 .fairCount span {

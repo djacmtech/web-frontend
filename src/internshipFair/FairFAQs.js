@@ -21,7 +21,7 @@ const FairFAQs = () => {
   }));
 
   return (
-    <>
+    <div id="FAQ's">
       <div className="pastCompanies">--------- FAQ's</div>
       <div
         id="FAQS"
@@ -277,7 +277,7 @@ const FairFAQs = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
