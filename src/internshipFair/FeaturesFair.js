@@ -4,7 +4,7 @@ import stipend from "../Assets/stipend.png";
 
 const FeaturesFair = () => {
   return (
-    <div style={{padding:"20px 0 20px 60px"}}>
+    <div style={{padding:"50px 0 150px 60px"}}>
       <div style={{ paddingLeft: "50px" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <div className="featuresHead">OPPORTUNITIES</div>

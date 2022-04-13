@@ -5,6 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { BsChevronDown } from "react-icons/bs";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 const FairFAQs = () => {
   const Accordion = styled((props) => (
@@ -99,8 +100,8 @@ const FairFAQs = () => {
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
@@ -145,8 +146,8 @@ const FairFAQs = () => {
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
@@ -191,8 +192,8 @@ const FairFAQs = () => {
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
@@ -237,8 +238,8 @@ const FairFAQs = () => {
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",

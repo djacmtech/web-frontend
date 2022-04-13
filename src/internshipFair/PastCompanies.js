@@ -25,7 +25,7 @@ import confluencr from "../Assets/confluencr.png";
 
 const PastCompanies = () => {
   return (
-    <div style={{ display: "flex", alignItems: "center",paddingTop:"50px", paddingBottom:"100px" }}>
+    <div style={{ display: "flex", alignItems: "center",paddingTop:"50px", paddingBottom:"120px" }}>
       <div className="pastCompanies">-------- PAST COMPANIES</div>
       <Swiper
         navigation={true}
