@@ -34,7 +34,7 @@ function OnBoarding() {
                     <img src={img} style={{ width: '100%', height: '100%' }} />
                 </Grid>
                 <Grid item md={8.5} sx={{ height: '100%' }}>
-                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5% 10%', flexDirection: 'column', height: '95%' }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5% 10%', height: '95%' }}>
                         <Grid item style={{ width: '100%', textAlign: 'left' }}>
                             <img src={logo} />
                         </Grid>
@@ -54,35 +54,35 @@ function OnBoarding() {
                                 <Form>
 
                                     <Grid container spacing={4} rowSpacing={4}>
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="branch"
                                                 label='Branch'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="skills"
                                                 label='Skills'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="year"
                                                 label='Year'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="resume"
-                                                label='Upload Resume'
+                                                type='file'
                                             />
                                         </Grid>
 
-                                        <Grid item xs={6}>
+                                        <Grid item md={6} xs={12}>
                                             <TextField
                                                 name="domain"
                                                 label='Top 3 Domains'
