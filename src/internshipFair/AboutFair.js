@@ -6,6 +6,7 @@ import IFAbout1 from "../Assets/IFAbout1.jpg";
 import IFAbout2 from "../Assets/IFAbout2.jpg";
 import { CgArrowLongRight } from "react-icons/cg";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function AboutFair() {
   return (
@@ -57,18 +58,26 @@ function AboutFair() {
               home model as negotiated between the company and the concerned
               student intern.
             </div>
-            <Button
-              style={{
-                backgroundColor: "#187271",
-                color: "#FFFFFF",
-                fontSize: "18px",
-                marginTop: "20px",
-                padding: "10px",
-              }}
-            >
-              Know more about DJSCE ACM{" "}
-              <CgArrowLongRight style={{ fontSize: "1.8rem", paddingLeft: "1rem" }} />
-            </Button>
+            <Link to="/" style={{textDecoration: "none"}}> 
+              <Button
+                style={{
+                  backgroundColor: "#187271",
+                  color: "#FFFFFF",
+                  fontSize: "18px",
+                  marginTop: "20px",
+                  padding: "10px",
+                  textTransform: "none",
+                  fontFamily: "Poppins",
+                  paddingLeft: "28px",
+                  paddingRight: "28px",
+                }}
+              >
+                Know more about DJSCE ACM{" "}
+                <CgArrowLongRight
+                  style={{ fontSize: "1.8rem", paddingLeft: "1rem" }}
+                />
+              </Button>
+            </Link>
           </Grid>
         </Grid>
       </Box>

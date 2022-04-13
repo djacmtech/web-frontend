@@ -5,6 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { BsChevronDown } from "react-icons/bs";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 const FairFAQs = () => {
   const Accordion = styled((props) => (
@@ -44,7 +45,11 @@ const FairFAQs = () => {
           }}
         >
           <div data-aos="fade-up">
-            <Accordion defaultExpanded={true} className="accordionFair">
+            <Accordion
+              defaultExpanded={true}
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
               <AccordionSummary
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
@@ -54,7 +59,7 @@ const FairFAQs = () => {
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
-                  boxShadow: "rgb(136 136 136 / 17%) 2px 2px 2px 2px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
                 }}
               >
                 <Typography
@@ -87,17 +92,20 @@ const FairFAQs = () => {
             </Accordion>
           </div>
           <div data-aos="fade-up">
-            <Accordion className="accordionFair">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
               <AccordionSummary
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
-                  boxShadow: "rgb(136 136 136 / 17%) 2px 2px 2px 2px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
                 }}
               >
                 <Typography
@@ -130,17 +138,20 @@ const FairFAQs = () => {
             </Accordion>
           </div>
           <div data-aos="fade-up">
-            <Accordion className="accordionFair">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
               <AccordionSummary
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
-                  boxShadow: "rgb(136 136 136 / 17%) 2px 2px 2px 2px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
                 }}
               >
                 <Typography
@@ -173,17 +184,20 @@ const FairFAQs = () => {
             </Accordion>
           </div>
           <div data-aos="fade-up">
-            <Accordion className="accordionFair">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
               <AccordionSummary
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
-                  boxShadow: "rgb(136 136 136 / 17%) 2px 2px 2px 2px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
                 }}
               >
                 <Typography
@@ -216,17 +230,20 @@ const FairFAQs = () => {
             </Accordion>
           </div>
           <div data-aos="fade-up">
-            <Accordion className="accordionFair">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
               <AccordionSummary
                 expandIcon={
                   <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
                 }
-                aria-controls="panel1a-content"
-                id="panel1a-header"
+                aria-controls="panel2a-content"
+                id="panel2a-header"
                 style={{
                   backgroundColor: "white",
                   borderRadius: "10px",
-                  boxShadow: "rgb(136 136 136 / 17%) 2px 2px 2px 2px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
                 }}
               >
                 <Typography

@@ -7,7 +7,7 @@ import { Navigation } from "swiper";
 
 export default function Testimonials() {
     return (
-        <>
+        <div style={{padding:"50px 0 150px 0"}}>
         <h1 className="heading">
           --------  TESTIMONIALS
         </h1>
@@ -24,6 +24,6 @@ export default function Testimonials() {
             <SwiperSlide><TestimonialCards/></SwiperSlide>
             <SwiperSlide><TestimonialCards/></SwiperSlide>
           </Swiper>
-        </>
+        </div>
     )
 }
