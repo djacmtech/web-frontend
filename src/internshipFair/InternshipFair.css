@@ -288,7 +288,8 @@
 }
 
 .timelineContent {
-  width: 80%;
+  width: 100%;
+  color: #2D3748;
 }
 
 .testimony {
@@ -300,6 +301,10 @@
   color: #187271;
   font-size: 48px;
   line-height: 72px;
+}
+
+.companies {
+  width: 15rem !important;
 }
 
 .swiper {
