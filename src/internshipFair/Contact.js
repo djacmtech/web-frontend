@@ -3,7 +3,6 @@ import "./InternshipFair.css";
 import { MdLocationOn } from "react-icons/md";
 import { Button } from "@mui/material";
 import { CgArrowLongRight } from "react-icons/cg";
-import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import {RiInstagramFill, RiFacebookCircleFill, RiLinkedinBoxFill} from "react-icons/ri";
 
 export default function Contact() {
