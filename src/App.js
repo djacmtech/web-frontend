@@ -21,6 +21,7 @@ import OnBoarding from "./internshipFair/OnBoarding";
 import ApplicationList from "./internshipFair/ApplicationList";
 import Applicants from "./internshipFair/Applicants";
 import PostAnInternship from "./internshipFair/PostAnInternship";
+import Profilepage from "./internshipFair/Profilepage";
 const FinalEvent = lazy(() => import('./Components/Eventpage/FinalEvent'));
 // const HomePage = lazy(() => import('./Components/HomePage/HomePage'));
 const Committee = lazy(() => import('./Components/Committee/Committee'));
@@ -158,7 +159,7 @@ function App() {
           <Route path="/apl" element={<ApplicationList />} ></Route>
           <Route path="/applicant" element={<Applicants />}></Route>
           <Route path="/postinternship" element={<PostAnInternship />}></Route>
-
+          <Route path="/profilepage" element={<Profilepage />}></Route>
         </Routes>
       </div>
     </Router>
