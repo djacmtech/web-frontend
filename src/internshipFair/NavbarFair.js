@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,6 +12,8 @@ import { Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-scroll";
+import Popup from "./Popup";
+import Login from "./Login";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { useNavigate } from "react-router-dom";
 const pages = [
@@ -25,6 +27,7 @@ const pages = [
 
 function ElevationScroll(props) {
     const { children, window } = props;
+
     // Note that you normally won't need to set the window ref as useScrollTrigger
     // will default to window.
     // This is only being set here because the demo is in an iframe.
@@ -49,6 +52,8 @@ const NavbarFair = (elev) => {
         right: false,
     });
     const anchor = "left";
+    const [openPopup, setOpenPopup] = useState(false);
+
     const toggleDrawer = (anchor, open) => (event) => {
         if (
             event.type === "keydown" &&
@@ -88,9 +93,9 @@ const NavbarFair = (elev) => {
         </Box>
     );
 
-    return (
+    return (<>
         <ElevationScroll>
-            <AppBar position="sticky" style={{backgroundColor:'white'}} color='transparent'>
+            <AppBar position="sticky" style={{ backgroundColor: 'white' }} color='transparent'>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
@@ -132,21 +137,21 @@ const NavbarFair = (elev) => {
                         </Typography>
                         <Box
                             sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
-                            // justifyContent="center"
-                            // alignContent="center"
-                            // style={{ transform: 'translateX(-4%)' }}
+                        // justifyContent="center"
+                        // alignContent="center"
+                        // style={{ transform: 'translateX(-4%)' }}
                         >
                             {pages.map((page, index) => (
                                 <Link key={index} to={page} spy={true} smooth={true}>
                                     <Button
                                         key={page}
-                                        style={{ fontSize: "1.2rem" ,fontFamily:'sans-serif',textTransform:'capitalize' }}
+                                        style={{ fontSize: "1.2rem", fontFamily: 'sans-serif', textTransform: 'capitalize' }}
                                         sx={{
                                             my: 2,
                                             color: "black",
                                             display: "block",
                                             paddingInline: "25px",
-                                            paddingLeft:"30px"
+                                            paddingLeft: "30px"
                                         }}
                                     >
                                         {page}
@@ -155,7 +160,7 @@ const NavbarFair = (elev) => {
                             ))}
                         </Box>
                         <Box sx={{ flexGrow: 0 }}>
-                            <Button variant="contained" size="large" style={{ color: '#2D3748', backgroundColor: 'white', fontWeight: '800',border:"1px solid black" }}>Login</Button>
+                            <Button variant="contained" size="large" style={{ color: '#2D3748', backgroundColor: 'white', fontWeight: '800', border: "1px solid black" }} onClick={() => setOpenPopup(true)}>Login</Button>
                             &nbsp;&nbsp;&nbsp;
                             <Button variant="contained" onClick={() => navigate('/signup')} size="large" style={{ backgroundColor: '#2D3748', color: 'white', fontWeight: '800' }}>Signup</Button>
                         </Box>
@@ -163,6 +168,10 @@ const NavbarFair = (elev) => {
                 </Container>
             </AppBar>
         </ElevationScroll>
+        <Popup openPopup={openPopup} setOpenPopup={setOpenPopup}>
+            <Login />
+        </Popup>
+    </>
     );
 };
 export default NavbarFair;
