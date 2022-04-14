@@ -1,14 +1,57 @@
 import { Box, Grid, Button, Card, CardContent } from "@mui/material";
 import React from "react";
 import { Formik, Form } from "formik";
-// import * as Yup from "yup";
+import * as Yup from "yup";
 import TextField from "./TextField";
+
+const INITIAL_FORM_STATE = {
+  email: "",
+  sapId: "",
+  year: "",
+  branch: "",
+  resume: "",
+  domains: "",
+  skills: "",
+  project: "",
+  phone: "",
+};
+
+const FORM_VALIDATION = Yup.object().shape({
+  email: Yup.string().email("Invalid Email").required("This field is Required"),
+  sapId: Yup.number()
+    .min(11, "Invalid Sap ID")
+    .integer()
+    .typeError("Please enter a valid SapId")
+    .required("This field is Required"),
+  year: Yup.number().required("This field is Required"),
+  branch: Yup.string().required("This field is Required"),
+  resume: Yup.string().required("This field is Required"),
+  domains: Yup.string().required("This field is Required"),
+  skills: Yup.string().required("This field is Required"),
+  project: Yup.string().required("This field is Required"),
+  phone: Yup.string()
+      .required("This field is Required")
+      .matches(
+        /^[6-9]\d{9}$/,
+        "Phone number is not valid"
+      )
+});
 
 const Profilepage = () => {
   return (
-    <div style={{backgroundColor:"#F8F8F8"}}>
+    <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
-        <div style={{fontFamily:"Poppins", fontWeight:"600", fontSize:"36px", color:"black", paddingTop:"40px"}}>Profile Page</div>
+        <div
+          style={{
+            fontFamily: "Poppins",
+            fontWeight: "600",
+            fontSize: "36px",
+            color: "black",
+            paddingTop: "40px",
+          }}
+        >
+          Profile Page
+        </div>
       </center>
       <Box
         sx={{
@@ -24,11 +67,11 @@ const Profilepage = () => {
                 <p
                   style={{
                     fontFamily: "Alumni Sans",
-                    fontWeight:"600",
+                    fontWeight: "600",
                     letterSpacing: "1%",
                     fontSize: "36px",
                     // lineHeight:"25.4px",
-                    color:"#187271"
+                    color: "#187271",
                   }}
                 >
                   SAYLI PEDNEKAR
@@ -36,8 +79,8 @@ const Profilepage = () => {
               </Grid>
               <Grid item sx={{ width: "100%", marginTop: "3%" }}>
                 <Formik
-                  // initialValues={{ ...INITIAL_FORM_STATE }}
-                  // validationSchema={FORM_VALIDATION}
+                  initialValues={{ ...INITIAL_FORM_STATE }}
+                  validationSchema={FORM_VALIDATION}
                   onSubmit={(values) => {
                     console.log(values);
                   }}
@@ -47,36 +90,36 @@ const Profilepage = () => {
                       <Grid item md={6} xs={12}>
                         <div>Email address</div>
                         <TextField
-                          name="emailaddress"
+                          name="email"
                           placeholder="Email address"
                           type="email"
-                          required
-                          style={{color:"#187271"}}
+                          // required
+                          style={{ color: "#187271" }}
                         />
                       </Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>Phone Number</div>
                         <TextField
-                          name="stipend"
+                          name="phone"
                           placeholder="Phone Number"
-                          required
+                          // required
                         />
                       </Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>SAP ID</div>
-                        <TextField name="sapid" placeholder="SAP ID" required />
+                        <TextField name="sapId" placeholder="SAP ID" />
                       </Grid>
 
-                      <Grid item md={6} xs={0} sm={{display:"none"}}></Grid>
+                      <Grid item md={6} xs={0} className="extraGrid"></Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>Year</div>
                         <TextField
                           name="year"
                           placeholder="Add year"
-                          required
+                          // required
                         />
                       </Grid>
 
@@ -85,7 +128,7 @@ const Profilepage = () => {
                         <TextField
                           name="branch"
                           placeholder="Add branch"
-                          required
+                          // required
                         />
                       </Grid>
 
@@ -94,22 +137,22 @@ const Profilepage = () => {
                         <TextField
                           name="domains"
                           placeholder="Select domains"
-                          required
+                          // required
                         />
                       </Grid>
 
-                      <Grid item md={6} xs={0} sm={{display:"none"}}></Grid>
+                      <Grid item md={6} xs={0} className="extraGrid"></Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>Skills</div>
                         <TextField
                           name="skills"
                           placeholder="Add skills"
-                          required
+                          // required
                         />
                       </Grid>
 
-                      <Grid item md={6} xs={0} sm={{display:"none"}}></Grid>
+                      <Grid item md={6} xs={0} className="extraGrid"></Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>Resume Link</div>
@@ -117,19 +160,18 @@ const Profilepage = () => {
                           name="resume"
                           placeholder="Add resume link"
                           type="url"
-                          required
+                          // required
                         />
                       </Grid>
 
-                      <Grid item md={6} xs={{display:"none"}} sm={{display:"none"}}></Grid>
+                      <Grid item md={6} xs={0} className="extraGrid"></Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>Project Link</div>
                         <TextField
                           name="project"
                           label="Add project link"
-                          type="url"
-                          required
+                          // type="url"
                         />
                       </Grid>
 

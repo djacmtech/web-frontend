@@ -405,3 +405,9 @@
     padding-top: 0px;
   }
 }
+
+@media (max-width: 900px){
+  .extraGrid{
+    display: none !important;
+  }
+}
