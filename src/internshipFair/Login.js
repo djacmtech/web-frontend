@@ -23,10 +23,10 @@ function Login() {
     return (
         <>
             <Grid container>
-                <Grid item>
+                {/* <Grid item>
                     <h2 style={{ textTransform: 'uppercase', fontFamily: 'Alumni Sans, sans-serif', color: 'rgba(24, 114, 113, 1)', margin: '0' }}>Login</h2>
                     <p style={{ color: 'black', fontFamily: 'Poppins', fontSize: '10px' }}>Don't have a account?<span style={{ color: 'rgba(24, 114, 113, 1)', cursor: 'pointer' }}> SignUp </span></p>
-                </Grid>
+                </Grid> */}
                 <Grid item>
                     <Formik
                         initialValues={{ ...INITIAL_FORM_STATE }}

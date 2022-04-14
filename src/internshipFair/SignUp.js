@@ -17,6 +17,7 @@ const INITIAL_FORM_STATE = {
   confirmPassword: "",
 };
 
+
 const FORM_VALIDATION = Yup.object().shape({
   firstName: Yup.string().required("Required"),
   lastName: Yup.string().required("Required"),
@@ -36,6 +37,7 @@ const FORM_VALIDATION = Yup.object().shape({
 
 function SignUp() {
   const [openPopup, setOpenPopup] = useState(false);
+  let axios = require('axios');
 
   return (
     <>
@@ -96,7 +98,30 @@ function SignUp() {
                 initialValues={{ ...INITIAL_FORM_STATE }}
                 validationSchema={FORM_VALIDATION}
                 onSubmit={(values) => {
-                  console.log(values);
+                  var data = JSON.stringify({
+                    "email": `${values.email}`,
+                    "firstName": `${values.firstName}`,
+                    "lastName": `${values.lastName}`,
+                    "password": `${values.password}`,
+                    "sapId": `${values.sapId}`
+                  });
+
+                  var config = {
+                    method: 'post',
+                    url: 'https://djacmdev.pythonanywhere.com/if/register',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    data: data
+                  };
+
+                  axios(config)
+                    .then(function (response) {
+                      console.log(JSON.stringify(response.data));
+                    })
+                    .catch(function (error) {
+                      console.log(error);
+                    });
                 }}
               >
                 <Form>
