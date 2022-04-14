@@ -1,6 +1,5 @@
-import { Grid, Button } from '@mui/material'
+import { Grid } from '@mui/material'
 import React, {useState} from 'react'
-import Popup from './Popup'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import TextField from './TextField'
@@ -62,8 +61,18 @@ function Login() {
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <p style={{ color: 'black', fontFamily: 'Poppins', fontSize: '12px', textAlign: 'right', fontWeight: 'bold', margin: '0' }}><span style={{ color: 'rgba(24, 114, 113, 1)', cursor: 'pointer' }}> Forgot Password? </span></p>
-
+                                    <p style={{ 
+                                        color: 'black',
+                                        fontFamily: 'Poppins', 
+                                        fontSize: '12px', 
+                                        textAlign: 'right', 
+                                        fontWeight: 'bold', 
+                                        margin: '0' 
+                                        }}>
+                                        <span style={{ color: 'rgba(24, 114, 113, 1)', cursor: 'pointer' }}>
+                                            Forgot Password? 
+                                        </span>
+                                    </p>
                                 </Grid>
                                 
 
