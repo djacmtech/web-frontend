@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { BsChevronDown } from "react-icons/bs";
-import { AiFillCheckCircle } from "react-icons/ai";
+// import { AiFillCheckCircle } from "react-icons/ai";
 
 const FairFAQs = () => {
   const Accordion = styled((props) => (
