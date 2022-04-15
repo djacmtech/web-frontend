@@ -92,7 +92,7 @@ const Profilepage = () => {
                         <TextField
                           name="email"
                           placeholder="Email address"
-                          type="email"
+                          // type="email"
                           // required
                           style={{ color: "#187271" }}
                         />
@@ -159,7 +159,7 @@ const Profilepage = () => {
                         <TextField
                           name="resume"
                           placeholder="Add resume link"
-                          type="url"
+                          // type="url"
                           // required
                         />
                       </Grid>
@@ -170,7 +170,7 @@ const Profilepage = () => {
                         <div>Project Link</div>
                         <TextField
                           name="project"
-                          label="Add project link"
+                          placeholder="Add project link"
                           // type="url"
                         />
                       </Grid>

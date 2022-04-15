@@ -53,7 +53,7 @@ export default function Contact() {
           md={5}
           columnGap={2}
           style={{
-            padding: "10% 4% 8% 0%",
+            padding: "10% 4% 8% 10%",
             textAlign: "center",
             display: "flex",
             alignItems: "center",
