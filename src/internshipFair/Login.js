@@ -1,90 +1,133 @@
-import { Grid } from '@mui/material'
-import React, {useState} from 'react'
-import { Formik, Form } from 'formik'
-import * as Yup from 'yup'
-import TextField from './TextField'
+import { Grid } from "@mui/material";
+import React from "react";
+import { Button } from "@mui/material";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import TextField from "./TextField";
 
 const INITIAL_FORM_STATE = {
-    firstName: '',
-    sapId: '',
-    password: '',
-}
+  email: "",
+  sapId: "",
+  password: "",
+};
 
 const FORM_VALIDATION = Yup.object().shape({
-    firstName: Yup.string().required('Required'),
-    sapId: Yup.number().min(11, 'Invalid Sap ID').integer().typeError('Please enter a valid SapId').required('Required'),
-    password: Yup.string().min(8, 'Password should atleast contain 8 characters').required('Required'),
+  firstName: Yup.string().required("Required"),
+  sapId: Yup.number()
+    .min(11, "Invalid Sap ID")
+    .integer()
+    .typeError("Please enter a valid SapId")
+    .required("Required"),
+  // password: Yup.string()
+  //   .min(8, "Password should atleast contain 8 characters")
+  //   .required("Required"),
 });
 
-function Login() {
+function Login(props) {
+  let axios = require("axios");
 
-    const [openPopup, setOpenPopup] = useState(true)
+  return (
+    <>
+      <Grid container>
+        <Grid item>
+          <Formik
+            initialValues={{ ...INITIAL_FORM_STATE }}
+            validationSchema={FORM_VALIDATION}
+            onSubmit={(values) => {
+              console.log('Hi')
+              var data = JSON.stringify({
+                "email": `${values.email}`,
+                "password": `${values.password}`,
+              });
 
-    return (
-        <>
-            <Grid container>
-                {/* <Grid item>
-                    <h2 style={{ textTransform: 'uppercase', fontFamily: 'Alumni Sans, sans-serif', color: 'rgba(24, 114, 113, 1)', margin: '0' }}>Login</h2>
-                    <p style={{ color: 'black', fontFamily: 'Poppins', fontSize: '10px' }}>Don't have a account?<span style={{ color: 'rgba(24, 114, 113, 1)', cursor: 'pointer' }}> SignUp </span></p>
-                </Grid> */}
-                <Grid item>
-                    <Formik
-                        initialValues={{ ...INITIAL_FORM_STATE }}
-                        validationSchema={FORM_VALIDATION}
-                        onSubmit={(values) => {
-                            console.log(values);
-                        }}
-                    >
-                        <Form>
+              var config = {
+                method: "post",
+                url: "https://djacmdev.pythonanywhere.com/if/login",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                data: data
+              };
 
-                            <Grid container spacing={4} rowSpacing={2} sx={{ marginTop: '5px' }}>
-                                <Grid item xs={12}>
-                                    <TextField
-                                        name="firstName"
-                                        label='First Name'
-                                    />
-                                </Grid>
-
-
-                                <Grid item xs={12}>
-                                    <TextField
-                                        name="sapId"
-                                        label='Sap ID'
-                                    />
-                                </Grid>
-
-                                <Grid item xs={12}>
-                                    <TextField
-                                        name="password"
-                                        label='Password'
-                                        type='password'
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <p style={{ 
-                                        color: 'black',
-                                        fontFamily: 'Poppins', 
-                                        fontSize: '12px', 
-                                        textAlign: 'right', 
-                                        fontWeight: 'bold', 
-                                        margin: '0' 
-                                        }}>
-                                        <span style={{ color: 'rgba(24, 114, 113, 1)', cursor: 'pointer' }}>
-                                            Forgot Password? 
-                                        </span>
-                                    </p>
-                                </Grid>
-                                
-
-                            </Grid>
-
-                        </Form>
-                    </Formik>
-
+              axios(config)
+                .then(function (response) {
+                  console.log('HI')
+                  console.log(JSON.stringify(response.data));
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
+            }}
+          >
+            <Form>
+              <Grid
+                container
+                spacing={4}
+                rowSpacing={2}
+                sx={{ marginTop: "5px" }}
+              >
+                <Grid item xs={12}>
+                  <TextField name="email" label="Email" />
                 </Grid>
-            </Grid>
-        </>
-    )
+
+                <Grid item xs={12}>
+                  <TextField name="sapId" label="Sap ID" />
+                </Grid>
+
+                <Grid item xs={12}>
+                  <TextField name="password" label="Password" type="password" />
+                </Grid>
+                <Grid item xs={12}>
+                  <p
+                    style={{
+                      color: "black",
+                      fontFamily: "Poppins",
+                      fontSize: "12px",
+                      textAlign: "right",
+                      fontWeight: "bold",
+                      margin: "0",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "rgba(24, 114, 113, 1)",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Forgot Password?
+                    </span>
+                  </p>
+                </Grid>
+              </Grid>
+              <Grid item xs={12} sx={{ padding: "3% 0%" }}>
+                <Button
+                  sx={{
+                    width: "100%",
+                    backgroundColor: "rgba(24, 114, 113, 1)",
+                    borderRadius: "4px",
+                    color: "white",
+                    border: "2px solid white",
+                    height: "50px",
+                    textTransform: "none",
+                    fontWeight: "bold",
+                    "&:hover": {
+                      color: "rgba(24, 114, 113, 1)",
+                      backgroundColor: "rgba(24, 114, 113, 0.4)",
+                      border: "2px solid rgba(24, 114, 113, 1)",
+                    },
+                  }}
+                  type="submit"
+                  onClick={props.openPopup?console.log('HI'):console.log('Hello')}
+                >
+                  Login
+                </Button>
+              </Grid>
+            </Form>
+          </Formik>
+        </Grid>
+      </Grid>
+    </>
+  );
 }
 
-export default Login
+export default Login;

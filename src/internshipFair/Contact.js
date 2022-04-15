@@ -27,8 +27,8 @@ export default function Contact() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.002340483474!2d72.83433341393042!3d19.10755325594757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c676018b43%3A0x75f29a4205098f99!2sDwarkadas%20J.%20Sanghvi%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1638180891128!5m2!1sen!2sin"
             loading="lazy"
             style={{
-              height: "350px",
-              width: "650px",
+              height: "80%",
+              width: "80%",
               padding: "5% 10% 5% 15%",
             }}
           />
