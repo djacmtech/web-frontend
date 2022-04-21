@@ -23,6 +23,8 @@ import Applicants from "./internshipFair/Applicants";
 import PostAnInternship from "./internshipFair/PostAnInternship";
 import Profilepage from "./internshipFair/Profilepage";
 import Dashboard from "./internshipFair/Dashboard";
+import InterNavbar from "./internshipFair/InterNavbar";
+import StudentCart from "./internshipFair/StudentCart";
 const FinalEvent = lazy(() => import('./Components/Eventpage/FinalEvent'));
 // const HomePage = lazy(() => import('./Components/HomePage/HomePage'));
 const Committee = lazy(() => import('./Components/Committee/Committee'));
@@ -157,9 +159,10 @@ function App() {
           <Route path="/internship-fair" element={<InternshipFair />} ></Route>
           <Route path="/signup" element={<SignUp />} ></Route>
           <Route path="/onboarding" element={<OnBoarding />} ></Route>
-          <Route path="/apl" element={<ApplicationList />} ></Route>
+          <Route path="/apl" element={<><InterNavbar/><ApplicationList /></>} ></Route>
           <Route path="/applicant" element={<Applicants />}></Route>
           <Route path="/postinternship" element={<PostAnInternship />}></Route>
+          <Route path="/cart" element={<StudentCart />}></Route>
           <Route path="/profilepage" element={<Profilepage />}></Route>
           <Route path="/dashboard" element={<Dashboard/>}></Route>
         </Routes>
