@@ -22,6 +22,7 @@ import ApplicationList from "./internshipFair/ApplicationList";
 import Applicants from "./internshipFair/Applicants";
 import PostAnInternship from "./internshipFair/PostAnInternship";
 import Profilepage from "./internshipFair/Profilepage";
+import Dashboard from "./internshipFair/Dashboard";
 import InterNavbar from "./internshipFair/InterNavbar";
 import StudentCart from "./internshipFair/StudentCart";
 import AppliedJobs from "./internshipFair/AppliedJobs";
@@ -167,6 +168,7 @@ function App() {
           <Route path="/profilepage" element={<><InterNavbar/><Profilepage /></>}></Route>
           <Route path="/appliedjobs" element={<><InterNavbar/><AppliedJobs /></>}></Route>
           <Route path="/jobposition" element={<><InterNavbar/><JobPosition /></>}></Route>
+          <Route path="/dashboard" element={<Dashboard/>}></Route>
         </Routes>
       </div>
     </Router>

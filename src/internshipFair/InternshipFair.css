@@ -433,3 +433,62 @@
   padding: 0.5% 2%;
 }
 
+/* dashboard */
+.job-card {
+  width: 40rem;
+  height: 15rem;
+  padding: 3%;
+  margin-block: 3%;
+}
+
+.job-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2rem;
+}
+
+.job-card-details {
+  margin-block: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.job-details-condition {
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.job-details-headings {
+  display: flex;
+  justify-content: space-evenly;
+  margin-block-end: 2%;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.job-details-icon {
+  color: #fff;
+  background-color: #187271;
+  border-radius: 50%;
+  padding: 1%;
+  font-size: 1rem;
+}
+
+/* filter */
+
+.filter-card {
+  width: 20rem;
+  height: 25rem;
+  padding: 8%;
+  text-align: center;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
