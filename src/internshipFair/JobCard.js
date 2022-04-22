@@ -1,6 +1,5 @@
 import { Button } from '@mui/material';
 import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
 import {MdLocationPin} from "react-icons/md";
 import {BiRupee} from "react-icons/bi";
 import {AiFillClockCircle} from "react-icons/ai";
