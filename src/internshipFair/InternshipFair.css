@@ -422,4 +422,14 @@
   }
 }
 
+.jobtitle{
+  font-size: 20px;
+  line-height: 45px;
+}
+.skills{
+  display: inline;
+  background-color: #2ABEA2;
+  border-radius: 25px;
+  padding: 0.5% 2%;
+}
 
