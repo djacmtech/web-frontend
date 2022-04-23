@@ -1,6 +1,7 @@
 import React from "react";
 import { CgArrowLongRight } from "react-icons/cg";
 import { Button } from "@mui/material";
+import JobProfileCards from "./JobProfileCards.js";
 
 const PostNewInternship = () => {
   return (
@@ -36,6 +37,8 @@ const PostNewInternship = () => {
         Post new{" "}
         <CgArrowLongRight style={{ fontSize: "1.8rem", paddingLeft: "1rem" }} />
       </Button>
+      <h2 className="aplHead">Post new job profile</h2>
+      <JobProfileCards/>
     </div>
   );
 };

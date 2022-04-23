@@ -446,6 +446,7 @@
   flex-direction: column;
   justify-content: center;
   line-height: 2rem;
+  text-align: left;
 }
 
 .job-card-details {
