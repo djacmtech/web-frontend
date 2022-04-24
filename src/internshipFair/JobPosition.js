@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Grid, Button, Divider, Card, CardContent } from "@mui/material";
 import { VscGlobe } from "react-icons/vsc";
 import "./InternshipFair.css";
@@ -7,6 +7,29 @@ import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 
 const JobPosition = () => {
+
+  var url = window.location.pathname.split('/')[2]
+  const [jobDetails, setJobDetails] = useState([])
+
+  var myHeaders = new Headers();
+  myHeaders.append("Authorization", "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254");
+
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+
+  useEffect(()=> {
+    fetch(`https://djacmdev.pythonanywhere.com/if/jobs/${url}`, requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      console.log(result)
+      setJobDetails(result)
+    })
+    .catch(error => console.log('error', error));
+  }, [])
+
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
@@ -19,7 +42,7 @@ const JobPosition = () => {
             paddingTop: "40px",
           }}
         >
-          Job Position
+          {jobDetails.role}
         </div>
       </center>
       <Box
@@ -43,8 +66,7 @@ const JobPosition = () => {
                     paddingTop:"1.5rem"
                   }}
                 >
-                  {" "}
-                  Job Position{" "}
+                  {jobDetails.role}
                 </span>
                 <span
                   style={{
@@ -54,8 +76,7 @@ const JobPosition = () => {
                     fontFamily: "Poppins",
                   }}
                 >
-                  {" "}
-                  Company Name{" "}
+                  {jobDetails.company_name}
                 </span>
                 <span> Location </span>
               </div>
@@ -65,21 +86,21 @@ const JobPosition = () => {
                     <MdLocationPin className="job-details-icon" />{" "}
                     <span style={{ color: "#2D3748" }}> MODE </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> Online </p>
+                  <p style={{ fontWeight: "500" }}> {jobDetails.WFH? "Online":"Offline"} </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
                     <BiRupee className="job-details-icon" />{" "}
                     <span> MIN STIPEND </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> 3000 </p>
+                  <p style={{ fontWeight: "500" }}> {jobDetails.stipend_low_range} </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
                     <AiFillClockCircle className="job-details-icon" />{" "}
                     <span> DURATION </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> 3 months </p>
+                  <p style={{ fontWeight: "500" }}> {jobDetails.duration} </p>
                 </div>
               </div>
               <div
@@ -97,11 +118,7 @@ const JobPosition = () => {
                 About the Company
               </div>
               <div>
-                MPYG is a one-of-a-kind platform aimed at helping yoga
-                enthusiasts get a personalized & real-time feedback-based yoga
-                experience. It is an artificial intelligence-based yoga platform
-                that provides real-time audiovisual instructions to people of
-                all ages taking into account their medical conditions.
+                {jobDetails.job_description}
               </div>
             </div>
             <div
@@ -128,11 +145,7 @@ const JobPosition = () => {
             <div style={{ paddingBottom: "1.5rem" }}>
               <div className="jobtitle">Job Description</div>
               <div>
-                MPYG is a one-of-a-kind platform aimed at helping yoga
-                enthusiasts get a personalized & real-time feedback-based yoga
-                experience. It is an artificial intelligence-based yoga platform
-                that provides real-time audiovisual instructions to people of
-                all ages taking into account their medical conditions.
+                {jobDetails.job_description}
               </div>
             </div>
             <div style={{ paddingBottom: "1rem" }}>

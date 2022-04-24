@@ -34,7 +34,7 @@ function Login(props) {
             initialValues={{ ...INITIAL_FORM_STATE }}
             validationSchema={FORM_VALIDATION}
             onSubmit={(values) => {
-              console.log('Hi')
+              // console.log(values)
               var data = JSON.stringify({
                 "email": `${values.email}`,
                 "password": `${values.password}`,
@@ -117,7 +117,7 @@ function Login(props) {
                     },
                   }}
                   type="submit"
-                  onClick={props.openPopup?console.log('HI'):console.log('Hello')}
+                  // onClick={props.openPopup?console.log('HI'):console.log('Hello')}
                 >
                   Login
                 </Button>

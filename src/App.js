@@ -168,7 +168,7 @@ function App() {
           <Route path="/cart" element={<StudentCart />}></Route>
           <Route path="/profilepage" element={<><InterNavbar/><Profilepage /></>}></Route>
           <Route path="/appliedjobs" element={<><InterNavbar/><AppliedJobs /></>}></Route>
-          <Route path="/jobposition" element={<><InterNavbar/><JobPosition /></>}></Route>
+          <Route path="/jobposition/:id" element={<><InterNavbar/><JobPosition /></>}></Route>
           <Route path="/dashboard" element={<Dashboard/>}></Route>
           <Route path="/postnewinternship" element={<><InterNavbar/><PostNewInternship/></>}></Route>
         </Routes>
