@@ -12,7 +12,7 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-
+import axios from 'axios';
 
 function PostAnInternship() {
 
@@ -30,11 +30,50 @@ function PostAnInternship() {
     const INITIAL_FORM_STATE = {
         jobposition: '',
         onOff: alignment,
+        branch: '',
+        job_description: '',
+        // jobPosition: "",
+        mandatory_skills: '',
+        stipend_low_range: '',
+        stipend_high_range: '',
+        perks: '',
+        num_of_applications: '',
+        duration: '',
+        WFH: '',
+        company_name: '',
+        deadline: '',
+
 
     }
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
+
+    // const [role, setRole] = useState("");
+    // const [formData, setFormData] = useState({
+    //     // branch: '',
+    //     // job_description: '',
+    //     jobPosition: "",
+    //     // mandatory_skills: '',
+    //     // stipend_low_range: '',
+    //     // stipend_high_range: '',
+    //     // perks: '',
+    //     // num_of_applications: '',
+    //     // duration: '',
+    //     // WFH: '',
+    //     // company_name: '',
+    //     // deadline: '',
+    // });
+
+    //   functions
+    // const handleChanges = (event) => {
+    //     setValues({
+    //         ...values,
+    //         [event.target.name]: event.target.value,
+    //     });
+    //     console.log(values);
+    // };
+
     return (
         <>
             <Box sx={{ backgroundColor: 'white', fontFamily: 'Poppins', padding: { md: '4% 15%', sx: '2% 8%', xs: '1% 5%' } }}>
@@ -53,7 +92,41 @@ function PostAnInternship() {
                                     validationSchema={FORM_VALIDATION}
                                     onSubmit={(values) => {
                                         console.log(values);
+
+                                        var data = JSON.stringify({
+                                            "role": `${values.jobPosition}`,
+                                            "stipend_low_range": `${values.stipend_low_range}`,
+                                            "stipend_high_range": `${values.stipend_high_range}`,
+                                            "company_name": `${values.company_name}`,
+                                            "job_description": `${values.job_description}`,
+                                            "mandatory_skills": `${values.mandatory_skills}`,
+                                            "perks": `${values.perks}`,
+                                            "duration": `${values.duration}`,
+                                            "branch": `${values.branch}`,
+                                            "WFH": `${values.WFH}`,
+                                            "num_of_applications": `${values.num_of_applications}`,
+
+
+
+                                        });
+                                        var config = {
+                                            method: 'post',
+                                            url: 'https://djacmdev.pythonanywhere.com/if/job-create',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            data: data
+                                        };
+                                        axios(config)
+                                            .then(function (response) {
+                                                console.log(JSON.stringify(response.data));
+                                            })
+                                            .catch(function (error) {
+                                                console.log(error);
+                                            });
                                     }}
+
+
                                 >
                                     <Form>
 
@@ -61,8 +134,12 @@ function PostAnInternship() {
                                             <Grid item md={12} xs={12}>
                                                 <TextField
                                                     name="jobposition"
+                                                    // name='jobPosition'
                                                     label='Job Position'
                                                     required
+                                                // value={formData.jobPosition}
+                                                // onClick={(e) => setFormData({ ...formData, jobPosition: e.target.value })}
+                                                // onChange={handleChanges}
                                                 />
                                             </Grid>
 
@@ -83,7 +160,7 @@ function PostAnInternship() {
 
                                             <Grid item md={6} xs={12}>
                                                 <TextField
-                                                    name="stipend"
+                                                    name="stipend_low_range"
                                                     label='Minimum Stipend'
                                                     type='number'
                                                 />
@@ -98,7 +175,7 @@ function PostAnInternship() {
 
                                             <Grid item md={12} xs={12}>
                                                 <TextField
-                                                    name="aboutthecompany"
+                                                    name="company_name"
                                                     id="outlined-multiline-static"
                                                     label="About the Company"
                                                     multiline
@@ -107,7 +184,7 @@ function PostAnInternship() {
                                             </Grid>
                                             <Grid item md={12} xs={12}>
                                                 <TextField
-                                                    name="aboutthecompany"
+                                                    name="job_description"
                                                     id="outlined-multiline-static"
                                                     label="Job description"
                                                     multiline
@@ -117,7 +194,7 @@ function PostAnInternship() {
 
                                             <Grid item md={12} xs={12}>
                                                 <TextField
-                                                    name="aboutthecompany"
+                                                    name="branch"
                                                     id="outlined-multiline-static"
                                                     label="Who can apply?"
                                                     multiline
@@ -127,7 +204,7 @@ function PostAnInternship() {
 
                                             <Grid item md={6} xs={12}>
                                                 <TextField
-                                                    name="skills"
+                                                    name="mandatory_skills"
                                                     label='Skills'
                                                 />
                                             </Grid>
@@ -163,7 +240,7 @@ function PostAnInternship() {
 
                                             <Grid item md={12} xs={12}>
                                                 <TextField
-                                                    name="aboutthecompany"
+                                                    name="perks"
                                                     id="outlined-multiline-static"
                                                     label="Perks"
                                                     multiline
@@ -172,7 +249,7 @@ function PostAnInternship() {
                                             </Grid>
 
                                             <Grid item xs={12}>
-                                                <Button sx={{ width: '100%', backgroundColor: 'rgba(24, 114, 113, 1)', borderRadius: '4px', color: 'white', border: '2px solid white', height: '50px', textTransform: 'none', fontWeight: 'bold', "&:hover": { color: "rgba(24, 114, 113, 1)", backgroundColor: "rgba(24, 114, 113, 0.4)", border: '2px solid rgba(24, 114, 113, 1)' } }} type='submit'>Submit</Button>
+                                                <Button sx={{ width: '100%', backgroundColor: 'rgba(24, 114, 113, 1)', borderRadius: '4px', color: 'white', border: '2px solid white', height: '50px', textTransform: 'none', fontWeight: 'bold', "&:hover": { color: "rgba(24, 114, 113, 1)", backgroundColor: "rgba(24, 114, 113, 0.4)", border: '2px solid rgba(24, 114, 113, 1)' } }} type='submit' >Submit</Button>
                                             </Grid>
 
                                         </Grid>
@@ -190,3 +267,7 @@ function PostAnInternship() {
 }
 
 export default PostAnInternship
+
+
+// no category and task des in backend
+// deadline max stipend and number of applicants not there in frontend
