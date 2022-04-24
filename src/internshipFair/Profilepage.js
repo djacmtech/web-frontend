@@ -30,14 +30,13 @@ const FORM_VALIDATION = Yup.object().shape({
   skills: Yup.string().required("This field is Required"),
   project: Yup.string().required("This field is Required"),
   phone: Yup.string()
-      .required("This field is Required")
-      .matches(
-        /^[6-9]\d{9}$/,
-        "Phone number is not valid"
-      )
+    .required("This field is Required")
+    // .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
 });
 
 const Profilepage = () => {
+  let axios = require("axios");
+  // let token = sessionStorage.getItem("token");
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
@@ -82,7 +81,36 @@ const Profilepage = () => {
                   initialValues={{ ...INITIAL_FORM_STATE }}
                   validationSchema={FORM_VALIDATION}
                   onSubmit={(values) => {
-                    console.log(values);
+                    var data = JSON.stringify({
+                      email_id: `${values.email}`,
+                      phone_no: `${values.phone}`,
+                      current_year: `${values.year}`,
+                      department: `${values.branch}`,
+                      sap_id: `${values.sapId}`,
+                      domains: `${values.domains}`,
+                      skills: `${values.skills}`,
+                      resume_drive_link: `${values.resume}`,
+                      project_drive_link: `${values.project}`,
+                    });
+
+                    var config = {
+                      method: "post",
+                      url: "http://djacmdev.pythonanywhere.com/if/student",
+                      headers: {
+                        Authorization: "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254",
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                      },
+                      data: data,
+                    };
+
+                    axios(config)
+                      .then(function (response) {
+                        console.log(JSON.stringify(response.data));
+                      })
+                      .catch(function (error) {
+                        console.log(error);
+                      });
                   }}
                 >
                   <Form>
