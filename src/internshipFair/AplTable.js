@@ -7,13 +7,14 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import { useEffect } from 'react';
+import axios from 'axios';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
         // backgroundColor: theme.palette.common.black,
         color: '#187271',
-        fontWeight:'700',
-        fontSize:'1rem'
+        fontWeight: '700',
+        fontSize: '1rem'
     },
     [`&.${tableCellClasses.body}`]: {
         fontSize: 14,
@@ -29,23 +30,38 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
         border: 0,
     },
 }));
+const current = new Date();
+const date = `${current.getFullYear()}-${current.getMonth() + 1}-${current.getDate()}`;
+console.log(date);
+var config = {
+    method: 'get',
+    url: 'https://djacmdev.pythonanywhere.com/if/job-create',
+    headers: {
+        'Authorization': 'Token 9009a5bec86112ef738f18418ccadac59ef574f0',
+    },
+};
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
 
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
 
 export default function CustomizedTables() {
+    const [value, setValue] = React.useState([]);
+
+    useEffect(() => {
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+                setValue(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }, [])
+
+    
     return (
         <TableContainer  >
-            <Table sx={{ minWidth: 700 , maxWidth :1050}} aria-label="customized table">
+            <Table sx={{ minWidth: 700, maxWidth: 1050 }} aria-label="customized table">
                 <TableHead>
                     <TableRow>
                         <StyledTableCell>Date</StyledTableCell>
@@ -56,15 +72,15 @@ export default function CustomizedTables() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
-                        <StyledTableRow key={row.name}>
+                    {value.map((row) => (
+                        <StyledTableRow key={row.id}>
                             <StyledTableCell component="th" scope="row">
-                                {row.name}
+                                {row.deadline}
                             </StyledTableCell>
-                            <StyledTableCell >{row.calories}</StyledTableCell>
-                            <StyledTableCell >{row.fat}</StyledTableCell>
-                            <StyledTableCell >{row.carbs}</StyledTableCell>
-                            <StyledTableCell >{row.protein}</StyledTableCell>
+                            <StyledTableCell >{row.role}</StyledTableCell>
+                            <StyledTableCell >{row.WFH ? "Online" : "Offline"}</StyledTableCell>
+                            <StyledTableCell >{row.num_of_applications}</StyledTableCell>
+                            <StyledTableCell >{row.deadline >= date ? "Active" : "Not Active"}</StyledTableCell>
                         </StyledTableRow>
                     ))}
                 </TableBody>
