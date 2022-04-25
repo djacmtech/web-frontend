@@ -30,7 +30,15 @@ function PostAnInternship() {
     const INITIAL_FORM_STATE = {
         jobposition: '',
         onOff: alignment,
-
+        stipend: '',
+        duration: '',
+        aboutthecompany: '',
+        jobDescription: '',
+        whoCanApply: '',
+        skills: '',
+        category: '',
+        taskDescription: '',
+        perks: ''
     }
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
@@ -50,7 +58,7 @@ function PostAnInternship() {
 
                                 <Formik
                                     initialValues={{ ...INITIAL_FORM_STATE }}
-                                    validationSchema={FORM_VALIDATION}
+                                    // validationSchema={FORM_VALIDATION}
                                     onSubmit={(values) => {
                                         console.log(values);
                                     }}
@@ -73,11 +81,11 @@ function PostAnInternship() {
                                                     name="onOff"
                                                     color="success"
                                                     value={alignment}
-                                                    exclusive
                                                     onChange={handleChange}
+                                                    exclusive
                                                 >
-                                                    <ToggleButton name="onOff" value="online">Online</ToggleButton>
-                                                    <ToggleButton name="onOff" value="offline">Offline</ToggleButton>
+                                                    <ToggleButton name="onoff" value="online" >Online</ToggleButton>
+                                                    <ToggleButton name="onoff" value="offline" >Offline</ToggleButton>
                                                 </ToggleButtonGroup>
                                             </Grid>
 
@@ -107,7 +115,7 @@ function PostAnInternship() {
                                             </Grid>
                                             <Grid item md={12} xs={12}>
                                                 <TextField
-                                                    name="aboutthecompany"
+                                                    name="jobDescription"
                                                     id="outlined-multiline-static"
                                                     label="Job description"
                                                     multiline
@@ -117,7 +125,7 @@ function PostAnInternship() {
 
                                             <Grid item md={12} xs={12}>
                                                 <TextField
-                                                    name="aboutthecompany"
+                                                    name="whoCanApply"
                                                     id="outlined-multiline-static"
                                                     label="Who can apply?"
                                                     multiline
@@ -152,7 +160,7 @@ function PostAnInternship() {
                                             {
                                                 tick ? <Grid item md={12} xs={12}>
                                                     <TextField
-                                                        name="aboutthecompany"
+                                                        name="taskDescription"
                                                         id="outlined-multiline-static"
                                                         label="Task Description"
                                                         multiline
@@ -163,7 +171,7 @@ function PostAnInternship() {
 
                                             <Grid item md={12} xs={12}>
                                                 <TextField
-                                                    name="aboutthecompany"
+                                                    name="perks"
                                                     id="outlined-multiline-static"
                                                     label="Perks"
                                                     multiline
@@ -189,4 +197,4 @@ function PostAnInternship() {
     )
 }
 
-export default PostAnInternship
+export default PostAnInternship 
