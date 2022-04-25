@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Button, Box } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import { MdLocationPin } from "react-icons/md";
@@ -6,6 +7,29 @@ import { AiFillClockCircle } from "react-icons/ai";
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 
 const AppliedJobs = () => {
+
+  var url = window.location.pathname.split('/')[2]
+  const [jobApplied, setJobApplied] = useState([])
+
+  var myHeaders = new Headers();
+  myHeaders.append("Authorization", "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254");
+
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+
+  useEffect(()=> {
+    fetch(`https://djacmdev.pythonanywhere.com/if/jobs/${url}`, requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      console.log(result)
+      setJobApplied(result)
+    })
+    .catch(error => console.log('error', error));
+  }, [])
+
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
@@ -42,7 +66,7 @@ const AppliedJobs = () => {
                   }}
                 >
                   {" "}
-                  Job Position{" "}
+                  {jobApplied.role}
                 </span>
                 <span
                   style={{
@@ -53,7 +77,7 @@ const AppliedJobs = () => {
                   }}
                 >
                   {" "}
-                  Company Name{" "}
+                  {jobApplied.company_name}
                 </span>
                 <span> Location </span>
               </div>
@@ -63,21 +87,21 @@ const AppliedJobs = () => {
                     <MdLocationPin className="job-details-icon" />{" "}
                     <span style={{ color: "#2D3748" }}> MODE </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> Online </p>
+                  <p style={{ fontWeight: "500" }}>{jobApplied.WFH? "Online":"Offline"}</p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
                     <BiRupee className="job-details-icon" />{" "}
                     <span> MIN STIPEND </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> 3000 </p>
+                  <p style={{ fontWeight: "500" }}> {jobApplied.stipend_low_range} </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
                     <AiFillClockCircle className="job-details-icon" />{" "}
                     <span> DURATION </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> 3 months </p>
+                  <p style={{ fontWeight: "500" }}>{jobApplied.duration}</p>
                 </div>
               </div>
               <div

@@ -29,9 +29,8 @@ const FORM_VALIDATION = Yup.object().shape({
   domains: Yup.string().required("This field is Required"),
   skills: Yup.string().required("This field is Required"),
   project: Yup.string().required("This field is Required"),
-  phone: Yup.string()
-    .required("This field is Required")
-    // .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
+  phone: Yup.string().required("This field is Required"),
+  // .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
 });
 
 const Profilepage = () => {
@@ -81,25 +80,25 @@ const Profilepage = () => {
                   initialValues={{ ...INITIAL_FORM_STATE }}
                   validationSchema={FORM_VALIDATION}
                   onSubmit={(values) => {
-                    var data = JSON.stringify({
-                      email_id: `${values.email}`,
-                      phone_no: `${values.phone}`,
-                      current_year: `${values.year}`,
-                      department: `${values.branch}`,
-                      sap_id: `${values.sapId}`,
-                      domains: `${values.domains}`,
-                      skills: `${values.skills}`,
-                      resume_drive_link: `${values.resume}`,
-                      project_drive_link: `${values.project}`,
-                    });
+                    // console.log(values);
+                    var FormData = require("form-data");
+                    var data = new FormData();
+                    data.append("email_id", `${values.email}`);
+                    data.append("phone_no", `${values.phone}`);
+                    data.append("sap_id", `${values.sapId}`);
+                    data.append("current_year", `${values.year}`);
+                    data.append("department", `${values.branch}`);
+                    data.append("domains", `${values.domains}`);
+                    data.append("skills", `${values.skills}`);
+                    data.append("resume_drive_link", `${values.resume}`);
+                    data.append("project_drive_link", `${values.project}`);
 
                     var config = {
                       method: "post",
                       url: "http://djacmdev.pythonanywhere.com/if/student",
                       headers: {
-                        Authorization: "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254",
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
+                        Authorization:
+                          "Token baad009ac028c3eba9335294cde4f20f2d2fe887",
                       },
                       data: data,
                     };
