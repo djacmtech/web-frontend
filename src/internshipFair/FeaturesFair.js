@@ -4,8 +4,8 @@ import stipend from "../Assets/stipend.png";
 
 const FeaturesFair = () => {
   return (
-    <div style={{padding:"50px 0 150px 60px"}}>
-      <div style={{ paddingLeft: "50px" }}>
+    <div style={{padding:"50px 0 150px 60px"}} className="featuresfair">
+      <div style={{ paddingLeft: "50px" }} className="feature">
         <div style={{ display: "flex", alignItems: "center" }}>
           <div className="featuresHead">OPPORTUNITIES</div>
           <span className="featuresSpan"></span>
@@ -22,7 +22,7 @@ const FeaturesFair = () => {
           full-time work.
         </div>
       </div>
-      <div style={{ paddingLeft: "50px" }}>
+      <div style={{ paddingLeft: "50px" }} className="feature">
         <div style={{ display: "flex", alignItems: "center" }}>
          <img src={stipend} alt="" className="stipendImg"/>
           <div className="StipendHead">STIPEND</div>

@@ -1,6 +1,6 @@
 import { Dialog, DialogContent } from '@mui/material'
 import React from 'react'
-import { Grid, Button } from '@mui/material'
+import { Grid } from '@mui/material';
 import { DialogTitle } from '@material-ui/core';
 
 function Popup(props) {
@@ -23,7 +23,6 @@ function Popup(props) {
                 <DialogContent>
                     {children}
                 </DialogContent>
-
             </Dialog>
         </>
     )

@@ -38,11 +38,11 @@ function AboutFair() {
             }}
             data-aos="fade-up"
           >
-            <div class="image-stack">
-              <div class="image-stack__item image-stack__item--top">
+            <div className="image-stack">
+              <div className="image-stack__item image-stack__item--top">
                 <img src={IFAbout2} alt="" className="imgFair" />
               </div>
-              <div class="image-stack__item image-stack__item--bottom">
+              <div className="image-stack__item image-stack__item--bottom">
                 <img src={IFAbout1} alt="" className="imgFair" />
               </div>
             </div>

@@ -197,8 +197,7 @@ function SignUp() {
                   style={{ color: "rgba(24, 114, 113, 1)", cursor: "pointer" }}
                   onClick={() => setOpenPopup(true)}
                 >
-                  {" "}
-                  Login{" "}
+                  Login
                 </span>
               </p>
             </Grid>
@@ -206,7 +205,7 @@ function SignUp() {
         </Grid>
       </Grid>
       <Popup openPopup={openPopup} setOpenPopup={setOpenPopup}>
-        <Login />
+        <Login openPopup={openPopup}/>
       </Popup>
     </>
   );
