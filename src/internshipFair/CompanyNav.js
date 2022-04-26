@@ -122,7 +122,7 @@ const CompanyNav = () => {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Link to={`/${page.toLowerCase().replace(' ','-')}`} style={{textDecoration:"none"}}>
+                <Link to={`/${page.toLowerCase().replace(' ','-').replace(' ','-')}`} style={{textDecoration:"none"}}>
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}

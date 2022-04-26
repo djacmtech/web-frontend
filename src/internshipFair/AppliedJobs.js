@@ -8,8 +8,10 @@ import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 
 const AppliedJobs = () => {
 
-  var url = window.location.pathname.split('/')[2]
+  var url = localStorage.getItem("id");
+
   const [jobApplied, setJobApplied] = useState([])
+
 
   var myHeaders = new Headers();
   myHeaders.append("Authorization", "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254");
@@ -25,10 +27,13 @@ const AppliedJobs = () => {
     .then(response => response.json())
     .then(result => {
       console.log(result)
+      console.log(jobApplied.length)
       setJobApplied(result)
     })
     .catch(error => console.log('error', error));
   }, [])
+
+const number  = jobApplied.length;
 
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>

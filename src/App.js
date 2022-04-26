@@ -166,7 +166,7 @@ function App() {
           {/* signup with login pop up */}
           <Route path="/signup" element={<SignUp />} ></Route>
           {/* student dashboard */}
-          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/dashboard" element={<><Dashboard /></>}></Route>
           {/* cart */}
           <Route path="/cart" element={<><InterNavbar></InterNavbar><StudentCart /></>}></Route>
 
@@ -175,12 +175,12 @@ function App() {
           <Route path="/profilepage" element={<><InterNavbar /><Profilepage /></>}></Route>
           
           <Route path="/onboarding" element={<OnBoarding />} ></Route>
-          <Route path="/if-application%20list" element={<><CompanyNav/><ApplicationList /></>} ></Route>
+          <Route path="/if-application-list" element={<><CompanyNav/><ApplicationList /></>} ></Route>
           <Route path="/applicant" element={<><CompanyNav/><Applicants /></>}></Route>
-          <Route path="/post-an%20internship" element={<><CompanyNav/><PostAnInternship /></>}></Route>
+          <Route path="/post-an-internship" element={<><CompanyNav/><PostAnInternship /></>}></Route>
           <Route path="/cart" element={<StudentCart />}></Route>
           <Route path="/profilepage" element={<><InterNavbar/><Profilepage /></>}></Route>
-          <Route path="/appliedjobs/:id" element={<><InterNavbar/><AppliedJobs /></>}></Route>
+          <Route path="/Applied%20Jobs" element={<><InterNavbar/><AppliedJobs /></>}></Route>
           <Route path="/jobposition/:id" element={<><InterNavbar/><JobPosition /></>}></Route>
           <Route path="/dashboard" element={<Dashboard/>}></Route>
           <Route path="/postnewinternship" element={<><CompanyNav/><PostNewInternship/></>}></Route>

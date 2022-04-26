@@ -101,7 +101,7 @@ const InterNavbar = () => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <Link to={`/${page}`} style={{ textDecoration: 'none' }}>
+                                    <Link to={`/${page.toLowerCase().replace(' ','-').replace(' ','-')}`} style={{ textDecoration: 'none' }}>
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>
                                             <Typography textAlign="center" style={{ color: 'black' }}>{page}</Typography>
                                         </MenuItem>
