@@ -6,6 +6,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import TextField from "./TextField";
 import Popup from "./Popup";
+import { useNavigate } from 'react-router-dom'; 
 import Login from "./Login";
 
 const INITIAL_FORM_STATE = {
@@ -38,6 +39,7 @@ const FORM_VALIDATION = Yup.object().shape({
 function SignUp() {
   const [openPopup, setOpenPopup] = useState(false);
   let axios = require('axios');
+  const navigate = useNavigate();
 
   return (
     <>
@@ -118,6 +120,8 @@ function SignUp() {
                   axios(config)
                     .then(function (response) {
                       console.log(JSON.stringify(response.data));
+                      navigate('/dashboard');
+
                     })
                     .catch(function (error) {
                       console.log(error);

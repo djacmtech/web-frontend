@@ -159,18 +159,31 @@ function App() {
           />
           <Route path="/LOC" element={<Loc />}></Route>
           <Route path="/Resources" element={<Resource />}></Route>
+
+          {/* main page */}
           <Route path="/internship-fair" element={<InternshipFair />} ></Route>
+          {/* signup with login pop up */}
           <Route path="/signup" element={<SignUp />} ></Route>
+          {/* student dashboard */}
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          {/* cart */}
+          <Route path="/cart" element={<><InterNavbar></InterNavbar><StudentCart /></>}></Route>
+
+          <Route path="/jobposition/:id" element={<><InterNavbar /><JobPosition /></>}></Route>
+
+          <Route path="/profilepage" element={<><InterNavbar /><Profilepage /></>}></Route>
+          
           <Route path="/onboarding" element={<OnBoarding />} ></Route>
-          <Route path="/apl" element={<><InterNavbar/><ApplicationList /></>} ></Route>
+          <Route path="/apl" element={<><InterNavbar /><ApplicationList /></>} ></Route>
           <Route path="/applicant" element={<Applicants />}></Route>
           <Route path="/postinternship" element={<PostAnInternship />}></Route>
-          <Route path="/cart" element={<StudentCart />}></Route>
-          <Route path="/profilepage" element={<><InterNavbar/><Profilepage /></>}></Route>
-          <Route path="/appliedjobs/:id" element={<><InterNavbar/><AppliedJobs /></>}></Route>
-          <Route path="/jobposition/:id" element={<><InterNavbar/><JobPosition /></>}></Route>
-          <Route path="/dashboard" element={<Dashboard/>}></Route>
-          <Route path="/postnewinternship" element={<><InterNavbar/><PostNewInternship/></>}></Route>
+
+
+          <Route path="/appliedjobs/:id" element={<><InterNavbar /><AppliedJobs /></>}></Route>
+
+
+
+          <Route path="/postnewinternship" element={<><InterNavbar /><PostNewInternship /></>}></Route>
         </Routes>
       </div>
     </Router>
