@@ -35,7 +35,7 @@ const FORM_VALIDATION = Yup.object().shape({
 
 const Profilepage = () => {
   let axios = require("axios");
-  // let token = sessionStorage.getItem("token");
+  // let token = localStorage.getItem("token");
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
@@ -97,8 +97,8 @@ const Profilepage = () => {
                       method: "post",
                       url: "http://djacmdev.pythonanywhere.com/if/student",
                       headers: {
-                        Authorization:
-                          "Token baad009ac028c3eba9335294cde4f20f2d2fe887",
+                        // Authorization: `Token ${token}`,
+                        'Authorization': 'Token 9009a5bec86112ef738f18418ccadac59ef574f0',
                       },
                       data: data,
                     };
