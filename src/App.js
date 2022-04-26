@@ -160,8 +160,20 @@ function App() {
           />
           <Route path="/LOC" element={<Loc />}></Route>
           <Route path="/Resources" element={<Resource />}></Route>
+
+          {/* main page */}
           <Route path="/internship-fair" element={<InternshipFair />} ></Route>
+          {/* signup with login pop up */}
           <Route path="/signup" element={<SignUp />} ></Route>
+          {/* student dashboard */}
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          {/* cart */}
+          <Route path="/cart" element={<><InterNavbar></InterNavbar><StudentCart /></>}></Route>
+
+          <Route path="/jobposition/:id" element={<><InterNavbar /><JobPosition /></>}></Route>
+
+          <Route path="/profilepage" element={<><InterNavbar /><Profilepage /></>}></Route>
+          
           <Route path="/onboarding" element={<OnBoarding />} ></Route>
           <Route path="/if-application%20list" element={<><CompanyNav/><ApplicationList /></>} ></Route>
           <Route path="/applicant" element={<><CompanyNav/><Applicants /></>}></Route>
