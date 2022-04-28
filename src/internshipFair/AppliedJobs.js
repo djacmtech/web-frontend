@@ -47,7 +47,7 @@ const number  = jobApplied.length;
             paddingTop: "40px",
           }}
         >
-          Applied Jobs : 3
+          Applied Jobs 
         </div>
         <Box
           sx={{

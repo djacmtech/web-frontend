@@ -108,6 +108,9 @@ function SignUp() {
                     "sapId": `${values.sapId}`
                   });
 
+                  localStorage.setItem("email", values.email)
+                  localStorage.setItem("sap", values.sapId)
+
                   var config = {
                     method: 'post',
                     url: 'https://djacmdev.pythonanywhere.com/if/register',
