@@ -5,6 +5,7 @@ import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import Swal from 'sweetalert2'
 import TextField from './TextField'
+import {useNavigate} from "react-router-dom"
 
 const INITIAL_FORM_STATE = {
     email: "",
@@ -22,6 +23,7 @@ function Login() {
 
     const [openPopup, setOpenPopup] = useState(true)
     var axios = require('axios');
+    const navigate = useNavigate();
 
     return (
         <>
@@ -50,6 +52,13 @@ function Login() {
                                         icon: 'success',
                                         // confirmButtonText: 'Cool'
                                     })
+                                    localStorage.setItem('id', response.data.User.id)
+                                    localStorage.setItem('name', response.data.User.email)
+                                    console.log(response.data.User.id);
+                                    if(response.data.User.is_student===true)
+                                    navigate("/dashboard");
+                                    else
+                                    navigate("/postnewinternship");
                                 })
                                 .catch(function (error) {
                                     console.log(error);

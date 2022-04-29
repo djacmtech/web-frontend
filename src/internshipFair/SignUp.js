@@ -121,12 +121,7 @@ function SignUp() {
                   axios(config)
                     .then(function (response) {
                       console.log(JSON.stringify(response.data));
-                      Swal.fire({
-                        title: 'Account created',
-                        icon: 'success',
-                        // confirmButtonText: 'Cool'
-                      })
-                      navigate('/dashboard');
+                      // navigate('/dashboard');
 
                     })
                     .catch(function (error) {
