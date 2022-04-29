@@ -5,6 +5,8 @@ import "./InternshipFair.css";
 import { MdLocationPin } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+
 
 const JobPosition = () => {
 
@@ -20,14 +22,14 @@ const JobPosition = () => {
     redirect: 'follow'
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     fetch(`https://djacmdev.pythonanywhere.com/if/jobs/${url}`, requestOptions)
-    .then(response => response.json())
-    .then(result => {
-      console.log(result)
-      setJobDetails(result)
-    })
-    .catch(error => console.log('error', error));
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+        setJobDetails(result)
+      })
+      .catch(error => console.log('error', error));
   }, [])
 
   return (
@@ -62,8 +64,8 @@ const JobPosition = () => {
                     fontSize: "2rem",
                     fontWeight: "600",
                     fontFamily: "Poppins",
-                    lineHeight:"40px",
-                    paddingTop:"1.5rem"
+                    lineHeight: "40px",
+                    paddingTop: "1.5rem"
                   }}
                 >
                   {jobDetails.role}
@@ -80,13 +82,13 @@ const JobPosition = () => {
                 </span>
                 <span> Location </span>
               </div>
-              <div className="job-card-details" style={{justifyContent:"left"}}>
+              <div className="job-card-details" style={{ justifyContent: "left" }}>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
                     <MdLocationPin className="job-details-icon" />{" "}
                     <span style={{ color: "#2D3748" }}> MODE </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> {jobDetails.WFH? "Online":"Offline"} </p>
+                  <p style={{ fontWeight: "500" }}> {jobDetails.WFH ? "Online" : "Offline"} </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
@@ -181,26 +183,29 @@ const JobPosition = () => {
               </ol>
             </div>
             <Grid item xs={12}>
-              <Button
-                sx={{
-                  width: "100%",
-                  backgroundColor: "rgba(24, 114, 113, 1)",
-                  borderRadius: "4px",
-                  color: "white",
-                  border: "2px solid white",
-                  height: "50px",
-                  textTransform: "none",
-                  fontWeight: "bold",
-                  "&:hover": {
-                    color: "rgba(24, 114, 113, 1)",
-                    backgroundColor: "rgba(24, 114, 113, 0.4)",
-                    border: "2px solid rgba(24, 114, 113, 1)",
-                  },
-                }}
-                type="submit"
-              >
-                ADD TO CART
-              </Button>
+              <Link to='/cart' style={{ textDecoration: 'none' }}>
+
+                <Button
+                  sx={{
+                    width: "100%",
+                    backgroundColor: "rgba(24, 114, 113, 1)",
+                    borderRadius: "4px",
+                    color: "white",
+                    border: "2px solid white",
+                    height: "50px",
+                    textTransform: "none",
+                    fontWeight: "bold",
+                    "&:hover": {
+                      color: "rgba(24, 114, 113, 1)",
+                      backgroundColor: "rgba(24, 114, 113, 0.4)",
+                      border: "2px solid rgba(24, 114, 113, 1)",
+                    },
+                  }}
+                  type="submit"
+                >
+                  ADD TO CART
+                </Button>
+              </Link>
             </Grid>
           </CardContent>
         </Card>

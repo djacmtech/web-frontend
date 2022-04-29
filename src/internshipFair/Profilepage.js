@@ -1,8 +1,10 @@
 import { Box, Grid, Button, Card, CardContent } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import TextField from "./TextField";
+import axios from "axios";
+import { useEffect } from "react";
 
 const INITIAL_FORM_STATE = {
   email: "",
@@ -29,14 +31,33 @@ const FORM_VALIDATION = Yup.object().shape({
   domains: Yup.string().required("This field is Required"),
   skills: Yup.string().required("This field is Required"),
   project: Yup.string().required("This field is Required"),
-  phone: Yup.string()
-    .required("This field is Required")
-    // .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
+  phone: Yup.string().required("This field is Required"),
+  // .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
 });
 
 const Profilepage = () => {
-  let axios = require("axios");
-  // let token = sessionStorage.getItem("token");
+
+  const [profile, setProfile] = useState([]);
+
+  var config = {
+    method: 'get',
+    url: 'https://djacmdev.pythonanywhere.com/if/student',
+    headers: { 
+      'Authorization': `Token ${localStorage.getItem('token')}`
+    }
+  };
+  
+  useEffect(()=> {
+    axios(config)
+    .then(function (response) {
+      console.log(response.data);
+      setProfile(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }, [])
+
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
@@ -80,38 +101,38 @@ const Profilepage = () => {
                 <Formik
                   initialValues={{ ...INITIAL_FORM_STATE }}
                   validationSchema={FORM_VALIDATION}
-                  onSubmit={(values) => {
-                    var data = JSON.stringify({
-                      email_id: `${values.email}`,
-                      phone_no: `${values.phone}`,
-                      current_year: `${values.year}`,
-                      department: `${values.branch}`,
-                      sap_id: `${values.sapId}`,
-                      domains: `${values.domains}`,
-                      skills: `${values.skills}`,
-                      resume_drive_link: `${values.resume}`,
-                      project_drive_link: `${values.project}`,
-                    });
+                  // onSubmit={(values) => {
+                  //   // console.log(values);
+                  //   var FormData = require("form-data");
+                  //   var data = new FormData();
+                  //   data.append("email_id", `${values.email}`);
+                  //   data.append("phone_no", `${values.phone}`);
+                  //   data.append("sap_id", `${values.sapId}`);
+                  //   data.append("current_year", `${values.year}`);
+                  //   data.append("department", `${values.branch}`);
+                  //   data.append("domains", `${values.domains}`);
+                  //   data.append("skills", `${values.skills}`);
+                  //   data.append("resume_drive_link", `${values.resume}`);
+                  //   data.append("project_drive_link", `${values.project}`);
 
-                    var config = {
-                      method: "post",
-                      url: "http://djacmdev.pythonanywhere.com/if/student",
-                      headers: {
-                        Authorization: "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254",
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
-                      },
-                      data: data,
-                    };
+                  //   var config = {
+                  //     method: "get",
+                  //     url: "http://djacmdev.pythonanywhere.com/if/student",
+                  //     headers: {
+                  //       // Authorization: `Token ${token}`,
+                  //       'Authorization': `Token ${localStorage.getItem('token')}`,
+                  //     },
+                  //     data: data,
+                  //   };
 
-                    axios(config)
-                      .then(function (response) {
-                        console.log(JSON.stringify(response.data));
-                      })
-                      .catch(function (error) {
-                        console.log(error);
-                      });
-                  }}
+                  //   axios(config)
+                  //     .then(function (response) {
+                  //       console.log(JSON.stringify(response.data));
+                  //     })
+                  //     .catch(function (error) {
+                  //       console.log(error);
+                  //     });
+                  // }}
                 >
                   <Form>
                     <Grid container spacing={4} rowSpacing={4}>
@@ -119,7 +140,10 @@ const Profilepage = () => {
                         <div>Email address</div>
                         <TextField
                           name="email"
-                          placeholder="Email address"
+                          placeholder={profile.email_id}
+                          InputProps={{
+                            readOnly:true
+                          }}
                           // type="email"
                           // required
                           style={{ color: "#187271" }}
@@ -130,14 +154,23 @@ const Profilepage = () => {
                         <div>Phone Number</div>
                         <TextField
                           name="phone"
-                          placeholder="Phone Number"
+                          placeholder={profile.phone_no}
+                          InputProps={{
+                            readOnly:true
+                          }}
                           // required
                         />
                       </Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>SAP ID</div>
-                        <TextField name="sapId" placeholder="SAP ID" />
+                        <TextField 
+                          name="sapId" 
+                          placeholder={profile.sap_id}
+                          InputProps={{
+                            readOnly:true
+                          }}
+                        />
                       </Grid>
 
                       <Grid item md={6} xs={0} className="extraGrid"></Grid>
@@ -146,8 +179,10 @@ const Profilepage = () => {
                         <div>Year</div>
                         <TextField
                           name="year"
-                          placeholder="Add year"
-                          // required
+                          placeholder={profile.graduation_year}
+                          InputProps={{
+                            readOnly:true
+                          }}
                         />
                       </Grid>
 
@@ -155,8 +190,10 @@ const Profilepage = () => {
                         <div>Branch</div>
                         <TextField
                           name="branch"
-                          placeholder="Add branch"
-                          // required
+                          placeholder={profile.department}
+                          InputProps={{
+                            readOnly:true
+                          }}
                         />
                       </Grid>
 
@@ -164,7 +201,10 @@ const Profilepage = () => {
                         <div>Domains</div>
                         <TextField
                           name="domains"
-                          placeholder="Select domains"
+                          placeholder={profile.domains}
+                          InputProps={{
+                            readOnly:true
+                          }}
                           // required
                         />
                       </Grid>
@@ -175,7 +215,10 @@ const Profilepage = () => {
                         <div>Skills</div>
                         <TextField
                           name="skills"
-                          placeholder="Add skills"
+                          placeholder={profile.skills}
+                          InputProps={{
+                            readOnly:true
+                          }}
                           // required
                         />
                       </Grid>
@@ -186,7 +229,10 @@ const Profilepage = () => {
                         <div>Resume Link</div>
                         <TextField
                           name="resume"
-                          placeholder="Add resume link"
+                          placeholder={profile.resume_drive_link}
+                          InputProps={{
+                            readOnly:true
+                          }}
                           // type="url"
                           // required
                         />
@@ -198,8 +244,11 @@ const Profilepage = () => {
                         <div>Project Link</div>
                         <TextField
                           name="project"
-                          placeholder="Add project link"
-                          // type="url"
+                          placeholder={profile.project_drive_link}
+                          InputProps={{
+                            readOnly:true
+                          }}
+                          type="url"
                         />
                       </Grid>
 
