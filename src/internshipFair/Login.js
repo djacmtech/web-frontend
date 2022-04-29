@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Popup from './Popup'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
+import Swal from 'sweetalert2'
 import TextField from './TextField'
 
 const INITIAL_FORM_STATE = {
@@ -44,9 +45,19 @@ function Login() {
                             axios(config)
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
+                                    Swal.fire({
+                                        title: 'Account created',
+                                        icon: 'success',
+                                        // confirmButtonText: 'Cool'
+                                    })
                                 })
                                 .catch(function (error) {
                                     console.log(error);
+                                    Swal.fire({
+                                        title: 'Invalid credentials',
+                                        icon: 'error',
+                                        // confirmButtonText: 'Cool'
+                                    })
                                 });
 
                         }}
