@@ -47,6 +47,7 @@ function Login() {
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
                                     localStorage.setItem('id', response.data.User.id)
+                                    localStorage.setItem('name', response.data.User.email)
                                     console.log(response.data.User.id);
                                     if(response.data.User.is_student===true)
                                     navigate("/dashboard");
