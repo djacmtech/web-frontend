@@ -4,6 +4,7 @@ import Popup from './Popup'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import TextField from './TextField'
+import { useNavigate } from 'react-router-dom'
 
 const INITIAL_FORM_STATE = {
     email: "",
@@ -18,7 +19,7 @@ const FORM_VALIDATION = Yup.object().shape({
 });
 
 function Login() {
-
+    const navigate = useNavigate()
     const [openPopup, setOpenPopup] = useState(true)
     var axios = require('axios');
 
@@ -44,6 +45,9 @@ function Login() {
                             axios(config)
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
+                                    if (response.data.token) {
+                                        navigate('/dashboard')
+                                    }
                                 })
                                 .catch(function (error) {
                                     console.log(error);
