@@ -21,7 +21,7 @@ const PostNewInternship = () => {
           for one month of full-time work.
         </li>
       </ul>
-      <Link to='/postinternship'>
+      <Link to='/post-an-internship' style={{textDecoration:"none"}}>
 
         <Button
           style={{
