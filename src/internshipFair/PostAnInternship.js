@@ -44,31 +44,6 @@ function PostAnInternship() {
         setAlignment(newAlignment);
     };
 
-    // const [role, setRole] = useState("");
-    // const [formData, setFormData] = useState({
-    //     // branch: '',
-    //     // job_description: '',
-    //     jobPosition: "",
-    //     // mandatory_skills: '',
-    //     // stipend_low_range: '',
-    //     // stipend_high_range: '',
-    //     // perks: '',
-    //     // num_of_applications: '',
-    //     // duration: '',
-    //     // WFH: '',
-    //     // company_name: '',
-    //     // deadline: '',
-    // });
-
-    //   functions
-    // const handleChanges = (event) => {
-    //     setValues({
-    //         ...values,
-    //         [event.target.name]: event.target.value,
-    //     });
-    //     console.log(values);
-    // };
-
     return (
         <>
             <Box sx={{ backgroundColor: 'white', fontFamily: 'Poppins', padding: { md: '4% 15%', sx: '2% 8%', xs: '1% 5%' } }}>

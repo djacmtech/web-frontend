@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import Popup from './Popup'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
+import Swal from 'sweetalert2'
 import TextField from './TextField'
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 
 const INITIAL_FORM_STATE = {
     email: "",
@@ -19,10 +20,9 @@ const FORM_VALIDATION = Yup.object().shape({
 });
 
 function Login() {
-
+    const navigate = useNavigate()
     const [openPopup, setOpenPopup] = useState(true)
     var axios = require('axios');
-    const navigate = useNavigate();
 
     return (
         <>
@@ -46,16 +46,26 @@ function Login() {
                             axios(config)
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
+                                    Swal.fire({
+                                        title: 'Account created',
+                                        icon: 'success',
+                                        // confirmButtonText: 'Cool'
+                                    })
                                     localStorage.setItem('id', response.data.User.id)
                                     localStorage.setItem('name', response.data.User.email)
                                     console.log(response.data.User.id);
-                                    if(response.data.User.is_student===true)
-                                    navigate("/dashboard");
+                                    if (response.data.User.is_student === true)
+                                        navigate("/dashboard");
                                     else
-                                    navigate("/postnewinternship");
+                                        navigate("/postnewinternship");
                                 })
                                 .catch(function (error) {
                                     console.log(error);
+                                    Swal.fire({
+                                        title: 'Invalid credentials',
+                                        icon: 'error',
+                                        // confirmButtonText: 'Cool'
+                                    })
                                 });
 
                         }}
