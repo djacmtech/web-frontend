@@ -8,6 +8,7 @@ import { MdLocationPin } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function Dashboard() {
 
@@ -16,17 +17,39 @@ export default function Dashboard() {
     const [companies, setCompanies] = useState([])
     const [count, setCount] = useState(0)
 
+    const token = localStorage.getItem('token')
+
     const addCompany = (id) => {
         let filteredCompany = job.filter((singleJob) => singleJob.id === id)
         setCount(count + 1)
         setCompanies([...companies, filteredCompany])
+        var FormData = require('form-data');
+        var data = new FormData();
+        data.append('job', '4');
+
+        var config = {
+            method: 'post',
+            url: 'https://djacmdev.pythonanywhere.com/if/cart',
+            headers: {
+                'Authorization': `Token ${token}`
+            },
+            data: data
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+
     }
     localStorage.setItem('CartCompanies', JSON.stringify(companies))
-    console.log(count)
-    console.log(companies)
 
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254");
+    myHeaders.append("Authorization", `Token ${token}`);
 
     var requestOptions = {
         method: 'GET',
