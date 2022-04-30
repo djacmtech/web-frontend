@@ -435,8 +435,8 @@
 
 /* dashboard */
 .job-card {
-  width: 40rem;
-  height: 15rem;
+  width: 90%;
+  height: 13%;
   padding: 3%;
   margin-block: 3%;
 }
