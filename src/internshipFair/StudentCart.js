@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Divider, Grid } from '@mui/material'
 import SquareIcon from '@mui/icons-material/Square';
 import { Button } from '@mui/material';
 const StudentCart = () => {
+
+    const [items, setItems] = useState([[{'company_name':'hi', 'role':'hi', 'price':50}]])
 
     const data = [
         {
@@ -22,9 +24,11 @@ const StudentCart = () => {
         }
     ]
 
-    const comp = localStorage.getItem('CartCompanies')
-    console.log(comp[0])
-    console.log(comp.length)
+    const comp = JSON.parse(localStorage.getItem('CartCompanies'))
+    console.log(comp[0][0])
+    useEffect(()=>{
+        setItems(comp)
+    }, [])
 
     return (
         <div style={{ backgroundColor: 'white', color: 'black', fontFamily: 'Poppins', padding: '3% 3% 3% 9%' }}>
@@ -35,16 +39,16 @@ const StudentCart = () => {
                     <div style={{ padding: '2% 6%' }}>
                         <span style={{ color: 'grey' }}>IF Interview list</span>
                         <span style={{ color: 'grey', float: 'right', transform: 'translateX(-110px)' }}>Price</span>
-                        {data.map((x) => {
+                        {items.map((x) => {
                             return <Grid container spacing={0}>
                                 <Grid item xs={2}>
                                     <SquareIcon style={{ fontSize: '7rem' }} />
                                 </Grid>
                                 <Grid item xs={8} style={{ transform: 'translateY(30px)' }}>
-                                    <span style={{ color: '#187271', fontWeight: '700', padding: '20px 0' }}>{x.name}</span>
+                                    <span style={{ color: '#187271', fontWeight: '700', padding: '20px 0' }}>{x[0].company_name}</span>
                                     <br />
-                                    <span style={{ color: 'grey' }}>{x.role}</span>
-                                    <span style={{ color: 'grey', float: 'right' }}>{x.price}</span>
+                                    <span style={{ color: 'grey' }}>{x[0].role}</span>
+                                    <span style={{ color: 'grey', float: 'right' }}>50</span>
                                 </Grid>
                             </Grid>
                         })}
