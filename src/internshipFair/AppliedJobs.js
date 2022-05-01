@@ -11,10 +11,10 @@ const AppliedJobs = () => {
   var url = localStorage.getItem("id");
 
   const [jobApplied, setJobApplied] = useState([])
-
+  const token  = localStorage.getItem("token");
 
   var myHeaders = new Headers();
-  myHeaders.append("Authorization", "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254");
+  myHeaders.append("Authorization", `Token ${token}`);
 
   var requestOptions = {
     method: 'GET',
@@ -47,7 +47,7 @@ const number  = jobApplied.length;
             paddingTop: "40px",
           }}
         >
-          Applied Jobs 
+          Applied Jobs
         </div>
         <Box
           sx={{

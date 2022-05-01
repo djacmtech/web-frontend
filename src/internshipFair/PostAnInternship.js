@@ -5,13 +5,13 @@ import * as Yup from 'yup'
 import TextField from './TextField'
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { withStyles } from "@material-ui/core/styles";
-import TextareaAutosize from '@mui/material/TextareaAutosize';
+// import { withStyles } from "@material-ui/core/styles";
+// import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Checkbox from '@mui/material/Checkbox';
-import FormGroup from '@mui/material/FormGroup';
+// import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+// import FormControl from '@mui/material/FormControl';
+// import FormLabel from '@mui/material/FormLabel';
 import axios from 'axios';
 
 function PostAnInternship() {
@@ -43,31 +43,6 @@ function PostAnInternship() {
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
-
-    // const [role, setRole] = useState("");
-    // const [formData, setFormData] = useState({
-    //     // branch: '',
-    //     // job_description: '',
-    //     jobPosition: "",
-    //     // mandatory_skills: '',
-    //     // stipend_low_range: '',
-    //     // stipend_high_range: '',
-    //     // perks: '',
-    //     // num_of_applications: '',
-    //     // duration: '',
-    //     // WFH: '',
-    //     // company_name: '',
-    //     // deadline: '',
-    // });
-
-    //   functions
-    // const handleChanges = (event) => {
-    //     setValues({
-    //         ...values,
-    //         [event.target.name]: event.target.value,
-    //     });
-    //     console.log(values);
-    // };
 
     return (
         <>

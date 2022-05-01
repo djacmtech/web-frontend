@@ -37,6 +37,28 @@ const FORM_VALIDATION = Yup.object().shape({
 
 const Profilepage = () => {
 
+    const [details, setDetails] = useState([])
+
+    var axios = require('axios')
+    var config = {
+      method: 'get',
+      url: 'http://127.0.0.1:8000/if/user',
+      headers: { 
+        'Authorization': `Token ${localStorage.getItem('token')}`, 
+      }
+    };
+
+    useEffect(()=>{
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        setDetails(response.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }, [])
+
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
@@ -73,7 +95,7 @@ const Profilepage = () => {
                     color: "#187271",
                   }}
                 >
-                  SAYLI PEDNEKAR
+                  {details.first_name+" "+details.last_name}
                 </p>
               </Grid>
               <Grid item sx={{ width: "100%", marginTop: "3%" }}>
@@ -82,9 +104,9 @@ const Profilepage = () => {
                   validationSchema={FORM_VALIDATION}
                   onSubmit={(values) => {
                     var data = JSON.stringify({
-                      "email_id": `${localStorage.getItem("email")}`,
+                      "email_id": `${details.email}`,
                     "phone_no": `${values.phone}`,
-                    "sap_id": `${localStorage.getItem("sap")}`,
+                    "sap_id": `${details.sap_id}`,
                     "current_year": `${values.year}`,
                     "department": `${values.branch}`,
                     "domains": `${values.domains}`,
@@ -123,7 +145,7 @@ const Profilepage = () => {
                         <div>Email address</div>
                         <TextField
                           name="email"
-                          placeholder={localStorage.getItem("email")?localStorage.getItem("email"):"Email"}
+                          placeholder={details.email}
                           inputProps={{
                             readOnly:true,
                           }}
@@ -152,8 +174,6 @@ const Profilepage = () => {
                           }}
                         />
                       </Grid>
-
-                      <Grid item md={6} xs={0} className="extraGrid"></Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>Year</div>

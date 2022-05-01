@@ -6,8 +6,9 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import TextField from "./TextField";
 import Popup from "./Popup";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import Login from "./Login";
+import Swal from 'sweetalert2'
 
 const INITIAL_FORM_STATE = {
   firstName: "",
@@ -128,6 +129,11 @@ function SignUp() {
                     })
                     .catch(function (error) {
                       console.log(error);
+                      Swal.fire({
+                        title: 'Invalid credentials',
+                        icon: 'error',
+                        // confirmButtonText: 'Cool'
+                      })
                     });
                 }}
               >
@@ -212,7 +218,7 @@ function SignUp() {
         </Grid>
       </Grid>
       <Popup openPopup={openPopup} setOpenPopup={setOpenPopup}>
-        <Login openPopup={openPopup}/>
+        <Login openPopup={openPopup} />
       </Popup>
     </>
   );
