@@ -7,7 +7,6 @@ import Paper from '@mui/material/Paper';
 import { MdLocationPin } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
-// import { Link } from 'react-router-dom';
 import axios from "axios";
 
 export default function Dashboard () {
@@ -57,7 +56,7 @@ export default function Dashboard () {
     };
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/if/list", requestOptions)
+        fetch("https://djacmdev.pythonanywhere.com/if/list", requestOptions)
             .then(response => response.json())
             .then(result => {
                 setJob(result)

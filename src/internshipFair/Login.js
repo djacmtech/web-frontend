@@ -42,7 +42,7 @@ function Login() {
 
                             var config = {
                                 method: 'post',
-                                url: 'http://127.0.0.1:8000/if/login',
+                                url: 'https://djacmdev.pythonanywhere.com/if/login',
                                 data: data
                             };
 

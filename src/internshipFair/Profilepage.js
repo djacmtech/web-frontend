@@ -42,7 +42,7 @@ const Profilepage = () => {
     var axios = require('axios')
     var config = {
       method: 'get',
-      url: 'http://127.0.0.1:8000/if/user',
+      url: 'https://djacmdev.pythonanywhere.com/if/user',
       headers: { 
         'Authorization': `Token ${localStorage.getItem('token')}`, 
       }
@@ -105,8 +105,8 @@ const Profilepage = () => {
                   onSubmit={(values) => {
                     var data = JSON.stringify({
                       "email_id": `${details.email}`,
-                    "phone_no": `${values.phone}`,
-                    "sap_id": `${details.sap_id}`,
+                    "phone_no": `+91${values.phone}`,
+                    "sap_id": `${localStorage.getItem("sap")}`,
                     "current_year": `${values.year}`,
                     "department": `${values.branch}`,
                     "domains": `${values.domains}`,
@@ -168,7 +168,7 @@ const Profilepage = () => {
                         <div>SAP ID</div>
                         <TextField 
                           name="sapId" 
-                          placeholder={localStorage.getItem("sap")?localStorage.getItem("sap"):"Sap ID"}
+                          placeholder={localStorage.getItem("sap")}
                           inputProps={{
                             readOnly:true,
                           }}

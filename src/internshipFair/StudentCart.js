@@ -22,6 +22,9 @@ const StudentCart = () => {
         }
     ]
 
+    const comp = localStorage.getItem('CartCompanies')
+    console.log(comp[0])
+    console.log(comp.length)
 
     return (
         <div style={{ backgroundColor: 'white', color: 'black', fontFamily: 'Poppins', padding: '3% 3% 3% 9%' }}>
