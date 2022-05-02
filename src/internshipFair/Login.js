@@ -1,6 +1,5 @@
 import { Grid, Button } from '@mui/material'
 import React, { useState } from 'react'
-import Popup from './Popup'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import Swal from 'sweetalert2'
@@ -49,11 +48,11 @@ function Login() {
                             axios(config)
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
-                                    // Swal.fire({
-                                    //     title: 'Account created',
-                                    //     icon: 'success',
-                                    //     // confirmButtonText: 'Cool'
-                                    // })
+                                    Swal.fire({
+                                        title: 'Welcome Back!',
+                                        icon: 'success',
+                                        // confirmButtonText: 'Cool'
+                                    })
                                     // localStorage.setItem('id', response.data.User.id)
                                     // localStorage.setItem('name', response.data.User.name)
                                     console.log(response.data.User);
