@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 const pages = [
   "Post an Internship",
   "IF Application list",
-  "Download Brochure",
+  // "Download Brochure",
 ];
 const settings = ["Profile", "Logout"];
 
@@ -122,7 +122,7 @@ const CompanyNav = () => {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Link to={`/${page.toLowerCase().replace(' ','-').replace(' ','-')}`} style={{textDecoration:"none"}}>
+                <Link to={`/${page.toLowerCase().replace(' ', '-').replace(' ', '-')}`} style={{ textDecoration: "none" }}>
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
@@ -132,7 +132,17 @@ const CompanyNav = () => {
                     {page}
                   </Button>
                 </Link>
+
               ))}
+              <a style={{textDecoration:'none'}} target='_blank' href="https://drive.google.com/file/d/1ZAMXsGkaUGj8WHKAO5VKQIqheS0iH6bg/view?usp=sharing" >
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", display: "block" }}
+                style={{ fontFamily: "Poppins" }}
+              >
+                Download Brochure
+              </Button>
+              </a>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>

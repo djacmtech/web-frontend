@@ -122,7 +122,7 @@ const Profilepage = () => {
                     var data = JSON.stringify({
                       "email_id": `${details.email}`,
                     "phone_no": `+91${values.phone}`,
-                    "sap_id": `${localStorage.getItem("sap")}`,
+                    "sap_id": `${values.sapId}`,
                     "current_year": `${values.year}`,
                     "department": `${values.branch}`,
                     "domains": `${values.domains}`,
@@ -172,7 +172,7 @@ const Profilepage = () => {
                           }}
                           // type="email"
                           // required
-                          style={{ color: "#187271" }}
+                          style={{ color: "black" }}
                         />
                       </Grid>
 
@@ -189,10 +189,10 @@ const Profilepage = () => {
                         <div>SAP ID</div>
                         <TextField 
                           name="sapId" 
-                          placeholder={localStorage.getItem("sap")}
-                          inputProps={{
-                            readOnly:true,
-                          }}
+                          // placeholder={localStorage.getItem("sap")}
+                          // inputProps={{
+                          //   readOnly:true,
+                          // }}
                         />
                       </Grid>
 
