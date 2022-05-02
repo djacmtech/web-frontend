@@ -103,8 +103,8 @@ function SignUp() {
                 onSubmit={(values) => {
                   var data = JSON.stringify({
                     "email": `${values.email}`,
-                    "firstName": `${values.firstName}`,
-                    "lastName": `${values.lastName}`,
+                    "first_name": `${values.firstName}`,
+                    "last_name": `${values.lastName}`,
                     "password": `${values.password}`,
                     "sapId": `${values.sapId}`
                   });
