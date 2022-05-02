@@ -109,9 +109,6 @@ function SignUp() {
                     "sapId": `${values.sapId}`
                   });
 
-                  localStorage.setItem("email", values.email)
-                  localStorage.setItem("sap", values.sapId)
-
                   var config = {
                     method: 'post',
                     url: 'https://djacmdev.pythonanywhere.com/if/register',
@@ -124,16 +121,21 @@ function SignUp() {
                   axios(config)
                     .then(function (response) {
                       console.log(JSON.stringify(response.data));
-                      // navigate('/dashboard');
+                      Swal.fire({
+                        title: 'Account created',
+                        icon: 'success',
+                        // confirmButtonText: 'Cool'
+                      })
+                      navigate('/dashboard');
 
                     })
                     .catch(function (error) {
                       console.log(error);
-                      Swal.fire({
-                        title: 'Invalid credentials',
-                        icon: 'error',
-                        // confirmButtonText: 'Cool'
-                      })
+                      // Swal.fire({
+                      //   title: 'Invalid credentials',
+                      //   icon: 'error',
+                      //   // confirmButtonText: 'Cool'
+                      // })
                     });
                 }}
               >

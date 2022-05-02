@@ -49,11 +49,11 @@ function Login() {
                             axios(config)
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
-                                    Swal.fire({
-                                        title: 'Account created',
-                                        icon: 'success',
-                                        // confirmButtonText: 'Cool'
-                                    })
+                                    // Swal.fire({
+                                    //     title: 'Account created',
+                                    //     icon: 'success',
+                                    //     // confirmButtonText: 'Cool'
+                                    // })
                                     // localStorage.setItem('id', response.data.User.id)
                                     // localStorage.setItem('name', response.data.User.name)
                                     console.log(response.data.User);
@@ -64,11 +64,11 @@ function Login() {
                                 })
                                 .catch(function (error) {
                                     console.log(error);
-                                    Swal.fire({
-                                        title: 'Invalid credentials',
-                                        icon: 'error',
-                                        // confirmButtonText: 'Cool'
-                                    })
+                                    // Swal.fire({
+                                    //     title: 'Invalid credentials',
+                                    //     icon: 'error',
+                                    //     // confirmButtonText: 'Cool'
+                                    // })
                                 });
 
                         }}
