@@ -200,7 +200,7 @@ const ResponsiveAppBar = () => {
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
 
-    // const name = localStorage.getItem("name").charAt(0).toUpperCase();
+    const name = localStorage.getItem("name").charAt(0).toUpperCase();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -301,7 +301,7 @@ const ResponsiveAppBar = () => {
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                <Avatar>{name}</Avatar>
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -328,7 +328,9 @@ const ResponsiveAppBar = () => {
                             <MenuItem onClick={handleCloseUserMenu}>
                                 <Typography textAlign="center" onClick={() => {
                                     navigate('/internship-fair');
-                                    localStorage.removeItem('token-info');
+                                    localStorage.removeItem('token');
+                                    localStorage.removeItem('name');
+                                    localStorage.removeItem('sap');
                                 }}>Logout</Typography>
                             </MenuItem>
                         </Menu>
