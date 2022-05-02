@@ -1,6 +1,5 @@
 import { Grid, Button } from '@mui/material'
 import React, { useState } from 'react'
-import Popup from './Popup'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import Swal from 'sweetalert2'
@@ -50,7 +49,7 @@ function Login() {
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
                                     Swal.fire({
-                                        title: 'Account created',
+                                        title: 'Welcome Back!',
                                         icon: 'success',
                                         // confirmButtonText: 'Cool'
                                     })

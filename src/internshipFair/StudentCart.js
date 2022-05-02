@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Divider, Grid } from '@mui/material'
+import { Divider, Grid, TextField } from '@mui/material'
 import SquareIcon from '@mui/icons-material/Square';
 import { Button } from '@mui/material';
 const StudentCart = () => {
@@ -67,6 +67,7 @@ const StudentCart = () => {
                         <b> UPID: 34235346536</b>
                     </p>
                     <br/>
+                    <TextField variant='outlined' label="Screenshot" margin='normal'/>
                     <center>
 
                         <Button variant='contained' style={{ backgroundColor: '#2D3748',padding:'3% 32%' }}>Submit</Button>
