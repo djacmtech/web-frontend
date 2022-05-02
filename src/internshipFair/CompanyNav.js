@@ -12,18 +12,22 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const pages = [
   "Post an Internship",
   "IF Application list",
   // "Download Brochure",
 ];
-const settings = ["Profile", "Logout"];
+const settings = ["Logout"];
 
 const CompanyNav = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const navigate = useNavigate();
+
+  const name = localStorage.getItem("name").charAt(0).toUpperCase();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -122,7 +126,13 @@ const CompanyNav = () => {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Link to={`/${page.toLowerCase().replace(' ', '-').replace(' ', '-')}`} style={{ textDecoration: "none" }}>
+                <Link
+                  to={`/${page
+                    .toLowerCase()
+                    .replace(" ", "-")
+                    .replace(" ", "-")}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
@@ -132,23 +142,27 @@ const CompanyNav = () => {
                     {page}
                   </Button>
                 </Link>
-
               ))}
-              <a style={{textDecoration:'none'}} target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1ZAMXsGkaUGj8WHKAO5VKQIqheS0iH6bg/view?usp=sharing" >
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
-                style={{ fontFamily: "Poppins" }}
+              <a
+                style={{ textDecoration: "none" }}
+                target="_blank"
+                rel="noreferrer"
+                href="https://drive.google.com/file/d/1ZAMXsGkaUGj8WHKAO5VKQIqheS0iH6bg/view?usp=sharing"
               >
-                Download Brochure
-              </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "black", display: "block" }}
+                  style={{ fontFamily: "Poppins" }}
+                >
+                  Download Brochure
+                </Button>
               </a>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                  <Avatar>{name}</Avatar>
                 </IconButton>
               </Tooltip>
               <Menu
@@ -167,11 +181,19 @@ const CompanyNav = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography
+                    textAlign="center"
+                    onClick={() => {
+                      navigate("/internship-fair");
+                      localStorage.removeItem("token");
+                      localStorage.removeItem("name");
+                      // localStorage.removeItem('sap');
+                    }}
+                  >
+                    Logout
+                  </Typography>
+                </MenuItem>
               </Menu>
             </Box>
           </Toolbar>
