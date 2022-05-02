@@ -200,7 +200,7 @@ const ResponsiveAppBar = () => {
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
 
-    // const name = localStorage.getItem("name").charAt(0).toUpperCase();
+    const name = localStorage.getItem("name").charAt(0).toUpperCase();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
