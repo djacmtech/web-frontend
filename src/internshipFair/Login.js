@@ -54,8 +54,8 @@ function Login() {
                                         icon: 'success',
                                         // confirmButtonText: 'Cool'
                                     })
-                                    // localStorage.setItem('id', response.data.User.id)
-                                    // localStorage.setItem('name', response.data.User.name)
+                                    localStorage.setItem('id', response.data.User.id)
+                                    localStorage.setItem('name', response.data.User.email)
                                     console.log(response.data.User);
                                     if (response.data.User.is_student === true)
                                         navigate("/dashboard");
@@ -64,11 +64,11 @@ function Login() {
                                 })
                                 .catch(function (error) {
                                     console.log(error);
-                                    Swal.fire({
-                                        title: 'Invalid credentials',
-                                        icon: 'error',
-                                        // confirmButtonText: 'Cool'
-                                    })
+                                    // Swal.fire({
+                                    //     title: 'Invalid credentials',
+                                    //     icon: 'error',
+                                    //     // confirmButtonText: 'Cool'
+                                    // })
                                 });
 
                         }}
