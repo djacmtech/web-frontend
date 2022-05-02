@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import TextField from "./TextField";
-import axios from "axios";
+import Swal from 'sweetalert2'
 import { useEffect } from "react";
+import axios from "axios";
 
 const INITIAL_FORM_STATE = {
   email: "",
@@ -38,8 +39,6 @@ const FORM_VALIDATION = Yup.object().shape({
 const Profilepage = () => {
 
     const [details, setDetails] = useState([])
-
-    var axios = require('axios')
     var config = {
       method: 'get',
       url: 'https://djacmdev.pythonanywhere.com/if/user',
@@ -47,6 +46,23 @@ const Profilepage = () => {
         'Authorization': `Token ${localStorage.getItem('token')}`, 
       }
     };
+
+
+    var config2 = {
+      method: 'get',
+      url: 'https://djacmdev.pythonanywhere.com/if/student',
+      headers: { 
+        'Authorization': 'Token 64abcd68a0ef771f6a2e889de806a1deac36e066'
+      }
+    };
+
+    axios(config2)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
     useEffect(()=>{
       axios(config)
@@ -133,6 +149,11 @@ const Profilepage = () => {
                     axios(config)
                       .then(function (response) {
                         console.log(JSON.stringify(response.data));
+                        Swal.fire({
+                          title: 'Profile Updated!',
+                          icon: 'success',
+                          // confirmButtonText: 'Cool'
+                        })
                       })
                       .catch(function (error) {
                         console.log(error);
