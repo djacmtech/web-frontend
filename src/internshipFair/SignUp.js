@@ -149,13 +149,13 @@ function SignUp() {
                       <TextField name="lastName" label="Last Name" />
                     </Grid>
 
-                    <Grid item md={6} xs={12}>
-                      <TextField name="email" label="Email" />
+                    <Grid item md={12} xs={12}>
+                      <TextField name="email" label="Email" fullWidth />
                     </Grid>
 
-                    <Grid item md={6} xs={12}>
+                    {/* <Grid item md={6} xs={12}>
                       <TextField name="sapId" label="Sap ID" />
-                    </Grid>
+                    </Grid> */}
 
                     <Grid item md={6} xs={12}>
                       <TextField
