@@ -37,6 +37,21 @@ const StudentCart = () => {
         setItems(comp)
     }, [])
 
+    const CssTextField = styled(TextField)({
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderColor: 'white',
+            },
+            '&:hover fieldset': {
+                borderColor: 'white',
+              },
+              '&:active fieldset': {
+                borderColor: 'white',
+                color:'white'
+              },
+        }
+    })
+
     return (
         <div style={{ backgroundColor: 'white', color: 'black', fontFamily: 'Poppins', padding: '3% 3% 3% 9%', height: '100vh' }}>
             <Grid container spacing={4} style={{ padding: '5%' }}>
@@ -75,14 +90,11 @@ const StudentCart = () => {
                     </p>
                     <br />
                     <label htmlFor="icon-button-file">
-                        Screenshot :
-                        <Input accept="image/*" id="icon-button-file" type="file" />
-                        <IconButton color="primary" aria-label="upload picture" component="span">
-                            <PhotoCamera style={{padding:'5px',color:'white',border:'1px white dotted',borderRadius:'50%'}} />
-                        </IconButton>
+                        Screenshot : &nbsp;
+                        <CssTextField type='text' size='small' placeholder='link'></CssTextField>
                     </label>
                     <center>
-
+<br/>
                         <Button variant='contained' style={{ backgroundColor: '#2D3748', padding: '3% 32%' }}>Submit</Button>
                     </center>
                 </Grid>
