@@ -338,7 +338,7 @@ const ResponsiveAppBar = () => {
                     navigate("/internship-fair");
                     localStorage.removeItem("token");
                     localStorage.removeItem("name");
-                    localStorage.removeItem("sap");
+                    localStorage.removeItem("id");
                   }}
                 >
                   Logout

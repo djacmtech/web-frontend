@@ -11,7 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
+// import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { Link, useNavigate } from "react-router-dom";
 
 const pages = [
@@ -42,23 +42,23 @@ const CompanyNav = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  function ElevationScroll(props) {
-    const { children, window } = props;
+  // function ElevationScroll(props) {
+  //   const { children, window } = props;
 
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
-    const trigger = useScrollTrigger({
-      disableHysteresis: true,
-      threshold: 0,
-      target: window ? window() : undefined,
-    });
+  //   // Note that you normally won't need to set the window ref as useScrollTrigger
+  //   // will default to window.
+  //   // This is only being set here because the demo is in an iframe.
+  //   const trigger = useScrollTrigger({
+  //     disableHysteresis: true,
+  //     threshold: 0,
+  //     target: window ? window() : undefined,
+  //   });
 
-    return React.cloneElement(children, {
-      elevation: trigger ? 4 : 0,
-      // color: trigger ? '#FFFFFF' : 'transparent',
-    });
-  }
+  //   return React.cloneElement(children, {
+  //     elevation: trigger ? 4 : 0,
+  //     // color: trigger ? '#FFFFFF' : 'transparent',
+  //   });
+  // }
   return (
     // <ElevationScroll>
       <AppBar

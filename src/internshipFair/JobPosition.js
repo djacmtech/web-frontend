@@ -7,7 +7,6 @@ import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
-
 const JobPosition = () => {
 
   var url = window.location.pathname.split('/')[2]
@@ -36,6 +35,7 @@ const JobPosition = () => {
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
         <div
+        className="jobTitle"
           style={{
             fontFamily: "Poppins",
             fontWeight: "600",
@@ -124,6 +124,7 @@ const JobPosition = () => {
               </div>
             </div>
             <div
+            className="jobLinks"
               style={{
                 display: "flex",
                 padding: "1.5rem 1.5rem 1rem 1.5rem",
