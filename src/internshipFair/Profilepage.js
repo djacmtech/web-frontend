@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import TextField from "./TextField";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 import { useEffect } from "react";
 import axios from "axios";
 
@@ -21,42 +21,40 @@ const INITIAL_FORM_STATE = {
 
 const FORM_VALIDATION = Yup.object().shape({
   // email: Yup.string().email("Invalid Email").required("This field is Required"),
-  // sapId: Yup.number()
-  //   .min(11, "Invalid Sap ID")
-  //   .integer()
-  //   .typeError("Please enter a valid SapId")
-  //   .required("This field is Required"),
+  sapId: Yup.number()
+    .min(11, "Invalid Sap ID")
+    .integer()
+    .typeError("Please enter a valid SapId")
+    .required("This field is Required"),
   year: Yup.number().required("This field is Required"),
   branch: Yup.string().required("This field is Required"),
   resume: Yup.string().required("This field is Required"),
   domains: Yup.string().required("This field is Required"),
   skills: Yup.string().required("This field is Required"),
   project: Yup.string().required("This field is Required"),
-  phone: Yup.string().required("This field is Required"),
-  // .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
+  phone: Yup.string().required("This field is Required")
+  .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
 });
 
 const Profilepage = () => {
+  const [details, setDetails] = useState([]);
+  var config = {
+    method: "get",
+    url: "https://djacmdev.pythonanywhere.com/if/user",
+    headers: {
+      Authorization: `Token ${localStorage.getItem("token")}`,
+    },
+  };
 
-    const [details, setDetails] = useState([])
-    var config = {
-      method: 'get',
-      url: 'https://djacmdev.pythonanywhere.com/if/user',
-      headers: { 
-        'Authorization': `Token ${localStorage.getItem('token')}`, 
-      }
-    };
+  var config2 = {
+    method: "get",
+    url: "https://djacmdev.pythonanywhere.com/if/student",
+    headers: {
+      Authorization: `Token ${localStorage.getItem("token")}`,
+    },
+  };
 
-
-    var config2 = {
-      method: 'get',
-      url: 'https://djacmdev.pythonanywhere.com/if/student',
-      headers: { 
-        'Authorization': 'Token 64abcd68a0ef771f6a2e889de806a1deac36e066'
-      }
-    };
-
-    axios(config2)
+  axios(config2)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
     })
@@ -64,16 +62,16 @@ const Profilepage = () => {
       console.log(error);
     });
 
-    useEffect(()=>{
-      axios(config)
+  useEffect(() => {
+    axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
-        setDetails(response.data)
+        setDetails(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-    }, [])
+  }, []);
 
   return (
     <div style={{ backgroundColor: "#F8F8F8" }}>
@@ -111,7 +109,7 @@ const Profilepage = () => {
                     color: "#187271",
                   }}
                 >
-                  {details.first_name+" "+details.last_name}
+                  {details.first_name + " " + details.last_name}
                 </p>
               </Grid>
               <Grid item sx={{ width: "100%", marginTop: "3%" }}>
@@ -120,40 +118,39 @@ const Profilepage = () => {
                   validationSchema={FORM_VALIDATION}
                   onSubmit={(values) => {
                     var data = JSON.stringify({
-                      "email_id": `${details.email}`,
-                    "phone_no": `+91${values.phone}`,
-                    "sap_id": `${values.sapId}`,
-                    "current_year": `${values.year}`,
-                    "department": `${values.branch}`,
-                    "domains": `${values.domains}`,
-                    "skills": `${values.skills}`,
-                    "resume_drive_link": `${values.resume}`,
-                    "project_drive_link": `${values.project}`,
-                    "graduation_year": "2024",
-                    "user": `${localStorage.getItem("id")}`,
-                    })
+                      email_id: `${details.email}`,
+                      phone_no: `+91${values.phone}`,
+                      sap_id: `${values.sapId}`,
+                      current_year: `${values.year}`,
+                      department: `${values.branch}`,
+                      domains: `${values.domains}`,
+                      skills: `${values.skills}`,
+                      resume_drive_link: `${values.resume}`,
+                      project_drive_link: `${values.project}`,
+                      graduation_year: "2024",
+                      user: `${localStorage.getItem("id")}`,
+                    });
 
-                    console.log(data)
+                    console.log(data);
 
                     var config = {
                       method: "POST",
                       url: "http://djacmdev.pythonanywhere.com/if/student",
                       headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Token ${localStorage.getItem('token')}`,
+                        "Content-Type": "application/json",
+                        Authorization: `Token ${localStorage.getItem("token")}`,
                       },
                       data: data,
                     };
-
 
                     axios(config)
                       .then(function (response) {
                         console.log(JSON.stringify(response.data));
                         Swal.fire({
-                          title: 'Profile Updated!',
-                          icon: 'success',
+                          title: "Profile Updated!",
+                          icon: "success",
                           // confirmButtonText: 'Cool'
-                        })
+                        });
                       })
                       .catch(function (error) {
                         console.log(error);
@@ -168,7 +165,7 @@ const Profilepage = () => {
                           name="email"
                           placeholder={details.email}
                           inputProps={{
-                            readOnly:true,
+                            readOnly: true,
                           }}
                           // type="email"
                           // required
@@ -187,29 +184,25 @@ const Profilepage = () => {
 
                       <Grid item md={6} xs={12}>
                         <div>SAP ID</div>
-                        <TextField 
-                          name="sapId" 
-                          // placeholder={localStorage.getItem("sap")}
+                        <TextField
+                          name="sapId"
+                          placeholder="SAP ID"
                           // inputProps={{
                           //   readOnly:true,
                           // }}
                         />
                       </Grid>
 
+                      <Grid item md={6} xs={0} className="extraGrid"></Grid>
+
                       <Grid item md={6} xs={12}>
                         <div>Year</div>
-                        <TextField
-                          name="year"
-                          placeholder="Add year"
-                        />
+                        <TextField name="year" placeholder="Add year" />
                       </Grid>
 
                       <Grid item md={6} xs={12}>
                         <div>Branch</div>
-                        <TextField
-                          name="branch"
-                          placeholder="Add branch"
-                        />
+                        <TextField name="branch" placeholder="Add branch" />
                       </Grid>
 
                       <Grid item md={6} xs={12}>

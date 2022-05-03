@@ -20,7 +20,7 @@ const FORM_VALIDATION = Yup.object().shape({
 
 function Login() {
     const navigate = useNavigate()
-    const [openPopup, setOpenPopup] = useState(true)
+    // const [openPopup, setOpenPopup] = useState(true)
     var axios = require('axios');
 
     return (

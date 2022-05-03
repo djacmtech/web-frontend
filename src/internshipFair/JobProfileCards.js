@@ -43,7 +43,7 @@ export default function JobCard() {
                     <MdLocationPin className="job-details-icon" />{" "}
                     <span style={{ color: "#2D3748" }}> MODE </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> Online </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"3rem" }}> Online </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
@@ -57,7 +57,7 @@ export default function JobCard() {
                     <AiFillClockCircle className="job-details-icon" />{" "}
                     <span> DURATION </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> 3 months </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"2.5rem" }}> 3 months </p>
                 </div>
               </div>
             </Grid>

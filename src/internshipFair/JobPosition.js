@@ -7,7 +7,6 @@ import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
-
 const JobPosition = () => {
 
   var url = window.location.pathname.split('/')[2]
@@ -36,6 +35,7 @@ const JobPosition = () => {
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
         <div
+        className="jobTitle"
           style={{
             fontFamily: "Poppins",
             fontWeight: "600",
@@ -88,7 +88,7 @@ const JobPosition = () => {
                     <MdLocationPin className="job-details-icon" />{" "}
                     <span style={{ color: "#2D3748" }}> MODE </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> {jobDetails.WFH ? "Online" : "Offline"} </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"3.1rem" }}> {jobDetails.WFH ? "Online" : "Offline"} </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
@@ -102,7 +102,7 @@ const JobPosition = () => {
                     <AiFillClockCircle className="job-details-icon" />{" "}
                     <span> DURATION </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> {jobDetails.duration} </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"2.5rem" }}> {jobDetails.duration} </p>
                 </div>
               </div>
               <div
@@ -124,6 +124,7 @@ const JobPosition = () => {
               </div>
             </div>
             <div
+            className="jobLinks"
               style={{
                 display: "flex",
                 padding: "1.5rem 1.5rem 1rem 1.5rem",
