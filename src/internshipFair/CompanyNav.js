@@ -19,7 +19,6 @@ const pages = [
   "IF Application list",
   // "Download Brochure",
 ];
-const settings = ["Logout"];
 
 const CompanyNav = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -61,7 +60,7 @@ const CompanyNav = () => {
     });
   }
   return (
-    <ElevationScroll>
+    // <ElevationScroll>
       <AppBar
         position="static"
         style={{ backgroundColor: "white", color: "black" }}
@@ -137,7 +136,7 @@ const CompanyNav = () => {
                     key={page}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "black", display: "block" }}
-                    style={{ fontFamily: "Poppins" }}
+                    // style={{ fontFamily: "Poppins" }}
                   >
                     {page}
                   </Button>
@@ -188,7 +187,7 @@ const CompanyNav = () => {
                       navigate("/internship-fair");
                       localStorage.removeItem("token");
                       localStorage.removeItem("name");
-                      // localStorage.removeItem('sap');
+                      localStorage.removeItem('id');
                     }}
                   >
                     Logout
@@ -199,7 +198,7 @@ const CompanyNav = () => {
           </Toolbar>
         </Container>
       </AppBar>
-    </ElevationScroll>
+    // </ElevationScroll>
   );
 };
 export default CompanyNav;

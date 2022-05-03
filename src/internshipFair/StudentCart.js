@@ -67,8 +67,9 @@ const StudentCart = () => {
                         <b> UPID: 34235346536</b>
                     </p>
                     <br/>
-                    <TextField variant='outlined' label="Screenshot" margin='normal'/>
+
                     <center>
+                    <TextField style={{backgroundColor:'white'}} color='secondary' variant='outlined' placeholder="Screenshot" margin='normal'/>
 
                         <Button variant='contained' style={{ backgroundColor: '#2D3748',padding:'3% 32%' }}>Submit</Button>
                     </center>
