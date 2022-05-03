@@ -88,7 +88,7 @@ const JobPosition = () => {
                     <MdLocationPin className="job-details-icon" />{" "}
                     <span style={{ color: "#2D3748" }}> MODE </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> {jobDetails.WFH ? "Online" : "Offline"} </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"3.1rem" }}> {jobDetails.WFH ? "Online" : "Offline"} </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
@@ -102,7 +102,7 @@ const JobPosition = () => {
                     <AiFillClockCircle className="job-details-icon" />{" "}
                     <span> DURATION </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> {jobDetails.duration} </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"2.5rem" }}> {jobDetails.duration} </p>
                 </div>
               </div>
               <div
