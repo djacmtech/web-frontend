@@ -2,33 +2,51 @@ import React, { useState, useEffect } from 'react'
 import { Divider, Grid, TextField } from '@mui/material'
 import SquareIcon from '@mui/icons-material/Square';
 import { Button } from '@mui/material';
+import axios from "axios";
 const StudentCart = () => {
 
     const [items, setItems] = useState([[{'company_name':'hi', 'role':'hi', 'price':50}]])
 
-    const data = [
+    const data = [[
         {
-            name: 'company name',
+            company_name: 'company name',
             role: 'internship role',
             price: '50',
         },
         {
-            name: 'company name',
+            company_name: 'company name',
             role: 'internship role',
             price: '50',
         },
         {
-            name: 'company name',
+            company_name: 'company name',
             role: 'internship role',
             price: '50',
         }
-    ]
+    ]]
 
-    const comp = JSON.parse(localStorage.getItem('CartCompanies'))
-    console.log(comp[0][0])
+    let headersList = {
+        "Accept": "*/*",
+        "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+        "Authorization": `Token ${localStorage.getItem('token')}` 
+    }
+
+    let reqOptions = {
+        url: "https://djacmdev.pythonanywhere.com//if/cart",
+        method: "GET",
+        headers: headersList,
+    }
+
     useEffect(()=>{
-        setItems(comp)
+        axios.request(reqOptions).then(function (response) {
+            setItems(response.data.cart_items);
+        })
     }, [])
+
+    // const comp = JSON.parse(localStorage.getItem('CartCompanies'))
+    // useEffect(()=>{
+    //     setItems(comp?comp:data)
+    // }, [])
 
     return (
         <div style={{ backgroundColor: 'white', color: 'black', fontFamily: 'Poppins', padding: '3% 3% 3% 9%' }}>
@@ -45,10 +63,10 @@ const StudentCart = () => {
                                     <SquareIcon style={{ fontSize: '7rem' }} />
                                 </Grid>
                                 <Grid item xs={8} style={{ transform: 'translateY(30px)' }}>
-                                    <span style={{ color: '#187271', fontWeight: '700', padding: '20px 0' }}>{x[0].company_name}</span>
+                                    <span style={{ color: '#187271', fontWeight: '700', padding: '20px 0' }}>{x.company_name}</span>
                                     <br />
-                                    <span style={{ color: 'grey' }}>{x[0].role}</span>
-                                    <span style={{ color: 'grey', float: 'right' }}>50</span>
+                                    <span style={{ color: 'grey' }}>{x.role}</span>
+                                    <span style={{ color: 'grey', float: 'right' }}>{x.price}</span>
                                 </Grid>
                             </Grid>
                         })}

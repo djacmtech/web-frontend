@@ -6,8 +6,14 @@ import { MdLocationPin } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 const JobPosition = () => {
+
+  const [job, setJob] = useState([]);
+
+  const [companies, setCompanies] = useState([]);
+  const [count, setCount] = useState(0);
 
   var url = window.location.pathname.split('/')[2]
   const [jobDetails, setJobDetails] = useState([])
@@ -155,33 +161,16 @@ const JobPosition = () => {
               <div className="jobtitle">Who can apply?</div>
               <div>Only those candidates can apply who:</div>
               <ol type="1" style={{ paddingInlineStart: "18px" }}>
-                <li>are available for the work from home job/internship</li>
-                <li>
-                  can start the work from home job/internship between 1st Apr'22
-                  and 6th May'22
-                </li>
-                <li>are available for duration of 2 months</li>
-                <li>have relevant skills and interests</li>
+                {jobDetails.job_requirement}
               </ol>
             </div>
             <div style={{ paddingBottom: "1rem" }}>
               <div className="jobtitle">Skills</div>
-              <div className="skills">abcd</div>
+              {jobDetails.mandatory_skills?.split(',').map((item)=><div className="skills">{item}</div>)}
             </div>
             <div style={{ paddingBottom: "1rem" }}>
               <div className="jobtitle">Perks</div>
-              <ol
-                type="1"
-                style={{ paddingInlineStart: "18px", marginBlockStart: "0" }}
-              >
-                <li>are available for the work from home job/internship</li>
-                <li>
-                  can start the work from home job/internship between 1st Apr'22
-                  and 6th May'22
-                </li>
-                <li>are available for duration of 2 months</li>
-                <li>have relevant skills and interests</li>
-              </ol>
+              {jobDetails.perks}
             </div>
             <Grid item xs={12}>
               <Link to='/cart' style={{ textDecoration: 'none' }}>
@@ -202,7 +191,7 @@ const JobPosition = () => {
                       border: "2px solid rgba(24, 114, 113, 1)",
                     },
                   }}
-                  type="submit"
+                  // onClick={() => addCompany(items.id)}
                 >
                   ADD TO CART
                 </Button>
