@@ -8,8 +8,10 @@ import { MdLocationPin } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
-export default function Dashboard () {
+export default function Dashboard() {
     const [job, setJob] = useState([]);
 
     const [companies, setCompanies] = useState([])
@@ -18,6 +20,11 @@ export default function Dashboard () {
     const token = localStorage.getItem('token')
 
     const addCompany = (id) => {
+        Swal.fire({
+            icon: 'success',
+            title: 'ADDED TO THE CARt',
+            footer: '<Link to="/cart">Check out the cart</Link>'
+          })
         let filteredCompany = job.filter((singleJob) => singleJob.id === id)
         setCount(count + 1)
         setCompanies([...companies, filteredCompany])
@@ -66,9 +73,9 @@ export default function Dashboard () {
     }, [])
 
     return (
-        <div>
+        <div style={{height:'100vh'}}>
             <InterNavbar />
-            <Grid container spacing={0} style={{ padding: '10%', backgroundColor: '#E5E5E5' }}>
+            <Grid container spacing={0} style={{ padding: '10% 10% 15%', backgroundColor: '#E5E5E5' }}>
                 <Grid md={6} style={{ paddingInline: '3%' }}>
                     <p style={{ paddingInline: '10%', backgroundColor: '#E5E5E5', color: '#2D3748', fontSize: '2rem', fontWeight: 'bold' }}> Student Dashboard </p>
                     <Filter />
@@ -105,7 +112,7 @@ export default function Dashboard () {
                                     </div>
                                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                                         {/* <Link style={{ textDecoration: 'none' }}> */}
-                                        <Button variant="contained" sx={{ backgroundColor: '#187271', textTransform: 'none', fontSize: 'Poppins', height: '2.2rem' }} onClick={() => addCompany(items.id)}> Add to cart </Button>
+                                        <Button variant="contained" sx={{ backgroundColor: '#187271', textTransform: 'none', fontSize: 'Poppins', height: '2.2rem' }} onClick={() => { addCompany(items.id) }}> Add to cart </Button>
                                         {/* </Link> */}
                                         <Button variant="text" href={`/jobposition/${items.id}`} style={{ color: '#187271', fontWeight: '600' }} > View Details </Button>
                                     </div>

@@ -283,7 +283,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            DJSCE ACM INTERNSHIP FAIR
+            {/* DJSCE ACM INTERNSHIP FAIR */}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
