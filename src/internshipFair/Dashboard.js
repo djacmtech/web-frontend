@@ -25,7 +25,7 @@ export default function Dashboard() {
         setCompanies([...companies, filteredCompany])
         var FormData = require('form-data');
         var data = new FormData();
-        data.append('job', '4');
+        data.append('job', `${id}`);
 
         var config = {
             method: 'post',
