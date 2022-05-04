@@ -4,7 +4,7 @@ import CustomizedTables from "./AplTable";
 const ApplicationList = () => {
   return (
     <div
-      style={{ padding: "4% 11%", backgroundColor: "white", color: "black" }}
+      style={{ padding: "4% 11%", backgroundColor: "white", color: "black" ,height:'100vh'}}
     >
       <h2 className="aplHead">IF Application List</h2>
 

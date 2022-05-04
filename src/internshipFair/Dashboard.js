@@ -1,29 +1,53 @@
 import InterNavbar from "./InterNavbar";
 import Grid from "@mui/material/Grid";
 import Filter from "./Filter";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import { MdLocationPin } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
-  const [job, setJob] = useState([]);
+    const [job, setJob] = useState([]);
 
   const [companies, setCompanies] = useState([]);
   const [count, setCount] = useState(0);
 
   const token = localStorage.getItem("token");
 
-  const addCompany = (id) => {
-    let filteredCompany = job.filter((singleJob) => singleJob.id === id);
-    setCount(count + 1);
-    setCompanies([...companies, filteredCompany]);
-    var FormData = require("form-data");
-    var data = new FormData();
-    data.append("job", "4");
+    const addCompany = (id) => {
+        Swal.fire({
+            icon: 'success',
+            title: 'ADDED TO THE CART',
+            footer: <Link to="/cart">Check out the cart</Link>
+          })
+        let filteredCompany = job.filter((singleJob) => singleJob.id === id)
+        setCount(count + 1)
+        setCompanies([...companies, filteredCompany])
+        var FormData = require('form-data');
+        var data = new FormData();
+        data.append('job', '4');
+
+        var config = {
+            method: 'post',
+            url: 'https://djacmdev.pythonanywhere.com/if/cart',
+            headers: {
+                'Authorization': `Token ${token}`
+            },
+            data: data
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
 
     var config = {
       method: "post",

@@ -36,7 +36,7 @@ const AppliedJobs = () => {
 const number  = jobApplied.length;
 
   return (
-    <div style={{ backgroundColor: "#F8F8F8" }}>
+    <div style={{ backgroundColor: "#F8F8F8",height:'100vh' }}>
       <center>
         <div
           style={{
