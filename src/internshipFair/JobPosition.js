@@ -7,14 +7,13 @@ import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
-
 const JobPosition = () => {
 
   var url = window.location.pathname.split('/')[2]
   const [jobDetails, setJobDetails] = useState([])
-
+  const token  = localStorage.getItem("token");
   var myHeaders = new Headers();
-  myHeaders.append("Authorization", "Token 2f241d7c99fdd2ef5c8baf3417db8701abe53254");
+  myHeaders.append("Authorization", `Token ${token}`);
 
   var requestOptions = {
     method: 'GET',
@@ -36,6 +35,7 @@ const JobPosition = () => {
     <div style={{ backgroundColor: "#F8F8F8" }}>
       <center>
         <div
+        className="jobTitle"
           style={{
             fontFamily: "Poppins",
             fontWeight: "600",
@@ -88,7 +88,7 @@ const JobPosition = () => {
                     <MdLocationPin className="job-details-icon" />{" "}
                     <span style={{ color: "#2D3748" }}> MODE </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> {jobDetails.WFH ? "Online" : "Offline"} </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"3.1rem" }}> {jobDetails.WFH ? "Online" : "Offline"} </p>
                 </div>
                 <div className="job-details-condition">
                   <div className="job-details-headings">
@@ -102,7 +102,7 @@ const JobPosition = () => {
                     <AiFillClockCircle className="job-details-icon" />{" "}
                     <span> DURATION </span>
                   </div>
-                  <p style={{ fontWeight: "500" }}> {jobDetails.duration} </p>
+                  <p style={{ fontWeight: "500", paddingLeft:"2.5rem" }}> {jobDetails.duration} </p>
                 </div>
               </div>
               <div
@@ -124,6 +124,7 @@ const JobPosition = () => {
               </div>
             </div>
             <div
+            className="jobLinks"
               style={{
                 display: "flex",
                 padding: "1.5rem 1.5rem 1rem 1.5rem",
@@ -154,33 +155,16 @@ const JobPosition = () => {
               <div className="jobtitle">Who can apply?</div>
               <div>Only those candidates can apply who:</div>
               <ol type="1" style={{ paddingInlineStart: "18px" }}>
-                <li>are available for the work from home job/internship</li>
-                <li>
-                  can start the work from home job/internship between 1st Apr'22
-                  and 6th May'22
-                </li>
-                <li>are available for duration of 2 months</li>
-                <li>have relevant skills and interests</li>
+                {jobDetails.job_requirement}
               </ol>
             </div>
             <div style={{ paddingBottom: "1rem" }}>
               <div className="jobtitle">Skills</div>
-              <div className="skills">abcd</div>
+              {jobDetails.mandatory_skills?.split(',').map((item)=><div className="skills">{item}</div>)}
             </div>
             <div style={{ paddingBottom: "1rem" }}>
               <div className="jobtitle">Perks</div>
-              <ol
-                type="1"
-                style={{ paddingInlineStart: "18px", marginBlockStart: "0" }}
-              >
-                <li>are available for the work from home job/internship</li>
-                <li>
-                  can start the work from home job/internship between 1st Apr'22
-                  and 6th May'22
-                </li>
-                <li>are available for duration of 2 months</li>
-                <li>have relevant skills and interests</li>
-              </ol>
+              {jobDetails.perks}
             </div>
             <Grid item xs={12}>
               <Link to='/cart' style={{ textDecoration: 'none' }}>
@@ -201,7 +185,7 @@ const JobPosition = () => {
                       border: "2px solid rgba(24, 114, 113, 1)",
                     },
                   }}
-                  type="submit"
+                  // onClick={() => addCompany(items.id)}
                 >
                   ADD TO CART
                 </Button>

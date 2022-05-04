@@ -22,6 +22,8 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
 }));
 
+const token  = localStorage.getItem("token");
+
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:nth-of-type(odd)': {
         backgroundColor: theme.palette.action.hover,
@@ -38,7 +40,7 @@ var config = {
     method: 'get',
     url: 'https://djacmdev.pythonanywhere.com/if/job-create',
     headers: {
-        'Authorization': 'Token 9009a5bec86112ef738f18418ccadac59ef574f0',
+        'Authorization': `Token ${token}`,
     },
 };
 

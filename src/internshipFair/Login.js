@@ -1,6 +1,5 @@
 import { Grid, Button } from '@mui/material'
-import React, { useState } from 'react'
-import Popup from './Popup'
+import React from 'react'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import Swal from 'sweetalert2'
@@ -21,7 +20,7 @@ const FORM_VALIDATION = Yup.object().shape({
 
 function Login() {
     const navigate = useNavigate()
-    const [openPopup, setOpenPopup] = useState(true)
+    // const [openPopup, setOpenPopup] = useState(true)
     var axios = require('axios');
 
     return (
@@ -32,6 +31,9 @@ function Login() {
                         initialValues={{ ...INITIAL_FORM_STATE }}
                         validationSchema={FORM_VALIDATION}
                         onSubmit={(values) => {
+                            
+                            console.log(values)
+
                             var FormData = require('form-data');
                             var data = new FormData();
                             data.append('email', `${values.email}`);
@@ -47,13 +49,13 @@ function Login() {
                                 .then(function (response) {
                                     localStorage.setItem('token', response.data.token)
                                     Swal.fire({
-                                        title: 'Account created',
+                                        title: 'Welcome Back!',
                                         icon: 'success',
                                         // confirmButtonText: 'Cool'
                                     })
                                     localStorage.setItem('id', response.data.User.id)
                                     localStorage.setItem('name', response.data.User.email)
-                                    console.log(response.data.User.id);
+                                    console.log(response.data.User);
                                     if (response.data.User.is_student === true)
                                         navigate("/dashboard");
                                     else
@@ -61,11 +63,11 @@ function Login() {
                                 })
                                 .catch(function (error) {
                                     console.log(error);
-                                    Swal.fire({
-                                        title: 'Invalid credentials',
-                                        icon: 'error',
-                                        // confirmButtonText: 'Cool'
-                                    })
+                                    // Swal.fire({
+                                    //     title: 'Invalid credentials',
+                                    //     icon: 'error',
+                                    //     // confirmButtonText: 'Cool'
+                                    // })
                                 });
 
                         }}

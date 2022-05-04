@@ -38,7 +38,7 @@
   text-align: center;
   float: right;
   width: 47%;
-  transform: translate(30px ,-20px);
+  transform: translate(30px, -20px);
   /* transform: translateY(20px); */
 }
 
@@ -93,7 +93,7 @@
   grid-column: 4 / -1;
   grid-row: 1;
 }
-.AbtFair{
+.AbtFair {
   padding-top: 225px;
 }
 .image-stack__item--top {
@@ -290,7 +290,7 @@
 
 .timelineContent {
   width: 100%;
-  color: #2D3748;
+  color: #2d3748;
 }
 
 .testimony {
@@ -340,7 +340,7 @@
 }
 .swiper-button-next {
   /* background-color: black; */
-  color: #2ABEA2 !important;
+  color: #2abea2 !important;
   /* height: 46.7px !important; */
   /* width: 35px !important; */
   /* border-radius: 50%; */
@@ -381,7 +381,7 @@
     height: 30.7px !important;
     width: 20px !important;
   }
-  .companiesdiv{
+  .companiesdiv {
     padding-bottom: 24px !important;
   }
 }
@@ -396,47 +396,45 @@
     font-size: 25px;
     line-height: 30px;
   }
-  .faircontent{
+  .faircontent {
     font-size: 15px;
     line-height: 20px;
     padding-top: 10px;
   }
-  .AbtFair{
+  .AbtFair {
     padding-top: 0px;
   }
-  .featuresfair{
+  .featuresfair {
     padding-left: 25px !important;
     padding-bottom: 45px !important;
   }
-  .feature{
+  .feature {
     padding-left: 0px !important;
   }
-  /* .companies{
-    padding-bottom: 50px !important;
-  } */
 }
 
-@media (max-width: 900px){
-  .extraGrid{
+@media (max-width: 900px) {
+  .extraGrid {
     display: none !important;
   }
 }
 
-.jobtitle{
+.jobtitle {
   font-size: 20px;
   line-height: 45px;
 }
-.skills{
+.skills {
   display: inline;
-  background-color: #2ABEA2;
+  background-color: #2abea2;
   border-radius: 25px;
   padding: 0.5% 2%;
+  margin-inline: 1%;
 }
 
 /* dashboard */
 .job-card {
-  width: 40rem;
-  height: 15rem;
+  width: 90%;
+  height: 28%;
   padding: 3%;
   margin-block: 3%;
 }
@@ -461,13 +459,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 0.8rem;
 }
 
 .job-details-headings {
   display: flex;
   justify-content: space-evenly;
   margin-block-end: 2%;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   width: 100%;
 }
 
@@ -482,7 +481,7 @@
 /* filter */
 
 .filter-card {
-  width: 20rem;
+  width: 85%;
   height: 25rem;
   padding: 8%;
   text-align: center;
@@ -492,4 +491,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* cart */
+.screenshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .jobTitle {
+    font-size: 1.5rem !important;
+    padding-top: 20px !important;
+  }
+  .jobLinks {
+    padding: 0.2rem 0 0 0 !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .resCart {
+    padding-bottom: 100px;
+  }
+  .resCartdiv {
+    padding: 1%;
+  }
 }

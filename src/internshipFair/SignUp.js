@@ -14,7 +14,6 @@ const INITIAL_FORM_STATE = {
   firstName: "",
   lastName: "",
   email: "",
-  sapId: "",
   password: "",
   confirmPassword: "",
 };
@@ -24,11 +23,6 @@ const FORM_VALIDATION = Yup.object().shape({
   firstName: Yup.string().required("Required"),
   lastName: Yup.string().required("Required"),
   email: Yup.string().email("Invalid Email").required("Required"),
-  sapId: Yup.number()
-    .min(11, "Invalid Sap ID")
-    .integer()
-    .typeError("Please enter a valid SapId")
-    .required("Required"),
   password: Yup.string()
     .min(8, "Password should atleast contain 8 characters")
     .required("Required"),
@@ -101,12 +95,16 @@ function SignUp() {
                 initialValues={{ ...INITIAL_FORM_STATE }}
                 validationSchema={FORM_VALIDATION}
                 onSubmit={(values) => {
+                  console.log(values)
+                  console.log('clicked')
                   var data = JSON.stringify({
                     "email": `${values.email}`,
-                    "firstName": `${values.firstName}`,
-                    "lastName": `${values.lastName}`,
+                    "first_name": `${values.firstName}`,
+                    "last_name": `${values.lastName}`,
                     "password": `${values.password}`,
-                    "sapId": `${values.sapId}`
+                    "confirm_password": `${values.confirmPassword}`,
+                    // "sapId": `${values.sapId}`
+
                   });
 
                   var config = {
@@ -121,16 +119,17 @@ function SignUp() {
                   axios(config)
                     .then(function (response) {
                       console.log(JSON.stringify(response.data));
-                      // navigate('/dashboard');
+                      Swal.fire({
+                        title: 'Account created',
+                        icon: 'success',
+                        // confirmButtonText: 'Cool'
+                      })
+                      localStorage.setItem('email', response.data.email)
+                      navigate('/internship-fair');
 
                     })
                     .catch(function (error) {
                       console.log(error);
-                      Swal.fire({
-                        title: 'Invalid credentials',
-                        icon: 'error',
-                        // confirmButtonText: 'Cool'
-                      })
                     });
                 }}
               >
@@ -144,13 +143,13 @@ function SignUp() {
                       <TextField name="lastName" label="Last Name" />
                     </Grid>
 
-                    <Grid item md={6} xs={12}>
-                      <TextField name="email" label="Email" />
+                    <Grid item md={12} xs={12}>
+                      <TextField name="email" label="Email"/>
                     </Grid>
 
-                    <Grid item md={6} xs={12}>
+                    {/* <Grid item md={6} xs={12}>
                       <TextField name="sapId" label="Sap ID" />
-                    </Grid>
+                    </Grid> */}
 
                     <Grid item md={6} xs={12}>
                       <TextField

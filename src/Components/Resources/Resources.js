@@ -88,7 +88,7 @@ const Resources = () => {
       <Header activePage="Resources" />
         <h1 style={{ padding: "2%" }}>Resources</h1>
         <center>
-        <Box sx={{ backgroundColor:"#0A0E2A" }} fullWidth>
+        <Box sx={{ backgroundColor:"#0A0E2A" }}>
           <AppBar position="static" style={{backgroundColor:"#0A0E2A"}}>
             <Tabs
               value={value}

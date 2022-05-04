@@ -1,72 +1,184 @@
-import React from 'react'
-import { Divider, Grid } from '@mui/material'
-import SquareIcon from '@mui/icons-material/Square';
-import { Button } from '@mui/material';
+import React, { useState, useEffect } from "react";
+import { Divider, Grid, TextField } from "@mui/material";
+import SquareIcon from "@mui/icons-material/Square";
+import { styled } from "@mui/material/styles";
+import { Button } from "@mui/material";
+import axios from "axios";
+import "./InternshipFair.css";
 const StudentCart = () => {
+  const Input = styled("input")({
+    display: "none",
+  });
+  const [items, setItems] = useState([
+    [{ company_name: "hi", role: "hi", price: 50 }],
+  ]);
+  const [price, setPrice] = useState([
+    [{ total_items: 4, total_price: 50, grand_total: 500}],
+  ]);
 
-    const data = [
-        {
-            name: 'company name',
-            role: 'internship role',
-            price: '50',
-        },
-        {
-            name: 'company name',
-            role: 'internship role',
-            price: '50',
-        },
-        {
-            name: 'company name',
-            role: 'internship role',
-            price: '50',
-        }
-    ]
+  const data = [
+    {
+      company_name: "company name",
+      role: "internship role",
+      price: "50",
+    },
+    {
+      company_name: "company name",
+      role: "internship role",
+      price: "50",
+    },
+    {
+      company_name: "company name",
+      role: "internship role",
+      price: "50",
+    },
+  ];
 
+  let headersList = {
+    Accept: "*/*",
+    // "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+    Authorization: `Token ${localStorage.getItem("token")}`,
+  };
 
-    return (
-        <div style={{ backgroundColor: 'white', color: 'black', fontFamily: 'Poppins', padding: '3% 3% 3% 9%' }}>
-            <Grid container spacing={1} style={{ padding: '5%' }}>
-                <Grid item sm={8}>
-                    <p style={{ fontSize: '1.5rem' }}>IF Cart</p>
-                    <Divider></Divider>
-                    <div style={{ padding: '2% 6%' }}>
-                        <span style={{ color: 'grey' }}>IF Interview list</span>
-                        <span style={{ color: 'grey', float: 'right', transform: 'translateX(-110px)' }}>Price</span>
-                        {data.map((x) => {
-                            return <Grid container spacing={0}>
-                                <Grid item xs={2}>
-                                    <SquareIcon style={{ fontSize: '7rem' }} />
-                                </Grid>
-                                <Grid item xs={8} style={{ transform: 'translateY(30px)' }}>
-                                    <span style={{ color: '#187271', fontWeight: '700', padding: '20px 0' }}>{x.name}</span>
-                                    <br />
-                                    <span style={{ color: 'grey' }}>{x.role}</span>
-                                    <span style={{ color: 'grey', float: 'right' }}>{x.price}</span>
-                                </Grid>
-                            </Grid>
-                        })}
-                    </div>
+  let reqOptions = {
+    url: "https://djacmdev.pythonanywhere.com//if/cart",
+    method: "GET",
+    headers: headersList,
+  };
+
+  useEffect(() => {
+    axios.request(reqOptions).then(function (response) {
+      setItems(response.data.cart_items ? response.data.cart_items : data);
+      setPrice(response.data.cart ? response.data.cart : null)
+    });
+  }, []);
+
+  const CssTextField = styled(TextField)({
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "white",
+      },
+      "&:hover fieldset": {
+        borderColor: "white",
+      },
+      "&:active fieldset": {
+        borderColor: "white",
+        color: "white",
+      },
+    },
+  });
+
+  return (
+    <div
+      style={{
+        backgroundColor: "white",
+        color: "black",
+        fontFamily: "Poppins",
+        padding: "3% 3% 3% 9%",
+        height: "100vh",
+      }}
+    >
+      <Grid container spacing={4} style={{ padding: "5%" }}>
+        <Grid item sm={8} xs={12} className="resCart">
+          <p style={{ fontSize: "1.5rem" }}>IF Cart</p>
+          <Divider></Divider>
+          <div style={{ padding: "2% 6%" }} className="resCartdiv">
+            <span style={{ color: "grey" }}>IF Interview list</span>
+            <span style={{ color: "grey", float: "right" }}>Price</span>
+            {items.map((x) => {
+              return (
+                <Grid container spacing={0}>
+                  <Grid item xs={2}>
+                    <SquareIcon style={{ fontSize: "7rem" }} />
+                  </Grid>
+                  <Grid item xs={8} style={{ transform: "translateY(30px)" }}>
+                    <span
+                      style={{
+                        color: "#187271",
+                        fontWeight: "700",
+                        padding: "20px 0",
+                      }}
+                    >
+                      {x.company_name}
+                    </span>
+                    <br />
+                    <span style={{ color: "grey" }}>{x.role}</span>
+                    <span style={{ color: "grey", float: "right" }}>
+                      {x.price}
+                    </span>
+                  </Grid>
                 </Grid>
-                <Grid item sm={4} style={{ backgroundColor: '#187271', color: 'white', padding: '2%' }}>
-                    <p style={{ fontSize: '1.3rem', fontWeight: '600' }}>Summary</p>
-                    <Divider />
-                    <p style={{ fontWeight: '600' }}>Interviews <span style={{ float: 'right' }}>50</span></p>
-                    <p style={{ fontWeight: '600' }}>Total <span style={{ float: 'right' }}>50</span></p>
-                    <Divider />
-                    <p style={{ fontWeight: '600' }}>Grand Total <span style={{ float: 'right' }}>50</span></p>
-                    <p style={{ fontSize: '.8rem' }}>Note:<br />
-                        Please pay the above amount through gpay to
-                        <br />
-                        <b> UPID: 34235346536</b>
-                    </p>
-                    <br/>
-                    <center>
+              );
+            })}
+          </div>
+        </Grid>
+        <Grid
+          item
+          sm={4}
+          xs
+          style={{ backgroundColor: "#187271", color: "white", padding: "2%" }}
+        >
+          <p style={{ fontSize: "1.3rem", fontWeight: "600" }}>Summary</p>
+          <Divider />
+          <p style={{ fontWeight: "600" }}>
+            Interviews <span style={{ float: "right" }}>{price.total_items}</span>
+          </p>
+          <p style={{ fontWeight: "600" }}>
+            Total <span style={{ float: "right" }}>{price.total_price}</span>
+          </p>
+          <Divider />
+          <p style={{ fontWeight: "600" }}>
+            Grand Total <span style={{ float: "right" }}>{price.grand_total}</span>
+          </p>
+          <p style={{ fontSize: ".8rem" }}>
+            Note:
+            <br />
+            Please pay the above amount through gpay to
+            <br />
+            <b> UPID: 34235346536</b>
+          </p>
+          <br />
+          <label htmlFor="icon-button-file" className="screenshot">
+            Screenshot : &nbsp;
+            <CssTextField type="text" sx={{color:'white'}} size="small" placeholder="Link" />
+          </label>
+          <br />
+          <p> Once you book the interviews you won't be able to sit for more, do you want to proceed? </p>
+          <center>
+            <Button
+              variant="contained"
+              color="error"
+              sx={{
+                // backgroundColor: "#2D3748",
+                padding: "3% 8%",
+                marginInline: '4%',
+                ":hover": {
+                  opacity: "50%",
+                  // backgroundColor: "#2D3748",
+                },
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#2D3748",
+                marginInline: '4%',
+                padding: "3% 8%",
+                ":hover": {
+                  opacity: "50%",
+                  backgroundColor: "#2D3748",
+                },
+              }}
+            >
+              Submit
+            </Button>
+          </center>
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
 
-                        <Button variant='contained' style={{ backgroundColor: '#2D3748',padding:'3% 32%' }}>Submit</Button>
-                    </center>
-                </Grid>
-            </Grid></div>
-    )
-}
-
-export default StudentCart
+export default StudentCart;
