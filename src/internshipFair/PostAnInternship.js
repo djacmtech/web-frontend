@@ -5,25 +5,21 @@ import * as Yup from 'yup'
 import TextField from './TextField'
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-// import { withStyles } from "@material-ui/core/styles";
-// import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Checkbox from '@mui/material/Checkbox';
 // import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-// import FormControl from '@mui/material/FormControl';
-// import FormLabel from '@mui/material/FormLabel';
 import axios from 'axios';
 
 function PostAnInternship() {
 
-    const FORM_VALIDATION = Yup.object().shape({
-        jobposition: Yup.string().required('Required'),
-        lastName: Yup.string().required('Required'),
-        email: Yup.string().email('Invalid Email').required('Required'),
-        sapId: Yup.number().min(11, 'Invalid Sap ID').integer().typeError('Please enter a valid SapId').required('Required'),
-        password: Yup.string().min(8, 'Password should atleast contain 8 characters').required('Required'),
-        confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Password should match').required('Required')
-    });
+    // const FORM_VALIDATION = Yup.object().shape({
+    //     jobposition: Yup.string().required('Required'),
+    //     lastName: Yup.string().required('Required'),
+    //     email: Yup.string().email('Invalid Email').required('Required'),
+    //     sapId: Yup.number().min(11, 'Invalid Sap ID').integer().typeError('Please enter a valid SapId').required('Required'),
+    //     password: Yup.string().min(8, 'Password should atleast contain 8 characters').required('Required'),
+    //     confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Password should match').required('Required')
+    // });
     const [tick, setTick] = useState(false)
     const [alignment, setAlignment] = useState('online');
 

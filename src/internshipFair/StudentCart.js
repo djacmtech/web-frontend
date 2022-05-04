@@ -2,11 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Divider, Grid, TextField } from "@mui/material";
 import SquareIcon from "@mui/icons-material/Square";
 import { styled } from "@mui/material/styles";
-import IconButton from "@mui/material/IconButton";
-import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import { Button } from "@mui/material";
 import axios from "axios";
-// import { Input } from '@mui/material';
 import "./InternshipFair.css";
 const StudentCart = () => {
   const Input = styled("input")({
@@ -14,6 +11,9 @@ const StudentCart = () => {
   });
   const [items, setItems] = useState([
     [{ company_name: "hi", role: "hi", price: 50 }],
+  ]);
+  const [price, setPrice] = useState([
+    [{ total_items: 4, total_price: 50, grand_total: 500}],
   ]);
 
   const data = [
@@ -49,6 +49,7 @@ const StudentCart = () => {
   useEffect(() => {
     axios.request(reqOptions).then(function (response) {
       setItems(response.data.cart_items ? response.data.cart_items : data);
+      setPrice(response.data.cart ? response.data.cart : null)
     });
   }, []);
 
@@ -120,14 +121,14 @@ const StudentCart = () => {
           <p style={{ fontSize: "1.3rem", fontWeight: "600" }}>Summary</p>
           <Divider />
           <p style={{ fontWeight: "600" }}>
-            Interviews <span style={{ float: "right" }}>50</span>
+            Interviews <span style={{ float: "right" }}>{price.total_items}</span>
           </p>
           <p style={{ fontWeight: "600" }}>
-            Total <span style={{ float: "right" }}>50</span>
+            Total <span style={{ float: "right" }}>{price.total_price}</span>
           </p>
           <Divider />
           <p style={{ fontWeight: "600" }}>
-            Grand Total <span style={{ float: "right" }}>50</span>
+            Grand Total <span style={{ float: "right" }}>{price.grand_total}</span>
           </p>
           <p style={{ fontSize: ".8rem" }}>
             Note:
@@ -142,12 +143,29 @@ const StudentCart = () => {
             <CssTextField type="text" sx={{color:'white'}} size="small" placeholder="Link" />
           </label>
           <br />
+          <p> Once you book the interviews you won't be able to sit for more, do you want to proceed? </p>
           <center>
+            <Button
+              variant="contained"
+              color="error"
+              sx={{
+                // backgroundColor: "#2D3748",
+                padding: "3% 8%",
+                marginInline: '4%',
+                ":hover": {
+                  opacity: "50%",
+                  // backgroundColor: "#2D3748",
+                },
+              }}
+            >
+              Cancel
+            </Button>
             <Button
               variant="contained"
               sx={{
                 backgroundColor: "#2D3748",
-                padding: "3% 32%",
+                marginInline: '4%',
+                padding: "3% 8%",
                 ":hover": {
                   opacity: "50%",
                   backgroundColor: "#2D3748",

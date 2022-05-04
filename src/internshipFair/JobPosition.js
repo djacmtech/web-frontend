@@ -6,14 +6,8 @@ import { MdLocationPin } from "react-icons/md";
 import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import axios from "axios";
 
 const JobPosition = () => {
-
-  const [job, setJob] = useState([]);
-
-  const [companies, setCompanies] = useState([]);
-  const [count, setCount] = useState(0);
 
   var url = window.location.pathname.split('/')[2]
   const [jobDetails, setJobDetails] = useState([])

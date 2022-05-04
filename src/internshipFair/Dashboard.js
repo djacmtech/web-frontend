@@ -23,7 +23,7 @@ export default function Dashboard() {
         Swal.fire({
             icon: 'success',
             title: 'ADDED TO THE CART',
-            footer: <Link to="/cart">Check out the cart</Link>
+            footer: `<a href="/cart">Check out the cart</a>`
           })
         let filteredCompany = job.filter((singleJob) => singleJob.id === id)
         setCount(count + 1)
@@ -40,23 +40,6 @@ export default function Dashboard() {
             },
             data: data
         };
-
-        axios(config)
-            .then(function (response) {
-                console.log(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-
-    var config = {
-      method: "post",
-      url: "https://djacmdev.pythonanywhere.com/if/cart",
-      headers: {
-        Authorization: `Token ${token}`,
-      },
-      data: data,
-    };
 
     axios(config)
       .then(function (response) {

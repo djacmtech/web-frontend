@@ -9,7 +9,7 @@ function CustomTextField({ name, ...otherProps }) {
     const config = {
         ...otherProps,
         ...field,
-        fullWidth: 'true',
+        fullWidth: true,
         variant: 'outlined'
     };
 
