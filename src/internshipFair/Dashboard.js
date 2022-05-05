@@ -12,34 +12,34 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {
-    const [job, setJob] = useState([]);
+  const [job, setJob] = useState([]);
 
   const [companies, setCompanies] = useState([]);
   const [count, setCount] = useState(0);
 
   const token = localStorage.getItem("token");
 
-    const addCompany = (id) => {
-        Swal.fire({
-            icon: 'success',
-            title: 'ADDED TO THE CART',
-            footer: `<a href="/cart">Check out the cart</a>`
-          })
-        let filteredCompany = job.filter((singleJob) => singleJob.id === id)
-        setCount(count + 1)
-        setCompanies([...companies, filteredCompany])
-        var FormData = require('form-data');
-        var data = new FormData();
-        data.append('job', `${id}`);
+  const addCompany = (id) => {
+    Swal.fire({
+      icon: 'success',
+      title: 'ADDED TO THE CART',
+      footer: `<a href="/cart">Check out the cart</a>`
+    })
+    let filteredCompany = job.filter((singleJob) => singleJob.id === id)
+    setCount(count + 1)
+    setCompanies([...companies, filteredCompany])
+    var FormData = require('form-data');
+    var data = new FormData();
+    data.append('job', `${id}`);
 
-        var config = {
-            method: 'post',
-            url: 'https://djacmdev.pythonanywhere.com/if/cart',
-            headers: {
-                'Authorization': `Token ${token}`
-            },
-            data: data
-        };
+    var config = {
+      method: 'post',
+      url: 'https://djacmdev.pythonanywhere.com/if/cart',
+      headers: {
+        'Authorization': `Token ${token}`
+      },
+      data: data
+    };
 
     axios(config)
       .then(function (response) {
@@ -73,12 +73,28 @@ export default function Dashboard() {
   return (
     <div>
       <InterNavbar />
+
       <Grid
         container
         spacing={0}
-        style={{ padding: "10%", backgroundColor: "#E5E5E5" }}
+        style={{ padding: "4% 10% 20% 10%", backgroundColor: "#E5E5E5" }}
       >
-        <Grid md={6} style={{ paddingInline: "3%" }}>
+        <center>
+
+          <p
+            style={{
+              textAlign: 'center',
+              backgroundColor: "#E5E5E5",
+              color: "#2D3748",
+              fontSize: "2rem",
+              fontWeight: "bold",
+            }}
+          >
+
+            Student Dashboard
+          </p>
+        </center>
+        <Grid md={0} style={{ paddingInline: "3%" }}>
           <p
             style={{
               paddingInline: "10%",
@@ -88,12 +104,12 @@ export default function Dashboard() {
               fontWeight: "bold",
             }}
           >
-            
-            Student Dashboard
+
+            {/* Student Dashboard */}
           </p>
-          <Filter />
+          {/* <Filter /> */}
         </Grid>
-        <Grid item xs={12} sm={12} md={6}>
+        <Grid item xs={12} sm={12} md={12}>
           {job.map((items) => (
             <Paper className="job-card">
               <div>
@@ -105,7 +121,7 @@ export default function Dashboard() {
                       fontWeight: "600",
                       fontFamily: "Poppins",
                     }}
-                  > 
+                  >
                     {items.role}
                   </span>
                   <span
@@ -115,7 +131,7 @@ export default function Dashboard() {
                       fontWeight: "400",
                       fontFamily: "Poppins",
                     }}
-                  > 
+                  >
                     {items.company_name}
                   </span>
                   {/* <span> Location </span> */}
@@ -161,11 +177,12 @@ export default function Dashboard() {
                       textTransform: "none",
                       fontSize: "Poppins",
                       height: "2.2rem",
-                      "&:hover": { 
-                        color: "rgba(24, 114, 113, 1)", 
-                        backgroundColor: "rgba(24, 114, 113, 0.4)", 
-                        border: '2px solid rgba(24, 114, 113, 1)' 
-                    }}}
+                      "&:hover": {
+                        color: "rgba(24, 114, 113, 1)",
+                        backgroundColor: "rgba(24, 114, 113, 0.4)",
+                        border: '2px solid rgba(24, 114, 113, 1)'
+                      }
+                    }}
                     onClick={() => addCompany(items.id)}
                   >
                     Add to cart
@@ -176,7 +193,7 @@ export default function Dashboard() {
                     href={`/jobposition/${items.id}`}
                     style={{ color: "#187271", fontWeight: "600" }}
                   >
-                    
+
                     View Details
                   </Button>
                 </div>
