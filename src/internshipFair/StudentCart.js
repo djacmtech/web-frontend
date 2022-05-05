@@ -6,9 +6,7 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import "./InternshipFair.css";
 const StudentCart = () => {
-  const Input = styled("input")({
-    display: "none",
-  });
+
   const [items, setItems] = useState([
     [{ company_name: "hi", role: "hi", price: 50 }],
   ]);
@@ -67,6 +65,30 @@ const StudentCart = () => {
       },
     },
   });
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    // console.log(document.getElementById("screenshot").value)
+    var data = new FormData();
+    data.append('payment_ss', document.getElementById("screenshot").value);
+
+    var config = {
+      method: 'post',
+      url: 'https://djacmdev.pythonanywhere.com/if/upload_ss',
+      headers: { 
+        'Authorization': `Token ${localStorage.getItem('token')}`
+      },
+      data : data
+    };
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  }
 
   return (
     <div
@@ -138,43 +160,44 @@ const StudentCart = () => {
             <b> UPID: 34235346536</b>
           </p>
           <br />
-          <label htmlFor="icon-button-file" className="screenshot">
-            Screenshot : &nbsp;
-            <CssTextField type="text" sx={{color:'white'}} size="small" placeholder="Link" />
-          </label>
-          <br />
-          <p> Once you book the interviews you won't be able to sit for more, do you want to proceed? </p>
-          <center>
-            <Button
-              variant="contained"
-              color="error"
-              sx={{
-                // backgroundColor: "#2D3748",
-                padding: "3% 8%",
-                marginInline: '4%',
-                ":hover": {
-                  opacity: "50%",
-                  // backgroundColor: "#2D3748",
-                },
-              }}
-            >
-              Cancel
-            </Button>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#2D3748",
-                marginInline: '4%',
-                padding: "3% 8%",
-                ":hover": {
-                  opacity: "50%",
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="icon-button-file" className="screenshot">
+              Screenshot : &nbsp;
+              <CssTextField type="text" id="screenshot" sx={{color:'white'}} size="small" placeholder="Link" />
+            </label>
+            <br />
+            <p> Once you book the interviews you won't be able to sit for more, do you want to proceed? </p>
+            <center>
+              <Button
+                variant="contained"
+                color="error"
+                sx={{
+                  padding: "3% 8%",
+                  marginInline: '4%',
+                  ":hover": {
+                    opacity: "50%",
+                  },
+                }}
+              >
+                Cancel
+              </Button>
+              <Button
+                variant="contained"
+                sx={{
                   backgroundColor: "#2D3748",
-                },
-              }}
-            >
-              Submit
-            </Button>
-          </center>
+                  marginInline: '4%',
+                  padding: "3% 8%",
+                  ":hover": {
+                    opacity: "50%",
+                    backgroundColor: "#2D3748",
+                  },
+                }}
+                type="submit"
+              >
+                Submit
+              </Button>
+            </center>
+          </form>
         </Grid>
       </Grid>
     </div>
