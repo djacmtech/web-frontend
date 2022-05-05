@@ -31,7 +31,7 @@ function Login() {
                         initialValues={{ ...INITIAL_FORM_STATE }}
                         validationSchema={FORM_VALIDATION}
                         onSubmit={(values) => {
-                            
+
                             console.log(values)
 
                             var FormData = require('form-data');
@@ -57,7 +57,7 @@ function Login() {
                                     localStorage.setItem('name', response.data.User.email)
                                     console.log(response.data.User);
                                     if (response.data.User.is_student === true)
-                                        navigate("/dashboard");
+                                        navigate("/profilepage");
                                     else
                                         navigate("/postnewinternship");
                                 })

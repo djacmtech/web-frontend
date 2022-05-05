@@ -33,7 +33,7 @@ const FORM_VALIDATION = Yup.object().shape({
   skills: Yup.string().required("This field is Required"),
   project: Yup.string().required("This field is Required"),
   phone: Yup.string().required("This field is Required")
-  .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
+    .matches(/^[6-9]\d{9}$/, "Phone number is not valid"),
 });
 
 const Profilepage = () => {
@@ -107,10 +107,13 @@ const Profilepage = () => {
                     fontSize: "36px",
                     // lineHeight:"25.4px",
                     color: "#187271",
+                    margin: '0',
+                    padding: '0'
                   }}
                 >
                   {details.first_name + " " + details.last_name}
                 </p>
+                <p style={{ color: 'red', margin: '0', padding: '0' }}>Please fill all the details to purchase internship</p>
               </Grid>
               <Grid item sx={{ width: "100%", marginTop: "3%" }}>
                 <Formik
@@ -178,7 +181,7 @@ const Profilepage = () => {
                         <TextField
                           name="phone"
                           placeholder="Phone number"
-                          // required
+                        // required
                         />
                       </Grid>
 
@@ -187,9 +190,9 @@ const Profilepage = () => {
                         <TextField
                           name="sapId"
                           placeholder="SAP ID"
-                          // inputProps={{
-                          //   readOnly:true,
-                          // }}
+                        // inputProps={{
+                        //   readOnly:true,
+                        // }}
                         />
                       </Grid>
 
@@ -210,7 +213,7 @@ const Profilepage = () => {
                         <TextField
                           name="domains"
                           placeholder="Select Domains"
-                          // required
+                        // required
                         />
                       </Grid>
 
@@ -221,7 +224,7 @@ const Profilepage = () => {
                         <TextField
                           name="skills"
                           placeholder="Skills"
-                          // required
+                        // required
                         />
                       </Grid>
 
@@ -232,8 +235,8 @@ const Profilepage = () => {
                         <TextField
                           name="resume"
                           placeholder="Add resume link"
-                          // type="url"
-                          // required
+                        // type="url"
+                        // required
                         />
                       </Grid>
 
