@@ -509,6 +509,10 @@
     padding: 0.2rem 0 0 0 !important;
     flex-direction: column !important;
   }
+  .job-card{
+    height: 33%;
+    padding:4%;
+  }
 }
 
 @media (max-width: 600px) {
