@@ -168,6 +168,7 @@ const NavbarFair = (elev) => {
                 ))}
               </Box>
               <Box sx={{ flexGrow: 0 }}>
+              <a href=" http://20.25.77.217/if/form/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
                 <Button
                   variant="contained"
                   size="large"
@@ -177,14 +178,16 @@ const NavbarFair = (elev) => {
                     fontWeight: "800",
                     border: "1px solid black",
                   }}
-                  onClick={() => setOpenPopup(true)}
+                  // onClick={() => setOpenPopup(true)}
                 >
-                  Login
+                  Register Now
                 </Button>{" "}
+                </a>
                 &nbsp;&nbsp;&nbsp;
+                <a href="http://20.25.77.217/if/job_profile/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
                 <Button
                   variant="contained"
-                  onClick={() => navigate("/signup")}
+                  // onClick={() => navigate("/signup")}
                   size="large"
                   style={{
                     backgroundColor: "#2D3748",
@@ -192,8 +195,9 @@ const NavbarFair = (elev) => {
                     fontWeight: "800",
                   }}
                 >
-                  Signup
+                  Job Profiles
                 </Button>{" "}
+                </a>
               </Box>
             </Toolbar>
           </Container>

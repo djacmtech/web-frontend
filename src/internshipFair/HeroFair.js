@@ -15,12 +15,12 @@ const HeroFair = () => {
             At DJSCE ACM's
           </span>
           <br />
-          <span className="heroFair">INTERNSHIP FAIR</span>
+          <span className="heroFair">INTERNSHIP FAIR 2022</span>
           <p className="extraHero">
-            Sign In to get yourself registered and know more about the
+           Register yourself and know more about the
             Internship opportunities and Job Profiles{" "}
           </p>
-          <a href="http://20.25.77.217/if/form/" target="_blank">
+          <a href="http://20.25.77.217/if/form/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
             <Button
               className="heroFairButton"
               variant="contained"
@@ -33,7 +33,7 @@ const HeroFair = () => {
               />
             </Button>
           </a>
-          <div style={{ fontSize: "20px", paddingTop: "20px" }}>
+          {/* <div style={{ fontSize: "20px", paddingTop: "20px" }}>
             <span style={{ color: "#2D3748" }}>
               Interested in providing internships?{" "}
             </span>
@@ -47,7 +47,7 @@ const HeroFair = () => {
                 Join Us
               </span>
             </a>
-          </div>
+          </div> */}
         </Grid>
         <Grid item sm={4} className="heroGridFair">
           {/* <div style={{backgroundColor:'#2ABEA2'}}></div> */}
