@@ -53,10 +53,9 @@ function AboutFair() {
               promoting our learning by doing ethos.
             </div>
             <div data-aos="fade-right" className="faircontent">
-              The internship can be scheduled between June and July for one
-              month of full-time work followed by part-time or work from the
-              home model as negotiated between the company and the concerned
-              student intern.
+            The internship will commence in June or July for one month
+            of full-time work followed by part-time or work-from-home 
+            options agreed upon between the employer and the student intern.
             </div>
             <Link to="/" style={{textDecoration: "none"}}> 
               <Button
