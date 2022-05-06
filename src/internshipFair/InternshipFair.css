@@ -384,6 +384,9 @@
   .companiesdiv {
     padding-bottom: 24px !important;
   }
+  .timelineHeading {
+    font-size: 110%;
+  }
 }
 
 .accordionFair {

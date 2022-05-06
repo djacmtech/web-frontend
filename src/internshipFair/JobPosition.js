@@ -168,7 +168,7 @@ const JobPosition = () => {
             </div>
             <Grid item xs={12}>
               <Link to='/cart' style={{ textDecoration: 'none' }}>
-
+{/* 
                 <Button
                   sx={{
                     width: "100%",
@@ -188,7 +188,7 @@ const JobPosition = () => {
                   // onClick={() => addCompany(items.id)}
                 >
                   ADD TO CART
-                </Button>
+                </Button> */}
               </Link>
             </Grid>
           </CardContent>

@@ -11,7 +11,7 @@ export default function TimelineInternship() {
     <Timeline position="alternate" style={{paddingInline:'10%'}}>
       <TimelineItem>
         <TimelineSeparator>
-          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'2rem'}} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
@@ -24,7 +24,7 @@ export default function TimelineInternship() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'2rem'}} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
@@ -37,7 +37,7 @@ export default function TimelineInternship() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'2rem'}} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
@@ -50,7 +50,7 @@ export default function TimelineInternship() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'2rem'}} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
@@ -63,7 +63,7 @@ export default function TimelineInternship() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'2rem'}} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>

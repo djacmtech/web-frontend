@@ -6,6 +6,8 @@ import TextField from "./TextField";
 import Swal from "sweetalert2";
 import { useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
 
 const INITIAL_FORM_STATE = {
   email: "",
@@ -37,10 +39,19 @@ const FORM_VALIDATION = Yup.object().shape({
 });
 
 const Profilepage = () => {
+  const navigate = useNavigate()
   const [details, setDetails] = useState([]);
   var config = {
     method: "get",
     url: "https://djacmdev.pythonanywhere.com/if/user",
+    headers: {
+      Authorization: `Token ${localStorage.getItem("token")}`,
+    },
+  };
+
+  var config3 = {
+    method: "get",
+    url: "https://djacmdev.pythonanywhere.com/if/student",
     headers: {
       Authorization: `Token ${localStorage.getItem("token")}`,
     },
@@ -63,10 +74,24 @@ const Profilepage = () => {
     });
 
   useEffect(() => {
+
+    axios(config3)
+.then(function (response) {
+  if(response.data.id && response.data.sap_id){
+    navigate('/dashboard')
+  }
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+    
     axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
         setDetails(response.data);
+        console.log(response.data.id)
+        
       })
       .catch(function (error) {
         console.log(error);
@@ -149,8 +174,9 @@ const Profilepage = () => {
                     axios(config)
                       .then(function (response) {
                         console.log(JSON.stringify(response.data));
+                        navigate('/dashboard')
                         Swal.fire({
-                          title: "Profile Updated!",
+                          title: "Profile Saved!",
                           icon: "success",
                           // confirmButtonText: 'Cool'
                         });
