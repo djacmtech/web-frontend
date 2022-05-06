@@ -1,6 +1,5 @@
 import InterNavbar from "./InterNavbar";
 import Grid from "@mui/material/Grid";
-import Filter from "./Filter";
 import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import Paper from "@mui/material/Paper";
@@ -9,7 +8,6 @@ import { BiRupee } from "react-icons/bi";
 import { AiFillClockCircle } from "react-icons/ai";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const [job, setJob] = useState([]);

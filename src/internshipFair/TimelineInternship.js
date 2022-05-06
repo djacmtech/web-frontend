@@ -17,9 +17,6 @@ export default function TimelineInternship() {
         <TimelineContent className='timelineEntry'>
             <span className='date'> 7th May </span>
             <span className='timelineHeading'> Registration Begins </span>
-            {/* <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
-            </span> */}
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>

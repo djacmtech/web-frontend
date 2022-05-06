@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, Divider, Grid, TextField } from "@mui/material";
 import SquareIcon from "@mui/icons-material/Square";
-import { styled } from "@mui/material/styles";
+import Swal from "sweetalert2";
 import { Button } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from "axios";
 import "./InternshipFair.css";
+import { useNavigate } from "react-router-dom";
 const StudentCart = () => {
 
   const [items, setItems] = useState([
@@ -76,20 +77,22 @@ axios(config)
     });
   }, [items]);
 
-  const CssTextField = styled(TextField)({
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "white",
-      },
-      "&:hover fieldset": {
-        borderColor: "white",
-      },
-      "&:active fieldset": {
-        borderColor: "white",
-        color: "white",
-      },
-    },
-  });
+  // const CssTextField = styled(TextField)({
+  //   "& .MuiOutlinedInput-root": {
+  //     "& fieldset": {
+  //       borderColor: "white",
+  //     },
+  //     "&:hover fieldset": {
+  //       borderColor: "white",
+  //     },
+  //     "&:active fieldset": {
+  //       borderColor: "white",
+  //       color: "white",
+  //     },
+  //   },
+  // });
+
+  const navigate = useNavigate()
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -107,7 +110,12 @@ axios(config)
     };
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
+      console.log(response.data['detail']);
+      Swal.fire({
+        icon: 'success',
+        title: response.data['detail'],
+        footer: `<a href="/dashboard"> Dashboard </a>`
+      })
     })
     .catch(function (error) {
       console.log(error);
@@ -196,7 +204,7 @@ axios(config)
           <form onSubmit={handleSubmit}>
             <label htmlFor="icon-button-file" className="screenshot">
               Screenshot : &nbsp;
-              <CssTextField type="text" id="screenshot" sx={{color:'white'}} size="small" placeholder="Link" />
+              <TextField type="url" id="screenshot" size="small" placeholder="Link" />
             </label>
             <br />
             <p> Once you book the interviews you won't be able to sit for more, do you want to proceed? </p>
