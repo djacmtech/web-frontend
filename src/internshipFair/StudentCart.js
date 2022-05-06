@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Divider, Grid, TextField } from "@mui/material";
+import { Card, CardContent, Divider, Grid, TextField } from "@mui/material";
 import SquareIcon from "@mui/icons-material/Square";
 import { styled } from "@mui/material/styles";
 import { Button } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
 import axios from "axios";
 import "./InternshipFair.css";
 const StudentCart = () => {
@@ -13,6 +14,30 @@ const StudentCart = () => {
   const [price, setPrice] = useState([
     [{ total_items: 4, total_price: 50, grand_total: 500}],
   ]);
+const token = localStorage.getItem('token')
+  const deleteInternship = (id) => {
+var FormData = require('form-data');
+var data = new FormData();
+data.append('job', `${id}`);
+
+var config = {
+  method: 'delete',
+  url: 'https://djacmdev.pythonanywhere.com//if/cart',
+  headers: { 
+    'Authorization': `Token ${token}`
+  },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(response)
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+  }
 
   const data = [
     {
@@ -49,7 +74,7 @@ const StudentCart = () => {
       setItems(response.data.cart_items ? response.data.cart_items : data);
       setPrice(response.data.cart ? response.data.cart : null)
     });
-  }, []);
+  }, [items]);
 
   const CssTextField = styled(TextField)({
     "& .MuiOutlinedInput-root": {
@@ -109,7 +134,10 @@ const StudentCart = () => {
             <span style={{ color: "grey", float: "right" }}>Price</span>
             {items.map((x) => {
               return (
-                <Grid container spacing={0}>
+                <Card sx={{margin:'2%'}}>
+                  <CardContent>
+
+                  <Grid container spacing={0}>
                   <Grid item xs={2}>
                     <SquareIcon style={{ fontSize: "7rem" }} />
                   </Grid>
@@ -121,15 +149,20 @@ const StudentCart = () => {
                         padding: "20px 0",
                       }}
                     >
-                      {x.company_name}
+                      {x.job_role}
                     </span>
-                    <br />
-                    <span style={{ color: "grey" }}>{x.role}</span>
+                    <div style={{ color: "grey" }}>{x.company_name}</div>
+                    <Grid container sx={{display:'flex', justifyContent:'flex-end', alignItems:'center'}}>
+
                     <span style={{ color: "grey", float: "right" }}>
                       {x.price}
                     </span>
+                    <span style={{color:'red', cursor:'pointer'}} onClick={() => deleteInternship(x.job)}><DeleteIcon/></span>
+                    </Grid>
                   </Grid>
                 </Grid>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>
