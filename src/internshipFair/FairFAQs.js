@@ -67,6 +67,7 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
+                    fontWeight:"bold"
                   }}
                   variant="h6"
                 >
@@ -79,7 +80,7 @@ const FairFAQs = () => {
                     textAlign: "left",
                     fontFamily: "Poppins",
                     color: "#585E62",
-                    fontSize: "20px",
+                    fontSize: "16px",
                   }}
                 >
                   With 7000+ students studying in 13 different countries, our
@@ -113,6 +114,7 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
+                    fontWeight:"bold"
                   }}
                   variant="h6"
                 >
@@ -125,7 +127,7 @@ const FairFAQs = () => {
                     textAlign: "left",
                     fontFamily: "Poppins",
                     color: "#585E62",
-                    fontSize: "20px",
+                    fontSize: "16px",
                   }}
                 >
                   With 7000+ students studying in 13 different countries, our
@@ -159,6 +161,7 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
+                    fontWeight:"bold"
                   }}
                   variant="h6"
                 >
@@ -171,7 +174,7 @@ const FairFAQs = () => {
                     textAlign: "left",
                     fontFamily: "Poppins",
                     color: "#585E62",
-                    fontSize: "20px",
+                    fontSize: "16px",
                   }}
                 >
                   With 7000+ students studying in 13 different countries, our
@@ -205,6 +208,7 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
+                    fontWeight:"bold"
                   }}
                   variant="h6"
                 >
@@ -217,7 +221,7 @@ const FairFAQs = () => {
                     textAlign: "left",
                     fontFamily: "Poppins",
                     color: "#585E62",
-                    fontSize: "20px",
+                    fontSize: "16px",
                   }}
                 >
                   With 7000+ students studying in 13 different countries, our
@@ -251,6 +255,7 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
+                    fontWeight:"bold"
                   }}
                   variant="h6"
                 >
@@ -263,7 +268,7 @@ const FairFAQs = () => {
                     textAlign: "left",
                     fontFamily: "Poppins",
                     color: "#585E62",
-                    fontSize: "20px",
+                    fontSize: "16px",
                   }}
                 >
                   With 7000+ students studying in 13 different countries, our

@@ -20,7 +20,7 @@ const InternshipFair = () => {
       <PastCompanies/>
       <FeaturesFair/>
       <Timeline/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <FairFAQs/>
       <Contact/>
       <FairFooter />
