@@ -1,5 +1,7 @@
 import './InternshipFair.css';
 import TestimonialCards from './TestimonialCards';
+import TestimonialCards2 from './TestimonialCards2';
+import TestimonialCards3 from './TestimonialCards3';
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper-bundle.min.css";
 import { FreeMode } from "swiper";
@@ -20,8 +22,8 @@ export default function Testimonials() {
             className="testimonialSwiper"
           >
             <SwiperSlide><TestimonialCards/></SwiperSlide>
-            <SwiperSlide><TestimonialCards/></SwiperSlide>
-            <SwiperSlide><TestimonialCards/></SwiperSlide>
+            <SwiperSlide><TestimonialCards2/></SwiperSlide>
+            <SwiperSlide><TestimonialCards3/></SwiperSlide>
           </Swiper>
         </div>
     )
