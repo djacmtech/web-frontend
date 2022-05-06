@@ -525,4 +525,9 @@
   .resCartdiv {
     padding: 1%;
   }
+  .mainScreenButton{
+    width: 100px;
+    /* font-size: 3px; */
+    /* transform: scale(.8); */
+  }
 }

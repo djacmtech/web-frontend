@@ -16,11 +16,12 @@ import Popup from "./Popup";
 import Login from "./Login";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { useNavigate } from "react-router-dom";
+import './InternshipFair.css'
 const pages = [
   "About IF",
   "Perks",
   "Timeline",
-  "Testimonial",
+  // "Testimonial",
   "FAQ's",
   "Contact Us",
 ];
@@ -137,7 +138,7 @@ const NavbarFair = (elev) => {
                 component="div"
                 sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}
               >
-                <img src={logo} alt="logo" width="50"></img>
+                {/* <img src={logo} alt="logo" width="10"></img> */}
               </Typography>
               <Box
                 sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
@@ -172,6 +173,8 @@ const NavbarFair = (elev) => {
                 <Button
                   variant="contained"
                   size="large"
+                  className="mainScreenButton"
+
                   style={{
                     color: "#2D3748",
                     backgroundColor: "white",
@@ -189,6 +192,7 @@ const NavbarFair = (elev) => {
                   variant="contained"
                   // onClick={() => navigate("/signup")}
                   size="large"
+                  className="mainScreenButton"
                   style={{
                     backgroundColor: "#2D3748",
                     color: "white",

@@ -67,11 +67,11 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
-                    fontWeight:"bold"
+                    fontWeight: "bold"
                   }}
                   variant="h6"
                 >
-                  University and Course Selection
+                  Who all can take part in the internship fair?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
@@ -83,11 +83,7 @@ const FairFAQs = () => {
                     fontSize: "16px",
                   }}
                 >
-                  With 7000+ students studying in 13 different countries, our
-                  experience speaks volumes about the diversity and capability
-                  of our counsellors to find you the right student-univesity
-                  fit. A systematic process with comprehensive list of schools
-                  opens many poosibilites for you.
+                  Students from any department from DJ Sanghvi can take part in the IF.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -114,11 +110,11 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
-                    fontWeight:"bold"
+                    fontWeight: "bold"
                   }}
                   variant="h6"
                 >
-                  SOP/Essay and LOR Assistance
+                  What roles can you apply for?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
@@ -130,11 +126,7 @@ const FairFAQs = () => {
                     fontSize: "16px",
                   }}
                 >
-                  With 7000+ students studying in 13 different countries, our
-                  experience speaks volumes about the diversity and capability
-                  of our counsellors to find you the right student-univesity
-                  fit. A systematic process with comprehensive list of schools
-                  opens many poosibilites for you.
+                  There are Technical as well as Non-Technical roles that you can apply for. Technical roles include ML Engineer, Software Developer, Data Analyst, etc., and Non-Technical roles include Business Development, Marketing, Content Writing, Video Editing, etc.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -161,11 +153,11 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
-                    fontWeight:"bold"
+                    fontWeight: "bold"
                   }}
                   variant="h6"
                 >
-                  Form Filling
+                  What are the perks for ACM members?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
@@ -177,11 +169,7 @@ const FairFAQs = () => {
                     fontSize: "16px",
                   }}
                 >
-                  With 7000+ students studying in 13 different countries, our
-                  experience speaks volumes about the diversity and capability
-                  of our counsellors to find you the right student-univesity
-                  fit. A systematic process with comprehensive list of schools
-                  opens many poosibilites for you.
+                  ACM Members will receive free mock interviews and 2 free roles they can apply for of their choice, after which regular application fees will be charged per interview.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -208,11 +196,11 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
-                    fontWeight:"bold"
+                    fontWeight: "bold"
                   }}
                   variant="h6"
                 >
-                  Financial Counselling and Loans
+                  How can Non-ACM members apply for IF?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
@@ -224,11 +212,7 @@ const FairFAQs = () => {
                     fontSize: "16px",
                   }}
                 >
-                  With 7000+ students studying in 13 different countries, our
-                  experience speaks volumes about the diversity and capability
-                  of our counsellors to find you the right student-univesity
-                  fit. A systematic process with comprehensive list of schools
-                  opens many poosibilites for you.
+                  IF is open to everyone and interested candidates will have to pay a small fee of ₹50 for each role they wish to apply for
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -255,11 +239,11 @@ const FairFAQs = () => {
                     fontFamily: "Poppins",
                     color: "#585E62",
                     textAlign: "left",
-                    fontWeight:"bold"
+                    fontWeight: "bold"
                   }}
                   variant="h6"
                 >
-                  Visa Counselling
+                  How many internship interviews can we sit for?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
@@ -271,11 +255,260 @@ const FairFAQs = () => {
                     fontSize: "16px",
                   }}
                 >
-                  With 7000+ students studying in 13 different countries, our
-                  experience speaks volumes about the diversity and capability
-                  of our counsellors to find you the right student-univesity
-                  fit. A systematic process with comprehensive list of schools
-                  opens many poosibilites for you.
+                  You can sit for as many interviews you wish to apply for.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div data-aos="fade-up">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
+              <AccordionSummary
+                expandIcon={
+                  <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
+                }
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    textAlign: "left",
+                    fontWeight: "bold"
+                  }}
+                  variant="h6"
+                >
+                  What are some of the perks of getting an internship?                </Typography>
+              </AccordionSummary>
+              <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
+                <Typography
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    fontSize: "16px",
+                  }}
+                >
+                  You'll receive a minimum stipend of ₹3000 per month and based on your performance you can also receive a Letter of Recommendation as well as gain industry experience.                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div data-aos="fade-up">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
+              <AccordionSummary
+                expandIcon={
+                  <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
+                }
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    textAlign: "left",
+                    fontWeight: "bold"
+                  }}
+                  variant="h6"
+                >
+                  Will the Internship Fair be conducted online or offline?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
+                <Typography
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    fontSize: "16px",
+                  }}
+                >
+                  IF will be conducted in Hybrid Mode and based on your preference and available slots you will be allocated an Online or Offline interview.                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div data-aos="fade-up">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
+              <AccordionSummary
+                expandIcon={
+                  <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
+                }
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    textAlign: "left",
+                    fontWeight: "bold"
+                  }}
+                  variant="h6"
+                >
+                  When will the internship start?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
+                <Typography
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    fontSize: "16px",
+                  }}
+                >
+                  The Internships will commence after the end semester exams for at least one month. Based on your performance and company requirements, you can receive an extension in your internship tenure.                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div data-aos="fade-up">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
+              <AccordionSummary
+                expandIcon={
+                  <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
+                }
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    textAlign: "left",
+                    fontWeight: "bold"
+                  }}
+                  variant="h6"
+                >
+                  What are some of the companies you can expect?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
+                <Typography
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    fontSize: "16px",
+                  }}
+                >
+                  Big companies, as well as emerging startups, visit the internship fair. Some of the known companies that visited last year are Yocket, MonkE, PrixLED, CPPSecrets.com, etc.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div data-aos="fade-up">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
+              <AccordionSummary
+                expandIcon={
+                  <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
+                }
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    textAlign: "left",
+                    fontWeight: "bold"
+                  }}
+                  variant="h6"
+                >
+                  Will the internships be Remote or On-Site?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
+                <Typography
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    fontSize: "16px",
+                  }}
+                >
+                  Your internship can either be remote or on-site as per the company requirements.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div data-aos="fade-up">
+            <Accordion
+              className="accordionFair"
+              style={{ borderBottom: "#FFFFFF" }}
+            >
+              <AccordionSummary
+                expandIcon={
+                  <BsChevronDown style={{ color: "#2ABEA2", padding: "5px" }} />
+                }
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  boxShadow: "rgb(49, 47, 47, 0.12) 2px 2px 2px 2px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    textAlign: "left",
+                    fontWeight: "bold"
+                  }}
+                  variant="h6"
+                >
+                  Do you require any prior experience to apply for IF?                </Typography>
+              </AccordionSummary>
+              <AccordionDetails style={{ backgroundColor: "#F2FCFB" }}>
+                <Typography
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "Poppins",
+                    color: "#585E62",
+                    fontSize: "16px",
+                  }}
+                >
+                  No, you don't need any prior experience to apply for IF.
                 </Typography>
               </AccordionDetails>
             </Accordion>
