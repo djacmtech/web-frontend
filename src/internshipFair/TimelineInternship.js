@@ -15,11 +15,11 @@ export default function TimelineInternship() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
-            <span className='date'> 9th May </span>
-            <span className='timelineHeading'> ACM 101 </span>
-            <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+            <span className='date'> 7th May </span>
+            <span className='timelineHeading'> Registration Begins </span>
+            {/* <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
-            </span>
+            </span> */}
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -30,9 +30,9 @@ export default function TimelineInternship() {
         <TimelineContent className='timelineEntry'>
             <span className='date'> 9th May </span>
             <span className='timelineHeading'> ACM 101 </span>
-            <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+            {/* <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
-            </p>
+            </span> */}
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -41,14 +41,40 @@ export default function TimelineInternship() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
-            <span className='date'> 9th May </span>
-            <span className='timelineHeading'> ACM 101 </span>
-            <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+            <span className='date'> 10th and 12th May </span>
+            <span className='timelineHeading'> Mock Interviews </span>
+            {/* <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
-            </p>
+            </p> */}
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
+        <TimelineSeparator>
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent className='timelineEntry'>
+            <span className='date'> 13th May (Evening) </span>
+            <span className='timelineHeading'> Interview Schedule Out </span>
+            {/* <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
+            </span> */}
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent className='timelineEntry'>
+            <span className='date'> 14th and 15th May </span>
+            <span className='timelineHeading'> Interviews </span>
+            {/* <p className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
+            </p> */}
+        </TimelineContent>
+      </TimelineItem>
+      {/* <TimelineItem>
         <TimelineSeparator>
           <BsFillDiamondFill style={{color:'#2D3748', fontSize:'40px'}} />
         </TimelineSeparator>
@@ -59,7 +85,7 @@ export default function TimelineInternship() {
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
             </span>
         </TimelineContent>
-      </TimelineItem>
+      </TimelineItem> */}
     </Timeline>
   );
 }

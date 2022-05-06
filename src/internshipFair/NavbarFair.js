@@ -160,9 +160,9 @@ const NavbarFair = (elev) => {
                             ))}
                         </Box>
                         <Box sx={{ flexGrow: 0 }}>
-                            <Button variant="contained" size="large" style={{ color: '#2D3748', backgroundColor: 'white', fontWeight: '800', border: "1px solid black" }} onClick={() => setOpenPopup(true)}>Login</Button>
+                            <a href="http://20.25.77.217/if/form/" target="_blank"><Button variant="contained" size="large" style={{ color: '#2D3748', backgroundColor: 'white', fontWeight: '800', border: "1px solid black" }}>Register</Button></a>
                             &nbsp;&nbsp;&nbsp;
-                            <Button variant="contained" onClick={() => navigate('/signup')} size="large" style={{ backgroundColor: '#2D3748', color: 'white', fontWeight: '800' }}>Signup</Button>
+                            <a href="http://20.25.77.217/if/job_profile/" target="_blank"><Button variant="contained" size="large" style={{ backgroundColor: '#2D3748', color: 'white', fontWeight: '800' }}>Jobs</Button></a>
                         </Box>
                     </Toolbar>
                 </Container>

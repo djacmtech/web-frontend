@@ -8,17 +8,15 @@ export default function TestimonialCards() {
     <Card sx={{ minWidth: 275 }} className="testimony">
       <CardContent>
         <Typography variant='h5' style={{color:'#187271'}} gutterBottom>
-          Name
+          Ankit Gupta
         </Typography>
         <Typography sx={{ mb: 1.5, fontSize:'0.8rem'}} color="text.secondary">
-          Info about person like branc or company position if company person
+          B.E. Computer Engineering
         </Typography>
         <Typography variant="body2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Venenatis quam ultricies eu, cursus vestibulum vitae. 
-        Quam feugiat tempus, vestibulum eu aliquam ultricies. 
-        Massa integer viverra ac risus gravida. Felis tempor et
-        sem vitae commodo elit sit. Libero.
+        
+        ACM's annual internship fair has been an incredible stepping stone to land an internship! There were opportunities in multiple domains to gain real world experience. Highly recommend!
+              
         </Typography>
       </CardContent>
     </Card>

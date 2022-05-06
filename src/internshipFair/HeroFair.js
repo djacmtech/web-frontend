@@ -20,6 +20,7 @@ const HeroFair = () => {
             Sign In to get yourself registered and know more about the
             Internship opportunities and Job Profiles{" "}
           </p>
+          <a href="http://20.25.77.217/if/form/" target="_blank">
           <Button
             className="heroFairButton"
             variant="contained"
@@ -30,7 +31,7 @@ const HeroFair = () => {
             <CgArrowLongRight
               style={{ fontSize: "1.8rem", paddingLeft: "1rem" }}
             />
-          </Button>
+          </Button></a>
           <div style={{ fontSize: "20px", paddingTop: "20px" }}>
             <span style={{ color: "#2D3748" }}>
               Interested in providing internships?{" "}

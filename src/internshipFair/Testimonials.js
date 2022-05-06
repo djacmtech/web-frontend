@@ -22,7 +22,6 @@ export default function Testimonials() {
             <SwiperSlide><TestimonialCards/></SwiperSlide>
             <SwiperSlide><TestimonialCards/></SwiperSlide>
             <SwiperSlide><TestimonialCards/></SwiperSlide>
-            <SwiperSlide><TestimonialCards/></SwiperSlide>
           </Swiper>
         </div>
     )
