@@ -49,15 +49,12 @@ function AboutFair() {
           </Grid>
           <Grid item sm={12} md={12} lg={7} style={{ padding: "5% 5% 5% 10%" }}>
             <div data-aos="fade-right" className="fairheading">
-              We aim to bridge the gap between academia and the industry by
-              promoting our learning by doing ethos.
+              ACM's Internship Fair's Legacy continues beyond.
             </div>
             <div data-aos="fade-right" className="faircontent">
-            The internship will commence in June or July for one month
-            of full-time work followed by part-time or work-from-home 
-            options agreed upon between the employer and the student intern.
+              The Flagship Event of DJ-ACM, the Internship Fair, has provided internships to 100s of students in the past, and it continues this year, with tremendous internship offers waiting for you to grab them up.
             </div>
-            <Link to="/" style={{textDecoration: "none"}}> 
+            <Link to="/" style={{ textDecoration: "none" }}>
               <Button
                 style={{
                   backgroundColor: "#187271",
