@@ -30,7 +30,7 @@ const FeaturesFair = () => {
             <div className="StipendHead">STIPEND</div>
           </div>
           <div className="StipendContent">
-            The internship can be scheduled between June and July for one month of
+            The internship can be scheduled in July, after the semester officially ends for one month of
             full-time work.
           </div>
         </div>

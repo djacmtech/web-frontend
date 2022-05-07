@@ -15,7 +15,7 @@ export default function TimelineInternship() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
-            <span className='date'> 7th May </span>
+            <span className='date'> 6th May </span>
             <span className='timelineHeading'> Registration Begins </span>
         </TimelineContent>
       </TimelineItem>
@@ -26,7 +26,7 @@ export default function TimelineInternship() {
         </TimelineSeparator>
         <TimelineContent className='timelineEntry'>
             <span className='date'> 9th May </span>
-            <span className='timelineHeading'> ACM 101 </span>
+            <span className='timelineHeading'> ACM's 101</span>
             {/* <span className='timelineContent'> Lorem ipsum dolor sit amet, consectetur  ea commodo consequat.
                 Lorem ipsum dolor sit amet, consectetur  ea commodo consequat. 
             </span> */}
