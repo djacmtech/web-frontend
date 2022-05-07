@@ -21,7 +21,7 @@ const HeroFair = () => {
             and Job Profiles{" "}
           </p>
           <a
-            href="http://20.25.77.217/if/form/"
+            href="https://djacm.tech/if/job_profile/"
             target="_blank"
             rel="noreferrer"
             style={{textDecoration: "none"}}

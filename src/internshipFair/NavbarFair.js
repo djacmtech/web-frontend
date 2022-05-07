@@ -170,7 +170,7 @@ const NavbarFair = elev => {
               </Box>
               <Box sx={{flexGrow: 0}}>
                 <a
-                  href=" http://20.25.77.217/if/form/"
+                  href="https://djacm.tech/if/form/"
                   target="_blank"
                   rel="noreferrer"
                   style={{textDecoration: "none"}}
@@ -192,7 +192,7 @@ const NavbarFair = elev => {
                 </a>
                 &nbsp;&nbsp;&nbsp;
                 <a
-                  href="http://20.25.77.217/if/job_profile/"
+                  href="https://djacm.tech/if/job_profile/"
                   target="_blank"
                   rel="noreferrer"
                   style={{textDecoration: "none"}}
