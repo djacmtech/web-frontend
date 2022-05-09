@@ -36,7 +36,7 @@ const NavBar = (activePage) => {
   else if (page === "Loc") value.loc = true;
   else if (page === "Blogs") value.Blogs = true;
   else if (page === "contactUS") value.contactUS = true;
-  else if (page === "Internshipfair") value.contactUS = true;
+  else if (page === "internshipfair") value.contactUS = true;
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -204,11 +204,11 @@ const NavBar = (activePage) => {
                 </button>
               </Link>
               <Link
-                disabled={value.Internshipfair}
+                disabled={value.internshipfair}
                 className="headerLinks"
                 to="/internship-fair"
               >
-                <button disabled={value.Internshipfair} className="btn">
+                <button disabled={value.internshipfair} className="btn">
                   Internship Fair
                 </button>
               </Link>
