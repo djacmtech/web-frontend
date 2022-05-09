@@ -1,32 +1,33 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import { GiHamburgerMenu } from "react-icons/gi";
+import {GiHamburgerMenu} from "react-icons/gi";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import logo from "../Assets/DJACMLOGODARK.png";
-import { Typography } from "@mui/material";
+import {Typography} from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import { Link } from "react-scroll";
+import {Link} from "react-scroll";
 import Popup from "./Popup";
 import Login from "./Login";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import "./InternshipFair.css";
 const pages = [
   "About IF",
   "Perks",
   "Timeline",
-  "Testimonial",
+  // "Testimonial",
   "FAQ's",
   "Contact Us",
 ];
 
 function ElevationScroll(props) {
-  const { children, window } = props;
+  const {children, window} = props;
 
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
@@ -43,7 +44,7 @@ function ElevationScroll(props) {
   });
 }
 
-const NavbarFair = (elev) => {
+const NavbarFair = elev => {
   const navigate = useNavigate();
   const [state, setState] = React.useState({
     top: false,
@@ -54,7 +55,7 @@ const NavbarFair = (elev) => {
   const anchor = "left";
   const [openPopup, setOpenPopup] = useState(false);
 
-  const toggleDrawer = (anchor, open) => (event) => {
+  const toggleDrawer = (anchor, open) => event => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -62,12 +63,12 @@ const NavbarFair = (elev) => {
       return;
     }
 
-    setState({ ...state, [anchor]: open });
+    setState({...state, [anchor]: open});
   };
 
-  const list = (anchor) => (
+  const list = anchor => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{width: anchor === "top" || anchor === "bottom" ? "auto" : 250}}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -76,7 +77,7 @@ const NavbarFair = (elev) => {
         {pages.map((text, index) => (
           <Link
             key={index}
-            style={{ textDecoration: "none" }}
+            style={{textDecoration: "none"}}
             to={text}
             spy={true}
             smooth={true}
@@ -98,7 +99,7 @@ const NavbarFair = (elev) => {
       <ElevationScroll>
         <AppBar
           position="sticky"
-          style={{ backgroundColor: "white" }}
+          style={{backgroundColor: "white"}}
           color="transparent"
         >
           <Container maxWidth="xl">
@@ -107,20 +108,20 @@ const NavbarFair = (elev) => {
                 variant="h6"
                 noWrap
                 component="div"
-                sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+                sx={{mr: 2, display: {xs: "none", md: "flex"}}}
               >
                 <img src={logo} alt="logo" width="50"></img>
               </Typography>
 
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <Box sx={{flexGrow: 1, display: {xs: "flex", md: "none"}}}>
                 <React.Fragment key={anchor}>
                   <Button
-                    style={{ fontSize: "2rem" }}
+                    style={{fontSize: "2rem"}}
                     size="large"
                     color="inherit"
                     onClick={toggleDrawer(anchor, true)}
                   >
-                    <GiHamburgerMenu style={{ color: "black" }} />
+                    <GiHamburgerMenu style={{color: "black"}} />
                   </Button>
                   <Drawer
                     anchor={anchor}
@@ -135,12 +136,12 @@ const NavbarFair = (elev) => {
                 variant="h6"
                 noWrap
                 component="div"
-                sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}
+                sx={{flexGrow: 0, display: {xs: "flex", md: "none"}}}
               >
-                <img src={logo} alt="logo" width="50"></img>
+                {/* <img src={logo} alt="logo" width="10"></img> */}
               </Typography>
               <Box
-                sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+                sx={{flexGrow: 1, display: {xs: "none", md: "flex"}}}
                 // justifyContent="center"
                 // alignContent="center"
                 // style={{ transform: 'translateX(-4%)' }}
@@ -167,36 +168,48 @@ const NavbarFair = (elev) => {
                   </Link>
                 ))}
               </Box>
-              <Box sx={{ flexGrow: 0 }}>
-              <a href=" http://20.25.77.217/if/form/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
-                <Button
-                  variant="contained"
-                  size="large"
-                  style={{
-                    color: "#2D3748",
-                    backgroundColor: "white",
-                    fontWeight: "800",
-                    border: "1px solid black",
-                  }}
-                  // onClick={() => setOpenPopup(true)}
+              <Box sx={{flexGrow: 0}}>
+                <a
+                  href="https://djacm.tech/if/form/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration: "none"}}
                 >
-                  Register Now
-                </Button>{" "}
+                  <Button
+                    variant="contained"
+                    size="large"
+                    className="mainScreenButton"
+                    style={{
+                      color: "#2D3748",
+                      backgroundColor: "white",
+                      fontWeight: "800",
+                      border: "1px solid black",
+                    }}
+                    // onClick={() => setOpenPopup(true)}
+                  >
+                    Register Now
+                  </Button>{" "}
                 </a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="http://20.25.77.217/if/job_profile/" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
-                <Button
-                  variant="contained"
-                  // onClick={() => navigate("/signup")}
-                  size="large"
-                  style={{
-                    backgroundColor: "#2D3748",
-                    color: "white",
-                    fontWeight: "800",
-                  }}
+                <a
+                  href="https://djacm.tech/if/job_profile/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{textDecoration: "none"}}
                 >
-                  Job Profiles
-                </Button>{" "}
+                  <Button
+                    variant="contained"
+                    // onClick={() => navigate("/signup")}
+                    size="large"
+                    className="mainScreenButton"
+                    style={{
+                      backgroundColor: "#2D3748",
+                      color: "white",
+                      fontWeight: "800",
+                    }}
+                  >
+                    Job Profiles
+                  </Button>{" "}
                 </a>
               </Box>
             </Toolbar>
