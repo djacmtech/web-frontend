@@ -36,7 +36,7 @@ const NavBar = (activePage) => {
   else if (page === "Loc") value.loc = true;
   else if (page === "Blogs") value.Blogs = true;
   else if (page === "contactUS") value.contactUS = true;
-  else if (page === "internshipfair") value.contactUS = true;
+  else if (page === "internshipfair") value.internshipfair = true;
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
