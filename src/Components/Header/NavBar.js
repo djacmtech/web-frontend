@@ -26,6 +26,7 @@ const NavBar = (activePage) => {
     Blogs: false,
     contactUS: false,
     loc: false,
+    internshipfair: false
   };
   let page = activePage.activePage.activePage;
   if (page === "Home") value.home = true;
@@ -35,7 +36,7 @@ const NavBar = (activePage) => {
   else if (page === "Loc") value.loc = true;
   else if (page === "Blogs") value.Blogs = true;
   else if (page === "contactUS") value.contactUS = true;
-
+  else if (page === "internshipfair") value.internshipfair = true;
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -78,7 +79,7 @@ const NavBar = (activePage) => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["Events", "Committee", "Loc","Resources","Contact Us"].map((text, index) => (
+        {["Events", "Committee", "Loc","Resources","Contact Us","Internship Fair"].map((text, index) => (
           <Link className="mobileDrawer" key={index} to={`/${text.toLowerCase().replace(' ','-')}`}>
             <ListItem button key={text}>
               <ListItemIcon>
@@ -200,6 +201,15 @@ const NavBar = (activePage) => {
               >
                 <button disabled={value.contactUS} className="btn">
                   Contact Us
+                </button>
+              </Link>
+              <Link
+                disabled={value.internshipfair}
+                className="headerLinks"
+                to="/internship-fair"
+              >
+                <button disabled={value.internshipfair} className="btn">
+                  Internship Fair
                 </button>
               </Link>
             </span>
