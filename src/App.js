@@ -189,7 +189,7 @@ function App() {
           <Route path="/Resources" element={<Resource />}></Route>
 
           {/* main page */}
-          <Route path="/internship-fair" element={<InternshipFair />}></Route>
+          {/* <Route path="/internship-fair" element={<InternshipFair />}></Route> */}
           {/* signup with login pop up */}
           <Route path="/signup" element={<SignUp />}></Route>
           {/* student dashboard */}

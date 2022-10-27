@@ -203,7 +203,7 @@ const NavBar = (activePage) => {
                   Contact Us
                 </button>
               </Link>
-              <Link
+              {/* <Link
                 disabled={value.internshipfair}
                 className="headerLinks"
                 to="/internship-fair"
@@ -211,7 +211,7 @@ const NavBar = (activePage) => {
                 <button disabled={value.internshipfair} className="btn">
                   Internship Fair
                 </button>
-              </Link>
+              </Link> */}
             </span>
           </Box>
         </Toolbar>
