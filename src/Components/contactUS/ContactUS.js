@@ -275,10 +275,10 @@ export default function ContactUS() {
                       xs={12}
                     >
                       <p>
-                        <BsTelephoneForwardFill /> +91 99877 48170
+                        <BsTelephoneForwardFill /> +91 93237 06633
                       </p>
                       <p>
-                        <BsTelephoneForwardFill /> +91 98197 05248
+                        <BsTelephoneForwardFill /> +91 99209 26902
                       </p>
                       <p>
                         <HiOutlineMail /> coreacm@gmail.com
