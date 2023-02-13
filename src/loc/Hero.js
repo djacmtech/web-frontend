@@ -1,7 +1,7 @@
 // import {useEffect} from "react";
 import "./Loc.css";
 import CountDown from "./countDown";
-import { Grid } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { Canvas } from '@react-three/fiber';
 import Ring from "./Ring";
 import Box from "./Box";
@@ -32,7 +32,7 @@ function Hero() {
             </Canvas>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
-            <h1 className="heroHeading">LOC 4.0</h1>
+            <h1 className="heroHeading">LOC 5.0</h1>
             <p className="heroContent">
               Hosted by - DJSCE ACM Student Chapter
             </p>
@@ -41,7 +41,12 @@ function Hero() {
               data-hackathon-slug="lines-of-code-djacm"
               data-button-theme="light"
             />
-            <p className="heroContentDate">12th - 13th March, 2022</p>
+            {/* <Button variant="contained">
+              <Typography variant="h5">
+              Sign up now
+              </Typography>
+            </Button> */}
+            <p className="heroContentDate">11th - 12th March, 2023</p>
             <div className="platinum">
               <h4 style={{ paddingInline: '2%' }}> Powered by </h4>
               <img src={arcana} style={{ width: '15%', paddingBottom: '1%' }} alt="arcana" />

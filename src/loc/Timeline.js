@@ -14,7 +14,7 @@ function Timeline() {
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls'>1</div>
                                 </Grid>
-                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>25th February</p></Grid>
+                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>20th February</p></Grid>
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>
                                 <Grid item md={5} ><p>Registrations open</p></Grid>
                             </Grid>
@@ -26,7 +26,7 @@ function Timeline() {
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls' >2</div>
                                 </Grid>
-                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>6th March</p></Grid>
+                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>8th March</p></Grid>
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>
                                 <Grid item md={5} ><p>Registrations end</p></Grid>
                             </Grid>
@@ -50,7 +50,7 @@ function Timeline() {
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls'>4</div>
                                 </Grid>
-                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>12th March</p></Grid>
+                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>11th March</p></Grid>
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>
                                 <Grid item md={5} ><p>Hack Day</p></Grid>
                             </Grid>
@@ -62,7 +62,7 @@ function Timeline() {
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls'>5</div>
                                 </Grid>
-                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>13th March</p></Grid>
+                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>12th March</p></Grid>
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>
                                 <Grid item md={5} ><p>Judging & Closing Ceremony</p></Grid>
                             </Grid>

@@ -80,7 +80,7 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
-                    ₹12,500
+                    {/* ₹10,000 */} 2nd Prize
                   </h2>
                 </div>
               </Grid>
@@ -115,7 +115,7 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
-                    ₹25,000
+                    {/* ₹25,000 */} 1st Prize
                   </h2>
                 </div>
               </Grid>
@@ -150,12 +150,15 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
-                    ₹7,500
+                    {/* ₹7,500 */} 3rd Prize
                   </h2>
                 </div>
               </Grid>
             </Grid>
-            <p className="goodies">& exciting goodies worth upto ₹2 Lakh!</p>
+            {/* <p className="goodies">& exciting goodies worth upto ₹2 Lakh!</p> */}
+            <p className="goodies">
+              TO BE ANNOUNCED SOON!
+            </p>
             <p className="auxiliaryPrizes">
               Get a chance to win prizes in subcategories like "Best UI/UX",
               "Best Pitch" and "Most Innovative Idea"
@@ -227,7 +230,10 @@ function Prizes() {
                   margin: "4%",
                 }}
               >
-                <h2 style={{padding: "0px", margin: "0px"}}>₹25,000</h2>
+                <h2 style={{padding: "0px", margin: "0px"}}>
+                  {/* ₹25,000 */}
+                  1st Prize
+                  </h2>
               </div>
             </Grid>
             <Grid
@@ -271,7 +277,10 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{padding: "0px", margin: "0px"}}>₹12,500</h2>
+                  <h2 style={{padding: "0px", margin: "0px"}}>
+                    {/* ₹12,500 */}
+                    2nd Prize
+                    </h2>
                 </div>
               </Grid>
               <Grid
@@ -304,7 +313,10 @@ function Prizes() {
                     margin: "4%",
                   }}
                 >
-                  <h2 style={{padding: "0px", margin: "0px"}}>₹7,500</h2>
+                  <h2 style={{padding: "0px", margin: "0px"}}>
+                    {/* ₹7,500 */}
+                    3rd Prize
+                    </h2>
                 </div>
               </Grid>
             </Grid>
@@ -312,7 +324,8 @@ function Prizes() {
               className="goodies"
               style={{fontSize: "15px", padding: "0px 30px"}}
             >
-              & exciting goodies worth upto ₹2 Lakh!
+              {/* & exciting goodies worth upto ₹2 Lakh! */}
+              TO BE ANNOUNCED SOON!
             </p>
             <p className="auxiliaryPrizes">
               Get a chance to win prizes in subcategories like "Best UI/UX",

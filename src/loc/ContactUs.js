@@ -80,20 +80,20 @@ function ContactUs() {
               <h2 style={{fontFamily: "righteous"}}> PHONE </h2>
               <a
                 style={{color: "#fff", textDecoration: "none"}}
-                href="tel:+91 9987748170"
+                href="tel:+91 9323706633"
               >
                 <p style={{fontSize: "20px", color: "#FFFFFF"}}>
                   {" "}
-                  Deap Daru | +91 9987748170{" "}
+                  Rishi Doshi | +91 9323706633{" "}
                 </p>
               </a>
               <a
                 style={{color: "#fff", textDecoration: "none"}}
-                href="tel:+91 9819705248"
+                href="tel:+91 9920926902"
               >
                 <p style={{fontSize: "20px", color: "#ffffff"}}>
                   {" "}
-                  Harvy Gandhi | +91 9819705248{" "}
+                  Praniket Walavalkar | +91 9920926902{" "}
                 </p>
               </a>
             </div>
@@ -109,7 +109,7 @@ function ContactUs() {
               >
                 <div>
                   {" "}
-                  <a href="http://djacm.co.in/">
+                  <a href="https://djacm.co.in/">
                     {" "}
                     <BsGlobe2
                       style={{

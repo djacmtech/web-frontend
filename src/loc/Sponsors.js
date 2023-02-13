@@ -36,7 +36,7 @@ function Sponsors() {
         }}
         data-aos="fade-right"
       >
-        Sponsors
+        Past Year Sponsors
       </h1>
       <div className="platinumSponsors">
         <h5 style={{textAlign: "center"}} data-aos="fade-up">
@@ -130,24 +130,26 @@ function Sponsors() {
           }}
         >
           <Grid item>
-            <a href="https://celo.org/" target="_blank" rel="noreferrer">
+            <a href="https://celo.org/" target="_blank" rel="noreferrer" style={{textDecoration:'none'}}>
               <Tooltip title="Celo" arrow placement="top">
-                <img
-                  src="https://drive.google.com/uc?export=download&id=1sS7IG73jrpKUq8oLaTPsIcNeq4uzgSJS"
+                {/* <img
+                  src=""
                   alt="Celo"
                   style={{width: "200px"}}
-                />
+                /> */}
+                <h1>Celo</h1>
               </Tooltip>
             </a>
           </Grid>
           <Grid item>
-            <a href="https://tezos.com/" target="_blank" rel="noreferrer">
+            <a href="https://tezos.com/" target="_blank" rel="noreferrer" style={{textDecoration:'none'}}>
               <Tooltip title="Tezos" arrow placement="top">
-                <img
+                {/* <img
                   src="https://drive.google.com/uc?export=download&id=1_LeBv0BPwHgCYiG3l2pH8db41pATZ32N"
                   alt="Tezos"
                   style={{width: "200px"}}
-                />
+                /> */}
+                <h1>Tezos</h1>
               </Tooltip>
             </a>
           </Grid>

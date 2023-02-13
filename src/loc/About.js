@@ -41,7 +41,7 @@ function About() {
               </span>
             </div>
             <div data-aos="fade-right" className="abtcontent">
-              With over 200 participants from numerous colleges, the hackathon
+              With over 500 participants from numerous colleges, the hackathon
               is a gathering where individual programmers collaborate their
               codes to make industry-grade projects.
             </div>
