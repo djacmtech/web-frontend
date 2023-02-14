@@ -112,7 +112,7 @@ function Sponsors() {
           </a>
         </Grid>
 
-        <Grid
+        {/* <Grid
           item
           md={3}
           xs={6}
@@ -127,17 +127,17 @@ function Sponsors() {
             rel='noreferrer'
             style={{ textDecoration: "none" }}>
             <Tooltip title='Celo' arrow placement='top'>
-              {/* <img
+               <img
                   src=""
                   alt="Celo"
                   style={{width: size}}
-                /> */}
+                /> 
               <h1>Celo</h1>
             </Tooltip>
           </a>
-        </Grid>
+        </Grid> */}
 
-        <Grid
+        {/* <Grid
           item
           md={3}
           xs={6}
@@ -152,15 +152,15 @@ function Sponsors() {
             rel='noreferrer'
             style={{ textDecoration: "none" }}>
             <Tooltip title='Tezos' arrow placement='top'>
-              {/* <img
-                  src="https://drive.google.com/uc?export=download&id=1_LeBv0BPwHgCYiG3l2pH8db41pATZ32N"
-                  alt="Tezos"
-                  style={{width: size}}
-                /> */}
+              <img
+                src='https://drive.google.com/uc?export=download&id=1_LeBv0BPwHgCYiG3l2pH8db41pATZ32N'
+                alt='Tezos'
+                style={{ width: size }}
+              />
               <h1>Tezos</h1>
             </Tooltip>
           </a>
-        </Grid>
+        </Grid> */}
 
         <Grid
           item
