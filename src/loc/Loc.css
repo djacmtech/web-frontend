@@ -2,6 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Readex+Pro:wght@200;400;600&family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
+body {
+  color: #dbdbdb;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: #011b29;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #34bdf3;
+  border-radius: 100vw;
+}
+
 /* About */
 .abtgrid {
   padding-inline: 5%;
@@ -96,6 +111,10 @@
   font-weight: 700;
   font-size: 1.2rem;
   padding: 0 20%;
+}
+
+sup {
+  font-size: 0.5em;
 }
 
 /* ***************************** PRIZES ********************************* */
@@ -255,9 +274,9 @@ h3 {
   background-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
 }
 
-.domainGrid {
+/* .domainGrid {
   transform: translateX(-20px);
-}
+} */
 /* ***************************** TIMELINE ********************************* */
 .timeline p {
   font-family: Montserrat;
@@ -738,5 +757,11 @@ h3 {
 @media (max-width: 600px) {
   .mobileview {
     margin-bottom: 80px !important;
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
   }
 }
