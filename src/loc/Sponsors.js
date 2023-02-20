@@ -431,8 +431,8 @@ function Sponsors() {
         rel="noreferrer"
         style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}
       >
-        <Button variant="contained" sx={{textTransform:'none'}}>
-          <Typography variant="h5">
+        <Button variant="contained" sx={{textTransform:'none', backgroundColor:'red', mt:2, mb:4}}>
+          <Typography variant="h4">
           Become a Sponser
           </Typography>
         </Button>

@@ -1,6 +1,8 @@
 import {Grid} from "@mui/material";
 import React from "react";
 import "./Loc.css";
+import trophy from "../Assets/trophy.png";
+
 function Prizes() {
   return (
     <>
@@ -64,9 +66,9 @@ function Prizes() {
                 }}
               >
                 <img
-                  src="https://drive.google.com/uc?export=download&id=1vDCd7giuyAvFN-u5UtWgFQDtEyqbhgID"
+                  src={trophy}
                   alt="prize-2"
-                  style={{width: "40%", height: "40%"}}
+                  style={{width: "53%", height: "53%"}}
                   data-aos="zoom-in"
                   className="imgPrize"
                 />
@@ -99,7 +101,7 @@ function Prizes() {
                 }}
               >
                 <img
-                  src="https://drive.google.com/uc?export=download&id=172ODE8_sj8s-CSd4SThuqTPADQogxY-n"
+                  src={trophy}
                   alt="prize-1"
                   style={{width: "70%", height: "70%"}}
                   data-aos="zoom-in"
@@ -134,7 +136,7 @@ function Prizes() {
                 }}
               >
                 <img
-                  src="https://drive.google.com/uc?export=download&id=1q7C-acDAoaXCr0bIvADUbKXSZjqbsF7i"
+                  src={trophy}
                   alt="prize-3"
                   style={{width: "40%", height: "40%"}}
                   data-aos="zoom-in"
@@ -169,8 +171,9 @@ function Prizes() {
       <div className="Prizes2">
         <div
           style={{
-            background:
-              "linear-gradient(74.09deg, #34BDF3 0%, #585BA8 100.01%)",
+            // background:
+            //   "linear-gradient(74.09deg, #34BDF3 0%, #585BA8 100.01%)",
+            backgroundColor:'#000',
           }}
         >
           <div
@@ -215,7 +218,7 @@ function Prizes() {
               }}
             >
               <img
-                src="https://drive.google.com/uc?export=download&id=172ODE8_sj8s-CSd4SThuqTPADQogxY-n"
+                src={trophy}
                 alt="prize-1"
                 style={{width: "40%", height: "40%"}}
                 data-aos="zoom-in"
@@ -261,9 +264,9 @@ function Prizes() {
                 }}
               >
                 <img
-                  src="https://drive.google.com/uc?export=download&id=1vDCd7giuyAvFN-u5UtWgFQDtEyqbhgID"
+                  src={trophy}
                   alt="prize-2"
-                  style={{width: "40%", height: "40%"}}
+                  style={{width: "30%", height: "30%"}}
                   data-aos="zoom-in"
                 />
                 <div
@@ -296,9 +299,9 @@ function Prizes() {
                 }}
               >
                 <img
-                  src="https://drive.google.com/uc?export=download&id=1q7C-acDAoaXCr0bIvADUbKXSZjqbsF7i"
+                  src={trophy}
                   alt="prize-3"
-                  style={{width: "40%", height: "40%"}}
+                  style={{width: "20%", height: "20%"}}
                   data-aos="zoom-in"
                 />
                 <div

@@ -20,7 +20,7 @@ function Sponsors() {
       className='mobileview'
       id='Sponsors'
       style={{
-        backgroundColor: "#001521",
+        backgroundColor: "#000",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -34,7 +34,7 @@ function Sponsors() {
           marginTop: "4%",
         }}
         data-aos='fade-right'>
-        Past Year Sponsors
+        LOC 5.0 Sponsors
       </h1>
 
       <div className='platinumSponsors'>
@@ -75,13 +75,13 @@ function Sponsors() {
             img='https://drive.google.com/uc?export=download&id=10RYEzZnnRVJbFbX1anivfJ0yYvMP6jSv'
             name='FileCoin'
           />
-          <SponsorsLogo link='https://zeeve.io/' name='Zeeve' />
+          {/* <SponsorsLogo link='https://zeeve.io/' name='Zeeve' />
           <SponsorsLogo link='https://earnest-fintech.co.in/' name='Earnest Fintech' />
-          <SponsorsLogo link='https://employeeforum.unc.edu/' name='Employee Forums' />
+          <SponsorsLogo link='https://employeeforum.unc.edu/' name='Employee Forums' /> */}
         </SponsorsContainer>
       </div>
 
-      <div className='silverSponsors'>
+      {/* <div className='silverSponsors'>
         <h5 style={{ textAlign: "center" }} data-aos='fade-up'>
           Silver Sponsors
         </h5>
@@ -114,7 +114,7 @@ function Sponsors() {
           <SponsorsLogo link='https://www.instagram.com/trays.eatery/' name='Trays eatery' />
           <SponsorsLogo link='http://www.urbantrekkers.org/home' name='Urban Trekkers' />
         </SponsorsContainer>
-      </div>
+      </div> */}
     </div>
   );
 }

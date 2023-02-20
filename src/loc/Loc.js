@@ -6,6 +6,7 @@ import Prizes from "./Prizes";
 import Timeline from "./Timeline";
 import Guidelines from "./Guidelines";
 import Sponsors from "./Sponsors_New";
+import PastSponsers from './Sponsors';
 import Faqs from "./Faqs";
 import ContactUs from "./ContactUs";
 import NavLoc from "./navLoc";
@@ -48,6 +49,7 @@ function Loc() {
         <Timeline />
         <Guidelines />
         <Sponsors />
+        <PastSponsers />
         <Faqs />
         <ContactUs />
         <LocFooter />

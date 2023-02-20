@@ -37,7 +37,7 @@ const LocFooter = () => {
                       spy={true}
                       smooth={true}
                       style={{
-                        fontSize: ".9rem",
+                        fontSize: "1.2rem",
                         padding: "4% 1%",
                         cursor: "pointer",
                         fontWeight: "400",
@@ -71,16 +71,16 @@ const LocFooter = () => {
               href='https://www.instagram.com/djsanghvi_acm/?hl=en'
               rel='noreferrer'
               target='_blank'>
-              <BsInstagram />
+              <BsInstagram color="red" />
             </a>
             <a href='https://www.facebook.com/djscoe.acm.5' rel='noreferrer' target='_blank'>
-              <BsFacebook />
+              <BsFacebook  color="red" />
             </a>
             <a
               href='https://in.linkedin.com/company/dj-sanghvi-acm'
               rel='noreferrer'
               target='_blank'>
-              <BsLinkedin />
+              <BsLinkedin color="red" />
             </a>
           </Grid>
         </Grid>

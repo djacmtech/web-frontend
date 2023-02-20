@@ -43,10 +43,10 @@ function Hero() {
             <p className='heroContentDate'>
               11<sup>th</sup> - 12<sup>th</sup> March, 2023
             </p>
-            {/* <div className='platinum'>
+            <div className='platinum'>
               <h4 style={{ paddingInline: "2%" }}> Powered by </h4>
-              <img src={arcana} style={{ width: "15%", paddingBottom: "1%" }} alt='arcana' />
-            </div> */}
+              <img src="https://drive.google.com/uc?export=download&id=1uOeQAKm5FdEnpN3ZVH7rUUllxwt7zXkd" style={{ width: "15%", paddingBottom: "1%" }} alt='devfolio' />
+            </div>
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <Canvas>
