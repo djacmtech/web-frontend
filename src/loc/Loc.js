@@ -5,24 +5,19 @@ import Hero from "./Hero";
 import Prizes from "./Prizes";
 import Timeline from "./Timeline";
 import Guidelines from "./Guidelines";
-import Sponsors from "./Sponsors";
+import Sponsors from "./Sponsors_New";
 import Faqs from "./Faqs";
 import ContactUs from "./ContactUs";
 import NavLoc from "./navLoc";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 import LocFooter from "./locFooter";
 
 function Loc() {
   return (
     <>
-      <div style={{backgroundColor: "#000"}}>
+      <div style={{ backgroundColor: "#000" }}>
         <NavLoc />
-        <Link
-          style={{textDecoration: "none"}}
-          to="heroTop"
-          spy={true}
-          smooth={true}
-        >
+        <Link style={{ textDecoration: "none" }} to='heroTop' spy={true} smooth={true}>
           {/* <Fab
             variant="extended"
             style={{
