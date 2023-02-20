@@ -14,7 +14,7 @@ function Domain() {
         className='domain'
         style={{
           color: "#FFFFFF",
-          backgroundColor: "#001521",
+          backgroundColor: "#000",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -51,7 +51,7 @@ function Domain() {
             item
             xs={12}
             sm={6}
-            md={3}
+            md={2}
             className='domainImgs'
             style={{
               display: "flex",
@@ -104,7 +104,7 @@ function Domain() {
             item
             xs={12}
             sm={6}
-            md={3}
+            md={2}
             className='domainImgs'
             style={{
               display: "flex",
@@ -155,7 +155,7 @@ function Domain() {
             item
             xs={12}
             sm={6}
-            md={3}
+            md={2}
             className='domainImgs'
             style={{
               display: "flex",
@@ -208,7 +208,7 @@ function Domain() {
             item
             xs={12}
             sm={6}
-            md={3}
+            md={2}
             className='domainImgs'
             style={{
               display: "flex",
@@ -257,11 +257,11 @@ function Domain() {
               </div>
             </div>
           </Grid>
-          <Grid
+          {/* <Grid
             item
             xs={12}
             sm={6}
-            md={3}
+            md={2}
             className='domainImgs'
             style={{
               display: "flex",
@@ -309,12 +309,12 @@ function Domain() {
                 </div>
               </div>
             </div>
-          </Grid>
+          </Grid> */}
           <Grid
             item
             xs={12}
             sm={6}
-            md={3}
+            md={2}
             className='domainImgs'
             style={{
               display: "flex",

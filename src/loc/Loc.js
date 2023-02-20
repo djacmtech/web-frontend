@@ -15,7 +15,7 @@ import LocFooter from "./locFooter";
 function Loc() {
   return (
     <>
-      <div style={{backgroundColor: "#001522"}}>
+      <div style={{backgroundColor: "#000"}}>
         <NavLoc />
         <Link
           style={{textDecoration: "none"}}

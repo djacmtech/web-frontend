@@ -7,8 +7,9 @@ function Prizes() {
       <div className="Prizes1 mobileview" id="Prizes">
         <div
           style={{
-            background:
-              "linear-gradient(74.09deg, #34BDF3 0%, #585BA8 100.01%)",
+            // background:
+            //   "linear-gradient(180deg, #c5020b 22.99%, #9f0510 79.15%)",
+            backgroundColor:'#000',
           }}
         >
           <div
@@ -80,7 +81,7 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
-                    {/* ₹10,000 */} 2nd Prize
+                    ₹30,000
                   </h2>
                 </div>
               </Grid>
@@ -115,7 +116,7 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
-                    {/* ₹25,000 */} 1st Prize
+                    ₹50,000
                   </h2>
                 </div>
               </Grid>
@@ -150,18 +151,17 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px", fontSize: "36px"}}>
-                    {/* ₹7,500 */} 3rd Prize
+                    ₹20,000
                   </h2>
                 </div>
               </Grid>
             </Grid>
-            {/* <p className="goodies">& exciting goodies worth upto ₹2 Lakh!</p> */}
-            <p className="goodies">
+            <p className="goodies">& exciting goodies worth upto ₹2 Lakh!</p>
+            {/* <p className="goodies">
               TO BE ANNOUNCED SOON!
-            </p>
+            </p> */}
             <p className="auxiliaryPrizes">
-              Get a chance to win prizes in subcategories like "Best UI/UX",
-              "Best Pitch" and "Most Innovative Idea"
+            Get a chance to win additional Prizes, Swags & Merchandise
             </p>
           </div>
         </div>
@@ -231,8 +231,7 @@ function Prizes() {
                 }}
               >
                 <h2 style={{padding: "0px", margin: "0px"}}>
-                  {/* ₹25,000 */}
-                  1st Prize
+                  ₹50,000
                   </h2>
               </div>
             </Grid>
@@ -278,8 +277,7 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px"}}>
-                    {/* ₹12,500 */}
-                    2nd Prize
+                    ₹30,000
                     </h2>
                 </div>
               </Grid>
@@ -314,8 +312,7 @@ function Prizes() {
                   }}
                 >
                   <h2 style={{padding: "0px", margin: "0px"}}>
-                    {/* ₹7,500 */}
-                    3rd Prize
+                    ₹20,000
                     </h2>
                 </div>
               </Grid>
@@ -324,12 +321,10 @@ function Prizes() {
               className="goodies"
               style={{fontSize: "15px", padding: "0px 30px"}}
             >
-              {/* & exciting goodies worth upto ₹2 Lakh! */}
-              TO BE ANNOUNCED SOON!
+              & exciting goodies worth upto ₹2 Lakh!
             </p>
             <p className="auxiliaryPrizes">
-              Get a chance to win prizes in subcategories like "Best UI/UX",
-              "Best Pitch" and "Most Innovative Idea"
+            Get a chance to win additional Prizes, Swags & Merchandise
             </p>
           </div>
         </div>

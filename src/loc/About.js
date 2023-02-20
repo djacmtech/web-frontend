@@ -13,7 +13,7 @@ function About() {
   return (
     <div
       style={{
-        backgroundColor: "#001521",
+        backgroundColor: "#000",
         paddingBottom: "70px",
       }}
     >
@@ -36,7 +36,7 @@ function About() {
           <Grid item sm={12} md={12} lg={7} style={{ padding: '5%' }}>
             <div data-aos="fade-right" className="abtheading">
               You&#39;re stuck at home but your ideas don&#39;t have to be.
-              Write some <span style={{ color: '#FF8A50' }}>
+              Write some <span style={{ color: '#ff1616' }}>
                 lines of code!
               </span>
             </div>

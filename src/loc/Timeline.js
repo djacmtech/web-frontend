@@ -4,7 +4,7 @@ import './Loc.css'
 
 function Timeline() {
     return (
-        <div id='Timeline' style={{ backgroundColor: '#001521' }}>
+        <div id='Timeline' style={{ backgroundColor: '#000' }}>
             <div className="timeline" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', marginBottom: '4%' }}>
                 <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '5%', marginBottom: '2%', fontFamily: "Righteous" }} className='prizesHeading' data-aos="fade-right">Timeline</h1>
                 <div className='timeStamps' >
@@ -26,7 +26,7 @@ function Timeline() {
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold' }}>
                                     <div className='balls' >2</div>
                                 </Grid>
-                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>8th March</p></Grid>
+                                <Grid item md={3} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p>7th March</p></Grid>
                                 <Grid item md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><p> - </p></Grid>
                                 <Grid item md={5} ><p>Registrations end</p></Grid>
                             </Grid>

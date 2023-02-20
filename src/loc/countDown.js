@@ -44,7 +44,7 @@ const CountDown = () => {
 
   return (
     <div className='countdownSection' >
-      <Grid container spacing={2} style={{ fontFamily: 'montserrat', border: '3px solid #FF8A50' }} className="countdownBorder">
+      <Grid container spacing={2} style={{ fontFamily: 'montserrat', border: '3px solid #ff1616' }} className="countdownBorder">
         {timerComponents.length ? timerComponents : <span> Time's up! </span>}
       </Grid>
       <br />

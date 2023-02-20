@@ -27,7 +27,7 @@ function Guidelines() {
     <div
       id='Guidelines'
       className='mobileview'
-      style={{ color: "black", backgroundColor: "#001522", padding: "0 8%", marginBottom: "4%" }}>
+      style={{ color: "black", backgroundColor: "#000", padding: "0 8%", marginBottom: "4%" }}>
       <center>
         <div data-aos='fade-right'>
           <h2 className='guidelineHeading'>Guidelines</h2>

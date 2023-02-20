@@ -13,7 +13,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #34bdf3;
+  background-color: #ff1616;
   border-radius: 100vw;
 }
 
@@ -28,7 +28,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
-  color: #001019;
+  color: #000;
   padding-top: 5%;
   color: #ffffff;
   padding-right: 20%;
@@ -53,7 +53,7 @@ body {
   height: 300px;
   width: 379px;
   border-radius: 5%;
-  border: 40px solid #011b29;
+  border: 40px solid #000;
   /* filter: drop-shadow(4px 4px 20px rgba(55, 112, 255, 0.12)); */
 }
 
@@ -84,7 +84,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(180deg, #16bdff 22.99%, #7b83fd 79.15%);
+  background-image: linear-gradient(180deg, #c5020b 22.99%, #9f0510 79.15%);
   font-size: 9rem;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -164,7 +164,7 @@ sup {
   font-size: 20px;
   font-weight: 800;
   padding-bottom: 20px;
-  border-image: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+  /* border-image: linear-gradient(180deg, #000 22.99%, #000 79.15%); */
   border-style: solid;
   border-width: 3px;
   border-image-slice: 1;
@@ -225,14 +225,14 @@ sup {
 }
 
 .flip-card-front {
-  background: linear-gradient(180deg, #ff8a50 22.99%, #f54951 79.15%);
+  background: linear-gradient(180deg, #c5020b 22.99%, #9f0510 79.15%);
   /* border: 20px solid #ffffff; */
   box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
   border-radius: 10px;
 }
 
 .flip-card-front:hover {
-  background: linear-gradient(179.94deg, #34bdf3 -1.24%, #585ba8 64.13%);
+  background: linear-gradient(179.94deg, rgb(226, 78, 78) -1.24%, #d20303 64.13%);
   /* border: 20px solid #ffffff; */
   box-shadow: 4px 4px 20px rgba(50, 106, 249, 0.2);
   border-radius: 10px;
@@ -286,7 +286,7 @@ h3 {
 
 .balls {
   padding: 2px;
-  background-color: #36b8ef !important;
+  background-color: #ff1616 !important;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -399,7 +399,7 @@ h3 {
 }
 /* guideline */
 .guidelines {
-  border-image: linear-gradient(179.94deg, #34bdf3 -1.24%, #585ba8 64.13%);
+  border-image: linear-gradient(179.94deg, #ff1616 -1.24%, #ff8a50 64.13%);
   border-style: solid;
   border-width: 8px;
   border-image-slice: 1;
@@ -691,7 +691,7 @@ h3 {
 
 /* FAQ */
 .MuiAccordion-root {
-  background-color: #001522 !important;
+  background-color: #000 !important;
 }
 
 /* loc footer */

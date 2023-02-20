@@ -9,7 +9,8 @@ function ContactUs() {
     <div
       id='Contact Us'
       style={{
-        background: "linear-gradient(179.94deg, #34BDF3 -1.24%, #585BA8 64.13%)",
+        // background: "linear-gradient(179.94deg, #ff1616 -1.24%, #af0203 64.13%)",
+        backgroundColor: "#000000",
         padding: "1rem",
       }}>
       <Grid container spacing={2}>
@@ -27,7 +28,7 @@ function ContactUs() {
           }}>
           <h1
             className='contactHeading'
-            style={{ color: "black", textAlign: "left", marginLeft: "-50px" }}
+            style={{ color: "white", textAlign: "left", marginLeft: "-50px" }}
             data-aos='fade-right'>
             {" "}
             Contact Us{" "}
@@ -54,7 +55,7 @@ function ContactUs() {
                   }}>
                   <div>
                     {" "}
-                    <AiFillMail style={{ fontSize: "30px", color: "#FFFFFF" }} />
+                    <AiFillMail style={{ fontSize: "30px", color: "#ff1616" }} />
                   </div>
                   <div style={{ paddingLeft: "20px", fontSize: "20px" }}>coreacm@gmail.com</div>
                 </div>
@@ -88,7 +89,7 @@ function ContactUs() {
                     <BsGlobe2
                       style={{
                         fontSize: "35px",
-                        color: "black",
+                        color: "red",
                         padding: "3px 8px 3px 0px",
                       }}
                     />{" "}
@@ -101,7 +102,7 @@ function ContactUs() {
                     <AiFillInstagram
                       style={{
                         fontSize: "40px",
-                        color: "black",
+                        color: "red",
                         padding: "3px 8px 3px 8px",
                       }}
                     />{" "}
@@ -114,7 +115,7 @@ function ContactUs() {
                     <AiFillLinkedin
                       style={{
                         fontSize: "40px",
-                        color: "black",
+                        color: "red",
                         padding: "3px 8px 3px 8px",
                       }}
                     />{" "}
@@ -127,7 +128,7 @@ function ContactUs() {
                     <AiFillFacebook
                       style={{
                         fontSize: "40px",
-                        color: "black",
+                        color: "red",
                         padding: "3px 8px 3px 8px",
                       }}
                     />{" "}

@@ -21,12 +21,12 @@ function Hero() {
   }, []);
 
   return (
-    <div id='heroTop' style={{ backgroundColor: "#001521", zIndex: "3", textAlign: "center" }}>
+    <div id='heroTop' style={{ backgroundColor: "#000", zIndex: "3", textAlign: "center" }}>
       <center>
         <Grid container spacing={0} className='hero'>
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <Canvas>
-              <Ring />
+              {/* <Ring /> */}
             </Canvas>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -34,23 +34,23 @@ function Hero() {
             <p className='heroContent'>Hosted by - DJSCE ACM Student Chapter</p>
             <div
               className='apply-button'
-              data-hackathon-slug='lines-of-code-djacm'
+              data-hackathon-slug='loc-lines-of-code'
               data-button-theme='light'
             />
             {/* <Button variant='contained'>
-              <Typography variant='h5'>Sign up now</Typography>
+              <Typography variant='h5'>Apply with Devfolio</Typography>
             </Button> */}
             <p className='heroContentDate'>
               11<sup>th</sup> - 12<sup>th</sup> March, 2023
             </p>
-            <div className='platinum'>
+            {/* <div className='platinum'>
               <h4 style={{ paddingInline: "2%" }}> Powered by </h4>
               <img src={arcana} style={{ width: "15%", paddingBottom: "1%" }} alt='arcana' />
-            </div>
+            </div> */}
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <Canvas>
-              <Box />
+              {/* <Box /> */}
             </Canvas>
           </Grid>
         </Grid>

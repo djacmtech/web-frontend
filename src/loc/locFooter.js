@@ -9,7 +9,7 @@ const LocFooter = () => {
     <div
       style={{
         paddingTop: "20px",
-        backgroundColor: "#001521",
+        backgroundColor: "#000",
         color: "white",
       }}>
       <center>

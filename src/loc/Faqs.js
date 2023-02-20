@@ -12,7 +12,7 @@ function Faqs() {
   const Accordion = styled(props => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
-    borderBottom: `1px solid #16bdff`,
+    borderBottom: `1px solid #af0203`,
     "&:not(:last-child)": {
       borderBottom: 0,
     },
@@ -27,7 +27,7 @@ function Faqs() {
       className='mobileview'
       style={{
         color: "black",
-        backgroundColor: "#001522",
+        backgroundColor: "#000",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -52,7 +52,7 @@ function Faqs() {
           spy={true}
           smooth={true}
           to='Contact Us'
-          style={{ color: "#FF8A50", padding: "5px", cursor: "pointer" }}>
+          style={{ color: "#ff1616", padding: "5px", cursor: "pointer" }}>
           {" "}
           Reach out to our Team{" "}
         </Link>{" "}
@@ -142,7 +142,7 @@ function Faqs() {
                   fontFamily: "Montserrat",
                   color: "white",
                 }}>
-                LoC 4.0 will be conducted in hybrid mode. Primarily held offline at SVKM's Dwarkadas
+                LoC 5.0 will be conducted in hybrid mode. Primarily held offline at SVKM's Dwarkadas
                 J. Sanghvi College of Engineering campus, Vile Parla, Mumbai, India; with an online
                 presence on Discord, being live braodcasted to participants attending online from
                 throughout the world.

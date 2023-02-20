@@ -88,7 +88,7 @@ const NavLoc = (elev) => {
 
   return (
     <ElevationScroll>
-      <AppBar position="sticky" style={{ backgroundColor: "#001521" }}>
+      <AppBar position="sticky" style={{ backgroundColor: "#000" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
