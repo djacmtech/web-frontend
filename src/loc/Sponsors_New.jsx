@@ -38,9 +38,9 @@ function Sponsors() {
       </h1>
 
       <div className='platinumSponsors'>
-        <h5 style={{ textAlign: "center" }} data-aos='fade-up'>
+        <h2 className='sponsor-header' data-aos='fade-up'>
           Platinum Sponsors
-        </h5>
+        </h2>
         <SponsorsContainer cols={2}>
           <SponsorsLogo
             link='https://devfolio.co/'
@@ -56,9 +56,9 @@ function Sponsors() {
       </div>
 
       <div className='goldSponsors'>
-        <h5 style={{ textAlign: "center" }} data-aos='fade-up'>
+        <h2 className='sponsor-header' data-aos='fade-up'>
           Gold Sponsors
-        </h5>
+        </h2>
         <SponsorsContainer cols={3}>
           <SponsorsLogo
             link='https://replit.com/'
@@ -82,33 +82,33 @@ function Sponsors() {
       </div>
 
       {/* <div className='silverSponsors'>
-        <h5 style={{ textAlign: "center" }} data-aos='fade-up'>
+        <h2 className='sponsor-header' data-aos='fade-up'>
           Silver Sponsors
-        </h5>
+        </h2>
         <SponsorsContainer>
           <SponsorsLogo link='https://www.coursefinder.ai/' name='CourseFinder' />
         </SponsorsContainer>
-      </div>
+      </div> */}
 
-      <div className='partners'>
-        <h5 style={{ textAlign: "center" }} data-aos='fade-up'>
+      {/* <div className='partners'>
+        <h2 className='sponsor-header' data-aos='fade-up'>
           Educational Partner
-        </h5>
+        </h2>
 
         <SponsorsContainer>
           <SponsorsLogo link='https://soegis.com/' name='Satguru Overseas Education' />
         </SponsorsContainer>
 
-        <h5 style={{ textAlign: "center" }} data-aos='fade-up'>
+        <h2 className='sponsor-header' data-aos='fade-up'>
           Health Partner
-        </h5>
+        </h2>
         <SponsorsContainer>
           <SponsorsLogo link='https://lifehealthfoods.co.in/' name='Life health foods' />
         </SponsorsContainer>
 
-        <h5 style={{ textAlign: "center" }} data-aos='fade-up'>
+        <h2 className='sponsor-header' data-aos='fade-up'>
           Other Sponsors
-        </h5>
+        </h2>
         <SponsorsContainer cols={3}>
           <SponsorsLogo link='https://www.threeway.studio/' name='Threeway studio' />
           <SponsorsLogo link='https://www.instagram.com/trays.eatery/' name='Trays eatery' />
@@ -138,7 +138,9 @@ export const SponsorsLogo = ({ name, link, img }) => {
           {img ? (
             <img src={img} alt={name} style={{ width: "200px" }} />
           ) : (
-            <h1 style={{ color: "#dbdbdb", fontSize: "2rem", textShadow: "none" }}>{name}</h1>
+            <h1 style={{ color: "#dbdbdb", fontSize: "2rem", textShadow: "none", margin: 0 }}>
+              {name}
+            </h1>
           )}
         </Tooltip>
       </a>
@@ -156,7 +158,10 @@ export const SponsorsContainer = ({ children, style, cols }) => {
         ...style,
         display: "grid",
         placeItems: "center",
-        gridTemplateColumns: `repeat(${cols || 1},1fr)`,
+        gap: "1rem",
+      }}
+      sx={{
+        gridTemplateColumns: { md: `repeat(${cols || 1},1fr)` },
       }}>
       {children}
     </Grid>
