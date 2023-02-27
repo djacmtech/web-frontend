@@ -97,7 +97,7 @@ const NavLoc = (elev) => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              <img src={logo} alt="logo" width="50"></img>
+              <img src={logo} alt="logo" width="100"></img>
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

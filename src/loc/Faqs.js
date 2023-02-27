@@ -143,8 +143,8 @@ function Faqs() {
                   color: "white",
                 }}>
                 LoC 5.0 will be conducted in hybrid mode. Primarily held offline at SVKM's Dwarkadas
-                J. Sanghvi College of Engineering campus, Vile Parla, Mumbai, India; with an online
-                presence on Discord, being live braodcasted to participants attending online from
+                J. Sanghvi College of Engineering campus, Vile Parle, Mumbai, India; with an online
+                presence on Discord, being live broadcasted to participants attending online from
                 throughout the world.
               </Typography>
             </AccordionDetails>
