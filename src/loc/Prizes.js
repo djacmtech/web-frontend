@@ -158,7 +158,7 @@ function Prizes() {
                 </div>
               </Grid>
             </Grid>
-            <p className="goodies">& exciting goodies worth upto ₹2 Lakh!</p>
+            {/* <p className="goodies">& exciting goodies worth upto ₹2 Lakh!</p> */}
             {/* <p className="goodies">
               TO BE ANNOUNCED SOON!
             </p> */}
@@ -320,12 +320,12 @@ function Prizes() {
                 </div>
               </Grid>
             </Grid>
-            <p
+            {/* <p
               className="goodies"
               style={{fontSize: "15px", padding: "0px 30px"}}
             >
               & exciting goodies worth upto ₹2 Lakh!
-            </p>
+            </p> */}
             <p className="auxiliaryPrizes">
             Get a chance to win additional Prizes, Swags & Merchandise
             </p>

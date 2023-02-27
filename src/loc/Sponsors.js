@@ -432,8 +432,8 @@ function Sponsors() {
         style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}
       >
         <Button variant="contained" sx={{textTransform:'none', backgroundColor:'red', mt:2, mb:4}}>
-          <Typography variant="h4">
-          Become a Sponser
+          <Typography variant="h5">
+          Become a Sponsor
           </Typography>
         </Button>
       </a>
